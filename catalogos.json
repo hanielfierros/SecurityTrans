@@ -1,0 +1,218 @@
+{
+ "vehiculos": [
+  {
+   "ID_VEHICULO": "VEH-0001",
+   "unidad_referencia": "D-179",
+   "marca": "Freightliner",
+   "modelo_operativo": "FREIGHTLINER M2",
+   "modelo_cientifico": "M2 106",
+   "placa_ficticia": "58-AB-7C",
+   "carroceria": "Rabón blindado nivel IV",
+   "combustible": "Diésel",
+   "capacidad_tanque_L": 350.0,
+   "masa_vacio_blindado_kg": 9000.0,
+   "rend_admin_ref_kmL": 3.6,
+   "blindaje": "IV",
+   "motor": "Cummins B6.7 (representativo)",
+   "potencia_kW": 186,
+   "transmision": "Allison 2500 (representativo)"
+  }
+ ],
+ "operadores": [
+  {
+   "ID_OPERADOR": "OPR-0001",
+   "nombre": "Carlos Eduardo Ramírez López",
+   "perfil": "Referencia original"
+  },
+  {
+   "ID_OPERADOR": "OPR-0002",
+   "nombre": "Miguel Ángel Hernández García",
+   "perfil": "Conducción altamente eficiente"
+  },
+  {
+   "ID_OPERADOR": "OPR-0003",
+   "nombre": "José Antonio Martínez Ruiz",
+   "perfil": "Conducción convencional"
+  },
+  {
+   "ID_OPERADOR": "OPR-0004",
+   "nombre": "Luis Fernando González Torres",
+   "perfil": "Velocidades elevadas"
+  },
+  {
+   "ID_OPERADOR": "OPR-0005",
+   "nombre": "Roberto Daniel Sánchez Flores",
+   "perfil": "Conducción irregular"
+  },
+  {
+   "ID_OPERADOR": "OPR-0006",
+   "nombre": "Alejandro Mendoza Castillo",
+   "perfil": "Ralentí prolongado"
+  },
+  {
+   "ID_OPERADOR": "OPR-0007",
+   "nombre": "Fernando Javier Morales Díaz",
+   "perfil": "Conducción mixta con desviación de combustible"
+  }
+ ],
+ "rutas": [
+  {
+   "ID_RUTA": "RUT-0001",
+   "origen": "Ciudad de México",
+   "destino": "Monterrey",
+   "sentido": "Ciudad de México → Monterrey",
+   "distancia_administrativa_km": 925.0
+  }
+ ],
+ "servicios": [
+  {
+   "FOLIO_SERVICIO": "SRV-2026-00001",
+   "ID_VEHICULO": "VEH-0001",
+   "ID_OPERADOR": "OPR-0001",
+   "ID_RUTA": "RUT-0001",
+   "fecha": "2026-06-15",
+   "perfil": "Referencia original",
+   "naturaleza": "SIMULADO"
+  },
+  {
+   "FOLIO_SERVICIO": "SRV-2026-00002",
+   "ID_VEHICULO": "VEH-0001",
+   "ID_OPERADOR": "OPR-0002",
+   "ID_RUTA": "RUT-0001",
+   "fecha": "2026-06-22",
+   "perfil": "Conducción altamente eficiente",
+   "naturaleza": "SIMULADO"
+  },
+  {
+   "FOLIO_SERVICIO": "SRV-2026-00003",
+   "ID_VEHICULO": "VEH-0001",
+   "ID_OPERADOR": "OPR-0003",
+   "ID_RUTA": "RUT-0001",
+   "fecha": "2026-06-29",
+   "perfil": "Conducción convencional",
+   "naturaleza": "SIMULADO"
+  },
+  {
+   "FOLIO_SERVICIO": "SRV-2026-00004",
+   "ID_VEHICULO": "VEH-0001",
+   "ID_OPERADOR": "OPR-0004",
+   "ID_RUTA": "RUT-0001",
+   "fecha": "2026-07-06",
+   "perfil": "Velocidades elevadas",
+   "naturaleza": "SIMULADO"
+  },
+  {
+   "FOLIO_SERVICIO": "SRV-2026-00005",
+   "ID_VEHICULO": "VEH-0001",
+   "ID_OPERADOR": "OPR-0005",
+   "ID_RUTA": "RUT-0001",
+   "fecha": "2026-07-13",
+   "perfil": "Conducción irregular",
+   "naturaleza": "SIMULADO"
+  },
+  {
+   "FOLIO_SERVICIO": "SRV-2026-00006",
+   "ID_VEHICULO": "VEH-0001",
+   "ID_OPERADOR": "OPR-0006",
+   "ID_RUTA": "RUT-0001",
+   "fecha": "2026-07-20",
+   "perfil": "Ralentí prolongado",
+   "naturaleza": "SIMULADO"
+  },
+  {
+   "FOLIO_SERVICIO": "SRV-2026-00007",
+   "ID_VEHICULO": "VEH-0001",
+   "ID_OPERADOR": "OPR-0007",
+   "ID_RUTA": "RUT-0001",
+   "fecha": "2026-07-27",
+   "perfil": "Conducción mixta con desviación de combustible",
+   "naturaleza": "SIMULADO"
+  }
+ ],
+ "reposicionamientos": [
+  {
+   "id": "REPO-00001",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00001",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-06-15"
+  },
+  {
+   "id": "REPO-00002",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00002",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-06-22"
+  },
+  {
+   "id": "REPO-00003",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00003",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-06-29"
+  },
+  {
+   "id": "REPO-00004",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00004",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-07-06"
+  },
+  {
+   "id": "REPO-00005",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00005",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-07-13"
+  },
+  {
+   "id": "REPO-00006",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00006",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-07-20"
+  },
+  {
+   "id": "REPO-00007",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00007",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-07-27"
+  }
+ ]
+}

@@ -1,0 +1,607 @@
+{
+ "metodologias": [
+  {
+   "id": "MET-01",
+   "nombre": "Mecánica clásica y dinámica longitudinal",
+   "modelos": 5
+  },
+  {
+   "id": "MET-02",
+   "nombre": "Termodinámica y energía",
+   "modelos": 5
+  },
+  {
+   "id": "MET-03",
+   "nombre": "Modelos reconocidos de consumo",
+   "modelos": 5
+  },
+  {
+   "id": "MET-04",
+   "nombre": "Conservación e inventario de combustible",
+   "modelos": 5
+  },
+  {
+   "id": "MET-05",
+   "nombre": "Cinemática GPS y geodesia",
+   "modelos": 5
+  },
+  {
+   "id": "MET-06",
+   "nombre": "Identificación de parámetros",
+   "modelos": 5
+  },
+  {
+   "id": "MET-07",
+   "nombre": "Incertidumbre y sensibilidad",
+   "modelos": 5
+  },
+  {
+   "id": "MET-08",
+   "nombre": "Estimación de estados",
+   "modelos": 5
+  },
+  {
+   "id": "MET-09",
+   "nombre": "Detección estadística de anomalías",
+   "modelos": 5
+  },
+  {
+   "id": "MET-10",
+   "nombre": "Aprendizaje automático y diagnóstico",
+   "modelos": 5
+  },
+  {
+   "id": "MET-11",
+   "nombre": "Optimización",
+   "modelos": 5
+  },
+  {
+   "id": "MET-12",
+   "nombre": "Finanzas y econometría",
+   "modelos": 5
+  }
+ ],
+ "modelos": [
+  {
+   "codigo": "MOD-001",
+   "metodologia": "MET-01",
+   "nombre": "Ecuación diferencial de movimiento longitudinal",
+   "objetivo": "Describir la dinámica longitudinal del vehículo como balance de fuerzas para obtener aceleración, velocidad y posición en el tiempo.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "Requiere datos cinemáticos finos; sin CAN Bus no se observa F_t real."
+  },
+  {
+   "codigo": "MOD-002",
+   "metodologia": "MET-01",
+   "nombre": "Resistencia aerodinámica y viento relativo",
+   "objetivo": "Modelar la fuerza de arrastre aerodinámico incluyendo el efecto del viento.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "Sin anemometría el viento real es desconocido; se asume viento medio."
+  },
+  {
+   "codigo": "MOD-003",
+   "metodologia": "MET-01",
+   "nombre": "Resistencia a la rodadura",
+   "objetivo": "Modelar la fuerza resistiva por rodadura de los neumáticos.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "Dependencia no lineal con carga y temperatura se desprecia."
+  },
+  {
+   "codigo": "MOD-004",
+   "metodologia": "MET-01",
+   "nombre": "Fuerza gravitacional por pendiente",
+   "objetivo": "Modelar la componente gravitatoria que acelera o frena el vehículo en pendiente.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "Pendiente promedio no sustituye al perfil; sube/baja se compensan en energía."
+  },
+  {
+   "codigo": "MOD-005",
+   "metodologia": "MET-01",
+   "nombre": "Masa equivalente e inercias rotacionales",
+   "objetivo": "Incorporar la inercia rotacional de ruedas, ejes y motor en la masa efectiva.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "Sin CAN Bus se desconoce la marcha; se usa factor medio."
+  },
+  {
+   "codigo": "MOD-006",
+   "metodologia": "MET-02",
+   "nombre": "Balance energético global",
+   "objetivo": "Establecer la contabilidad de energía desde el combustible hasta la rueda.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "El cierre depende de la exactitud de medición del tanque."
+  },
+  {
+   "codigo": "MOD-007",
+   "metodologia": "MET-02",
+   "nombre": "Demanda instantánea de potencia",
+   "objetivo": "Calcular la potencia en rueda necesaria para sostener el movimiento.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "Sin CAN Bus, P_aux y eta_t son estimados."
+  },
+  {
+   "codigo": "MOD-008",
+   "metodologia": "MET-02",
+   "nombre": "Eficiencia térmica del motor",
+   "objetivo": "Relacionar la potencia útil del motor con la energía química consumida.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "Sin mapa real, la eficiencia parcial es aproximada."
+  },
+  {
+   "codigo": "MOD-009",
+   "metodologia": "MET-02",
+   "nombre": "Consumo mediante BSFC",
+   "objetivo": "Estimar el flujo másico de combustible a partir de la potencia y el BSFC.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "BSFC varía con RPM y carga; un solo valor es aproximación gruesa."
+  },
+  {
+   "codigo": "MOD-010",
+   "metodologia": "MET-02",
+   "nombre": "Pérdidas de transmisión y sistemas auxiliares",
+   "objetivo": "Cuantificar las pérdidas mecánicas de la cadena cinemática y de auxiliares.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO_CON_SUPUESTOS",
+   "limitaciones": "A/C y ralentí con auxiliares elevan el consumo en paradas."
+  },
+  {
+   "codigo": "MOD-011",
+   "metodologia": "MET-03",
+   "nombre": "Modelo CMEM (Comprehensive Modal Emissions Model)",
+   "objetivo": "Modelar consumo/emisiones modales con base física (carga, motor, transmisión).",
+   "estado_aplicabilidad": "REQUIERE_PARAMETROS_EXTERNOS",
+   "estado_ejecucion_web": "REQUIERE_PARAMETROS_EXTERNOS",
+   "limitaciones": "Sin mapa motor no puede declararse implementación completa."
+  },
+  {
+   "codigo": "MOD-012",
+   "metodologia": "MET-03",
+   "nombre": "Modelo VT-CPFM (Virginia Tech Comprehensive Power-based Fuel model)",
+   "objetivo": "Estimar consumo con dos regímenes: potencia positiva y negativa/ralentí.",
+   "estado_aplicabilidad": "REQUIERE_CALIBRACION",
+   "estado_ejecucion_web": "REQUIERE_PARAMETROS_EXTERNOS",
+   "limitaciones": "Sin datos de consumo instantáneo, coeficientes no calibrables."
+  },
+  {
+   "codigo": "MOD-013",
+   "metodologia": "MET-03",
+   "nombre": "Vehicle Specific Power (VSP) y tasas de consumo",
+   "objetivo": "Usar la potencia específica por unidad de masa para clasificar regímenes.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_PARAMETROS_EXTERNOS",
+   "limitaciones": "Tasas de bin genéricas no sustituyen medición del vehículo."
+  },
+  {
+   "codigo": "MOD-014",
+   "metodologia": "MET-03",
+   "nombre": "Modelo MOVES (EPA)",
+   "objetivo": "Estimar consumo/emisiones con el inventario regulatorio de la EPA.",
+   "estado_aplicabilidad": "REQUIERE_PARAMETROS_EXTERNOS",
+   "estado_ejecucion_web": "REQUIERE_PARAMETROS_EXTERNOS",
+   "limitaciones": "Requiere la categoría correcta (M2 106 es mediano)."
+  },
+  {
+   "codigo": "MOD-015",
+   "metodologia": "MET-03",
+   "nombre": "Modelo COPERT",
+   "objetivo": "Estimar consumo/emisiones con el modelo europeo de transporte por carretera.",
+   "estado_aplicabilidad": "REQUIERE_PARAMETROS_EXTERNOS",
+   "estado_ejecucion_web": "REQUIERE_PARAMETROS_EXTERNOS",
+   "limitaciones": "Clase europea puede no coincidir con M2 106 mexicano."
+  },
+  {
+   "codigo": "MOD-016",
+   "metodologia": "MET-04",
+   "nombre": "Balance diferencial de combustible",
+   "objetivo": "Describir la variación temporal del volumen de combustible en el tanque.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "Sin medición intermedia, Q_perdida no separable del error."
+  },
+  {
+   "codigo": "MOD-017",
+   "metodologia": "MET-04",
+   "nombre": "Balance integral del viaje",
+   "objetivo": "Cerrar el balance de combustible del viaje completo.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "No distingue causas de la pérdida sin más evidencia."
+  },
+  {
+   "codigo": "MOD-018",
+   "metodologia": "MET-04",
+   "nombre": "Modelo discreto de abastecimientos",
+   "objetivo": "Modelar los abastecimientos como eventos discretos con volumen y precio.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_ACTUALES",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "Diferencia ticket vs real es anomalía de interés."
+  },
+  {
+   "codigo": "MOD-019",
+   "metodologia": "MET-04",
+   "nombre": "Geometría y calibración volumétrica de tanques",
+   "objetivo": "Convertir nivel medido en volumen mediante la geometría/calibración del tanque.",
+   "estado_aplicabilidad": "REQUIERE_CALIBRACION",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "El porcentaje del tablero NO es litros calibrados."
+  },
+  {
+   "codigo": "MOD-020",
+   "metodologia": "MET-04",
+   "nombre": "Corrección por temperatura y densidad",
+   "objetivo": "Corregir el volumen de combustible por temperatura y densidad.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "Ignorar temperatura sesga el cierre de masa."
+  },
+  {
+   "codigo": "MOD-021",
+   "metodologia": "MET-05",
+   "nombre": "Distancias geodésicas WGS84",
+   "objetivo": "Calcular distancias reales entre puntos GPS sobre el elipsoide WGS84.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "GPS ruidoso requiere suavizado previo."
+  },
+  {
+   "codigo": "MOD-022",
+   "metodologia": "MET-05",
+   "nombre": "Reconstrucción de velocidades y aceleraciones",
+   "objetivo": "Derivar velocidad y aceleración de las series GPS.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "GPS de baja frecuencia no resuelve aceleración."
+  },
+  {
+   "codigo": "MOD-023",
+   "metodologia": "MET-05",
+   "nombre": "Interpolación y suavizado numérico",
+   "objetivo": "Interpolar trayectorias irregulares y suavizar ruido de medición.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Suavizado excesivo atenúa eventos cortos reales."
+  },
+  {
+   "codigo": "MOD-024",
+   "metodologia": "MET-05",
+   "nombre": "Topografía y pendientes",
+   "objetivo": "Estimar pendientes del terreno a partir de la altitud.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Pendiente promedio no captura picos energéticos."
+  },
+  {
+   "codigo": "MOD-025",
+   "metodologia": "MET-05",
+   "nombre": "Segmentación temporal y detección de detenciones",
+   "objetivo": "Segmentar la ruta en movimiento, detenciones y ralentí.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Ralentí requiere señal de motor (CAN Bus)."
+  },
+  {
+   "codigo": "MOD-026",
+   "metodologia": "MET-06",
+   "nombre": "Mínimos cuadrados lineales y no lineales",
+   "objetivo": "Ajustar parámetros del modelo minimizando el error cuadrático.",
+   "estado_aplicabilidad": "REQUIERE_CALIBRACION",
+   "estado_ejecucion_web": "REQUIERE_CALIBRACION",
+   "limitaciones": "Colinealidad degrada la estimación."
+  },
+  {
+   "codigo": "MOD-027",
+   "metodologia": "MET-06",
+   "nombre": "Identificación de parámetros físicos",
+   "objetivo": "Estimar CdA, Crr y eficiencias a partir de datos operativos.",
+   "estado_aplicabilidad": "REQUIERE_CALIBRACION",
+   "estado_ejecucion_web": "REQUIERE_CALIBRACION",
+   "limitaciones": "Correlación CdA-Crr exige datos en rangos distintos."
+  },
+  {
+   "codigo": "MOD-028",
+   "metodologia": "MET-06",
+   "nombre": "Regularización de Tikhonov",
+   "objetivo": "Estabilizar el problema inverso mal condicionado.",
+   "estado_aplicabilidad": "REQUIERE_CALIBRACION",
+   "estado_ejecucion_web": "REQUIERE_CALIBRACION",
+   "limitaciones": "Sobre-regularización suprime señal real."
+  },
+  {
+   "codigo": "MOD-029",
+   "metodologia": "MET-06",
+   "nombre": "Inferencia bayesiana jerárquica",
+   "objetivo": "Estimar parámetros con distribuciones a priori y jerarquías.",
+   "estado_aplicabilidad": "REQUIERE_CALIBRACION",
+   "estado_ejecucion_web": "REQUIERE_CALIBRACION",
+   "limitaciones": "Costo computacional alto; requiere pymc."
+  },
+  {
+   "codigo": "MOD-030",
+   "metodologia": "MET-06",
+   "nombre": "Estimación inversa de pérdidas no explicadas",
+   "objetivo": "Estimar el volumen de pérdida no explicada como variable latente.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_CALIBRACION",
+   "limitaciones": "Sin medición intermedia no se separa de error."
+  },
+  {
+   "codigo": "MOD-031",
+   "metodologia": "MET-07",
+   "nombre": "Propagación analítica de incertidumbre",
+   "objetivo": "Propagar incertidumbres de entrada a las salidas mediante linealización.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Subestima colas en no linealidad fuerte."
+  },
+  {
+   "codigo": "MOD-032",
+   "metodologia": "MET-07",
+   "nombre": "Simulación Monte Carlo",
+   "objetivo": "Cuantificar la distribución de salidas muestreando entradas inciertas.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Costoso computacionalmente."
+  },
+  {
+   "codigo": "MOD-033",
+   "metodologia": "MET-07",
+   "nombre": "Intervalos predictivos",
+   "objetivo": "Construir intervalos de predicción para el consumo esperado.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Extrapolación invalida el intervalo."
+  },
+  {
+   "codigo": "MOD-034",
+   "metodologia": "MET-07",
+   "nombre": "Sensibilidad global de Sobol",
+   "objetivo": "Descomponer la varianza de salida entre las entradas.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Costoso; N grandes."
+  },
+  {
+   "codigo": "MOD-035",
+   "metodologia": "MET-07",
+   "nombre": "Observabilidad e identificabilidad",
+   "objetivo": "Determinar si parámetros/estados pueden estimarse de los datos.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "No cuantifica incertidumbre por sí solo."
+  },
+  {
+   "codigo": "MOD-036",
+   "metodologia": "MET-08",
+   "nombre": "Modelo en espacio de estados",
+   "objetivo": "Formular el sistema dinámico en forma de estados y observaciones.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_DATOS",
+   "limitaciones": "No linealidades requieren filtros avanzados."
+  },
+  {
+   "codigo": "MOD-037",
+   "metodologia": "MET-08",
+   "nombre": "Filtro de Kalman",
+   "objetivo": "Estimar estados de sistemas lineales con ruido gaussiano.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_DATOS",
+   "limitaciones": "No linealidad viola supuestos."
+  },
+  {
+   "codigo": "MOD-038",
+   "metodologia": "MET-08",
+   "nombre": "Filtro de Kalman extendido",
+   "objetivo": "Extender el Kalman a sistemas no lineales por linealización local.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_DATOS",
+   "limitaciones": "Falla en no linealidades fuertes."
+  },
+  {
+   "codigo": "MOD-039",
+   "metodologia": "MET-08",
+   "nombre": "Filtro de Kalman unscented",
+   "objetivo": "Estimar estados no lineales sin linealización (transformada unscented).",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_DATOS",
+   "limitaciones": "Costoso para estados grandes."
+  },
+  {
+   "codigo": "MOD-040",
+   "metodologia": "MET-08",
+   "nombre": "Filtro de partículas",
+   "objetivo": "Estimar estados con distribuciones no gaussianas.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_DATOS",
+   "limitaciones": "Alto costo computacional."
+  },
+  {
+   "codigo": "MOD-041",
+   "metodologia": "MET-09",
+   "nombre": "Análisis estadístico de residuos",
+   "objetivo": "Verificar el modelo y detectar desviaciones sistemáticas.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "No separa causa de anomalía."
+  },
+  {
+   "codigo": "MOD-042",
+   "metodologia": "MET-09",
+   "nombre": "CUSUM",
+   "objetivo": "Detectar cambios persistentes en el consumo.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "No detecta cambios transitorios."
+  },
+  {
+   "codigo": "MOD-043",
+   "metodologia": "MET-09",
+   "nombre": "EWMA",
+   "objetivo": "Suavizar la serie y detectar desviaciones suaves.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "Reacciona lento a saltos grandes."
+  },
+  {
+   "codigo": "MOD-044",
+   "metodologia": "MET-09",
+   "nombre": "Detección bayesiana de puntos de cambio",
+   "objetivo": "Inferir si y cuándo cambió el proceso de consumo.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "Costo computacional."
+  },
+  {
+   "codigo": "MOD-045",
+   "metodologia": "MET-09",
+   "nombre": "Isolation Forest",
+   "objetivo": "Detectar observaciones anómalas de forma no supervisada.",
+   "estado_aplicabilidad": "REQUIERE_HISTORICO",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "Requiere muchas muestras."
+  },
+  {
+   "codigo": "MOD-046",
+   "metodologia": "MET-10",
+   "nombre": "Regresión multivariable y robusta",
+   "objetivo": "Modelar el consumo en función de múltiples variables explicativas.",
+   "estado_aplicabilidad": "REQUIERE_HISTORICO",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "Multicolinealidad infla varianza."
+  },
+  {
+   "codigo": "MOD-047",
+   "metodologia": "MET-10",
+   "nombre": "Random Forest",
+   "objetivo": "Modelar no linealidades y detectar variables importantes.",
+   "estado_aplicabilidad": "REQUIERE_HISTORICO",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "Un solo viaje no permite entrenamiento real."
+  },
+  {
+   "codigo": "MOD-048",
+   "metodologia": "MET-10",
+   "nombre": "Gradient Boosting",
+   "objetivo": "Modelo aditivo secuencial de alta capacidad predictiva.",
+   "estado_aplicabilidad": "REQUIERE_HISTORICO",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "Un solo viaje no permite entrenamiento."
+  },
+  {
+   "codigo": "MOD-049",
+   "metodologia": "MET-10",
+   "nombre": "Redes bayesianas",
+   "objetivo": "Modelar dependencias causales entre variables operativas y consumo.",
+   "estado_aplicabilidad": "REQUIERE_HISTORICO",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "Explicable y auditabilble."
+  },
+  {
+   "codigo": "MOD-050",
+   "metodologia": "MET-10",
+   "nombre": "Modelos híbridos físico-estadísticos",
+   "objetivo": "Combinar el modelo físico con residuos modelados estadísticamente.",
+   "estado_aplicabilidad": "REQUIERE_CALIBRACION",
+   "estado_ejecucion_web": "REQUIERE_HISTORICO",
+   "limitaciones": "Riesgo de sobreajuste del residual."
+  },
+  {
+   "codigo": "MOD-051",
+   "metodologia": "MET-11",
+   "nombre": "Programación lineal",
+   "objetivo": "Optimizar asignaciones lineales (rutas, inventario) con restricciones.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "No modela no linealidades."
+  },
+  {
+   "codigo": "MOD-052",
+   "metodologia": "MET-11",
+   "nombre": "Programación no lineal",
+   "objetivo": "Optimizar problemas con restricciones/función objetivo no lineales.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "No convexidad complica."
+  },
+  {
+   "codigo": "MOD-053",
+   "metodologia": "MET-11",
+   "nombre": "Optimización multiobjetivo",
+   "objetivo": "Optimizar simultáneamente consumo, tiempo y costo.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Elección de solución final subjetiva."
+  },
+  {
+   "codigo": "MOD-054",
+   "metodologia": "MET-11",
+   "nombre": "Control óptimo de velocidad",
+   "objetivo": "Determinar el perfil de velocidad que minimiza el consumo.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Tráfico real impone restricciones."
+  },
+  {
+   "codigo": "MOD-055",
+   "metodologia": "MET-11",
+   "nombre": "Optimización robusta y estocástica",
+   "objetivo": "Optimizar bajo incertidumbre de parámetros y demanda.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "APLICABLE_PENDIENTE",
+   "limitaciones": "Requiere caracterizar incertidumbre."
+  },
+  {
+   "codigo": "MOD-056",
+   "metodologia": "MET-12",
+   "nombre": "Valoración de inventario de combustible",
+   "objetivo": "Valorar el combustible en el tanque con un método contable.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_ACTUALES",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "Método contable estándar."
+  },
+  {
+   "codigo": "MOD-057",
+   "metodologia": "MET-12",
+   "nombre": "Descomposición precio-volumen",
+   "objetivo": "Separar la variación de costo en efecto precio y efecto volumen.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_ACTUALES",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "Atribución parcial requiere cuidado."
+  },
+  {
+   "codigo": "MOD-058",
+   "metodologia": "MET-12",
+   "nombre": "Costos operativos unitarios",
+   "objetivo": "Calcular costo por km y por tonelada-kilómetro.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_ACTUALES",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "No aísla causas."
+  },
+  {
+   "codigo": "MOD-059",
+   "metodologia": "MET-12",
+   "nombre": "Pronóstico económico y presupuestario",
+   "objetivo": "Pronosticar costo de combustible de futuros viajes.",
+   "estado_aplicabilidad": "REQUIERE_HISTORICO",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "Horizonte lejano incierto."
+  },
+  {
+   "codigo": "MOD-060",
+   "metodologia": "MET-12",
+   "nombre": "Retorno de inversión y valor de la información",
+   "objetivo": "Evaluar el retorno de implementar nuevos controles de medición.",
+   "estado_aplicabilidad": "APLICABLE_CON_DATOS_SIMULADOS",
+   "estado_ejecucion_web": "EJECUTADO",
+   "limitaciones": "Beneficios no verificados no son ahorros reales."
+  }
+ ],
+ "nota": "Los 60 modelos provienen de MODEL_REGISTRY.json. La ciencia compleja se ejecutó en Python; el navegador solo presenta resultados."
+}

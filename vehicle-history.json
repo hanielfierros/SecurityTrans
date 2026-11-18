@@ -1,0 +1,135 @@
+{
+ "ID_VEHICULO": "VEH-0001",
+ "odo_inicial_km": 120000.0,
+ "odo_final_acumulado_km": 132950.0,
+ "servicios": [
+  {
+   "folio": "SRV-2026-00001",
+   "fecha": "2026-06-15",
+   "odo_inicial_km": 120000.0,
+   "odo_final_km": 120925.0
+  },
+  {
+   "folio": "SRV-2026-00002",
+   "fecha": "2026-06-22",
+   "odo_inicial_km": 121850.0,
+   "odo_final_km": 122775.0
+  },
+  {
+   "folio": "SRV-2026-00003",
+   "fecha": "2026-06-29",
+   "odo_inicial_km": 123700.0,
+   "odo_final_km": 124625.0
+  },
+  {
+   "folio": "SRV-2026-00004",
+   "fecha": "2026-07-06",
+   "odo_inicial_km": 125550.0,
+   "odo_final_km": 126475.0
+  },
+  {
+   "folio": "SRV-2026-00005",
+   "fecha": "2026-07-13",
+   "odo_inicial_km": 127400.0,
+   "odo_final_km": 128325.0
+  },
+  {
+   "folio": "SRV-2026-00006",
+   "fecha": "2026-07-20",
+   "odo_inicial_km": 129250.0,
+   "odo_final_km": 130175.0
+  },
+  {
+   "folio": "SRV-2026-00007",
+   "fecha": "2026-07-27",
+   "odo_inicial_km": 131100.0,
+   "odo_final_km": 132025.0
+  }
+ ],
+ "reposicionamientos": [
+  {
+   "id": "REPO-00001",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00001",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-06-15"
+  },
+  {
+   "id": "REPO-00002",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00002",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-06-22"
+  },
+  {
+   "id": "REPO-00003",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00003",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-06-29"
+  },
+  {
+   "id": "REPO-00004",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00004",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-07-06"
+  },
+  {
+   "id": "REPO-00005",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00005",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-07-13"
+  },
+  {
+   "id": "REPO-00006",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00006",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-07-20"
+  },
+  {
+   "id": "REPO-00007",
+   "id_vehiculo": "VEH-0001",
+   "id_ruta": "RUT-0001",
+   "origen": "Monterrey",
+   "destino": "Ciudad de México",
+   "folio_servicio_origen": "SRV-2026-00007",
+   "distancia_km": 925.0,
+   "combustible_estimado_L": 256.94444444444446,
+   "naturaleza": "SIMULADO/ESTIMADO (traslado de retorno)",
+   "fecha": "2026-07-27"
+  }
+ ]
+}

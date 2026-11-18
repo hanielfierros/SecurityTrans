@@ -1,0 +1,6446 @@
+{
+ "folio": "SRV-2026-00004",
+ "naturaleza": "SERVICIO SIMULADO",
+ "resumen": {
+  "folio": "SRV-2026-00004",
+  "operador": "Luis Fernando González Torres",
+  "id_operador": "OPR-0004",
+  "perfil": "Velocidades elevadas",
+  "fecha": "2026-07-06",
+  "origen": "Ciudad de México",
+  "destino": "Monterrey",
+  "distancia_programada_km": 925.0,
+  "distancia_ejecutada_km": 925.0,
+  "duracion_h": 12.26,
+  "tiempo_detenido_h": 1.5,
+  "tiempo_ralenti_h": 0.24,
+  "rendimiento_kmL": 4.61,
+  "consumo_motor_L": 200.5,
+  "salida_segun_balance_L": 200.5,
+  "costo_MXN": 5674.33,
+  "presupuesto_MXN": 7271.53,
+  "ahorro_sobrecosto_MXN": 1597.2,
+  "incertidumbre": "masa de blindaje y PBV ESTIMADOS",
+  "estado_datos": "SIMULADO"
+ },
+ "comportamiento": {
+  "velocidad_promedio_movimiento_kmh": 86.66,
+  "velocidad_maxima_kmh": 100.0,
+  "desviacion_velocidad_kmh": 10.1,
+  "aceleracion_maxima_ms2": 0.55,
+  "desaceleracion_maxima_ms2": -0.574,
+  "n_aceleraciones_intensas": 55,
+  "n_frenados_intensos": 0,
+  "n_paradas": 3
+ },
+ "inventario": {
+  "inicial_L": 200.0,
+  "abastecimientos_L": 150.0,
+  "final_L": 149.5,
+  "salida_balance_L": 200.5,
+  "consumo_motor_L": 200.5,
+  "diferencia_no_explicada_L": 0.0
+ },
+ "finanzas": {
+  "presupuesto_MXN": 7271.53,
+  "litros_presupuestados_L": 256.9,
+  "importe_abastecimientos_MXN": 4245.0,
+  "costo_consumo_MXN": 5674.33,
+  "costo_por_km_MXN": 6.13,
+  "ahorro_sobrecosto_MXN": 1597.2,
+  "variacion_volumen_MXN": 1597.2,
+  "variacion_precio_MXN": 0.0,
+  "valor_diferencia_no_explicada_MXN": 0.0
+ },
+ "energia": {
+  "energia_aerodinamica_MJ": 1467.1,
+  "energia_rodadura_MJ": 904.2,
+  "energia_pendiente_MJ": 795.6,
+  "energia_aceleracion_MJ": 31.3,
+  "energia_frenado_dispersada_MJ": 27.2
+ },
+ "planeado_esperado_ejecutado": {
+  "distancia": {
+   "planeado": 925.0,
+   "esperado": 925.0,
+   "ejecutado": 925.0,
+   "unidad": "km"
+  },
+  "tiempo": {
+   "planeado": 14.0,
+   "esperado": 12.3,
+   "ejecutado": 12.3,
+   "unidad": "h"
+  },
+  "rendimiento": {
+   "planeado": 3.6,
+   "esperado": 4.61,
+   "ejecutado": 4.61,
+   "unidad": "km/L"
+  },
+  "litros": {
+   "planeado": 256.9,
+   "esperado": 200.5,
+   "ejecutado": 200.5,
+   "unidad": "L"
+  },
+  "costo": {
+   "planeado": 7271.53,
+   "esperado": 5674.15,
+   "ejecutado": 5674.33,
+   "unidad": "MXN"
+  }
+ },
+ "alertas": [
+  {
+   "ID_ALERTA": "AL-00004-03",
+   "FOLIO_SERVICIO": "SRV-2026-00004",
+   "severidad": "OBSERVACION",
+   "tipo": "velocidad_elevada",
+   "indicador": "velocidad_maxima_kmh",
+   "valor_observado": 100.0,
+   "referencia": 95.0,
+   "umbral": 95.0,
+   "incertidumbre": "baja",
+   "interpretacion": "Velocidades elevadas incrementan la resistencia aerodinámica.",
+   "recomendacion": "Evaluar límites operativos de velocidad.",
+   "modelo_asociado": "MOD-002",
+   "estado_datos": "SIMULADO"
+  }
+ ],
+ "gps": [
+  {
+   "t_s": 0,
+   "distancia_km": 0.0,
+   "lat": 19.4326,
+   "lon": -99.1328,
+   "velocidad_kmh": 0.0,
+   "aceleracion_ms2": 0.55,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 63,
+   "distancia_km": 1.003,
+   "lat": 19.439395,
+   "lon": -99.134083,
+   "velocidad_kmh": 90.16,
+   "aceleracion_ms2": 0.038,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 126,
+   "distancia_km": 2.611,
+   "lat": 19.450278,
+   "lon": -99.136141,
+   "velocidad_kmh": 92.71,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 189,
+   "distancia_km": 4.244,
+   "lat": 19.461335,
+   "lon": -99.138231,
+   "velocidad_kmh": 93.9,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 252,
+   "distancia_km": 5.896,
+   "lat": 19.472515,
+   "lon": -99.140346,
+   "velocidad_kmh": 94.78,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 315,
+   "distancia_km": 7.559,
+   "lat": 19.483776,
+   "lon": -99.142475,
+   "velocidad_kmh": 95.27,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 378,
+   "distancia_km": 9.228,
+   "lat": 19.495073,
+   "lon": -99.144613,
+   "velocidad_kmh": 95.4,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 441,
+   "distancia_km": 10.896,
+   "lat": 19.506363,
+   "lon": -99.146749,
+   "velocidad_kmh": 95.19,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 504,
+   "distancia_km": 12.558,
+   "lat": 19.517613,
+   "lon": -99.148878,
+   "velocidad_kmh": 94.72,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 567,
+   "distancia_km": 14.211,
+   "lat": 19.528797,
+   "lon": -99.150996,
+   "velocidad_kmh": 94.11,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 630,
+   "distancia_km": 15.852,
+   "lat": 19.539907,
+   "lon": -99.153099,
+   "velocidad_kmh": 93.48,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 693,
+   "distancia_km": 17.483,
+   "lat": 19.550947,
+   "lon": -99.15519,
+   "velocidad_kmh": 92.96,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 756,
+   "distancia_km": 19.106,
+   "lat": 19.561936,
+   "lon": -99.157271,
+   "velocidad_kmh": 92.63,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 819,
+   "distancia_km": 20.726,
+   "lat": 19.572902,
+   "lon": -99.159349,
+   "velocidad_kmh": 92.57,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 882,
+   "distancia_km": 22.348,
+   "lat": 19.583878,
+   "lon": -99.161429,
+   "velocidad_kmh": 92.81,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 945,
+   "distancia_km": 23.977,
+   "lat": 19.5949,
+   "lon": -99.163518,
+   "velocidad_kmh": 93.32,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1008,
+   "distancia_km": 25.616,
+   "lat": 19.605995,
+   "lon": -99.165621,
+   "velocidad_kmh": 94.05,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1071,
+   "distancia_km": 27.269,
+   "lat": 19.617185,
+   "lon": -99.167743,
+   "velocidad_kmh": 94.89,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1134,
+   "distancia_km": 28.937,
+   "lat": 19.628474,
+   "lon": -99.169884,
+   "velocidad_kmh": 95.73,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1197,
+   "distancia_km": 30.619,
+   "lat": 19.639856,
+   "lon": -99.172042,
+   "velocidad_kmh": 96.43,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1260,
+   "distancia_km": 32.311,
+   "lat": 19.651306,
+   "lon": -99.174214,
+   "velocidad_kmh": 96.89,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1323,
+   "distancia_km": 34.008,
+   "lat": 19.662791,
+   "lon": -99.176393,
+   "velocidad_kmh": 97.0,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1386,
+   "distancia_km": 35.704,
+   "lat": 19.674266,
+   "lon": -99.178571,
+   "velocidad_kmh": 96.73,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1449,
+   "distancia_km": 37.391,
+   "lat": 19.685685,
+   "lon": -99.180738,
+   "velocidad_kmh": 96.06,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1512,
+   "distancia_km": 39.064,
+   "lat": 19.697002,
+   "lon": -99.182886,
+   "velocidad_kmh": 95.04,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1575,
+   "distancia_km": 40.716,
+   "lat": 19.70818,
+   "lon": -99.185009,
+   "velocidad_kmh": 93.74,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1638,
+   "distancia_km": 42.343,
+   "lat": 19.719194,
+   "lon": -99.1871,
+   "velocidad_kmh": 92.28,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1701,
+   "distancia_km": 43.945,
+   "lat": 19.730031,
+   "lon": -99.189159,
+   "velocidad_kmh": 90.79,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1764,
+   "distancia_km": 45.521,
+   "lat": 19.740697,
+   "lon": -99.191186,
+   "velocidad_kmh": 89.4,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1827,
+   "distancia_km": 47.075,
+   "lat": 19.75121,
+   "lon": -99.193183,
+   "velocidad_kmh": 88.23,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1890,
+   "distancia_km": 48.611,
+   "lat": 19.761602,
+   "lon": -99.195159,
+   "velocidad_kmh": 87.37,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 1953,
+   "distancia_km": 50.135,
+   "lat": 19.771912,
+   "lon": -99.197119,
+   "velocidad_kmh": 86.86,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2016,
+   "distancia_km": 51.653,
+   "lat": 19.782182,
+   "lon": -99.199072,
+   "velocidad_kmh": 86.69,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2079,
+   "distancia_km": 53.171,
+   "lat": 19.792452,
+   "lon": -99.201025,
+   "velocidad_kmh": 86.83,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2142,
+   "distancia_km": 54.693,
+   "lat": 19.802752,
+   "lon": -99.202984,
+   "velocidad_kmh": 87.19,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2205,
+   "distancia_km": 56.223,
+   "lat": 19.813101,
+   "lon": -99.204953,
+   "velocidad_kmh": 87.66,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2268,
+   "distancia_km": 57.762,
+   "lat": 19.823506,
+   "lon": -99.206932,
+   "velocidad_kmh": 88.11,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2331,
+   "distancia_km": 59.307,
+   "lat": 19.833957,
+   "lon": -99.208921,
+   "velocidad_kmh": 88.44,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2394,
+   "distancia_km": 60.856,
+   "lat": 19.844434,
+   "lon": -99.210914,
+   "velocidad_kmh": 88.54,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2457,
+   "distancia_km": 62.404,
+   "lat": 19.854905,
+   "lon": -99.212907,
+   "velocidad_kmh": 88.35,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2520,
+   "distancia_km": 63.946,
+   "lat": 19.865335,
+   "lon": -99.214892,
+   "velocidad_kmh": 87.85,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2583,
+   "distancia_km": 65.477,
+   "lat": 19.875688,
+   "lon": -99.216863,
+   "velocidad_kmh": 87.08,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2646,
+   "distancia_km": 66.992,
+   "lat": 19.885936,
+   "lon": -99.218814,
+   "velocidad_kmh": 86.1,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2709,
+   "distancia_km": 68.489,
+   "lat": 19.89606,
+   "lon": -99.220742,
+   "velocidad_kmh": 85.01,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2772,
+   "distancia_km": 69.967,
+   "lat": 19.906055,
+   "lon": -99.222645,
+   "velocidad_kmh": 83.95,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2835,
+   "distancia_km": 71.428,
+   "lat": 19.915932,
+   "lon": -99.224527,
+   "velocidad_kmh": 83.03,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2898,
+   "distancia_km": 72.875,
+   "lat": 19.925715,
+   "lon": -99.22639,
+   "velocidad_kmh": 82.38,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 2961,
+   "distancia_km": 74.313,
+   "lat": 19.935441,
+   "lon": -99.228243,
+   "velocidad_kmh": 82.08,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 3024,
+   "distancia_km": 75.75,
+   "lat": 19.945155,
+   "lon": -99.230094,
+   "velocidad_kmh": 82.19,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 3087,
+   "distancia_km": 77.192,
+   "lat": 19.954906,
+   "lon": -99.231952,
+   "velocidad_kmh": 82.7,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 3150,
+   "distancia_km": 78.647,
+   "lat": 19.96474,
+   "lon": -99.233826,
+   "velocidad_kmh": 83.58,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 3213,
+   "distancia_km": 80.12,
+   "lat": 19.974695,
+   "lon": -99.235723,
+   "velocidad_kmh": 84.74,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 3276,
+   "distancia_km": 81.614,
+   "lat": 19.984798,
+   "lon": -99.237648,
+   "velocidad_kmh": 86.06,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 3339,
+   "distancia_km": 83.132,
+   "lat": 19.99506,
+   "lon": -99.239602,
+   "velocidad_kmh": 87.41,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 3402,
+   "distancia_km": 84.673,
+   "lat": 20.005477,
+   "lon": -99.241587,
+   "velocidad_kmh": 88.67,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 3465,
+   "distancia_km": 86.036,
+   "lat": 20.014684,
+   "lon": -99.243342,
+   "velocidad_kmh": 69.96,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 3528,
+   "distancia_km": 87.263,
+   "lat": 20.022978,
+   "lon": -99.244925,
+   "velocidad_kmh": 70.38,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 3591,
+   "distancia_km": 88.498,
+   "lat": 20.031323,
+   "lon": -99.246517,
+   "velocidad_kmh": 70.72,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 3654,
+   "distancia_km": 89.737,
+   "lat": 20.039694,
+   "lon": -99.248114,
+   "velocidad_kmh": 70.8,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 3717,
+   "distancia_km": 90.975,
+   "lat": 20.04806,
+   "lon": -99.24971,
+   "velocidad_kmh": 70.68,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 3780,
+   "distancia_km": 92.209,
+   "lat": 20.056403,
+   "lon": -99.251302,
+   "velocidad_kmh": 70.42,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 3843,
+   "distancia_km": 93.439,
+   "lat": 20.06471,
+   "lon": -99.252886,
+   "velocidad_kmh": 70.1,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 3906,
+   "distancia_km": 94.663,
+   "lat": 20.07298,
+   "lon": -99.254464,
+   "velocidad_kmh": 69.82,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 3969,
+   "distancia_km": 95.883,
+   "lat": 20.081223,
+   "lon": -99.256037,
+   "velocidad_kmh": 69.67,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4032,
+   "distancia_km": 97.103,
+   "lat": 20.08946,
+   "lon": -99.257608,
+   "velocidad_kmh": 69.72,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4095,
+   "distancia_km": 98.325,
+   "lat": 20.097717,
+   "lon": -99.259183,
+   "velocidad_kmh": 70.01,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4158,
+   "distancia_km": 99.555,
+   "lat": 20.106023,
+   "lon": -99.260767,
+   "velocidad_kmh": 70.56,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4221,
+   "distancia_km": 100.796,
+   "lat": 20.114408,
+   "lon": -99.262366,
+   "velocidad_kmh": 71.32,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4284,
+   "distancia_km": 102.052,
+   "lat": 20.122893,
+   "lon": -99.263983,
+   "velocidad_kmh": 72.26,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4347,
+   "distancia_km": 103.326,
+   "lat": 20.131495,
+   "lon": -99.265623,
+   "velocidad_kmh": 73.27,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4410,
+   "distancia_km": 104.617,
+   "lat": 20.140216,
+   "lon": -99.267285,
+   "velocidad_kmh": 74.26,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4473,
+   "distancia_km": 105.924,
+   "lat": 20.149047,
+   "lon": -99.268967,
+   "velocidad_kmh": 75.14,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4536,
+   "distancia_km": 107.245,
+   "lat": 20.15797,
+   "lon": -99.270667,
+   "velocidad_kmh": 75.8,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4599,
+   "distancia_km": 108.576,
+   "lat": 20.166954,
+   "lon": -99.272378,
+   "velocidad_kmh": 76.17,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4662,
+   "distancia_km": 109.91,
+   "lat": 20.175963,
+   "lon": -99.274094,
+   "velocidad_kmh": 76.24,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4725,
+   "distancia_km": 111.242,
+   "lat": 20.184961,
+   "lon": -99.275807,
+   "velocidad_kmh": 75.99,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4788,
+   "distancia_km": 112.568,
+   "lat": 20.193911,
+   "lon": -99.277511,
+   "velocidad_kmh": 75.45,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4851,
+   "distancia_km": 113.882,
+   "lat": 20.202785,
+   "lon": -99.2792,
+   "velocidad_kmh": 74.71,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4914,
+   "distancia_km": 115.181,
+   "lat": 20.211561,
+   "lon": -99.28087,
+   "velocidad_kmh": 73.84,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 4977,
+   "distancia_km": 116.465,
+   "lat": 20.220232,
+   "lon": -99.28252,
+   "velocidad_kmh": 72.94,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5040,
+   "distancia_km": 117.734,
+   "lat": 20.228799,
+   "lon": -99.284151,
+   "velocidad_kmh": 72.12,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5103,
+   "distancia_km": 118.99,
+   "lat": 20.237279,
+   "lon": -99.285764,
+   "velocidad_kmh": 71.46,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5166,
+   "distancia_km": 120.236,
+   "lat": 20.245692,
+   "lon": -99.287364,
+   "velocidad_kmh": 71.01,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5229,
+   "distancia_km": 121.477,
+   "lat": 20.254067,
+   "lon": -99.288957,
+   "velocidad_kmh": 70.8,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5292,
+   "distancia_km": 122.716,
+   "lat": 20.262431,
+   "lon": -99.290548,
+   "velocidad_kmh": 70.82,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5355,
+   "distancia_km": 123.957,
+   "lat": 20.270809,
+   "lon": -99.29214,
+   "velocidad_kmh": 71.03,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5418,
+   "distancia_km": 125.203,
+   "lat": 20.279219,
+   "lon": -99.293739,
+   "velocidad_kmh": 71.35,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5481,
+   "distancia_km": 126.455,
+   "lat": 20.28767,
+   "lon": -99.295345,
+   "velocidad_kmh": 71.7,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5544,
+   "distancia_km": 127.712,
+   "lat": 20.296158,
+   "lon": -99.296957,
+   "velocidad_kmh": 71.98,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5607,
+   "distancia_km": 128.973,
+   "lat": 20.30467,
+   "lon": -99.298574,
+   "velocidad_kmh": 72.09,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5670,
+   "distancia_km": 130.234,
+   "lat": 20.313183,
+   "lon": -99.30019,
+   "velocidad_kmh": 71.99,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5733,
+   "distancia_km": 131.491,
+   "lat": 20.321667,
+   "lon": -99.301801,
+   "velocidad_kmh": 71.61,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5796,
+   "distancia_km": 132.739,
+   "lat": 20.330091,
+   "lon": -99.3034,
+   "velocidad_kmh": 70.97,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5859,
+   "distancia_km": 133.973,
+   "lat": 20.338424,
+   "lon": -99.304981,
+   "velocidad_kmh": 70.09,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5922,
+   "distancia_km": 135.19,
+   "lat": 20.346642,
+   "lon": -99.30654,
+   "velocidad_kmh": 69.04,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 5985,
+   "distancia_km": 136.477,
+   "lat": 20.355329,
+   "lon": -99.308187,
+   "velocidad_kmh": 90.22,
+   "aceleracion_ms2": 0.074,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6048,
+   "distancia_km": 138.086,
+   "lat": 20.366193,
+   "lon": -99.310246,
+   "velocidad_kmh": 91.59,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6111,
+   "distancia_km": 139.676,
+   "lat": 20.376933,
+   "lon": -99.312281,
+   "velocidad_kmh": 90.23,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6174,
+   "distancia_km": 141.245,
+   "lat": 20.387527,
+   "lon": -99.314288,
+   "velocidad_kmh": 89.15,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6237,
+   "distancia_km": 142.799,
+   "lat": 20.398016,
+   "lon": -99.316275,
+   "velocidad_kmh": 88.45,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6300,
+   "distancia_km": 144.344,
+   "lat": 20.408448,
+   "lon": -99.31825,
+   "velocidad_kmh": 88.18,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6363,
+   "distancia_km": 145.888,
+   "lat": 20.418874,
+   "lon": -99.320224,
+   "velocidad_kmh": 88.33,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6426,
+   "distancia_km": 147.437,
+   "lat": 20.42934,
+   "lon": -99.322205,
+   "velocidad_kmh": 88.85,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6489,
+   "distancia_km": 148.999,
+   "lat": 20.439885,
+   "lon": -99.324201,
+   "velocidad_kmh": 89.65,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6552,
+   "distancia_km": 150.576,
+   "lat": 20.450536,
+   "lon": -99.326216,
+   "velocidad_kmh": 90.6,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6615,
+   "distancia_km": 152.17,
+   "lat": 20.461302,
+   "lon": -99.328252,
+   "velocidad_kmh": 91.57,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6678,
+   "distancia_km": 153.781,
+   "lat": 20.472177,
+   "lon": -99.330309,
+   "velocidad_kmh": 92.43,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6741,
+   "distancia_km": 155.404,
+   "lat": 20.483142,
+   "lon": -99.332382,
+   "velocidad_kmh": 93.07,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6804,
+   "distancia_km": 157.037,
+   "lat": 20.494167,
+   "lon": -99.334466,
+   "velocidad_kmh": 93.42,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6867,
+   "distancia_km": 158.672,
+   "lat": 20.505214,
+   "lon": -99.336554,
+   "velocidad_kmh": 93.46,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6930,
+   "distancia_km": 160.306,
+   "lat": 20.516247,
+   "lon": -99.338639,
+   "velocidad_kmh": 93.2,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 6993,
+   "distancia_km": 161.933,
+   "lat": 20.527235,
+   "lon": -99.340715,
+   "velocidad_kmh": 92.71,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 7056,
+   "distancia_km": 163.55,
+   "lat": 20.538157,
+   "lon": -99.342778,
+   "velocidad_kmh": 92.1,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 7119,
+   "distancia_km": 165.156,
+   "lat": 20.549006,
+   "lon": -99.344826,
+   "velocidad_kmh": 91.49,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 7182,
+   "distancia_km": 166.753,
+   "lat": 20.559791,
+   "lon": -99.346863,
+   "velocidad_kmh": 91.02,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 7245,
+   "distancia_km": 167.208,
+   "lat": 20.562856,
+   "lon": -99.347438,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7308,
+   "distancia_km": 167.208,
+   "lat": 20.562846,
+   "lon": -99.347431,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7371,
+   "distancia_km": 167.208,
+   "lat": 20.562836,
+   "lon": -99.347423,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7434,
+   "distancia_km": 167.208,
+   "lat": 20.562826,
+   "lon": -99.347415,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7497,
+   "distancia_km": 167.208,
+   "lat": 20.562817,
+   "lon": -99.347407,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7560,
+   "distancia_km": 167.208,
+   "lat": 20.562808,
+   "lon": -99.347399,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7623,
+   "distancia_km": 167.208,
+   "lat": 20.5628,
+   "lon": -99.34739,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7686,
+   "distancia_km": 167.208,
+   "lat": 20.562791,
+   "lon": -99.347381,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7749,
+   "distancia_km": 167.208,
+   "lat": 20.562784,
+   "lon": -99.347372,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7812,
+   "distancia_km": 167.208,
+   "lat": 20.562776,
+   "lon": -99.347362,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7875,
+   "distancia_km": 167.208,
+   "lat": 20.562769,
+   "lon": -99.347352,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 7938,
+   "distancia_km": 167.208,
+   "lat": 20.562762,
+   "lon": -99.347342,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8001,
+   "distancia_km": 167.208,
+   "lat": 20.562756,
+   "lon": -99.347331,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8064,
+   "distancia_km": 167.208,
+   "lat": 20.56275,
+   "lon": -99.347321,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8127,
+   "distancia_km": 167.208,
+   "lat": 20.562744,
+   "lon": -99.34731,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8190,
+   "distancia_km": 167.208,
+   "lat": 20.562739,
+   "lon": -99.347299,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8253,
+   "distancia_km": 167.208,
+   "lat": 20.562735,
+   "lon": -99.347288,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8316,
+   "distancia_km": 167.208,
+   "lat": 20.56273,
+   "lon": -99.347276,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8379,
+   "distancia_km": 167.208,
+   "lat": 20.562726,
+   "lon": -99.347264,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8442,
+   "distancia_km": 167.208,
+   "lat": 20.562723,
+   "lon": -99.347252,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8505,
+   "distancia_km": 167.208,
+   "lat": 20.56272,
+   "lon": -99.34724,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8568,
+   "distancia_km": 167.208,
+   "lat": 20.562717,
+   "lon": -99.347228,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8631,
+   "distancia_km": 167.208,
+   "lat": 20.562715,
+   "lon": -99.347216,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8694,
+   "distancia_km": 167.208,
+   "lat": 20.562713,
+   "lon": -99.347204,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8757,
+   "distancia_km": 167.208,
+   "lat": 20.562712,
+   "lon": -99.347191,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8820,
+   "distancia_km": 167.208,
+   "lat": 20.562711,
+   "lon": -99.347178,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8883,
+   "distancia_km": 167.208,
+   "lat": 20.562711,
+   "lon": -99.347166,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 8946,
+   "distancia_km": 167.208,
+   "lat": 20.562711,
+   "lon": -99.347153,
+   "velocidad_kmh": 90.93,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 9009,
+   "distancia_km": 167.444,
+   "lat": 20.564308,
+   "lon": -99.347442,
+   "velocidad_kmh": 96.49,
+   "aceleracion_ms2": 0.098,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9072,
+   "distancia_km": 169.185,
+   "lat": 20.576082,
+   "lon": -99.349657,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9135,
+   "distancia_km": 170.935,
+   "lat": 20.587915,
+   "lon": -99.351883,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9198,
+   "distancia_km": 172.679,
+   "lat": 20.599711,
+   "lon": -99.354101,
+   "velocidad_kmh": 99.06,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9261,
+   "distancia_km": 174.399,
+   "lat": 20.611338,
+   "lon": -99.356288,
+   "velocidad_kmh": 97.45,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9324,
+   "distancia_km": 176.09,
+   "lat": 20.622775,
+   "lon": -99.358438,
+   "velocidad_kmh": 95.86,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9387,
+   "distancia_km": 177.754,
+   "lat": 20.63403,
+   "lon": -99.360555,
+   "velocidad_kmh": 94.4,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9450,
+   "distancia_km": 179.395,
+   "lat": 20.645129,
+   "lon": -99.362641,
+   "velocidad_kmh": 93.22,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9513,
+   "distancia_km": 181.019,
+   "lat": 20.656109,
+   "lon": -99.364705,
+   "velocidad_kmh": 92.38,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9576,
+   "distancia_km": 182.631,
+   "lat": 20.667012,
+   "lon": -99.366754,
+   "velocidad_kmh": 91.92,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9639,
+   "distancia_km": 184.238,
+   "lat": 20.677885,
+   "lon": -99.368798,
+   "velocidad_kmh": 91.84,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9702,
+   "distancia_km": 185.847,
+   "lat": 20.688768,
+   "lon": -99.370844,
+   "velocidad_kmh": 92.08,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9765,
+   "distancia_km": 187.462,
+   "lat": 20.699694,
+   "lon": -99.372897,
+   "velocidad_kmh": 92.53,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9828,
+   "distancia_km": 189.086,
+   "lat": 20.71068,
+   "lon": -99.374963,
+   "velocidad_kmh": 93.07,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9891,
+   "distancia_km": 190.719,
+   "lat": 20.72173,
+   "lon": -99.37704,
+   "velocidad_kmh": 93.58,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 9954,
+   "distancia_km": 192.36,
+   "lat": 20.732831,
+   "lon": -99.379127,
+   "velocidad_kmh": 93.92,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 10017,
+   "distancia_km": 194.005,
+   "lat": 20.74396,
+   "lon": -99.381219,
+   "velocidad_kmh": 94.02,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 10080,
+   "distancia_km": 195.632,
+   "lat": 20.754968,
+   "lon": -99.383289,
+   "velocidad_kmh": 88.82,
+   "aceleracion_ms2": -0.026,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10143,
+   "distancia_km": 197.169,
+   "lat": 20.765367,
+   "lon": -99.385244,
+   "velocidad_kmh": 87.43,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10206,
+   "distancia_km": 198.693,
+   "lat": 20.775677,
+   "lon": -99.387181,
+   "velocidad_kmh": 86.66,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10269,
+   "distancia_km": 200.201,
+   "lat": 20.785883,
+   "lon": -99.3891,
+   "velocidad_kmh": 85.71,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10332,
+   "distancia_km": 201.692,
+   "lat": 20.795972,
+   "lon": -99.390996,
+   "velocidad_kmh": 84.68,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10395,
+   "distancia_km": 203.165,
+   "lat": 20.805942,
+   "lon": -99.39287,
+   "velocidad_kmh": 83.71,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10458,
+   "distancia_km": 204.623,
+   "lat": 20.815805,
+   "lon": -99.394724,
+   "velocidad_kmh": 82.91,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10521,
+   "distancia_km": 206.068,
+   "lat": 20.82559,
+   "lon": -99.396563,
+   "velocidad_kmh": 82.39,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10584,
+   "distancia_km": 207.508,
+   "lat": 20.835337,
+   "lon": -99.398395,
+   "velocidad_kmh": 82.25,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10647,
+   "distancia_km": 208.949,
+   "lat": 20.84509,
+   "lon": -99.400229,
+   "velocidad_kmh": 82.51,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10710,
+   "distancia_km": 210.399,
+   "lat": 20.854899,
+   "lon": -99.402074,
+   "velocidad_kmh": 83.17,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10773,
+   "distancia_km": 211.863,
+   "lat": 20.864808,
+   "lon": -99.403937,
+   "velocidad_kmh": 84.17,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10836,
+   "distancia_km": 213.346,
+   "lat": 20.874852,
+   "lon": -99.405827,
+   "velocidad_kmh": 85.43,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10899,
+   "distancia_km": 214.854,
+   "lat": 20.885054,
+   "lon": -99.407746,
+   "velocidad_kmh": 86.81,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 10962,
+   "distancia_km": 216.385,
+   "lat": 20.895421,
+   "lon": -99.409698,
+   "velocidad_kmh": 88.2,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11025,
+   "distancia_km": 217.94,
+   "lat": 20.905946,
+   "lon": -99.411679,
+   "velocidad_kmh": 89.46,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11088,
+   "distancia_km": 219.515,
+   "lat": 20.916607,
+   "lon": -99.413686,
+   "velocidad_kmh": 90.48,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11151,
+   "distancia_km": 221.106,
+   "lat": 20.927372,
+   "lon": -99.415713,
+   "velocidad_kmh": 91.2,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11214,
+   "distancia_km": 222.705,
+   "lat": 20.938201,
+   "lon": -99.417753,
+   "velocidad_kmh": 91.58,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11277,
+   "distancia_km": 224.309,
+   "lat": 20.949055,
+   "lon": -99.419798,
+   "velocidad_kmh": 91.63,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11340,
+   "distancia_km": 225.911,
+   "lat": 20.9599,
+   "lon": -99.421841,
+   "velocidad_kmh": 91.43,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11403,
+   "distancia_km": 227.508,
+   "lat": 20.97071,
+   "lon": -99.423879,
+   "velocidad_kmh": 91.06,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11466,
+   "distancia_km": 229.098,
+   "lat": 20.981472,
+   "lon": -99.425907,
+   "velocidad_kmh": 90.65,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11529,
+   "distancia_km": 230.681,
+   "lat": 20.992188,
+   "lon": -99.427927,
+   "velocidad_kmh": 90.3,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11592,
+   "distancia_km": 232.259,
+   "lat": 21.002874,
+   "lon": -99.429942,
+   "velocidad_kmh": 90.14,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11655,
+   "distancia_km": 233.837,
+   "lat": 21.013555,
+   "lon": -99.431956,
+   "velocidad_kmh": 90.24,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11718,
+   "distancia_km": 235.42,
+   "lat": 21.024267,
+   "lon": -99.433977,
+   "velocidad_kmh": 90.65,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11781,
+   "distancia_km": 237.012,
+   "lat": 21.035047,
+   "lon": -99.43601,
+   "velocidad_kmh": 91.38,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11844,
+   "distancia_km": 238.62,
+   "lat": 21.045931,
+   "lon": -99.438064,
+   "velocidad_kmh": 92.38,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11907,
+   "distancia_km": 240.247,
+   "lat": 21.056945,
+   "lon": -99.440143,
+   "velocidad_kmh": 93.57,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 11970,
+   "distancia_km": 241.895,
+   "lat": 21.068104,
+   "lon": -99.44225,
+   "velocidad_kmh": 94.82,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12033,
+   "distancia_km": 243.566,
+   "lat": 21.079409,
+   "lon": -99.444384,
+   "velocidad_kmh": 96.02,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12096,
+   "distancia_km": 245.255,
+   "lat": 21.090846,
+   "lon": -99.446544,
+   "velocidad_kmh": 97.02,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12159,
+   "distancia_km": 246.96,
+   "lat": 21.102385,
+   "lon": -99.448724,
+   "velocidad_kmh": 97.73,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12222,
+   "distancia_km": 248.674,
+   "lat": 21.113987,
+   "lon": -99.450916,
+   "velocidad_kmh": 98.07,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12285,
+   "distancia_km": 250.39,
+   "lat": 21.125603,
+   "lon": -99.453112,
+   "velocidad_kmh": 98.0,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12348,
+   "distancia_km": 252.101,
+   "lat": 21.137186,
+   "lon": -99.455301,
+   "velocidad_kmh": 97.52,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12411,
+   "distancia_km": 253.801,
+   "lat": 21.148691,
+   "lon": -99.457476,
+   "velocidad_kmh": 96.7,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12474,
+   "distancia_km": 255.484,
+   "lat": 21.160082,
+   "lon": -99.45963,
+   "velocidad_kmh": 95.63,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12537,
+   "distancia_km": 257.147,
+   "lat": 21.171338,
+   "lon": -99.461759,
+   "velocidad_kmh": 94.43,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12600,
+   "distancia_km": 258.789,
+   "lat": 21.182451,
+   "lon": -99.463861,
+   "velocidad_kmh": 93.23,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12663,
+   "distancia_km": 260.41,
+   "lat": 21.193428,
+   "lon": -99.465938,
+   "velocidad_kmh": 92.16,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12726,
+   "distancia_km": 262.015,
+   "lat": 21.204291,
+   "lon": -99.467994,
+   "velocidad_kmh": 91.31,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12789,
+   "distancia_km": 263.608,
+   "lat": 21.21507,
+   "lon": -99.470034,
+   "velocidad_kmh": 90.75,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12852,
+   "distancia_km": 265.193,
+   "lat": 21.225802,
+   "lon": -99.472066,
+   "velocidad_kmh": 90.52,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12915,
+   "distancia_km": 266.778,
+   "lat": 21.236524,
+   "lon": -99.474097,
+   "velocidad_kmh": 90.57,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 12978,
+   "distancia_km": 268.365,
+   "lat": 21.247266,
+   "lon": -99.476132,
+   "velocidad_kmh": 90.85,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 13041,
+   "distancia_km": 269.958,
+   "lat": 21.25805,
+   "lon": -99.478175,
+   "velocidad_kmh": 91.25,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 13104,
+   "distancia_km": 271.559,
+   "lat": 21.268883,
+   "lon": -99.480228,
+   "velocidad_kmh": 91.67,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 13167,
+   "distancia_km": 273.166,
+   "lat": 21.27976,
+   "lon": -99.482289,
+   "velocidad_kmh": 91.98,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 13230,
+   "distancia_km": 274.777,
+   "lat": 21.290661,
+   "lon": -99.484356,
+   "velocidad_kmh": 92.07,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 13293,
+   "distancia_km": 276.387,
+   "lat": 21.301555,
+   "lon": -99.486421,
+   "velocidad_kmh": 91.86,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 13356,
+   "distancia_km": 277.99,
+   "lat": 21.312404,
+   "lon": -99.488479,
+   "velocidad_kmh": 91.31,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 13419,
+   "distancia_km": 279.58,
+   "lat": 21.323166,
+   "lon": -99.49052,
+   "velocidad_kmh": 90.42,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 13482,
+   "distancia_km": 281.008,
+   "lat": 21.332827,
+   "lon": -99.492354,
+   "velocidad_kmh": 69.92,
+   "aceleracion_ms2": -0.018,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 13545,
+   "distancia_km": 282.215,
+   "lat": 21.340996,
+   "lon": -99.493905,
+   "velocidad_kmh": 68.37,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 13608,
+   "distancia_km": 283.401,
+   "lat": 21.349027,
+   "lon": -99.495431,
+   "velocidad_kmh": 67.26,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 13671,
+   "distancia_km": 284.569,
+   "lat": 21.356928,
+   "lon": -99.496933,
+   "velocidad_kmh": 66.19,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 13734,
+   "distancia_km": 285.718,
+   "lat": 21.36471,
+   "lon": -99.498413,
+   "velocidad_kmh": 65.27,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 13797,
+   "distancia_km": 286.854,
+   "lat": 21.372395,
+   "lon": -99.499874,
+   "velocidad_kmh": 64.58,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 13860,
+   "distancia_km": 287.98,
+   "lat": 21.380016,
+   "lon": -99.501324,
+   "velocidad_kmh": 64.18,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 13923,
+   "distancia_km": 289.102,
+   "lat": 21.387608,
+   "lon": -99.502769,
+   "velocidad_kmh": 64.09,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 13986,
+   "distancia_km": 290.225,
+   "lat": 21.395208,
+   "lon": -99.504216,
+   "velocidad_kmh": 64.31,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14049,
+   "distancia_km": 291.355,
+   "lat": 21.40285,
+   "lon": -99.50567,
+   "velocidad_kmh": 64.79,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14112,
+   "distancia_km": 292.494,
+   "lat": 21.41056,
+   "lon": -99.507139,
+   "velocidad_kmh": 65.46,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14175,
+   "distancia_km": 293.647,
+   "lat": 21.418355,
+   "lon": -99.508623,
+   "velocidad_kmh": 66.22,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14238,
+   "distancia_km": 294.812,
+   "lat": 21.42624,
+   "lon": -99.510125,
+   "velocidad_kmh": 66.96,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14301,
+   "distancia_km": 295.99,
+   "lat": 21.434207,
+   "lon": -99.511643,
+   "velocidad_kmh": 67.61,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14364,
+   "distancia_km": 297.178,
+   "lat": 21.442241,
+   "lon": -99.513173,
+   "velocidad_kmh": 68.09,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14427,
+   "distancia_km": 298.372,
+   "lat": 21.450318,
+   "lon": -99.514712,
+   "velocidad_kmh": 68.34,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14490,
+   "distancia_km": 299.568,
+   "lat": 21.45841,
+   "lon": -99.516254,
+   "velocidad_kmh": 68.36,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14553,
+   "distancia_km": 300.763,
+   "lat": 21.466491,
+   "lon": -99.517795,
+   "velocidad_kmh": 68.17,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14616,
+   "distancia_km": 301.953,
+   "lat": 21.474539,
+   "lon": -99.519329,
+   "velocidad_kmh": 67.83,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14679,
+   "distancia_km": 303.136,
+   "lat": 21.482541,
+   "lon": -99.520855,
+   "velocidad_kmh": 67.41,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14742,
+   "distancia_km": 304.313,
+   "lat": 21.490493,
+   "lon": -99.522372,
+   "velocidad_kmh": 67.02,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14805,
+   "distancia_km": 305.483,
+   "lat": 21.498404,
+   "lon": -99.523881,
+   "velocidad_kmh": 66.74,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14868,
+   "distancia_km": 306.649,
+   "lat": 21.506293,
+   "lon": -99.525386,
+   "velocidad_kmh": 66.65,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14931,
+   "distancia_km": 307.817,
+   "lat": 21.514187,
+   "lon": -99.526892,
+   "velocidad_kmh": 66.83,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 14994,
+   "distancia_km": 308.99,
+   "lat": 21.522118,
+   "lon": -99.528406,
+   "velocidad_kmh": 67.29,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15057,
+   "distancia_km": 310.174,
+   "lat": 21.530119,
+   "lon": -99.529932,
+   "velocidad_kmh": 68.02,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15120,
+   "distancia_km": 311.372,
+   "lat": 21.538222,
+   "lon": -99.531479,
+   "velocidad_kmh": 68.99,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15183,
+   "distancia_km": 312.59,
+   "lat": 21.546449,
+   "lon": -99.533049,
+   "velocidad_kmh": 70.11,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15246,
+   "distancia_km": 313.827,
+   "lat": 21.554814,
+   "lon": -99.534644,
+   "velocidad_kmh": 71.3,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15309,
+   "distancia_km": 315.085,
+   "lat": 21.563317,
+   "lon": -99.536267,
+   "velocidad_kmh": 72.45,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15372,
+   "distancia_km": 316.362,
+   "lat": 21.571948,
+   "lon": -99.537913,
+   "velocidad_kmh": 73.46,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15435,
+   "distancia_km": 317.655,
+   "lat": 21.580685,
+   "lon": -99.53958,
+   "velocidad_kmh": 74.24,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15498,
+   "distancia_km": 318.959,
+   "lat": 21.589497,
+   "lon": -99.541261,
+   "velocidad_kmh": 74.74,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15561,
+   "distancia_km": 320.269,
+   "lat": 21.598351,
+   "lon": -99.54295,
+   "velocidad_kmh": 74.94,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15624,
+   "distancia_km": 321.58,
+   "lat": 21.607209,
+   "lon": -99.54464,
+   "velocidad_kmh": 74.84,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15687,
+   "distancia_km": 322.887,
+   "lat": 21.616041,
+   "lon": -99.546325,
+   "velocidad_kmh": 74.51,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15750,
+   "distancia_km": 324.187,
+   "lat": 21.624821,
+   "lon": -99.548,
+   "velocidad_kmh": 74.0,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15813,
+   "distancia_km": 325.477,
+   "lat": 21.633536,
+   "lon": -99.549663,
+   "velocidad_kmh": 73.42,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15876,
+   "distancia_km": 326.757,
+   "lat": 21.642183,
+   "lon": -99.551312,
+   "velocidad_kmh": 72.87,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 15939,
+   "distancia_km": 328.028,
+   "lat": 21.650769,
+   "lon": -99.55295,
+   "velocidad_kmh": 72.42,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 16002,
+   "distancia_km": 329.292,
+   "lat": 21.659312,
+   "lon": -99.554581,
+   "velocidad_kmh": 72.16,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 16065,
+   "distancia_km": 330.554,
+   "lat": 21.667837,
+   "lon": -99.556207,
+   "velocidad_kmh": 72.11,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 16128,
+   "distancia_km": 331.994,
+   "lat": 21.677564,
+   "lon": -99.558061,
+   "velocidad_kmh": 98.26,
+   "aceleracion_ms2": 0.026,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16191,
+   "distancia_km": 333.731,
+   "lat": 21.689301,
+   "lon": -99.560295,
+   "velocidad_kmh": 99.67,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16254,
+   "distancia_km": 335.48,
+   "lat": 21.701113,
+   "lon": -99.562543,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16317,
+   "distancia_km": 337.23,
+   "lat": 21.712936,
+   "lon": -99.564794,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16380,
+   "distancia_km": 338.98,
+   "lat": 21.724759,
+   "lon": -99.567043,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16443,
+   "distancia_km": 340.73,
+   "lat": 21.736581,
+   "lon": -99.569293,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16506,
+   "distancia_km": 342.48,
+   "lat": 21.748403,
+   "lon": -99.571543,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16569,
+   "distancia_km": 344.23,
+   "lat": 21.760224,
+   "lon": -99.573792,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16632,
+   "distancia_km": 345.98,
+   "lat": 21.772045,
+   "lon": -99.576041,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16695,
+   "distancia_km": 347.73,
+   "lat": 21.783866,
+   "lon": -99.57829,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16758,
+   "distancia_km": 349.479,
+   "lat": 21.795679,
+   "lon": -99.580537,
+   "velocidad_kmh": 99.6,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16821,
+   "distancia_km": 351.208,
+   "lat": 21.807362,
+   "lon": -99.582759,
+   "velocidad_kmh": 98.07,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16884,
+   "distancia_km": 352.91,
+   "lat": 21.818857,
+   "lon": -99.584945,
+   "velocidad_kmh": 96.44,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 16947,
+   "distancia_km": 354.584,
+   "lat": 21.83016,
+   "lon": -99.587095,
+   "velocidad_kmh": 94.85,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17010,
+   "distancia_km": 356.231,
+   "lat": 21.841284,
+   "lon": -99.58921,
+   "velocidad_kmh": 93.45,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17073,
+   "distancia_km": 357.856,
+   "lat": 21.852259,
+   "lon": -99.591298,
+   "velocidad_kmh": 92.34,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17136,
+   "distancia_km": 359.465,
+   "lat": 21.863123,
+   "lon": -99.593364,
+   "velocidad_kmh": 91.6,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17199,
+   "distancia_km": 361.064,
+   "lat": 21.873923,
+   "lon": -99.595417,
+   "velocidad_kmh": 91.25,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17262,
+   "distancia_km": 362.66,
+   "lat": 21.884704,
+   "lon": -99.597467,
+   "velocidad_kmh": 91.27,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17325,
+   "distancia_km": 364.26,
+   "lat": 21.895507,
+   "lon": -99.59952,
+   "velocidad_kmh": 91.59,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17388,
+   "distancia_km": 365.867,
+   "lat": 21.906361,
+   "lon": -99.601583,
+   "velocidad_kmh": 92.11,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17451,
+   "distancia_km": 367.484,
+   "lat": 21.917281,
+   "lon": -99.603658,
+   "velocidad_kmh": 92.7,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17514,
+   "distancia_km": 369.111,
+   "lat": 21.928269,
+   "lon": -99.605745,
+   "velocidad_kmh": 93.23,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17577,
+   "distancia_km": 370.746,
+   "lat": 21.93931,
+   "lon": -99.607842,
+   "velocidad_kmh": 93.58,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17640,
+   "distancia_km": 372.385,
+   "lat": 21.950378,
+   "lon": -99.609944,
+   "velocidad_kmh": 93.67,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17703,
+   "distancia_km": 374.023,
+   "lat": 21.961436,
+   "lon": -99.612043,
+   "velocidad_kmh": 93.44,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17766,
+   "distancia_km": 375.654,
+   "lat": 21.972449,
+   "lon": -99.614134,
+   "velocidad_kmh": 92.9,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17829,
+   "distancia_km": 377.272,
+   "lat": 21.983381,
+   "lon": -99.616209,
+   "velocidad_kmh": 92.09,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17892,
+   "distancia_km": 378.876,
+   "lat": 21.994207,
+   "lon": -99.618263,
+   "velocidad_kmh": 91.12,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 17955,
+   "distancia_km": 380.461,
+   "lat": 22.004913,
+   "lon": -99.620294,
+   "velocidad_kmh": 90.09,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 18018,
+   "distancia_km": 382.029,
+   "lat": 22.015501,
+   "lon": -99.622303,
+   "velocidad_kmh": 89.15,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 18081,
+   "distancia_km": 383.582,
+   "lat": 22.025989,
+   "lon": -99.624292,
+   "velocidad_kmh": 88.42,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 18144,
+   "distancia_km": 385.126,
+   "lat": 22.036411,
+   "lon": -99.626269,
+   "velocidad_kmh": 88.02,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 18207,
+   "distancia_km": 386.665,
+   "lat": 22.046809,
+   "lon": -99.62824,
+   "velocidad_kmh": 88.03,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 18270,
+   "distancia_km": 388.209,
+   "lat": 22.057234,
+   "lon": -99.630216,
+   "velocidad_kmh": 88.47,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 18333,
+   "distancia_km": 389.764,
+   "lat": 22.067735,
+   "lon": -99.632206,
+   "velocidad_kmh": 89.32,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 18396,
+   "distancia_km": 391.29,
+   "lat": 22.07804,
+   "lon": -99.634158,
+   "velocidad_kmh": 84.95,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18459,
+   "distancia_km": 392.787,
+   "lat": 22.088147,
+   "lon": -99.636073,
+   "velocidad_kmh": 86.19,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18522,
+   "distancia_km": 394.308,
+   "lat": 22.09842,
+   "lon": -99.638019,
+   "velocidad_kmh": 87.63,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18585,
+   "distancia_km": 395.855,
+   "lat": 22.108861,
+   "lon": -99.639996,
+   "velocidad_kmh": 89.04,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18648,
+   "distancia_km": 397.424,
+   "lat": 22.119461,
+   "lon": -99.642002,
+   "velocidad_kmh": 90.28,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18711,
+   "distancia_km": 399.013,
+   "lat": 22.130193,
+   "lon": -99.644033,
+   "velocidad_kmh": 91.26,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18774,
+   "distancia_km": 400.617,
+   "lat": 22.141022,
+   "lon": -99.646082,
+   "velocidad_kmh": 91.92,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18837,
+   "distancia_km": 402.229,
+   "lat": 22.151909,
+   "lon": -99.648141,
+   "velocidad_kmh": 92.23,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18900,
+   "distancia_km": 403.843,
+   "lat": 22.162813,
+   "lon": -99.650204,
+   "velocidad_kmh": 92.23,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 18963,
+   "distancia_km": 405.455,
+   "lat": 22.173702,
+   "lon": -99.652263,
+   "velocidad_kmh": 91.98,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19026,
+   "distancia_km": 407.061,
+   "lat": 22.184551,
+   "lon": -99.654313,
+   "velocidad_kmh": 91.58,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19089,
+   "distancia_km": 408.66,
+   "lat": 22.195349,
+   "lon": -99.656354,
+   "velocidad_kmh": 91.15,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19152,
+   "distancia_km": 410.252,
+   "lat": 22.206102,
+   "lon": -99.658386,
+   "velocidad_kmh": 90.81,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19215,
+   "distancia_km": 411.159,
+   "lat": 22.212227,
+   "lon": -99.659542,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19278,
+   "distancia_km": 411.159,
+   "lat": 22.212218,
+   "lon": -99.659537,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19341,
+   "distancia_km": 411.159,
+   "lat": 22.212208,
+   "lon": -99.659531,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19404,
+   "distancia_km": 411.159,
+   "lat": 22.212199,
+   "lon": -99.659525,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19467,
+   "distancia_km": 411.159,
+   "lat": 22.212191,
+   "lon": -99.659518,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19530,
+   "distancia_km": 411.159,
+   "lat": 22.212182,
+   "lon": -99.659511,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19593,
+   "distancia_km": 411.159,
+   "lat": 22.212174,
+   "lon": -99.659504,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19656,
+   "distancia_km": 411.159,
+   "lat": 22.212166,
+   "lon": -99.659497,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19719,
+   "distancia_km": 411.159,
+   "lat": 22.212159,
+   "lon": -99.659489,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19782,
+   "distancia_km": 411.159,
+   "lat": 22.212152,
+   "lon": -99.659481,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19845,
+   "distancia_km": 411.159,
+   "lat": 22.212146,
+   "lon": -99.659472,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19908,
+   "distancia_km": 411.159,
+   "lat": 22.21214,
+   "lon": -99.659463,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 19971,
+   "distancia_km": 411.159,
+   "lat": 22.212134,
+   "lon": -99.659454,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20034,
+   "distancia_km": 411.159,
+   "lat": 22.212129,
+   "lon": -99.659445,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20097,
+   "distancia_km": 411.159,
+   "lat": 22.212124,
+   "lon": -99.659435,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20160,
+   "distancia_km": 411.159,
+   "lat": 22.212119,
+   "lon": -99.659425,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20223,
+   "distancia_km": 411.159,
+   "lat": 22.212115,
+   "lon": -99.659415,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20286,
+   "distancia_km": 411.159,
+   "lat": 22.212111,
+   "lon": -99.659404,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20349,
+   "distancia_km": 411.159,
+   "lat": 22.212108,
+   "lon": -99.659394,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20412,
+   "distancia_km": 411.159,
+   "lat": 22.212105,
+   "lon": -99.659383,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20475,
+   "distancia_km": 411.159,
+   "lat": 22.212103,
+   "lon": -99.659372,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20538,
+   "distancia_km": 411.159,
+   "lat": 22.212101,
+   "lon": -99.65936,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20601,
+   "distancia_km": 411.159,
+   "lat": 22.212099,
+   "lon": -99.659349,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20664,
+   "distancia_km": 411.159,
+   "lat": 22.212098,
+   "lon": -99.659337,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20727,
+   "distancia_km": 411.159,
+   "lat": 22.212098,
+   "lon": -99.659325,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20790,
+   "distancia_km": 411.159,
+   "lat": 22.212098,
+   "lon": -99.659313,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20853,
+   "distancia_km": 411.159,
+   "lat": 22.212098,
+   "lon": -99.659301,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20916,
+   "distancia_km": 411.159,
+   "lat": 22.212099,
+   "lon": -99.659289,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 20979,
+   "distancia_km": 411.159,
+   "lat": 22.2121,
+   "lon": -99.659276,
+   "velocidad_kmh": 90.7,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21042,
+   "distancia_km": 412.511,
+   "lat": 22.221237,
+   "lon": -99.660992,
+   "velocidad_kmh": 89.62,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21105,
+   "distancia_km": 414.069,
+   "lat": 22.231775,
+   "lon": -99.662973,
+   "velocidad_kmh": 88.44,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21168,
+   "distancia_km": 415.605,
+   "lat": 22.242161,
+   "lon": -99.664925,
+   "velocidad_kmh": 87.09,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21231,
+   "distancia_km": 417.116,
+   "lat": 22.252385,
+   "lon": -99.666846,
+   "velocidad_kmh": 85.7,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21294,
+   "distancia_km": 418.604,
+   "lat": 22.262449,
+   "lon": -99.668737,
+   "velocidad_kmh": 84.41,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21357,
+   "distancia_km": 420.072,
+   "lat": 22.272373,
+   "lon": -99.670601,
+   "velocidad_kmh": 83.33,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21420,
+   "distancia_km": 421.523,
+   "lat": 22.282188,
+   "lon": -99.672444,
+   "velocidad_kmh": 82.58,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21483,
+   "distancia_km": 422.964,
+   "lat": 22.291938,
+   "lon": -99.674275,
+   "velocidad_kmh": 82.21,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21546,
+   "distancia_km": 424.403,
+   "lat": 22.301669,
+   "lon": -99.676103,
+   "velocidad_kmh": 82.26,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21609,
+   "distancia_km": 425.845,
+   "lat": 22.31143,
+   "lon": -99.677935,
+   "velocidad_kmh": 82.69,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21672,
+   "distancia_km": 427.299,
+   "lat": 22.321261,
+   "lon": -99.679782,
+   "velocidad_kmh": 83.43,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21735,
+   "distancia_km": 428.767,
+   "lat": 22.331195,
+   "lon": -99.681647,
+   "velocidad_kmh": 84.39,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21798,
+   "distancia_km": 430.253,
+   "lat": 22.341249,
+   "lon": -99.683535,
+   "velocidad_kmh": 85.43,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21861,
+   "distancia_km": 431.757,
+   "lat": 22.351426,
+   "lon": -99.685447,
+   "velocidad_kmh": 86.44,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21924,
+   "distancia_km": 433.278,
+   "lat": 22.361714,
+   "lon": -99.68738,
+   "velocidad_kmh": 87.29,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 21987,
+   "distancia_km": 434.811,
+   "lat": 22.37209,
+   "lon": -99.689329,
+   "velocidad_kmh": 87.9,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22050,
+   "distancia_km": 436.353,
+   "lat": 22.382521,
+   "lon": -99.691288,
+   "velocidad_kmh": 88.22,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22113,
+   "distancia_km": 437.897,
+   "lat": 22.392971,
+   "lon": -99.693252,
+   "velocidad_kmh": 88.23,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22176,
+   "distancia_km": 439.439,
+   "lat": 22.403407,
+   "lon": -99.695213,
+   "velocidad_kmh": 87.99,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22239,
+   "distancia_km": 440.976,
+   "lat": 22.413803,
+   "lon": -99.697166,
+   "velocidad_kmh": 87.56,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22302,
+   "distancia_km": 442.504,
+   "lat": 22.424142,
+   "lon": -99.699108,
+   "velocidad_kmh": 87.06,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22365,
+   "distancia_km": 444.023,
+   "lat": 22.434425,
+   "lon": -99.701041,
+   "velocidad_kmh": 86.61,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22428,
+   "distancia_km": 445.536,
+   "lat": 22.444664,
+   "lon": -99.702964,
+   "velocidad_kmh": 86.33,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22491,
+   "distancia_km": 447.046,
+   "lat": 22.454884,
+   "lon": -99.704885,
+   "velocidad_kmh": 86.31,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22554,
+   "distancia_km": 448.559,
+   "lat": 22.465123,
+   "lon": -99.706809,
+   "velocidad_kmh": 86.63,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22617,
+   "distancia_km": 450.08,
+   "lat": 22.475422,
+   "lon": -99.708745,
+   "velocidad_kmh": 87.31,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22680,
+   "distancia_km": 451.617,
+   "lat": 22.485822,
+   "lon": -99.7107,
+   "velocidad_kmh": 88.33,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22743,
+   "distancia_km": 453.174,
+   "lat": 22.49636,
+   "lon": -99.712681,
+   "velocidad_kmh": 89.62,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22806,
+   "distancia_km": 454.755,
+   "lat": 22.507063,
+   "lon": -99.714694,
+   "velocidad_kmh": 91.09,
+   "aceleracion_ms2": 0.007,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22869,
+   "distancia_km": 456.363,
+   "lat": 22.517943,
+   "lon": -99.71674,
+   "velocidad_kmh": 92.6,
+   "aceleracion_ms2": 0.007,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22932,
+   "distancia_km": 457.996,
+   "lat": 22.528998,
+   "lon": -99.71882,
+   "velocidad_kmh": 94.02,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 22995,
+   "distancia_km": 459.652,
+   "lat": 22.54021,
+   "lon": -99.72093,
+   "velocidad_kmh": 95.23,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23058,
+   "distancia_km": 461.327,
+   "lat": 22.551546,
+   "lon": -99.723063,
+   "velocidad_kmh": 96.12,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23121,
+   "distancia_km": 463.015,
+   "lat": 22.562966,
+   "lon": -99.725213,
+   "velocidad_kmh": 96.63,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23184,
+   "distancia_km": 464.707,
+   "lat": 22.574424,
+   "lon": -99.72737,
+   "velocidad_kmh": 96.75,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23247,
+   "distancia_km": 466.399,
+   "lat": 22.585873,
+   "lon": -99.729526,
+   "velocidad_kmh": 96.5,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23310,
+   "distancia_km": 468.083,
+   "lat": 22.597273,
+   "lon": -99.731673,
+   "velocidad_kmh": 95.96,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23373,
+   "distancia_km": 469.756,
+   "lat": 22.608597,
+   "lon": -99.733805,
+   "velocidad_kmh": 95.22,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23436,
+   "distancia_km": 471.415,
+   "lat": 22.619828,
+   "lon": -99.735921,
+   "velocidad_kmh": 94.41,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23499,
+   "distancia_km": 473.06,
+   "lat": 22.630965,
+   "lon": -99.738018,
+   "velocidad_kmh": 93.65,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23562,
+   "distancia_km": 474.694,
+   "lat": 22.642021,
+   "lon": -99.740102,
+   "velocidad_kmh": 93.06,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 23625,
+   "distancia_km": 476.18,
+   "lat": 22.652082,
+   "lon": -99.741997,
+   "velocidad_kmh": 72.75,
+   "aceleracion_ms2": -0.018,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 23688,
+   "distancia_km": 477.443,
+   "lat": 22.660634,
+   "lon": -99.743606,
+   "velocidad_kmh": 72.07,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 23751,
+   "distancia_km": 478.705,
+   "lat": 22.669183,
+   "lon": -99.745216,
+   "velocidad_kmh": 72.25,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 23814,
+   "distancia_km": 479.973,
+   "lat": 22.677766,
+   "lon": -99.746833,
+   "velocidad_kmh": 72.62,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 23877,
+   "distancia_km": 481.248,
+   "lat": 22.6864,
+   "lon": -99.748459,
+   "velocidad_kmh": 73.11,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 23940,
+   "distancia_km": 482.532,
+   "lat": 22.695095,
+   "lon": -99.750098,
+   "velocidad_kmh": 73.63,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24003,
+   "distancia_km": 483.824,
+   "lat": 22.703848,
+   "lon": -99.751748,
+   "velocidad_kmh": 74.09,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24066,
+   "distancia_km": 485.124,
+   "lat": 22.712648,
+   "lon": -99.753407,
+   "velocidad_kmh": 74.39,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24129,
+   "distancia_km": 486.427,
+   "lat": 22.721469,
+   "lon": -99.755071,
+   "velocidad_kmh": 74.46,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24192,
+   "distancia_km": 487.728,
+   "lat": 22.730283,
+   "lon": -99.756733,
+   "velocidad_kmh": 74.25,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24255,
+   "distancia_km": 489.024,
+   "lat": 22.739052,
+   "lon": -99.758388,
+   "velocidad_kmh": 73.73,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24318,
+   "distancia_km": 490.307,
+   "lat": 22.747744,
+   "lon": -99.760028,
+   "velocidad_kmh": 72.94,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24381,
+   "distancia_km": 491.575,
+   "lat": 22.756329,
+   "lon": -99.761649,
+   "velocidad_kmh": 71.93,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24444,
+   "distancia_km": 492.824,
+   "lat": 22.764783,
+   "lon": -99.763245,
+   "velocidad_kmh": 70.77,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24507,
+   "distancia_km": 494.051,
+   "lat": 22.773097,
+   "lon": -99.764816,
+   "velocidad_kmh": 69.57,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24570,
+   "distancia_km": 495.259,
+   "lat": 22.781272,
+   "lon": -99.76636,
+   "velocidad_kmh": 68.44,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24633,
+   "distancia_km": 496.447,
+   "lat": 22.789321,
+   "lon": -99.767881,
+   "velocidad_kmh": 67.46,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24696,
+   "distancia_km": 497.621,
+   "lat": 22.797267,
+   "lon": -99.769383,
+   "velocidad_kmh": 66.72,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24759,
+   "distancia_km": 498.784,
+   "lat": 22.805142,
+   "lon": -99.770872,
+   "velocidad_kmh": 66.25,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24822,
+   "distancia_km": 499.941,
+   "lat": 22.812979,
+   "lon": -99.772355,
+   "velocidad_kmh": 66.08,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24885,
+   "distancia_km": 501.098,
+   "lat": 22.820812,
+   "lon": -99.773837,
+   "velocidad_kmh": 66.17,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 24948,
+   "distancia_km": 502.259,
+   "lat": 22.828669,
+   "lon": -99.775324,
+   "velocidad_kmh": 66.48,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25011,
+   "distancia_km": 503.426,
+   "lat": 22.836571,
+   "lon": -99.776819,
+   "velocidad_kmh": 66.91,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25074,
+   "distancia_km": 504.601,
+   "lat": 22.844526,
+   "lon": -99.778326,
+   "velocidad_kmh": 67.38,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25137,
+   "distancia_km": 505.784,
+   "lat": 22.852533,
+   "lon": -99.779843,
+   "velocidad_kmh": 67.78,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25200,
+   "distancia_km": 506.973,
+   "lat": 22.86058,
+   "lon": -99.781368,
+   "velocidad_kmh": 68.04,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25263,
+   "distancia_km": 508.164,
+   "lat": 22.868646,
+   "lon": -99.782896,
+   "velocidad_kmh": 68.1,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25326,
+   "distancia_km": 509.355,
+   "lat": 22.876705,
+   "lon": -99.784424,
+   "velocidad_kmh": 67.93,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25389,
+   "distancia_km": 510.54,
+   "lat": 22.88473,
+   "lon": -99.785946,
+   "velocidad_kmh": 67.54,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25452,
+   "distancia_km": 511.718,
+   "lat": 22.892697,
+   "lon": -99.787458,
+   "velocidad_kmh": 66.97,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25515,
+   "distancia_km": 512.884,
+   "lat": 22.900589,
+   "lon": -99.788955,
+   "velocidad_kmh": 66.29,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25578,
+   "distancia_km": 514.037,
+   "lat": 22.908398,
+   "lon": -99.790438,
+   "velocidad_kmh": 65.6,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25641,
+   "distancia_km": 515.18,
+   "lat": 22.916129,
+   "lon": -99.791906,
+   "velocidad_kmh": 64.99,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25704,
+   "distancia_km": 516.313,
+   "lat": 22.923798,
+   "lon": -99.793362,
+   "velocidad_kmh": 64.56,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25767,
+   "distancia_km": 517.441,
+   "lat": 22.931429,
+   "lon": -99.794812,
+   "velocidad_kmh": 64.37,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25830,
+   "distancia_km": 518.568,
+   "lat": 22.939056,
+   "lon": -99.796262,
+   "velocidad_kmh": 64.49,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25893,
+   "distancia_km": 519.7,
+   "lat": 22.946715,
+   "lon": -99.797718,
+   "velocidad_kmh": 64.92,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 25956,
+   "distancia_km": 520.842,
+   "lat": 22.954442,
+   "lon": -99.799188,
+   "velocidad_kmh": 65.64,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 26019,
+   "distancia_km": 521.999,
+   "lat": 22.962269,
+   "lon": -99.800676,
+   "velocidad_kmh": 66.59,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 26082,
+   "distancia_km": 523.174,
+   "lat": 22.970217,
+   "lon": -99.802188,
+   "velocidad_kmh": 67.69,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 26145,
+   "distancia_km": 524.368,
+   "lat": 22.9783,
+   "lon": -99.803726,
+   "velocidad_kmh": 68.84,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 26208,
+   "distancia_km": 525.583,
+   "lat": 22.986515,
+   "lon": -99.805289,
+   "velocidad_kmh": 69.93,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 26271,
+   "distancia_km": 526.927,
+   "lat": 22.995602,
+   "lon": -99.807018,
+   "velocidad_kmh": 94.97,
+   "aceleracion_ms2": 0.067,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26334,
+   "distancia_km": 528.631,
+   "lat": 23.007131,
+   "lon": -99.809209,
+   "velocidad_kmh": 98.19,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26397,
+   "distancia_km": 530.356,
+   "lat": 23.018792,
+   "lon": -99.811425,
+   "velocidad_kmh": 98.82,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26460,
+   "distancia_km": 532.088,
+   "lat": 23.030505,
+   "lon": -99.813651,
+   "velocidad_kmh": 99.07,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26523,
+   "distancia_km": 533.821,
+   "lat": 23.042227,
+   "lon": -99.81588,
+   "velocidad_kmh": 98.99,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26586,
+   "distancia_km": 535.551,
+   "lat": 23.053924,
+   "lon": -99.818104,
+   "velocidad_kmh": 98.67,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26649,
+   "distancia_km": 537.274,
+   "lat": 23.065571,
+   "lon": -99.820319,
+   "velocidad_kmh": 98.2,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26712,
+   "distancia_km": 538.988,
+   "lat": 23.077161,
+   "lon": -99.822523,
+   "velocidad_kmh": 97.72,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26775,
+   "distancia_km": 540.695,
+   "lat": 23.088701,
+   "lon": -99.824718,
+   "velocidad_kmh": 97.37,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26838,
+   "distancia_km": 542.397,
+   "lat": 23.10021,
+   "lon": -99.826908,
+   "velocidad_kmh": 97.24,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26901,
+   "distancia_km": 544.1,
+   "lat": 23.111721,
+   "lon": -99.829098,
+   "velocidad_kmh": 97.4,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 26964,
+   "distancia_km": 545.808,
+   "lat": 23.123271,
+   "lon": -99.831295,
+   "velocidad_kmh": 97.9,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27027,
+   "distancia_km": 547.528,
+   "lat": 23.134898,
+   "lon": -99.833508,
+   "velocidad_kmh": 98.71,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27090,
+   "distancia_km": 549.265,
+   "lat": 23.146637,
+   "lon": -99.835742,
+   "velocidad_kmh": 99.76,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27153,
+   "distancia_km": 551.014,
+   "lat": 23.158461,
+   "lon": -99.837992,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27216,
+   "distancia_km": 552.764,
+   "lat": 23.17029,
+   "lon": -99.840244,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27279,
+   "distancia_km": 554.514,
+   "lat": 23.182118,
+   "lon": -99.842495,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27342,
+   "distancia_km": 556.264,
+   "lat": 23.193946,
+   "lon": -99.844746,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27405,
+   "distancia_km": 558.014,
+   "lat": 23.205774,
+   "lon": -99.846998,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27468,
+   "distancia_km": 559.764,
+   "lat": 23.217601,
+   "lon": -99.849249,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27531,
+   "distancia_km": 561.514,
+   "lat": 23.229427,
+   "lon": -99.851501,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27594,
+   "distancia_km": 563.264,
+   "lat": 23.241254,
+   "lon": -99.853753,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27657,
+   "distancia_km": 565.014,
+   "lat": 23.253079,
+   "lon": -99.856004,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27720,
+   "distancia_km": 566.764,
+   "lat": 23.264905,
+   "lon": -99.858256,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27783,
+   "distancia_km": 568.511,
+   "lat": 23.276711,
+   "lon": -99.860504,
+   "velocidad_kmh": 99.37,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27846,
+   "distancia_km": 570.238,
+   "lat": 23.28838,
+   "lon": -99.862726,
+   "velocidad_kmh": 98.03,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27909,
+   "distancia_km": 571.943,
+   "lat": 23.2999,
+   "lon": -99.86492,
+   "velocidad_kmh": 96.89,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 27972,
+   "distancia_km": 573.631,
+   "lat": 23.311301,
+   "lon": -99.867091,
+   "velocidad_kmh": 96.03,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 28035,
+   "distancia_km": 575.306,
+   "lat": 23.322619,
+   "lon": -99.869247,
+   "velocidad_kmh": 95.51,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 28098,
+   "distancia_km": 576.975,
+   "lat": 23.333897,
+   "lon": -99.871395,
+   "velocidad_kmh": 95.33,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 28161,
+   "distancia_km": 578.644,
+   "lat": 23.345173,
+   "lon": -99.873543,
+   "velocidad_kmh": 95.46,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 28224,
+   "distancia_km": 580.318,
+   "lat": 23.356477,
+   "lon": -99.875695,
+   "velocidad_kmh": 95.79,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 28287,
+   "distancia_km": 581.998,
+   "lat": 23.367827,
+   "lon": -99.877857,
+   "velocidad_kmh": 96.23,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 28350,
+   "distancia_km": 583.686,
+   "lat": 23.379228,
+   "lon": -99.880028,
+   "velocidad_kmh": 96.63,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 28413,
+   "distancia_km": 585.379,
+   "lat": 23.390667,
+   "lon": -99.882206,
+   "velocidad_kmh": 96.87,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 28476,
+   "distancia_km": 586.994,
+   "lat": 23.401574,
+   "lon": -99.884284,
+   "velocidad_kmh": 90.81,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 28539,
+   "distancia_km": 588.58,
+   "lat": 23.41229,
+   "lon": -99.886325,
+   "velocidad_kmh": 90.47,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 28602,
+   "distancia_km": 590.158,
+   "lat": 23.422948,
+   "lon": -99.888355,
+   "velocidad_kmh": 89.82,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 28665,
+   "distancia_km": 591.722,
+   "lat": 23.433508,
+   "lon": -99.890366,
+   "velocidad_kmh": 88.86,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 28728,
+   "distancia_km": 593.266,
+   "lat": 23.443941,
+   "lon": -99.892353,
+   "velocidad_kmh": 87.66,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 28791,
+   "distancia_km": 594.789,
+   "lat": 23.454222,
+   "lon": -99.894312,
+   "velocidad_kmh": 86.34,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 28854,
+   "distancia_km": 596.288,
+   "lat": 23.464346,
+   "lon": -99.89624,
+   "velocidad_kmh": 85.01,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 28917,
+   "distancia_km": 597.765,
+   "lat": 23.474318,
+   "lon": -99.898139,
+   "velocidad_kmh": 83.81,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 28980,
+   "distancia_km": 599.222,
+   "lat": 23.484161,
+   "lon": -99.900014,
+   "velocidad_kmh": 82.85,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29043,
+   "distancia_km": 600.666,
+   "lat": 23.493912,
+   "lon": -99.901871,
+   "velocidad_kmh": 82.24,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29106,
+   "distancia_km": 602.103,
+   "lat": 23.503613,
+   "lon": -99.903718,
+   "velocidad_kmh": 82.03,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29169,
+   "distancia_km": 603.54,
+   "lat": 23.513314,
+   "lon": -99.905565,
+   "velocidad_kmh": 82.23,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29232,
+   "distancia_km": 604.983,
+   "lat": 23.523061,
+   "lon": -99.907421,
+   "velocidad_kmh": 82.8,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29295,
+   "distancia_km": 606.44,
+   "lat": 23.532894,
+   "lon": -99.909292,
+   "velocidad_kmh": 83.66,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29358,
+   "distancia_km": 607.913,
+   "lat": 23.542843,
+   "lon": -99.911185,
+   "velocidad_kmh": 84.72,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29421,
+   "distancia_km": 609.405,
+   "lat": 23.55292,
+   "lon": -99.913102,
+   "velocidad_kmh": 85.83,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29484,
+   "distancia_km": 610.917,
+   "lat": 23.563126,
+   "lon": -99.915044,
+   "velocidad_kmh": 86.87,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29547,
+   "distancia_km": 612.445,
+   "lat": 23.573446,
+   "lon": -99.917006,
+   "velocidad_kmh": 87.74,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29610,
+   "distancia_km": 613.987,
+   "lat": 23.583853,
+   "lon": -99.918984,
+   "velocidad_kmh": 88.34,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29673,
+   "distancia_km": 615.536,
+   "lat": 23.594314,
+   "lon": -99.920973,
+   "velocidad_kmh": 88.64,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29736,
+   "distancia_km": 617.087,
+   "lat": 23.604791,
+   "lon": -99.922964,
+   "velocidad_kmh": 88.64,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29799,
+   "distancia_km": 618.637,
+   "lat": 23.615253,
+   "lon": -99.924951,
+   "velocidad_kmh": 88.39,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29862,
+   "distancia_km": 620.18,
+   "lat": 23.625674,
+   "lon": -99.926931,
+   "velocidad_kmh": 87.98,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29925,
+   "distancia_km": 621.715,
+   "lat": 23.636042,
+   "lon": -99.9289,
+   "velocidad_kmh": 87.51,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 29988,
+   "distancia_km": 623.243,
+   "lat": 23.646357,
+   "lon": -99.930859,
+   "velocidad_kmh": 87.11,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30051,
+   "distancia_km": 624.765,
+   "lat": 23.656636,
+   "lon": -99.932811,
+   "velocidad_kmh": 86.9,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30114,
+   "distancia_km": 626.286,
+   "lat": 23.666906,
+   "lon": -99.93476,
+   "velocidad_kmh": 86.97,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30177,
+   "distancia_km": 627.811,
+   "lat": 23.677204,
+   "lon": -99.936715,
+   "velocidad_kmh": 87.37,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30240,
+   "distancia_km": 629.346,
+   "lat": 23.687571,
+   "lon": -99.938682,
+   "velocidad_kmh": 88.13,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30303,
+   "distancia_km": 630.898,
+   "lat": 23.698048,
+   "lon": -99.940669,
+   "velocidad_kmh": 89.21,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30366,
+   "distancia_km": 632.471,
+   "lat": 23.708669,
+   "lon": -99.942683,
+   "velocidad_kmh": 90.54,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30429,
+   "distancia_km": 634.068,
+   "lat": 23.719457,
+   "lon": -99.944729,
+   "velocidad_kmh": 92.0,
+   "aceleracion_ms2": 0.007,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30492,
+   "distancia_km": 635.691,
+   "lat": 23.73042,
+   "lon": -99.946807,
+   "velocidad_kmh": 93.48,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30555,
+   "distancia_km": 637.339,
+   "lat": 23.741551,
+   "lon": -99.948916,
+   "velocidad_kmh": 94.83,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30618,
+   "distancia_km": 639.009,
+   "lat": 23.752828,
+   "lon": -99.951053,
+   "velocidad_kmh": 95.93,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30681,
+   "distancia_km": 640.695,
+   "lat": 23.764218,
+   "lon": -99.95321,
+   "velocidad_kmh": 96.7,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30744,
+   "distancia_km": 642.392,
+   "lat": 23.775675,
+   "lon": -99.95538,
+   "velocidad_kmh": 97.08,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30807,
+   "distancia_km": 644.091,
+   "lat": 23.787153,
+   "lon": -99.957553,
+   "velocidad_kmh": 97.06,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30870,
+   "distancia_km": 645.787,
+   "lat": 23.798606,
+   "lon": -99.959721,
+   "velocidad_kmh": 96.68,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30933,
+   "distancia_km": 647.473,
+   "lat": 23.809998,
+   "lon": -99.961877,
+   "velocidad_kmh": 96.02,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 30996,
+   "distancia_km": 649.146,
+   "lat": 23.8213,
+   "lon": -99.964015,
+   "velocidad_kmh": 95.19,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31059,
+   "distancia_km": 650.804,
+   "lat": 23.8325,
+   "lon": -99.966134,
+   "velocidad_kmh": 94.32,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31122,
+   "distancia_km": 652.448,
+   "lat": 23.843601,
+   "lon": -99.968234,
+   "velocidad_kmh": 93.53,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31185,
+   "distancia_km": 654.079,
+   "lat": 23.854619,
+   "lon": -99.970317,
+   "velocidad_kmh": 92.92,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31248,
+   "distancia_km": 654.775,
+   "lat": 23.859317,
+   "lon": -99.971204,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31311,
+   "distancia_km": 654.775,
+   "lat": 23.859308,
+   "lon": -99.9712,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31374,
+   "distancia_km": 654.775,
+   "lat": 23.859299,
+   "lon": -99.971196,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31437,
+   "distancia_km": 654.775,
+   "lat": 23.859291,
+   "lon": -99.971191,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31500,
+   "distancia_km": 654.775,
+   "lat": 23.859283,
+   "lon": -99.971186,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31563,
+   "distancia_km": 654.775,
+   "lat": 23.859276,
+   "lon": -99.971181,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31626,
+   "distancia_km": 654.775,
+   "lat": 23.859269,
+   "lon": -99.971175,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31689,
+   "distancia_km": 654.775,
+   "lat": 23.859262,
+   "lon": -99.971169,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31752,
+   "distancia_km": 654.775,
+   "lat": 23.859256,
+   "lon": -99.971162,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31815,
+   "distancia_km": 654.775,
+   "lat": 23.85925,
+   "lon": -99.971155,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31878,
+   "distancia_km": 654.775,
+   "lat": 23.859244,
+   "lon": -99.971148,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 31941,
+   "distancia_km": 654.775,
+   "lat": 23.859239,
+   "lon": -99.97114,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32004,
+   "distancia_km": 654.775,
+   "lat": 23.859234,
+   "lon": -99.971132,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32067,
+   "distancia_km": 654.775,
+   "lat": 23.85923,
+   "lon": -99.971124,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32130,
+   "distancia_km": 654.775,
+   "lat": 23.859226,
+   "lon": -99.971115,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32193,
+   "distancia_km": 654.775,
+   "lat": 23.859223,
+   "lon": -99.971106,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32256,
+   "distancia_km": 654.775,
+   "lat": 23.85922,
+   "lon": -99.971097,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32319,
+   "distancia_km": 654.775,
+   "lat": 23.859217,
+   "lon": -99.971088,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32382,
+   "distancia_km": 654.775,
+   "lat": 23.859215,
+   "lon": -99.971078,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32445,
+   "distancia_km": 654.775,
+   "lat": 23.859213,
+   "lon": -99.971068,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32508,
+   "distancia_km": 654.775,
+   "lat": 23.859212,
+   "lon": -99.971058,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32571,
+   "distancia_km": 654.775,
+   "lat": 23.859211,
+   "lon": -99.971047,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32634,
+   "distancia_km": 654.775,
+   "lat": 23.859211,
+   "lon": -99.971037,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32697,
+   "distancia_km": 654.775,
+   "lat": 23.859211,
+   "lon": -99.971026,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32760,
+   "distancia_km": 654.775,
+   "lat": 23.859211,
+   "lon": -99.971014,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32823,
+   "distancia_km": 654.775,
+   "lat": 23.859212,
+   "lon": -99.971003,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32886,
+   "distancia_km": 654.775,
+   "lat": 23.859213,
+   "lon": -99.970991,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 32949,
+   "distancia_km": 654.775,
+   "lat": 23.859215,
+   "lon": -99.97098,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33012,
+   "distancia_km": 654.775,
+   "lat": 23.859218,
+   "lon": -99.970968,
+   "velocidad_kmh": 92.74,
+   "aceleracion_ms2": -0.171,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33075,
+   "distancia_km": 656.301,
+   "lat": 23.869537,
+   "lon": -99.972908,
+   "velocidad_kmh": 85.97,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33138,
+   "distancia_km": 657.798,
+   "lat": 23.879662,
+   "lon": -99.974811,
+   "velocidad_kmh": 85.14,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33201,
+   "distancia_km": 659.28,
+   "lat": 23.88969,
+   "lon": -99.976695,
+   "velocidad_kmh": 84.33,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33264,
+   "distancia_km": 660.75,
+   "lat": 23.899628,
+   "lon": -99.978562,
+   "velocidad_kmh": 83.64,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33327,
+   "distancia_km": 662.209,
+   "lat": 23.909501,
+   "lon": -99.980417,
+   "velocidad_kmh": 83.21,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33390,
+   "distancia_km": 663.664,
+   "lat": 23.919341,
+   "lon": -99.982265,
+   "velocidad_kmh": 83.11,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33453,
+   "distancia_km": 665.12,
+   "lat": 23.929194,
+   "lon": -99.984115,
+   "velocidad_kmh": 83.41,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33516,
+   "distancia_km": 666.586,
+   "lat": 23.939106,
+   "lon": -99.985977,
+   "velocidad_kmh": 84.09,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33579,
+   "distancia_km": 668.066,
+   "lat": 23.949122,
+   "lon": -99.987858,
+   "velocidad_kmh": 85.14,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33642,
+   "distancia_km": 669.567,
+   "lat": 23.959278,
+   "lon": -99.989766,
+   "velocidad_kmh": 86.45,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 33705,
+   "distancia_km": 671.032,
+   "lat": 23.96919,
+   "lon": -99.991627,
+   "velocidad_kmh": 71.01,
+   "aceleracion_ms2": -0.068,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 33768,
+   "distancia_km": 672.246,
+   "lat": 23.977402,
+   "lon": -99.993166,
+   "velocidad_kmh": 69.55,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 33831,
+   "distancia_km": 673.473,
+   "lat": 23.985705,
+   "lon": -99.994723,
+   "velocidad_kmh": 70.63,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 33894,
+   "distancia_km": 674.717,
+   "lat": 23.994126,
+   "lon": -99.996302,
+   "velocidad_kmh": 71.54,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 33957,
+   "distancia_km": 675.975,
+   "lat": 24.002641,
+   "lon": -99.997899,
+   "velocidad_kmh": 72.21,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34020,
+   "distancia_km": 677.243,
+   "lat": 24.01122,
+   "lon": -99.999507,
+   "velocidad_kmh": 72.6,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34083,
+   "distancia_km": 678.515,
+   "lat": 24.019829,
+   "lon": -100.001122,
+   "velocidad_kmh": 72.72,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34146,
+   "distancia_km": 679.787,
+   "lat": 24.028437,
+   "lon": -100.002736,
+   "velocidad_kmh": 72.61,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34209,
+   "distancia_km": 681.055,
+   "lat": 24.037022,
+   "lon": -100.004346,
+   "velocidad_kmh": 72.32,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34272,
+   "distancia_km": 682.317,
+   "lat": 24.045567,
+   "lon": -100.005948,
+   "velocidad_kmh": 71.95,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34335,
+   "distancia_km": 683.573,
+   "lat": 24.054068,
+   "lon": -100.007542,
+   "velocidad_kmh": 71.59,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34398,
+   "distancia_km": 684.823,
+   "lat": 24.062531,
+   "lon": -100.00913,
+   "velocidad_kmh": 71.33,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34461,
+   "distancia_km": 686.071,
+   "lat": 24.070974,
+   "lon": -100.010713,
+   "velocidad_kmh": 71.24,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34524,
+   "distancia_km": 687.318,
+   "lat": 24.07942,
+   "lon": -100.012297,
+   "velocidad_kmh": 71.38,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34587,
+   "distancia_km": 688.57,
+   "lat": 24.087897,
+   "lon": -100.013887,
+   "velocidad_kmh": 71.75,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34650,
+   "distancia_km": 689.831,
+   "lat": 24.096432,
+   "lon": -100.015488,
+   "velocidad_kmh": 72.34,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34713,
+   "distancia_km": 691.103,
+   "lat": 24.105047,
+   "lon": -100.017104,
+   "velocidad_kmh": 73.09,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34776,
+   "distancia_km": 692.39,
+   "lat": 24.113756,
+   "lon": -100.018739,
+   "velocidad_kmh": 73.92,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34839,
+   "distancia_km": 693.691,
+   "lat": 24.122564,
+   "lon": -100.020392,
+   "velocidad_kmh": 74.73,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34902,
+   "distancia_km": 695.005,
+   "lat": 24.131462,
+   "lon": -100.022062,
+   "velocidad_kmh": 75.43,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 34965,
+   "distancia_km": 696.33,
+   "lat": 24.14043,
+   "lon": -100.023746,
+   "velocidad_kmh": 75.91,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35028,
+   "distancia_km": 697.66,
+   "lat": 24.149441,
+   "lon": -100.025438,
+   "velocidad_kmh": 76.12,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35091,
+   "distancia_km": 698.992,
+   "lat": 24.158457,
+   "lon": -100.027132,
+   "velocidad_kmh": 76.02,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35154,
+   "distancia_km": 700.319,
+   "lat": 24.167443,
+   "lon": -100.028819,
+   "velocidad_kmh": 75.6,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35217,
+   "distancia_km": 701.636,
+   "lat": 24.176361,
+   "lon": -100.030495,
+   "velocidad_kmh": 74.9,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35280,
+   "distancia_km": 702.939,
+   "lat": 24.185184,
+   "lon": -100.032152,
+   "velocidad_kmh": 73.99,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35343,
+   "distancia_km": 704.225,
+   "lat": 24.193889,
+   "lon": -100.033788,
+   "velocidad_kmh": 72.95,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35406,
+   "distancia_km": 705.492,
+   "lat": 24.202469,
+   "lon": -100.0354,
+   "velocidad_kmh": 71.88,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35469,
+   "distancia_km": 706.741,
+   "lat": 24.210927,
+   "lon": -100.03699,
+   "velocidad_kmh": 70.9,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35532,
+   "distancia_km": 707.974,
+   "lat": 24.219277,
+   "lon": -100.038559,
+   "velocidad_kmh": 70.07,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35595,
+   "distancia_km": 709.195,
+   "lat": 24.227543,
+   "lon": -100.040113,
+   "velocidad_kmh": 69.48,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35658,
+   "distancia_km": 710.407,
+   "lat": 24.235754,
+   "lon": -100.041657,
+   "velocidad_kmh": 69.14,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35721,
+   "distancia_km": 711.616,
+   "lat": 24.24394,
+   "lon": -100.043196,
+   "velocidad_kmh": 69.05,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35784,
+   "distancia_km": 712.825,
+   "lat": 24.252128,
+   "lon": -100.044736,
+   "velocidad_kmh": 69.17,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35847,
+   "distancia_km": 714.038,
+   "lat": 24.26034,
+   "lon": -100.046281,
+   "velocidad_kmh": 69.43,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35910,
+   "distancia_km": 715.255,
+   "lat": 24.268588,
+   "lon": -100.047833,
+   "velocidad_kmh": 69.75,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 35973,
+   "distancia_km": 716.479,
+   "lat": 24.276872,
+   "lon": -100.049392,
+   "velocidad_kmh": 70.04,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 36036,
+   "distancia_km": 717.706,
+   "lat": 24.285183,
+   "lon": -100.050957,
+   "velocidad_kmh": 70.19,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 36099,
+   "distancia_km": 718.934,
+   "lat": 24.2935,
+   "lon": -100.052523,
+   "velocidad_kmh": 70.14,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 36162,
+   "distancia_km": 720.159,
+   "lat": 24.301797,
+   "lon": -100.054086,
+   "velocidad_kmh": 69.85,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 36225,
+   "distancia_km": 721.377,
+   "lat": 24.310044,
+   "lon": -100.055641,
+   "velocidad_kmh": 69.31,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 3.0
+  },
+  {
+   "t_s": 36288,
+   "distancia_km": 722.915,
+   "lat": 24.320451,
+   "lon": -100.057604,
+   "velocidad_kmh": 93.94,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36351,
+   "distancia_km": 724.549,
+   "lat": 24.331512,
+   "lon": -100.059691,
+   "velocidad_kmh": 92.75,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36414,
+   "distancia_km": 726.16,
+   "lat": 24.342416,
+   "lon": -100.061749,
+   "velocidad_kmh": 91.38,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36477,
+   "distancia_km": 727.747,
+   "lat": 24.353158,
+   "lon": -100.063777,
+   "velocidad_kmh": 90.03,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36540,
+   "distancia_km": 729.312,
+   "lat": 24.36375,
+   "lon": -100.065776,
+   "velocidad_kmh": 88.86,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36603,
+   "distancia_km": 730.858,
+   "lat": 24.37422,
+   "lon": -100.067753,
+   "velocidad_kmh": 87.98,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36666,
+   "distancia_km": 732.393,
+   "lat": 24.384607,
+   "lon": -100.069716,
+   "velocidad_kmh": 87.49,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36729,
+   "distancia_km": 733.923,
+   "lat": 24.394962,
+   "lon": -100.071672,
+   "velocidad_kmh": 87.43,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36792,
+   "distancia_km": 735.456,
+   "lat": 24.405336,
+   "lon": -100.073632,
+   "velocidad_kmh": 87.8,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36855,
+   "distancia_km": 736.999,
+   "lat": 24.415778,
+   "lon": -100.075606,
+   "velocidad_kmh": 88.56,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36918,
+   "distancia_km": 738.557,
+   "lat": 24.426327,
+   "lon": -100.0776,
+   "velocidad_kmh": 89.61,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 36981,
+   "distancia_km": 740.136,
+   "lat": 24.437012,
+   "lon": -100.079621,
+   "velocidad_kmh": 90.83,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37044,
+   "distancia_km": 741.737,
+   "lat": 24.447844,
+   "lon": -100.08167,
+   "velocidad_kmh": 92.07,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37107,
+   "distancia_km": 743.358,
+   "lat": 24.458818,
+   "lon": -100.083746,
+   "velocidad_kmh": 93.22,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37170,
+   "distancia_km": 744.998,
+   "lat": 24.469915,
+   "lon": -100.085846,
+   "velocidad_kmh": 94.14,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37233,
+   "distancia_km": 746.652,
+   "lat": 24.481103,
+   "lon": -100.087964,
+   "velocidad_kmh": 94.77,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37296,
+   "distancia_km": 748.313,
+   "lat": 24.492346,
+   "lon": -100.090093,
+   "velocidad_kmh": 95.06,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37359,
+   "distancia_km": 749.977,
+   "lat": 24.503604,
+   "lon": -100.092224,
+   "velocidad_kmh": 95.04,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37422,
+   "distancia_km": 751.638,
+   "lat": 24.514842,
+   "lon": -100.094353,
+   "velocidad_kmh": 94.77,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37485,
+   "distancia_km": 753.293,
+   "lat": 24.526038,
+   "lon": -100.096474,
+   "velocidad_kmh": 94.33,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37548,
+   "distancia_km": 754.94,
+   "lat": 24.537178,
+   "lon": -100.098585,
+   "velocidad_kmh": 93.86,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37611,
+   "distancia_km": 756.579,
+   "lat": 24.548267,
+   "lon": -100.100687,
+   "velocidad_kmh": 93.49,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37674,
+   "distancia_km": 758.213,
+   "lat": 24.559323,
+   "lon": -100.102783,
+   "velocidad_kmh": 93.34,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37737,
+   "distancia_km": 759.847,
+   "lat": 24.570379,
+   "lon": -100.104879,
+   "velocidad_kmh": 93.49,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37800,
+   "distancia_km": 761.488,
+   "lat": 24.581474,
+   "lon": -100.106983,
+   "velocidad_kmh": 94.01,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37863,
+   "distancia_km": 763.14,
+   "lat": 24.592651,
+   "lon": -100.109104,
+   "velocidad_kmh": 94.89,
+   "aceleracion_ms2": 0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37926,
+   "distancia_km": 764.811,
+   "lat": 24.603953,
+   "lon": -100.111248,
+   "velocidad_kmh": 96.09,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 37989,
+   "distancia_km": 766.505,
+   "lat": 24.615411,
+   "lon": -100.113422,
+   "velocidad_kmh": 97.52,
+   "aceleracion_ms2": 0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38052,
+   "distancia_km": 768.225,
+   "lat": 24.627047,
+   "lon": -100.11563,
+   "velocidad_kmh": 99.07,
+   "aceleracion_ms2": 0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38115,
+   "distancia_km": 769.97,
+   "lat": 24.638848,
+   "lon": -100.11787,
+   "velocidad_kmh": 99.99,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38178,
+   "distancia_km": 771.72,
+   "lat": 24.650683,
+   "lon": -100.120117,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38241,
+   "distancia_km": 773.47,
+   "lat": 24.662518,
+   "lon": -100.122364,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38304,
+   "distancia_km": 775.22,
+   "lat": 24.674352,
+   "lon": -100.124612,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38367,
+   "distancia_km": 776.97,
+   "lat": 24.686186,
+   "lon": -100.12686,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38430,
+   "distancia_km": 778.72,
+   "lat": 24.698019,
+   "lon": -100.129108,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38493,
+   "distancia_km": 780.47,
+   "lat": 24.709852,
+   "lon": -100.131356,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 38556,
+   "distancia_km": 782.173,
+   "lat": 24.721368,
+   "lon": -100.133545,
+   "velocidad_kmh": 95.99,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 38619,
+   "distancia_km": 783.845,
+   "lat": 24.73267,
+   "lon": -100.135693,
+   "velocidad_kmh": 95.07,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 38682,
+   "distancia_km": 785.5,
+   "lat": 24.743862,
+   "lon": -100.137821,
+   "velocidad_kmh": 94.14,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 38745,
+   "distancia_km": 787.14,
+   "lat": 24.754948,
+   "lon": -100.13993,
+   "velocidad_kmh": 93.31,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 38808,
+   "distancia_km": 788.767,
+   "lat": 24.765948,
+   "lon": -100.142022,
+   "velocidad_kmh": 92.69,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 38871,
+   "distancia_km": 790.386,
+   "lat": 24.77689,
+   "lon": -100.144104,
+   "velocidad_kmh": 92.35,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 38934,
+   "distancia_km": 792.001,
+   "lat": 24.787808,
+   "lon": -100.146181,
+   "velocidad_kmh": 92.3,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 38997,
+   "distancia_km": 793.618,
+   "lat": 24.798738,
+   "lon": -100.148261,
+   "velocidad_kmh": 92.53,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39060,
+   "distancia_km": 795.241,
+   "lat": 24.809707,
+   "lon": -100.150349,
+   "velocidad_kmh": 92.97,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39123,
+   "distancia_km": 796.873,
+   "lat": 24.820737,
+   "lon": -100.152449,
+   "velocidad_kmh": 93.53,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39186,
+   "distancia_km": 798.514,
+   "lat": 24.831833,
+   "lon": -100.154561,
+   "velocidad_kmh": 94.08,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39249,
+   "distancia_km": 800.165,
+   "lat": 24.842987,
+   "lon": -100.156684,
+   "velocidad_kmh": 94.5,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39312,
+   "distancia_km": 801.821,
+   "lat": 24.854178,
+   "lon": -100.158815,
+   "velocidad_kmh": 94.69,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39375,
+   "distancia_km": 803.477,
+   "lat": 24.865373,
+   "lon": -100.160946,
+   "velocidad_kmh": 94.56,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39438,
+   "distancia_km": 805.128,
+   "lat": 24.876529,
+   "lon": -100.163071,
+   "velocidad_kmh": 94.06,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39501,
+   "distancia_km": 806.767,
+   "lat": 24.887603,
+   "lon": -100.16518,
+   "velocidad_kmh": 93.19,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39564,
+   "distancia_km": 808.388,
+   "lat": 24.898555,
+   "lon": -100.167266,
+   "velocidad_kmh": 92.01,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39627,
+   "distancia_km": 809.985,
+   "lat": 24.909351,
+   "lon": -100.169323,
+   "velocidad_kmh": 90.59,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39690,
+   "distancia_km": 811.557,
+   "lat": 24.919971,
+   "lon": -100.171346,
+   "velocidad_kmh": 89.07,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39753,
+   "distancia_km": 813.102,
+   "lat": 24.930411,
+   "lon": -100.173336,
+   "velocidad_kmh": 87.56,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39816,
+   "distancia_km": 814.622,
+   "lat": 24.940679,
+   "lon": -100.175293,
+   "velocidad_kmh": 86.2,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39879,
+   "distancia_km": 816.121,
+   "lat": 24.950801,
+   "lon": -100.177222,
+   "velocidad_kmh": 85.1,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 39942,
+   "distancia_km": 817.603,
+   "lat": 24.960813,
+   "lon": -100.179131,
+   "velocidad_kmh": 84.36,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40005,
+   "distancia_km": 819.075,
+   "lat": 24.970759,
+   "lon": -100.181028,
+   "velocidad_kmh": 83.99,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40068,
+   "distancia_km": 820.545,
+   "lat": 24.980685,
+   "lon": -100.18292,
+   "velocidad_kmh": 84.01,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40131,
+   "distancia_km": 822.017,
+   "lat": 24.990633,
+   "lon": -100.184817,
+   "velocidad_kmh": 84.35,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40194,
+   "distancia_km": 823.498,
+   "lat": 25.000635,
+   "lon": -100.186724,
+   "velocidad_kmh": 84.92,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40257,
+   "distancia_km": 824.99,
+   "lat": 25.010714,
+   "lon": -100.188646,
+   "velocidad_kmh": 85.62,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40320,
+   "distancia_km": 826.495,
+   "lat": 25.020876,
+   "lon": -100.190583,
+   "velocidad_kmh": 86.31,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40383,
+   "distancia_km": 828.011,
+   "lat": 25.031113,
+   "lon": -100.192535,
+   "velocidad_kmh": 86.88,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40446,
+   "distancia_km": 829.534,
+   "lat": 25.041405,
+   "lon": -100.194497,
+   "velocidad_kmh": 87.23,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40509,
+   "distancia_km": 831.062,
+   "lat": 25.051721,
+   "lon": -100.196463,
+   "velocidad_kmh": 87.3,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40572,
+   "distancia_km": 832.588,
+   "lat": 25.062029,
+   "lon": -100.198427,
+   "velocidad_kmh": 87.08,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40635,
+   "distancia_km": 834.108,
+   "lat": 25.072293,
+   "lon": -100.200384,
+   "velocidad_kmh": 86.59,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40698,
+   "distancia_km": 835.618,
+   "lat": 25.082488,
+   "lon": -100.202327,
+   "velocidad_kmh": 85.92,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40761,
+   "distancia_km": 837.114,
+   "lat": 25.092595,
+   "lon": -100.204253,
+   "velocidad_kmh": 85.15,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40824,
+   "distancia_km": 838.598,
+   "lat": 25.102613,
+   "lon": -100.206162,
+   "velocidad_kmh": 84.41,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40887,
+   "distancia_km": 840.07,
+   "lat": 25.112551,
+   "lon": -100.208057,
+   "velocidad_kmh": 83.83,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 40950,
+   "distancia_km": 841.533,
+   "lat": 25.122436,
+   "lon": -100.20994,
+   "velocidad_kmh": 83.52,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41013,
+   "distancia_km": 842.995,
+   "lat": 25.132304,
+   "lon": -100.211821,
+   "velocidad_kmh": 83.56,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41076,
+   "distancia_km": 844.46,
+   "lat": 25.142201,
+   "lon": -100.213706,
+   "velocidad_kmh": 83.99,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41139,
+   "distancia_km": 845.937,
+   "lat": 25.15217,
+   "lon": -100.215606,
+   "velocidad_kmh": 84.8,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41202,
+   "distancia_km": 847.431,
+   "lat": 25.162257,
+   "lon": -100.217527,
+   "velocidad_kmh": 85.95,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41265,
+   "distancia_km": 848.947,
+   "lat": 25.172495,
+   "lon": -100.219476,
+   "velocidad_kmh": 87.34,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41328,
+   "distancia_km": 850.489,
+   "lat": 25.182906,
+   "lon": -100.221458,
+   "velocidad_kmh": 88.85,
+   "aceleracion_ms2": 0.007,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41391,
+   "distancia_km": 852.057,
+   "lat": 25.193496,
+   "lon": -100.223474,
+   "velocidad_kmh": 90.35,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41454,
+   "distancia_km": 853.65,
+   "lat": 25.204256,
+   "lon": -100.225521,
+   "velocidad_kmh": 91.71,
+   "aceleracion_ms2": 0.006,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41517,
+   "distancia_km": 855.266,
+   "lat": 25.215163,
+   "lon": -100.227596,
+   "velocidad_kmh": 92.82,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41580,
+   "distancia_km": 856.897,
+   "lat": 25.226182,
+   "lon": -100.229692,
+   "velocidad_kmh": 93.6,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41643,
+   "distancia_km": 858.54,
+   "lat": 25.237272,
+   "lon": -100.231801,
+   "velocidad_kmh": 94.02,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41706,
+   "distancia_km": 860.186,
+   "lat": 25.24839,
+   "lon": -100.233915,
+   "velocidad_kmh": 94.08,
+   "aceleracion_ms2": -0.0,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41769,
+   "distancia_km": 861.831,
+   "lat": 25.259497,
+   "lon": -100.236027,
+   "velocidad_kmh": 93.85,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41832,
+   "distancia_km": 863.469,
+   "lat": 25.270564,
+   "lon": -100.23813,
+   "velocidad_kmh": 93.42,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41895,
+   "distancia_km": 865.1,
+   "lat": 25.281573,
+   "lon": -100.240222,
+   "velocidad_kmh": 92.9,
+   "aceleracion_ms2": -0.002,
+   "pendiente_pct": 0.0
+  },
+  {
+   "t_s": 41958,
+   "distancia_km": 866.766,
+   "lat": 25.292824,
+   "lon": -100.24236,
+   "velocidad_kmh": 98.41,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42021,
+   "distancia_km": 868.487,
+   "lat": 25.304448,
+   "lon": -100.244568,
+   "velocidad_kmh": 98.21,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42084,
+   "distancia_km": 870.204,
+   "lat": 25.316045,
+   "lon": -100.246771,
+   "velocidad_kmh": 98.1,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42147,
+   "distancia_km": 871.922,
+   "lat": 25.327649,
+   "lon": -100.248974,
+   "velocidad_kmh": 98.3,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42210,
+   "distancia_km": 873.647,
+   "lat": 25.339296,
+   "lon": -100.251185,
+   "velocidad_kmh": 98.82,
+   "aceleracion_ms2": 0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42273,
+   "distancia_km": 875.383,
+   "lat": 25.351022,
+   "lon": -100.25341,
+   "velocidad_kmh": 99.62,
+   "aceleracion_ms2": 0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42336,
+   "distancia_km": 877.131,
+   "lat": 25.362832,
+   "lon": -100.255651,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42399,
+   "distancia_km": 878.881,
+   "lat": 25.374652,
+   "lon": -100.257894,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42462,
+   "distancia_km": 880.631,
+   "lat": 25.386472,
+   "lon": -100.260136,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42525,
+   "distancia_km": 882.381,
+   "lat": 25.398292,
+   "lon": -100.262378,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42588,
+   "distancia_km": 884.131,
+   "lat": 25.410112,
+   "lon": -100.264619,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42651,
+   "distancia_km": 885.881,
+   "lat": 25.421933,
+   "lon": -100.26686,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42714,
+   "distancia_km": 887.631,
+   "lat": 25.433754,
+   "lon": -100.2691,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42777,
+   "distancia_km": 889.381,
+   "lat": 25.445575,
+   "lon": -100.27134,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42840,
+   "distancia_km": 891.131,
+   "lat": 25.457396,
+   "lon": -100.27358,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42903,
+   "distancia_km": 892.881,
+   "lat": 25.469218,
+   "lon": -100.275819,
+   "velocidad_kmh": 100.0,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 42966,
+   "distancia_km": 894.627,
+   "lat": 25.481013,
+   "lon": -100.278053,
+   "velocidad_kmh": 99.21,
+   "aceleracion_ms2": -0.007,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43029,
+   "distancia_km": 896.35,
+   "lat": 25.492653,
+   "lon": -100.280256,
+   "velocidad_kmh": 97.73,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43092,
+   "distancia_km": 898.048,
+   "lat": 25.504123,
+   "lon": -100.282428,
+   "velocidad_kmh": 96.37,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43155,
+   "distancia_km": 899.725,
+   "lat": 25.515448,
+   "lon": -100.284571,
+   "velocidad_kmh": 95.28,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43218,
+   "distancia_km": 901.385,
+   "lat": 25.526663,
+   "lon": -100.286693,
+   "velocidad_kmh": 94.51,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43281,
+   "distancia_km": 903.035,
+   "lat": 25.537809,
+   "lon": -100.288802,
+   "velocidad_kmh": 94.11,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43344,
+   "distancia_km": 904.68,
+   "lat": 25.548929,
+   "lon": -100.290905,
+   "velocidad_kmh": 94.05,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43407,
+   "distancia_km": 906.328,
+   "lat": 25.56006,
+   "lon": -100.293009,
+   "velocidad_kmh": 94.27,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43470,
+   "distancia_km": 907.981,
+   "lat": 25.571229,
+   "lon": -100.295121,
+   "velocidad_kmh": 94.66,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43533,
+   "distancia_km": 909.641,
+   "lat": 25.58245,
+   "lon": -100.297242,
+   "velocidad_kmh": 95.11,
+   "aceleracion_ms2": 0.002,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43596,
+   "distancia_km": 911.309,
+   "lat": 25.593721,
+   "lon": -100.299371,
+   "velocidad_kmh": 95.49,
+   "aceleracion_ms2": 0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43659,
+   "distancia_km": 912.982,
+   "lat": 25.605026,
+   "lon": -100.301507,
+   "velocidad_kmh": 95.67,
+   "aceleracion_ms2": 0.0,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43722,
+   "distancia_km": 914.656,
+   "lat": 25.616336,
+   "lon": -100.303644,
+   "velocidad_kmh": 95.57,
+   "aceleracion_ms2": -0.001,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43785,
+   "distancia_km": 916.325,
+   "lat": 25.627615,
+   "lon": -100.305773,
+   "velocidad_kmh": 95.13,
+   "aceleracion_ms2": -0.003,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43848,
+   "distancia_km": 917.984,
+   "lat": 25.638823,
+   "lon": -100.307889,
+   "velocidad_kmh": 94.36,
+   "aceleracion_ms2": -0.004,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43911,
+   "distancia_km": 919.626,
+   "lat": 25.649923,
+   "lon": -100.309985,
+   "velocidad_kmh": 93.31,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 43974,
+   "distancia_km": 921.248,
+   "lat": 25.660886,
+   "lon": -100.312053,
+   "velocidad_kmh": 92.07,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 44037,
+   "distancia_km": 922.848,
+   "lat": 25.671697,
+   "lon": -100.314093,
+   "velocidad_kmh": 90.75,
+   "aceleracion_ms2": -0.006,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 44100,
+   "distancia_km": 924.424,
+   "lat": 25.682354,
+   "lon": -100.316103,
+   "velocidad_kmh": 89.49,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": -2.637
+  },
+  {
+   "t_s": 44123,
+   "distancia_km": 924.995,
+   "lat": 25.686208,
+   "lon": -100.316825,
+   "velocidad_kmh": 89.08,
+   "aceleracion_ms2": -0.005,
+   "pendiente_pct": -2.637
+  }
+ ],
+ "paradas": [],
+ "abastecimientos": [
+  {
+   "id": "ABA-001",
+   "t_h": 6.0,
+   "litros": 150.0,
+   "precio": 28.3,
+   "importe": 4245.0
+  }
+ ],
+ "gps_meta": {
+  "puntos_originales": 44124,
+  "puntos_diezmados": 702,
+  "metodo": "muestreo uniforme con preservación de extremos"
+ }
+}
