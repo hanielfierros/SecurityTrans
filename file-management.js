@@ -37,6 +37,15 @@ const ESTADOS_CHECK = ["PENDIENTE", "VERIFICADO", "ANOMALIA", "NO_APLICA"];
 const TIPOS_SISTEMA = { CREACION: "Servicio creado", CAMBIO: "Actualización del servicio",
   CHECKLIST: "Check de salida registrado", CIERRE: "Servicio cerrado" };
 
+const ETAPAS = [
+  { id: "ALTA_SERVICIO", nombre: "Alta de servicio" },
+  { id: "CARGA", nombre: "Carga" },
+  { id: "INICIO_RUTA", nombre: "Inicio de ruta" },
+  { id: "DESCARGA", nombre: "Descarga" },
+  { id: "ENTREGA_DOCS", nombre: "Entrega de docs" },
+  { id: "CIERRE_SERVICIO", nombre: "Cierre de servicio" },
+];
+
 // ---------------------------------------------------------------------------
 // Utilidades de sesión
 // ---------------------------------------------------------------------------
@@ -196,7 +205,77 @@ function poblarCategorias() {
   const sel = $id("CATEGORIA");
   const cats = sesion?.categorias || sesion?.categories || sesion?.categoriasPermitidas || ["Mensaje General"];
   sel.innerHTML = "";
-  (Array.isArray(cats) ? cats : []).forEach(c => sel.appendChild(new Option(c, c)));
+  (Array.isArray(cats) ? cats : []).forEach(c => {
+    // En OPERACIONES_LOGISTICA se oculta la categoría "Ruta" (solo en el frontend).
+    if (sesion?.area === "OPERACIONES_LOGISTICA" && String(c).trim().toLowerCase() === "ruta") return;
+    sel.appendChild(new Option(c, c));
+  });
+}
+
+// ===========================================================================
+// Timeline de progreso del servicio (solo local, sin Backend)
+// ===========================================================================
+function claveTimeline() {
+  const u = sesion?.usuario || "anonimo";
+  return "securitytrans:fm:timeline:v1:" + servicioIdActual + ":" + (sesion?.area || "") + ":" + u;
+}
+
+function leerEtapas() {
+  try {
+    const raw = localStorage.getItem(claveTimeline());
+    if (raw) { const d = JSON.parse(raw); if (d && d.etapas) return d.etapas; }
+  } catch (e) { /* dato corrupto: se recupera el valor por defecto */ }
+  // Por defecto: "Alta de servicio" ya está completada (el servicio existe).
+  return { ALTA_SERVICIO: true, CARGA: false, INICIO_RUTA: false, DESCARGA: false, ENTREGA_DOCS: false, CIERRE_SERVICIO: false };
+}
+
+function guardarEtapas(etapas) {
+  try {
+    localStorage.setItem(claveTimeline(), JSON.stringify({ version: 1, etapas, actualizadoLocal: new Date().toISOString() }));
+  } catch (e) { /* degradación a memoria (sin persistencia) */ }
+}
+
+function renderTimeline(soloLectura) {
+  const cont = $id("TIMELINE"); if (!cont) return;
+  cont.innerHTML = "";
+  if (!servicioIdActual) { cont.hidden = true; return; }
+  cont.hidden = false;
+  cont.dataset.readonly = soloLectura ? "1" : "0";
+  const etapas = leerEtapas();
+
+  const track = el("div", "fm-timeline-track");
+  ETAPAS.forEach(et => {
+    const completado = !!etapas[et.id];
+    const step = el("div", "fm-step" + (completado ? " completado" : ""));
+    step.dataset.etapa = et.id;
+    const btn = el("button", "dot", completado ? "✓" : "");
+    btn.type = "button";
+    btn.setAttribute("aria-pressed", String(completado));
+    btn.setAttribute("aria-label", et.nombre + (completado ? " (completada)" : " (pendiente)"));
+    btn.title = et.nombre;
+    if (soloLectura) {
+      btn.disabled = true;
+    } else {
+      btn.addEventListener("click", () => {
+        const e2 = leerEtapas();
+        e2[et.id] = !e2[et.id];
+        guardarEtapas(e2);
+        renderTimeline(false);  // solo re-renderiza el Timeline (no toca el Backend)
+      });
+    }
+    step.appendChild(btn);
+    step.appendChild(el("span", "label", et.nombre));
+    track.appendChild(step);
+  });
+  cont.appendChild(track);
+
+  const completadas = ETAPAS.filter(et => etapas[et.id]).length;
+  const pct = Math.round(completadas / 6 * 100);
+  const info = el("div", "fm-timeline-info");
+  info.appendChild(el("span", "", "Progreso del servicio · " + completadas + " de 6 etapas"));
+  info.appendChild(el("span", "pct", pct + "% completado"));
+  cont.appendChild(info);
+  cont.appendChild(el("div", "fm-timeline-note", "Seguimiento local — Las marcaciones se guardan únicamente en este navegador."));
 }
 
 // ---------------------------------------------------------------------------
@@ -326,6 +405,7 @@ async function seleccionarServicio(sid) {
     $id("TOP_STATUS").textContent = estado || "";
     actualizarChatHeader(d);
     actualizarModoLectura(estado === "CERRADO");
+    renderTimeline(estado === "CERRADO");
     if (sesion.area === "CONDUCTOR") await cargarChecklist();
     await cargarMensajes();
   } catch (e) { $id("SERVICIO_DETALLE").textContent = e.message; }
