@@ -97,6 +97,49 @@
     <p class="fm-map-nota" id="MAP_NOTA"></p>
   </section>
 
+  <!-- Protocolo obligatorio de evidencias fotográficas -->
+  <section class="fm-card" id="PROTOCOLO_SECTION">
+    <div class="fm-map-titulo">
+      <h2>PROTOCOLO OBLIGATORIO DE EVIDENCIAS FOTOGRÁFICAS</h2>
+      <p class="sub">Evidencias con fotografía, ubicación, fecha y hora</p>
+    </div>
+    <div id="PROTOCOLO_LISTA"></div>
+    <p class="fm-map-nota">Las evidencias deben tomarse en el momento de cada actividad, con fotografía, ubicación, fecha y hora.</p>
+    <p class="fm-map-nota" style="color:var(--fm-warning)">Utiliza la cámara únicamente cuando el vehículo esté detenido en condiciones seguras. No utilices el teléfono mientras conduces.</p>
+  </section>
+
+  <!-- Perfil cronológico del servicio -->
+  <section class="fm-card" id="CRONOLOGICO_SECTION">
+    <div class="fm-map-titulo">
+      <h2>PERFIL CRONOLÓGICO DEL SERVICIO</h2>
+      <p class="sub">Eventos, evidencias y tiempos del servicio</p>
+    </div>
+    <div id="CRONOLOGICO"></div>
+  </section>
+
+  <!-- Cámara del conductor (getUserMedia + geolocalización) -->
+  <div class="fm-camera" id="CAMERA_MODAL" hidden>
+    <div class="fm-camera-top">
+      <span>Tomar fotografía</span>
+      <span class="spacer"></span>
+      <button class="fm-icon-btn" id="CAMERA_CLOSE" aria-label="Cerrar">✕</button>
+    </div>
+    <video id="CAMERA_VIDEO" autoplay playsinline></video>
+    <canvas id="CAMERA_CANVAS" hidden></canvas>
+    <div id="CAMERA_PREVIEW" hidden></div>
+    <div class="fm-camera-bottom">
+      <button class="fm-btn primary" id="CAMERA_SHOOT">Capturar</button>
+      <button class="fm-btn" id="CAMERA_RETAKE" hidden>Repetir fotografía</button>
+      <button class="fm-btn" id="CAMERA_RELOC" hidden>Reintentar ubicación</button>
+      <span class="fm-loading" id="CAMERA_GEO"></span>
+    </div>
+    <div class="fm-camera-annot">
+      <label for="CAMERA_NOTA" class="sr-only">Nota</label>
+      <textarea id="CAMERA_NOTA" placeholder="Nota de la evidencia…"></textarea>
+      <button class="fm-btn primary" id="CAMERA_SEND" hidden>Enviar evidencia</button>
+    </div>
+  </div>
+
   <!-- Visor de adjuntos (imagen y PDF) -->
   <div class="fm-viewer" id="VIEWER" hidden>
     <div class="fm-viewer-top">

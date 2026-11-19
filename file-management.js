@@ -204,7 +204,12 @@ function flujoPanel() {
     $id("BTN_ENVIAR").addEventListener("click", enviarMensaje);
     $id("MENSAJE").addEventListener("keydown", onTeclaMensaje);
     $id("BTN_ADJUNTAR").addEventListener("click", () => { $id("FILE_INPUT").removeAttribute("capture"); $id("FILE_INPUT").click(); });
-    $id("BTN_CAMARA").addEventListener("click", () => { $id("FILE_INPUT").setAttribute("capture", "environment"); $id("FILE_INPUT").click(); });
+    if (area === "CONDUCTOR") {
+      $id("BTN_CAMARA").addEventListener("click", abrirCamara);
+      configurarCamara();
+    } else {
+      $id("BTN_CAMARA").hidden = true;
+    }
     $id("FILE_INPUT").addEventListener("change", (e) => seleccionarAdjunto(e.target.files && e.target.files[0]));
     configurarVisor();
     document.addEventListener("click", manejarBotonesMoviles);
@@ -795,6 +800,8 @@ async function cargarMensajes() {
     renderMensajes(lista);
     renderDocumentos(lista);
     procesarUbicaciones(lista);
+    renderProtocolo();
+    renderCronologico();
     $id("CHAT_STATUS").textContent = "Sincronizado " + horaCorta();
   } catch (e) {
     $id("CHAT_STATUS").textContent = "Sin conexión";
@@ -1452,6 +1459,212 @@ function configurarMapa() {
     $id("MAP_FULLSCREEN").textContent = document.fullscreenElement ? "Salir de pantalla completa" : "Pantalla completa";
     setTimeout(() => { if (mapaLeaflet) mapaLeaflet.invalidateSize(); }, 150);
   });
+}
+
+// ===========================================================================
+// CÁMARA DEL CONDUCTOR (getUserMedia + geolocalización)
+// ===========================================================================
+const PROTOCOLO = [
+  { cat: "Kilometraje y Combustible Inicial", frec: "Antes de iniciar el recorrido" },
+  { cat: "Carga de mercancía", frec: "Cada operación de carga" },
+  { cat: "Inicio de Viaje", frec: "Al iniciar el desplazamiento" },
+  { cat: "Paso por Caseta", frec: "Cada caseta" },
+  { cat: "Carga de combustible", frec: "Cada abastecimiento" },
+  { cat: "Inicio de Descanso", frec: "Cada descanso" },
+  { cat: "Reanudación de Viaje", frec: "Cada reanudación" },
+  { cat: "Hotel", frec: "Cuando aplique" },
+  { cat: "Llegada a Destino", frec: "Cada destino" },
+  { cat: "Descarga de mercancía", frec: "Cada descarga" },
+  { cat: "Kilometraje y Combustible Final", frec: "Al finalizar el recorrido" },
+];
+
+let camaraStream = null;
+let fotoCapturada = null;
+let ubicacionCapturada = null;
+
+function detenerCamara() {
+  if (camaraStream) { camaraStream.getTracks().forEach(t => t.stop()); camaraStream = null; }
+}
+
+function cerrarCamara() {
+  detenerCamara();
+  $id("CAMERA_MODAL").hidden = true;
+  fotoCapturada = null;
+  ubicacionCapturada = null;
+  $id("CAMERA_GEO").textContent = "";
+  $id("CAMERA_NOTA").value = "";
+}
+
+async function abrirCamara() {
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    alert("La cámara no está disponible en este navegador.");
+    return;
+  }
+  $id("CAMERA_MODAL").hidden = false;
+  try {
+    camaraStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false });
+    const video = $id("CAMERA_VIDEO");
+    video.srcObject = camaraStream;
+    video.hidden = false;
+    $id("CAMERA_PREVIEW").hidden = true;
+    $id("CAMERA_SHOOT").hidden = false;
+    $id("CAMERA_RETAKE").hidden = true;
+    $id("CAMERA_SEND").hidden = true;
+    $id("CAMERA_GEO").textContent = "";
+  } catch (e) {
+    alert("No se pudo acceder a la cámara: " + e.message);
+    cerrarCamara();
+  }
+}
+
+async function capturarFoto() {
+  const video = $id("CAMERA_VIDEO");
+  const canvas = $id("CAMERA_CANVAS");
+  canvas.width = video.videoWidth; canvas.height = video.videoHeight;
+  canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+  const dataUrl = canvas.toDataURL("image/jpeg", 0.85);
+  fotoCapturada = { dataUrl };
+  const prev = $id("CAMERA_PREVIEW");
+  prev.innerHTML = "";
+  const img = document.createElement("img");
+  img.src = dataUrl; img.alt = "Fotografía capturada";
+  prev.appendChild(img);
+  prev.hidden = false;
+  video.hidden = true;
+  $id("CAMERA_SHOOT").hidden = true;
+  $id("CAMERA_RETAKE").hidden = false;
+  $id("CAMERA_SEND").hidden = false;
+  obtenerUbicacion();
+}
+
+function obtenerUbicacion() {
+  $id("CAMERA_GEO").textContent = "Obteniendo ubicación…";
+  if (!navigator.geolocation) {
+    $id("CAMERA_GEO").textContent = "Geolocalización no disponible.";
+    ubicacionCapturada = null;
+    return;
+  }
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      ubicacionCapturada = { lat: pos.coords.latitude, lon: pos.coords.longitude,
+        precision: pos.coords.accuracy, fecha: new Date().toISOString() };
+      $id("CAMERA_GEO").textContent = "Ubicación: " + pos.coords.latitude.toFixed(5) + ", " +
+        pos.coords.longitude.toFixed(5) + " (±" + Math.round(pos.coords.accuracy) + " m)";
+    },
+    (err) => {
+      $id("CAMERA_GEO").textContent = "No se pudo obtener la ubicación: " + err.message;
+      ubicacionCapturada = null;
+    },
+    { enableHighAccuracy: true, maximumAge: 0, timeout: 20000 }
+  );
+}
+
+async function enviarEvidencia() {
+  if (!fotoCapturada) return;
+  if (!ubicacionCapturada) {
+    alert("No se obtuvo una ubicación válida. Esta evidencia no puede registrarse como georreferenciada. Reintente la ubicación.");
+    return;
+  }
+  if (!servicioIdActual) { alert("Seleccione un servicio."); return; }
+  const categoria = $id("CATEGORIA").value || "Mensaje General";
+  const nota = $id("CAMERA_NOTA").value.trim();
+  const btn = $id("CAMERA_SEND");
+  btn.disabled = true; btn.textContent = "Enviando…";
+  try {
+    const base64 = fotoCapturada.dataUrl.split(",")[1] || "";
+    await WixApi.registrarEvidencia({
+      servicioId: servicioIdActual, categoria, mensaje: nota,
+      nombreArchivo: "evidencia.jpg", tipoArchivo: "image/jpeg", contenidoBase64: base64,
+      latitud: ubicacionCapturada.lat, longitud: ubicacionCapturada.lon,
+      precisionMetros: ubicacionCapturada.precision,
+      fechaCapturaDispositivo: ubicacionCapturada.fecha, fechaGeolocalizacion: ubicacionCapturada.fecha,
+      origenEnvio: "CHAT",
+    });
+    $id("CAMERA_NOTA").value = "";
+    cerrarCamara();
+    $id("CHAT_STATUS").textContent = "Evidencia enviada correctamente";
+    await cargarMensajes();
+  } catch (e) {
+    alert("La evidencia pudo haberse completado. Actualiza el historial antes de volver a enviar.\n" + e.message);
+  } finally {
+    btn.disabled = false; btn.textContent = "Enviar evidencia";
+  }
+}
+
+function configurarCamara() {
+  $id("CAMERA_CLOSE").addEventListener("click", cerrarCamara);
+  $id("CAMERA_SHOOT").addEventListener("click", capturarFoto);
+  $id("CAMERA_RETAKE").addEventListener("click", () => abrirCamara());
+  $id("CAMERA_RELOC").addEventListener("click", obtenerUbicacion);
+  $id("CAMERA_SEND").addEventListener("click", enviarEvidencia);
+}
+
+// ===========================================================================
+// PROTOCOLO OBLIGATORIO DE EVIDENCIAS
+// ===========================================================================
+function renderProtocolo() {
+  const cont = $id("PROTOCOLO_LISTA"); if (!cont) return;
+  cont.innerHTML = "";
+  const evidencias = mensajesActuales.filter(m => m.tieneArchivo && m.tipoArchivo && String(m.tipoArchivo).startsWith("image/"));
+  const tabla = el("table", "fm-protocol");
+  const th = el("tr");
+  ["Evidencia", "Frecuencia", "Estado"].forEach(h => th.appendChild(el("th", "", h)));
+  tabla.appendChild(th);
+  PROTOCOLO.forEach(p => {
+    const tr = el("tr");
+    tr.appendChild(el("td", "", p.cat));
+    tr.appendChild(el("td", "", p.frec));
+    const encontrada = evidencias.some(e => {
+      const c = String(e.categoria || "").toLowerCase();
+      return c && (c.includes(p.cat.toLowerCase()) || p.cat.toLowerCase().includes(c));
+    });
+    const estado = encontrada ? "Registrada" : "Pendiente";
+    tr.appendChild(el("td", "estado est-" + estado, estado));
+    tabla.appendChild(tr);
+  });
+  cont.appendChild(tabla);
+}
+
+// ===========================================================================
+// PERFIL CRONOLÓGICO DEL SERVICIO
+// ===========================================================================
+function ind(label, valor) {
+  const d = el("div", "ind");
+  d.appendChild(el("b", "", String(valor)));
+  d.appendChild(document.createTextNode(label));
+  return d;
+}
+
+function renderCronologico() {
+  const cont = $id("CRONOLOGICO"); if (!cont) return;
+  cont.innerHTML = "";
+  if (!folioActual) { cont.appendChild(el("div", "fm-empty", "Selecciona un servicio para consultar su perfil cronológico.")); return; }
+  const eventos = [...mensajesActuales].sort((a, b) => String(a.fechaEnvio || a.fecha || "").localeCompare(String(b.fechaEnvio || b.fecha || "")));
+  if (!eventos.length) { cont.appendChild(el("div", "fm-empty", "Sin eventos registrados.")); return; }
+
+  const nFotos = eventos.filter(m => m.tieneArchivo && m.tipoArchivo && String(m.tipoArchivo).startsWith("image/")).length;
+  const nDocs = eventos.filter(m => m.tieneArchivo && m.tipoArchivo === "application/pdf").length;
+  const nMsgs = eventos.filter(m => !m.tieneArchivo).length;
+  const inds = el("div", "fm-crono-indicadores");
+  inds.appendChild(ind("Eventos", eventos.length));
+  inds.appendChild(ind("Fotografías", nFotos));
+  inds.appendChild(ind("Documentos", nDocs));
+  inds.appendChild(ind("Mensajes", nMsgs));
+  cont.appendChild(inds);
+
+  const linea = el("div", "fm-crono");
+  eventos.forEach(m => {
+    const ev = el("div", "fm-crono-evento");
+    ev.appendChild(el("span", "hora", fechaHora(m.fechaEnvio || m.fecha || m.fechaServidor)));
+    const punto = el("span", "punto"); punto.style.background = areaInfo(m.area).color;
+    ev.appendChild(punto);
+    const info = el("div", "info");
+    info.appendChild(el("div", "titulo", m.categoria || (m.tieneArchivo ? "Adjunto" : "Mensaje")));
+    info.appendChild(el("div", "meta", (textoDe(m.usuario || m.user || "")) + " · " + areaInfo(m.area).nombre));
+    ev.appendChild(info);
+    linea.appendChild(ev);
+  });
+  cont.appendChild(linea);
 }
 
 // ---------------------------------------------------------------------------

@@ -437,3 +437,44 @@
 .fm-ubicacion-chip .fm-ubicacion-no { color: var(--fm-warning); }
 .fm-ubicacion-chip .fm-btn { font-size: 11px; padding: 3px 8px; }
 .fm-ubicacion-chip a { font-size: 12px; }
+
+/* --- Cámara del conductor --- */
+.fm-camera {
+  position: fixed; inset: 0; z-index: 90; background: #000;
+  display: flex; flex-direction: column; color: #fff;
+}
+.fm-camera-top { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: rgba(0,0,0,0.5); }
+.fm-camera-top .spacer { flex: 1; }
+.fm-camera-top .fm-icon-btn { background: rgba(255,255,255,0.15); color: #fff; border-color: transparent; }
+#CAMERA_VIDEO, #CAMERA_PREVIEW { flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+#CAMERA_VIDEO { width: 100%; object-fit: cover; background: #000; }
+#CAMERA_PREVIEW img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.fm-camera-bottom { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 12px 16px; }
+.fm-camera-bottom .fm-btn { background: rgba(255,255,255,0.15); color: #fff; border-color: transparent; }
+.fm-camera-annot { padding: 0 16px 16px; display: flex; flex-direction: column; gap: 10px; }
+.fm-camera-annot textarea { width: 100%; min-height: 60px; resize: vertical; border-radius: 10px; padding: 10px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff; }
+
+/* --- Protocolo obligatorio --- */
+.fm-protocol { width: 100%; border-collapse: collapse; font-size: 13px; }
+.fm-protocol th, .fm-protocol td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--fm-border); }
+.fm-protocol th { color: var(--fm-text-secondary); font-size: 12px; background: var(--fm-surface-secondary); }
+.fm-protocol .estado { font-weight: 600; font-size: 12px; }
+.est-Pendiente { color: var(--fm-text-tertiary); }
+.est-Registrada { color: var(--fm-success); }
+.est-Incompleta { color: var(--fm-warning); }
+.est-Incidencia { color: var(--fm-danger); }
+.est-NoDeterminable, .est-NoAplica { color: var(--fm-text-tertiary); }
+
+/* --- Perfil cronológico --- */
+.fm-crono { font-size: 13px; }
+.fm-crono-lane { border: 1px solid var(--fm-border); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+.fm-crono-lane summary { cursor: pointer; padding: 10px 12px; font-weight: 600; background: var(--fm-surface-secondary); list-style-position: inside; display: flex; justify-content: space-between; }
+.fm-crono-evento { display: flex; gap: 10px; padding: 8px 12px; border-top: 1px solid var(--fm-border); align-items: flex-start; }
+.fm-crono-evento .hora { flex: 0 0 auto; font-size: 11px; color: var(--fm-text-secondary); }
+.fm-crono-evento .punto { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; margin-top: 4px; }
+.fm-crono-evento .info { flex: 1; min-width: 0; }
+.fm-crono-evento .titulo { font-weight: 600; }
+.fm-crono-evento .meta { font-size: 11px; color: var(--fm-text-secondary); }
+.fm-crono-indicadores { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+.fm-crono-indicadores .ind { padding: 6px 10px; border: 1px solid var(--fm-border); border-radius: 8px; font-size: 12px; }
+.fm-crono-indicadores .ind b { display: block; font-size: 15px; }

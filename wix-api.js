@@ -162,4 +162,17 @@ export const WixApi = {
   resolverUbicacion(servicioId, mensajeId, url) {
     return apiRequest("POST", "st_resolver_ubicacion", { servicioId, mensajeId, url }, true);
   },
+
+  // Registra una evidencia fotográfica georreferenciada (CONDUCTOR).
+  registrarEvidencia(datos) {
+    return apiRequest("POST", "st_registrar_evidencia", datos, true);
+  },
+
+  // Consulta ubicaciones y evidencias del servicio.
+  ubicaciones(servicioId) {
+    return apiRequest("GET", "st_ubicaciones?servicioId=" + encodeURIComponent(servicioId), null, true);
+  },
+  evidencias(servicioId) {
+    return apiRequest("GET", "st_evidencias?servicioId=" + encodeURIComponent(servicioId), null, true);
+  },
 };
