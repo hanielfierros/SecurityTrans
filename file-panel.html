@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="FILE MANAGEMENT — Panel de trabajo por área SecurityTrans.">
   <title>Panel de trabajo — FILE MANAGEMENT</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
@@ -11,44 +12,60 @@
 </head>
 <body class="fm">
   <header class="fm-nav" id="TOP_BAR">
-    <a class="brand" href="./index.html">iData<small style="color:var(--color-text-secondary);font-weight:400"> · FILE MANAGEMENT</small></a>
-    <span class="nav-link" id="TOP_AREA">Área</span>
-    <span class="nav-link" id="TOP_USER">Usuario</span>
-    <span class="nav-link" id="TOP_FOLIO">Folio: —</span>
-    <span class="nav-link" id="TOP_STATUS">—</span>
+    <a class="brand" href="./index.html">iData<small>· FILE MANAGEMENT</small></a>
+    <span class="nav-pill" id="TOP_AREA">Área</span>
+    <span class="meta" id="TOP_USER">Usuario</span>
+    <span class="meta" id="TOP_FOLIO">Folio: —</span>
+    <span class="meta" id="TOP_STATUS">—</span>
     <span class="spacer"></span>
     <button class="fm-btn" type="button" id="BTN_LOGOUT">Cerrar sesión</button>
   </header>
 
   <main class="fm-workspace">
-    <!-- Panel izquierdo (operaciones / área) -->
+    <!-- Panel izquierdo -->
     <section class="fm-panel" id="PANEL">
       <div id="PANEL_CONTENT"><p class="fm-empty">Cargando…</p></div>
     </section>
 
-    <!-- Chat compartido (derecha / móvil) -->
+    <!-- Chat compartido -->
     <section class="fm-chat" id="CHAT">
-      <h2>Chat del servicio</h2>
-      <p class="fm-empty" id="CHAT_EMPTY">Seleccione un servicio para consultar su conversación.</p>
-      <div class="fm-messages" id="MESSAGES"></div>
+      <header class="fm-chat-head">
+        <span class="avatar" id="CHAT_AVATAR">S</span>
+        <div>
+          <div class="titulo" id="CHAT_TITULO">Ventana de servicio</div>
+          <div class="sub" id="CHAT_SUB">Seleccione un servicio</div>
+        </div>
+        <span class="spacer"></span>
+        <span class="meta" id="CHAT_ESTADO"></span>
+      </header>
+
+      <div class="fm-messages" id="MESSAGES">
+        <p class="fm-empty" id="CHAT_EMPTY">Seleccione un servicio para consultar su conversación.</p>
+      </div>
+
+      <div class="fm-readonly" id="READONLY_BANNER" hidden>
+        Servicio cerrado · Solo lectura
+      </div>
+
       <div class="fm-composer" id="COMPOSER" hidden>
         <div class="row">
           <label for="CATEGORIA" class="sr-only">Categoría</label>
           <select id="CATEGORIA"></select>
         </div>
         <label for="MENSAJE" class="sr-only">Mensaje</label>
-        <textarea id="MENSAJE" placeholder="Escriba un mensaje…"></textarea>
+        <textarea id="MENSAJE" placeholder="Escriba un mensaje…" rows="1"></textarea>
         <div class="row">
-          <button class="fm-btn" type="button" id="BTN_ADJUNTAR" disabled title="Carga de documentos pendiente de habilitación">Adjuntar archivo</button>
-          <button class="fm-btn" type="button" id="BTN_CAMARA" disabled title="Carga de evidencias pendiente de habilitación">Cámara</button>
+          <button class="fm-icon-btn" type="button" id="BTN_ADJUNTAR" disabled title="Adjuntos pendientes de habilitación" aria-label="Adjuntar archivo">📎</button>
+          <button class="fm-icon-btn" type="button" id="BTN_CAMARA" disabled title="Adjuntos pendientes de habilitación" aria-label="Cámara">📷</button>
           <span class="spacer"></span>
-          <button class="fm-btn primary" type="button" id="BTN_ENVIAR">Enviar</button>
+          <button class="fm-icon-btn send" type="button" id="BTN_ENVIAR" aria-label="Enviar">➤</button>
         </div>
-        <p style="font-size:0.7rem;color:var(--color-text-secondary)">
-          La carga de documentos y fotografías estará disponible cuando el backend habilite la interfaz correspondiente.
+        <p class="fm-chat-status" style="font-size:11px;color:var(--fm-text-tertiary)">
+          Adjuntos pendientes de habilitación.
         </p>
       </div>
-      <p class="fm-loading" id="CHAT_STATUS" style="margin-top:6px"></p>
+
+      <p class="fm-chat-status" id="CHAT_STATUS"></p>
     </section>
   </main>
 
