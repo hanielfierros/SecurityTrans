@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FILE MANAGEMENT — Gestión documental y operativa de servicios SecurityTrans.">
+  <title>FILE MANAGEMENT — SECURITYTRANS</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./file-management.css">
+  <script src="./theme.js"></script>
+</head>
+<body class="fm">
+  <header class="fm-nav">
+    <a class="brand" href="./index.html">iData<small style="color:var(--color-text-secondary);font-weight:400"> · FILE MANAGEMENT</small></a>
+    <a class="nav-link" href="./index.html">Volver a iData</a>
+    <span class="spacer"></span>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar tema"></button>
+  </header>
+
+  <main class="fm-main">
+    <h1 style="margin:8px 0 4px">FILE MANAGEMENT</h1>
+    <p style="color:var(--color-text-secondary);margin:0 0 28px">Seleccione su área para continuar.</p>
+
+    <section class="fm-areas" aria-label="Áreas de trabajo">
+      <a class="fm-area-card fm-op" href="./file-login.html?area=OPERACIONES_LOGISTICA">
+        <span class="fm-area-icon" aria-hidden="true">🚚</span>
+        <h2>OPERACIONES - LOGÍSTICA</h2>
+        <p>Creación y gestión de servicios de transporte</p>
+      </a>
+      <a class="fm-area-card fm-adm" href="./file-login.html?area=ADMINISTRACION">
+        <span class="fm-area-icon" aria-hidden="true">📋</span>
+        <h2>ADMINISTRACIÓN</h2>
+        <p>Consulta y contribución a servicios abiertos</p>
+      </a>
+      <a class="fm-area-card fm-cond" href="./file-login.html?area=CONDUCTOR">
+        <span class="fm-area-icon" aria-hidden="true">🧑‍✈️</span>
+        <h2>CONDUCTOR</h2>
+        <p>Checklist, evidencias e información del servicio</p>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

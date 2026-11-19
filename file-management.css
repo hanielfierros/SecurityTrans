@@ -1,0 +1,131 @@
+/* ============================================================
+   SECURITYTRANS — FILE MANAGEMENT (estilos aislados)
+
+   Reutiliza los tokens de diseño de styles.css (grises + tema dual).
+   Colores funcionales por área, coordinados con la marca.
+   Todo el alcance se limita con el prefijo .fm para no afectar
+   al módulo FUEL MANAGEMENT.
+   ============================================================ */
+
+.fm { --area: #64748B; }
+
+.fm-nav {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 10px 20px; background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border); position: sticky; top: 0; z-index: 20;
+}
+.fm-nav .brand { font-weight: 700; font-size: 1.05rem; color: var(--color-text); text-decoration: none; }
+.fm-nav .spacer { flex: 1; }
+.fm-nav .nav-link { color: var(--color-text-secondary); text-decoration: none; font-size: 13px; padding: 6px 10px; border-radius: 6px; }
+.fm-nav .nav-link:hover { color: var(--color-text); background: var(--color-surface-alt); }
+
+.fm-main { max-width: 1200px; margin: 0 auto; padding: 24px 20px 64px; }
+
+/* --- Tarjetas de área (entrada) --- */
+.fm-areas { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.fm-area-card {
+  flex: 1 1 220px; max-width: 300px; min-height: 200px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 32px 20px; border-radius: 16px; text-decoration: none;
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  color: var(--color-text); box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fm-area-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+.fm-area-card:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+.fm-area-icon { width: 60px; height: 60px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 16px; color: #fff; }
+.fm-area-card h2 { margin: 0; font-size: 1rem; letter-spacing: 0.04em; text-align: center; }
+.fm-area-card p { margin: 6px 0 0; font-size: 0.8rem; color: var(--color-text-secondary); text-align: center; }
+
+/* Colores de área */
+.fm-op { --area: #2563EB; } .fm-op .fm-area-icon { background: #2563EB; }
+.fm-adm { --area: #7C3AED; } .fm-adm .fm-area-icon { background: #7C3AED; }
+.fm-cond { --area: #16A34A; } .fm-cond .fm-area-icon { background: #16A34A; }
+
+/* --- Login --- */
+.fm-login {
+  max-width: 400px; margin: 40px auto; padding: 32px;
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: 16px; box-shadow: var(--shadow-card);
+}
+.fm-login h1 { font-size: 1.3rem; margin: 0 0 4px; }
+.fm-login .sub { color: var(--color-text-secondary); font-size: 0.85rem; margin-bottom: 20px; }
+.fm-field { margin-bottom: 16px; }
+.fm-field label { display: block; font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 6px; }
+.fm-field input, .fm-field select, .fm-field textarea {
+  width: 100%; font: inherit; color: var(--color-text); background: var(--color-surface);
+  border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 12px;
+}
+.fm-field textarea { min-height: 90px; resize: vertical; }
+.fm-error { color: var(--color-danger); font-size: 0.82rem; margin: 8px 0; }
+.fm-loading { color: var(--color-text-secondary); font-size: 0.82rem; }
+
+/* --- Botones --- */
+.fm-btn {
+  font: inherit; font-size: 14px; padding: 10px 18px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);
+}
+.fm-btn:hover { background: var(--color-surface-alt); }
+.fm-btn.primary { background: var(--area, var(--color-primary)); color: #fff; border-color: var(--area, var(--color-primary)); }
+.fm-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.fm-btn:focus-visible { outline: 2px solid var(--area, var(--color-primary)); outline-offset: 2px; }
+
+/* --- Panel 50/50 --- */
+.fm-workspace { display: grid; grid-template-columns: 1fr 1fr; gap: 0; height: calc(100vh - 54px); }
+.fm-panel, .fm-chat { overflow-y: auto; padding: 16px; }
+.fm-panel { border-right: 1px solid var(--color-border); }
+.fm-chat { display: flex; flex-direction: column; }
+
+.fm-panel h2, .fm-chat h2 { font-size: 1.05rem; margin: 0 0 12px; }
+.fm-section { margin-bottom: 16px; }
+.fm-section h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-secondary); margin: 0 0 8px; }
+.fm-status-chip {
+  display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+.fm-status-chip.ABIERTO { color: var(--color-success); border-color: var(--color-success); }
+.fm-status-chip.CERRADO { color: var(--color-text-secondary); border-color: var(--color-text-secondary); }
+
+/* --- Mensajes del chat --- */
+.fm-messages { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-bottom: 8px; }
+.fm-msg { border: 1px solid var(--color-border); border-radius: 8px; padding: 8px 12px; background: var(--color-surface); }
+.fm-msg .head { display: flex; gap: 8px; flex-wrap: wrap; font-size: 0.72rem; color: var(--color-text-secondary); margin-bottom: 4px; }
+.fm-msg .area { font-weight: 700; }
+.fm-msg .cuerpo { font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; }
+.fm-msg.sistema { background: var(--color-surface-alt); border-left: 3px solid #64748B; }
+.fm-msg.OPERACIONES_LOGISTICA { border-left: 3px solid #2563EB; }
+.fm-msg.ADMINISTRACION { border-left: 3px solid #7C3AED; }
+.fm-msg.CONDUCTOR { border-left: 3px solid #16A34A; }
+
+/* --- Composer --- */
+.fm-composer { border-top: 1px solid var(--color-border); padding-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+.fm-composer textarea { width: 100%; font: inherit; min-height: 60px; resize: vertical; border: 1px solid var(--color-border); border-radius: 8px; padding: 10px; background: var(--color-surface); color: var(--color-text); }
+.fm-composer .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+.fm-empty { color: var(--color-text-secondary); font-size: 0.9rem; text-align: center; padding: 24px; }
+
+/* --- Tabla de servicios --- */
+.fm-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.fm-table th, .fm-table td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--color-border); }
+.fm-table th { color: var(--color-text-secondary); background: var(--color-surface-alt); }
+
+/* --- Checklist --- */
+.fm-checklist-item { border: 1px solid var(--color-border); border-radius: 8px; padding: 8px 12px; margin-bottom: 6px; }
+.fm-checklist-item .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.fm-checklist-item select { font: inherit; border: 1px solid var(--color-border); border-radius: 6px; padding: 4px 8px; background: var(--color-surface); color: var(--color-text); }
+.fm-checklist-progress { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 10px; }
+
+/* --- Aviso de solo lectura --- */
+.fm-readonly-banner {
+  background: var(--color-surface-alt); border: 1px solid var(--color-border);
+  border-radius: 8px; padding: 12px 16px; font-size: 0.9rem; margin-bottom: 16px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .fm-workspace { grid-template-columns: 1fr; height: auto; }
+  .fm-panel { border-right: none; border-bottom: 1px solid var(--color-border); }
+  .fm-chat { min-height: 60vh; }
+  .fm-chat.hidden-mobile { display: none; }
+  .fm-panel.hidden-mobile { display: none; }
+}

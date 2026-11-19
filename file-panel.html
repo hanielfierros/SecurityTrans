@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de trabajo — FILE MANAGEMENT</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./file-management.css">
+  <script src="./theme.js"></script>
+</head>
+<body class="fm">
+  <header class="fm-nav" id="TOP_BAR">
+    <a class="brand" href="./index.html">iData<small style="color:var(--color-text-secondary);font-weight:400"> · FILE MANAGEMENT</small></a>
+    <span class="nav-link" id="TOP_AREA">Área</span>
+    <span class="nav-link" id="TOP_USER">Usuario</span>
+    <span class="nav-link" id="TOP_FOLIO">Folio: —</span>
+    <span class="nav-link" id="TOP_STATUS">—</span>
+    <span class="spacer"></span>
+    <button class="fm-btn" type="button" id="BTN_LOGOUT">Cerrar sesión</button>
+  </header>
+
+  <main class="fm-workspace">
+    <!-- Panel izquierdo (operaciones / área) -->
+    <section class="fm-panel" id="PANEL">
+      <div id="PANEL_CONTENT"><p class="fm-empty">Cargando…</p></div>
+    </section>
+
+    <!-- Chat compartido (derecha / móvil) -->
+    <section class="fm-chat" id="CHAT">
+      <h2>Chat del servicio</h2>
+      <p class="fm-empty" id="CHAT_EMPTY">Seleccione un servicio para consultar su conversación.</p>
+      <div class="fm-messages" id="MESSAGES"></div>
+      <div class="fm-composer" id="COMPOSER" hidden>
+        <div class="row">
+          <label for="CATEGORIA" class="sr-only">Categoría</label>
+          <select id="CATEGORIA"></select>
+        </div>
+        <label for="MENSAJE" class="sr-only">Mensaje</label>
+        <textarea id="MENSAJE" placeholder="Escriba un mensaje…"></textarea>
+        <div class="row">
+          <button class="fm-btn" type="button" id="BTN_ADJUNTAR" disabled title="Carga de documentos pendiente de habilitación">Adjuntar archivo</button>
+          <button class="fm-btn" type="button" id="BTN_CAMARA" disabled title="Carga de evidencias pendiente de habilitación">Cámara</button>
+          <span class="spacer"></span>
+          <button class="fm-btn primary" type="button" id="BTN_ENVIAR">Enviar</button>
+        </div>
+        <p style="font-size:0.7rem;color:var(--color-text-secondary)">
+          La carga de documentos y fotografías estará disponible cuando el backend habilite la interfaz correspondiente.
+        </p>
+      </div>
+      <p class="fm-loading" id="CHAT_STATUS" style="margin-top:6px"></p>
+    </section>
+  </main>
+
+  <script type="module" src="./file-management.js"></script>
+</body>
+</html>
