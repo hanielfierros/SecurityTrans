@@ -53,8 +53,11 @@
 
 /* Colores por área */
 .fm-area-OPERACIONES_LOGISTICA { --area: #2563EB; --area-soft: #DBEAFE; }
-.fm-area-ADMINISTRACION { --area: #7C3AED; --area-soft: #EDE9FE; }
+.fm-area-AUDITORIA { --area: #7C3AED; --area-soft: #EDE9FE; }
 .fm-area-CONDUCTOR { --area: #15803D; --area-soft: #DCFCE7; }
+.fm-area-DIRECCION_OPERACION { --area: #0891B2; --area-soft: #CFFAFE; }
+.fm-area-CONTADOR { --area: #B45309; --area-soft: #FFEDD5; }
+.fm-area-AUTORIZACIONES_FINANCIERAS { --area: #BE185D; --area-soft: #FCE7F3; }
 .fm-area-SISTEMA { --area: #64748B; --area-soft: #E2E8F0; }
 
 /* --- Navegación superior --- */
@@ -394,3 +397,43 @@
 [data-theme="dark"] .fm-timeline .fm-step.completado::after { background: #30A46C; }
 [data-theme="dark"] .fm-timeline .fm-timeline-info { color: #AEAEB2; }
 [data-theme="dark"] .fm-timeline .fm-timeline-note { color: #8E8E93; }
+
+/* --- Mapa del servicio --- */
+.fm-map {
+  border-top: 1px solid var(--fm-border); background: var(--fm-surface);
+  padding: 14px 20px 20px;
+}
+.fm-map-head { display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+.fm-map-titulo h2 { margin: 0; font-size: 17px; font-weight: 700; }
+.fm-map-titulo .sub { margin: 2px 0 0; font-size: 12px; color: var(--fm-text-secondary); }
+.fm-map-tools { display: flex; gap: 6px; flex-wrap: wrap; margin-left: auto; }
+.fm-map-tools .fm-btn { font-size: 12px; padding: 6px 10px; }
+.fm-map-filter select { font: inherit; font-size: 12px; padding: 6px 8px; border: 1px solid var(--fm-border); border-radius: var(--fm-radius-sm); background: var(--fm-surface); color: var(--fm-text-primary); }
+.fm-map-legend { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; font-size: 11px; color: var(--fm-text-secondary); }
+.fm-map-legend .item { display: flex; align-items: center; gap: 4px; }
+.fm-map-legend .punto { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+#map { height: 500px; border-radius: var(--fm-radius-sm); border: 1px solid var(--fm-border); z-index: 0; }
+.fm-map-historial { margin-top: 12px; }
+.fm-map-historial .filas { max-height: 260px; overflow-y: auto; }
+.fm-map-historial .fila { display: flex; align-items: center; gap: 10px; padding: 6px 8px; border-bottom: 1px solid var(--fm-border); font-size: 12px; }
+.fm-map-historial .fila .num { color: var(--fm-text-tertiary); }
+.fm-map-historial .fila .info { flex: 1; min-width: 0; }
+.fm-map-historial .fila .resumen { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fm-map-historial .fila .meta { font-size: 11px; color: var(--fm-text-secondary); }
+.fm-map-nota { font-size: 11px; color: var(--fm-text-tertiary); margin: 8px 0 0; }
+.fm-map .fm-empty { padding: 20px; text-align: center; color: var(--fm-text-tertiary); }
+.leaflet-popup-content { font-family: var(--fm-font, inherit); font-size: 12px; }
+.leaflet-popup-content .lbl { color: var(--fm-text-secondary, #636366); }
+
+@media (max-width: 900px) {
+  #map { height: 380px; }
+  .fm-map { padding: 12px 12px 16px; }
+  .fm-map-tools { margin-left: 0; }
+}
+
+/* --- Chip de ubicación en mensajes --- */
+.fm-ubicacion-chip { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 6px; font-size: 12px; color: var(--fm-text-secondary); }
+.fm-ubicacion-chip .fm-ubicacion-ok { color: var(--fm-success); font-weight: 600; }
+.fm-ubicacion-chip .fm-ubicacion-no { color: var(--fm-warning); }
+.fm-ubicacion-chip .fm-btn { font-size: 11px; padding: 3px 8px; }
+.fm-ubicacion-chip a { font-size: 12px; }

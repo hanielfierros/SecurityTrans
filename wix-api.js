@@ -157,4 +157,9 @@ export const WixApi = {
     return apiRequest("GET", "st_descarga?servicioId=" + encodeURIComponent(servicioId)
       + "&mensajeId=" + encodeURIComponent(mensajeId), null, true);
   },
+
+  // Resuelve un enlace corto de Google Maps a coordenadas (vía Backend).
+  resolverUbicacion(servicioId, mensajeId, url) {
+    return apiRequest("POST", "st_resolver_ubicacion", { servicioId, mensajeId, url }, true);
+  },
 };

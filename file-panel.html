@@ -8,7 +8,9 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./file-management.css">
+  <link rel="stylesheet" href="./leaflet.css">
   <script src="./theme.js"></script>
+  <script src="./leaflet.js"></script>
 </head>
 <body class="fm">
   <header class="fm-nav" id="TOP_BAR">
@@ -69,6 +71,31 @@
       <p class="fm-chat-status" id="CHAT_STATUS"></p>
     </section>
   </main>
+
+  <!-- Mapa del servicio (ancho completo, bajo los paneles) -->
+  <section class="fm-map" id="MAP_SECTION">
+    <div class="fm-map-head">
+      <div class="fm-map-titulo">
+        <h2>MAPA DEL SERVICIO</h2>
+        <p class="sub" id="MAP_SUB">Ubicaciones reportadas · Servicio —</p>
+      </div>
+      <div class="fm-map-tools" id="MAP_TOOLS">
+        <button class="fm-btn" type="button" id="MAP_ULTIMA" aria-label="Última ubicación">Última ubicación</button>
+        <button class="fm-btn" type="button" id="MAP_TODAS" aria-label="Todas las ubicaciones">Todas las ubicaciones</button>
+        <button class="fm-btn" type="button" id="MAP_HISTORIAL" aria-label="Historial">Historial</button>
+        <label class="fm-map-filter">
+          <span class="sr-only">Filtrar por área</span>
+          <select id="MAP_FILTRO_AREA"><option value="">Todas las áreas</option></select>
+        </label>
+        <button class="fm-btn" type="button" id="MAP_RECORRIDO" aria-label="Mostrar recorrido">Mostrar recorrido</button>
+        <button class="fm-btn" type="button" id="MAP_FULLSCREEN" aria-label="Pantalla completa">Pantalla completa</button>
+      </div>
+    </div>
+    <div class="fm-map-legend" id="MAP_LEGEND"></div>
+    <div id="map"></div>
+    <div class="fm-map-historial" id="MAP_HISTORIAL_LISTA" hidden></div>
+    <p class="fm-map-nota" id="MAP_NOTA"></p>
+  </section>
 
   <!-- Visor de adjuntos (imagen y PDF) -->
   <div class="fm-viewer" id="VIEWER" hidden>

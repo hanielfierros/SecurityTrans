@@ -20,9 +20,20 @@ import { WixApi, getToken, setToken, clearToken } from "./wix-api.js";
 const SESSION_KEY = "st_session_data";
 const AREAS = {
   OPERACIONES_LOGISTICA: { nombre: "Operaciones - Logística", color: "#2563EB" },
-  ADMINISTRACION: { nombre: "Administración", color: "#7C3AED" },
+  AUDITORIA: { nombre: "Auditoría", color: "#7C3AED" },
   CONDUCTOR: { nombre: "Conductor", color: "#15803D" },
+  DIRECCION_OPERACION: { nombre: "Dirección Operación", color: "#0891B2" },
+  CONTADOR: { nombre: "Contador", color: "#B45309" },
+  AUTORIZACIONES_FINANCIERAS: { nombre: "Autorizaciones Financieras", color: "#BE185D" },
 };
+
+// Compatibilidad histórica: los registros antiguos de ADMINISTRACION se muestran como AUDITORÍA.
+const AREA_COMPAT = { ADMINISTRACION: "AUDITORIA" };
+function areaCanon(area) { const a = (area || "").toUpperCase(); return AREA_COMPAT[a] || a; }
+function areaInfo(area) {
+  const canon = areaCanon(area);
+  return AREAS[canon] || { nombre: canon || "Sistema", color: "#64748B" };
+}
 
 const GRUPOS_FALLBACK = {
   PERSONAL: "Documentación personal del conductor",
@@ -98,6 +109,22 @@ function diaClave(v) {
 }
 function horaCorta() { return new Date().toLocaleTimeString("es-MX", { hour12: false }); }
 
+// Renderiza texto convirtiendo las URLs en enlaces seguros (sin innerHTML, sin XSS).
+function renderCuerpoMensaje(contenedor, texto) {
+  const t = texto || "";
+  const regex = /(https?:\/\/[^\s<>]+)/g;
+  let last = 0, m;
+  while ((m = regex.exec(t)) !== null) {
+    if (m.index > last) contenedor.appendChild(document.createTextNode(t.slice(last, m.index)));
+    const a = document.createElement("a");
+    a.href = m[1]; a.textContent = m[1]; a.target = "_blank"; a.rel = "noopener noreferrer";
+    contenedor.appendChild(a);
+    last = m.index + m[1].length;
+  }
+  if (last < t.length) contenedor.appendChild(document.createTextNode(t.slice(last)));
+  else if (!t) contenedor.appendChild(document.createTextNode(""));
+}
+
 // Clasifica errores de login (no todo error HTTP 400 es contraseña).
 function clasificarError(e) {
   const msg = (e && e.message) ? String(e.message) : "";
@@ -111,12 +138,12 @@ function clasificarError(e) {
 // LOGIN
 // ===========================================================================
 function flujoLogin() {
-  const area = areaDesdeURL();
-  const info = AREAS[area];
-  if (!info) { const b = $id("LOGIN_ERROR"); b.textContent = "Área no reconocida."; b.hidden = false; return; }
+  const canon = areaCanon(areaDesdeURL());
+  const info = areaInfo(canon);
+  if (!AREAS[canon]) { const b = $id("LOGIN_ERROR"); b.textContent = "Área no reconocida."; b.hidden = false; return; }
   $id("AREA_TITLE").textContent = info.nombre;
-  $id("AREA_SUB").textContent = "Área: " + area;
-  document.body.classList.add("fm-area-" + area);
+  $id("AREA_SUB").textContent = "Área: " + canon;
+  document.body.classList.add("fm-area-" + canon);
   $id("BTN_VOLVER").addEventListener("click", () => location.href = "./file-management.html");
   $id("BTN_INGRESAR").addEventListener("click", ingresar);
 
@@ -129,7 +156,7 @@ function flujoLogin() {
     $id("LOGIN_LOADING").hidden = false;
     $id("LOGIN_ERROR").hidden = true;
     try {
-      const resp = await WixApi.login(usuario, passwordRaw, area);
+      const resp = await WixApi.login(usuario, passwordRaw, canon);
       const token = resp?.data?.token || resp?.token || resp?.data?.sessionToken;
       if (!token) { mostrarError("El servidor no devolvió un token de sesión."); return; }
       setToken(token);
@@ -167,11 +194,11 @@ function flujoPanel() {
   (async () => {
     try { sesion = (await WixApi.session())?.data || {}; guardarSesion(sesion); }
     catch (e) { sesion = leerSesion(); if (!sesion) { limpiarSesion(); location.href = "./file-management.html"; return; } }
-    const area = sesion.area || areaDesdeURL() || "";
+    const area = areaCanon(sesion.area || areaDesdeURL() || "");
     let usuarioLocal = null; try { usuarioLocal = sessionStorage.getItem("st_usuario"); } catch (e) {}
     sesion.usuario = sesion.usuario || sesion.nombre || sesion.user || usuarioLocal || "—";
     document.body.classList.add("fm-area-" + area);
-    $id("TOP_AREA").textContent = AREAS[area]?.nombre || area;
+    $id("TOP_AREA").textContent = areaInfo(area).nombre;
     $id("TOP_USER").textContent = sesion.usuario;
     $id("BTN_LOGOUT").addEventListener("click", cerrarSesion);
     $id("BTN_ENVIAR").addEventListener("click", enviarMensaje);
@@ -182,6 +209,7 @@ function flujoPanel() {
     configurarVisor();
     document.addEventListener("click", manejarBotonesMoviles);
     poblarCategorias();
+    configurarMapa();
     await cargarCatalogosYServicios(area);
     iniciarPolling(area);
   })();
@@ -401,11 +429,14 @@ async function seleccionarServicio(sid) {
     versionActual = d.version || d.Version || d.servicio?.version || 1;
     renderInfoCard(d);
     const estado = textoDe(d.estado || d.servicio?.estado || "").toUpperCase();
-    $id("TOP_FOLIO").textContent = "Folio: " + (textoDe(d.folio || d.servicio?.folio) || sid);
+    folioActual = textoDe(d.folio || d.servicio?.folio) || "";
+    $id("TOP_FOLIO").textContent = "Folio: " + (folioActual || sid);
     $id("TOP_STATUS").textContent = estado || "";
     actualizarChatHeader(d);
     actualizarModoLectura(estado === "CERRADO");
     renderTimeline(estado === "CERRADO");
+    iniciarMapa();
+    resetearMapa();
     if (sesion.area === "CONDUCTOR") await cargarChecklist();
     await cargarMensajes();
   } catch (e) { $id("SERVICIO_DETALLE").textContent = e.message; }
@@ -763,6 +794,7 @@ async function cargarMensajes() {
     mensajesActuales = lista;
     renderMensajes(lista);
     renderDocumentos(lista);
+    procesarUbicaciones(lista);
     $id("CHAT_STATUS").textContent = "Sincronizado " + horaCorta();
   } catch (e) {
     $id("CHAT_STATUS").textContent = "Sin conexión";
@@ -811,7 +843,7 @@ function sepDia(dia) {
 
 function renderMensaje(m) {
   const tipo = (m.tipo || m.recordType || m.tipoRegistro || "MENSAJE").toUpperCase();
-  const area = (m.area || m.Area || "SISTEMA").toUpperCase();
+  const area = areaCanon(m.area || m.Area || "SISTEMA");
   const esSistema = TIPOS_SISTEMA[tipo] !== undefined;
   const usuario = textoDe(m.usuario || m.user || m.nombre || "Sistema");
   const propio = !esSistema && usuario === sesion.usuario;
@@ -828,7 +860,7 @@ function renderMensaje(m) {
   const bubble = el("div", "fm-bubble");
   const meta = el("div", "meta");
   if (!esSistema) {
-    meta.appendChild(el("span", "area", AREAS[area]?.nombre || area));
+    meta.appendChild(el("span", "area", areaInfo(area).nombre));
     meta.appendChild(el("span", "", usuario));
     if (m.categoria) meta.appendChild(el("span", "", "· " + textoDe(m.categoria)));
   }
@@ -836,11 +868,24 @@ function renderMensaje(m) {
   bubble.appendChild(meta);
 
   const cuerpo = el("div", "cuerpo");
-  cuerpo.textContent = esSistema
-    ? (TIPOS_SISTEMA[tipo] + " — " + textoDe(m.mensaje || m.contenido || m.texto || "") + (m.usuario ? " (" + usuario + ")" : ""))
-    : textoDe(m.mensaje || m.contenido || m.texto || "");
+  const textoMensaje = textoDe(m.mensaje || m.contenido || m.texto || "");
+  if (esSistema) {
+    cuerpo.textContent = TIPOS_SISTEMA[tipo] + " — " + textoMensaje + (m.usuario ? " (" + usuario + ")" : "");
+  } else {
+    renderCuerpoMensaje(cuerpo, textoMensaje);
+  }
   bubble.appendChild(cuerpo);
   if (m.tieneArchivo) renderAdjunto(m, bubble);
+
+  // Chip de ubicación para mensajes "Mensaje General" con enlace de Google Maps.
+  if (!esSistema && esMensajeGeneral(m.categoria) && enlacesGoogle(textoMensaje).length) {
+    const chip = el("div", "fm-ubicacion-chip");
+    chip.appendChild(el("span", "", "Identificando ubicación…"));
+    bubble.appendChild(chip);
+    const mensajeId = m.mensajeId || m.id || m._id || "";
+    mapaChips.set(mensajeId, chip);
+  }
+
   msg.appendChild(bubble);
   return msg;
 }
@@ -1094,6 +1139,320 @@ function iniciarPolling(area) {
   document.addEventListener("visibilitychange", () => { if (!document.hidden && servicioIdActual) cargarMensajes(); });
 }
 function detenerPolling() { if (timer) { clearInterval(timer); timer = null; } }
+
+// ===========================================================================
+// MAPA DEL SERVICIO (Leaflet + OpenStreetMap)
+// ===========================================================================
+const RE_GMAPS = /(https?:\/\/(?:maps\.app\.goo\.gl|goo\.gl\/maps|maps\.google\.com|www\.google\.com\/maps)[^\s<>]+)/g;
+
+let folioActual = "";
+let mapaLeaflet = null;
+let mapaInicializado = false;
+let mapaMarcadores = [];
+let mapaMarcadorPorId = new Map();
+let mapaCache = new Map();
+let mapaRecorrido = null;
+let mapaFiltroArea = "";
+let mapaMostrarRecorrido = false;
+let mapaChips = new Map();
+let procesandoUbicaciones = false;
+
+function esMensajeGeneral(categoria) {
+  const c = String(categoria || "").trim().toLowerCase();
+  return c === "mensaje general" || c === "general";
+}
+
+function enlacesGoogle(texto) {
+  const t = texto || "";
+  const out = [];
+  let m; RE_GMAPS.lastIndex = 0;
+  while ((m = RE_GMAPS.exec(t)) !== null) out.push(m[0]);
+  return out;
+}
+
+function parsearCoordenadas(url) {
+  try {
+    const u = new URL(url);
+    const q = u.searchParams.get("q") || u.searchParams.get("query") || "";
+    if (q) {
+      const m = q.match(/^(-?\d{1,2}(?:\.\d+)?)\s*,\s*(-?\d{1,3}(?:\.\d+)?)$/);
+      if (m) {
+        const lat = parseFloat(m[1]), lon = parseFloat(m[2]);
+        if (Number.isFinite(lat) && Number.isFinite(lon) && lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180) {
+          return { lat, lon };
+        }
+      }
+    }
+  } catch (e) {}
+  return null;
+}
+
+function tituloDeMensaje(texto) {
+  const lineas = (texto || "").split(/\n+/).map(s => s.trim()).filter(Boolean);
+  for (const l of lineas) {
+    if (!/^https?:\/\//.test(l) && !enlacesGoogle(l).length) return l;
+  }
+  return "Ubicación compartida";
+}
+
+function anotacionSinUrl(texto) {
+  return (texto || "").replace(RE_GMAPS, "").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+function claveUbicacion(mensajeId, indice) {
+  return servicioIdActual + "|" + (mensajeId || "") + "|" + indice;
+}
+
+function iniciarMapa() {
+  const cont = $id("map");
+  if (!cont || typeof L === "undefined") return;
+  if (mapaInicializado && mapaLeaflet) { setTimeout(() => mapaLeaflet.invalidateSize(), 50); return; }
+  mapaLeaflet = L.map("map").setView([23.6, -102.5], 5);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors", maxZoom: 18,
+  }).addTo(mapaLeaflet);
+  mapaInicializado = true;
+  actualizarLeyenda();
+}
+
+function actualizarLeyenda() {
+  const ley = $id("MAP_LEGEND");
+  if (!ley) return;
+  ley.innerHTML = "";
+  Object.keys(AREAS).forEach(a => {
+    const item = el("span", "item");
+    const punto = el("span", "punto"); punto.style.background = AREAS[a].color;
+    item.appendChild(punto);
+    item.appendChild(document.createTextNode(AREAS[a].nombre));
+    ley.appendChild(item);
+  });
+}
+
+function resetearMapa() {
+  if (mapaLeaflet) {
+    mapaMarcadores.forEach(u => { if (u.marker) mapaLeaflet.removeLayer(u.marker); });
+    if (mapaRecorrido) { mapaLeaflet.removeLayer(mapaRecorrido); mapaRecorrido = null; }
+  }
+  mapaMarcadores = [];
+  mapaMarcadorPorId.clear();
+  mapaChips.clear();
+  mapaMostrarRecorrido = false;
+  $id("MAP_RECORRIDO").textContent = "Mostrar recorrido";
+  $id("MAP_HISTORIAL_LISTA").hidden = true;
+  actualizarMapaInfo();
+}
+
+function actualizarMapaInfo() {
+  const n = mapaMarcadores.length;
+  $id("MAP_SUB").textContent = "Ubicaciones reportadas · " + n + (n === 1 ? " ubicación" : " ubicaciones") + " · Servicio " + (folioActual || "—");
+  const nota = $id("MAP_NOTA");
+  if (!folioActual) nota.textContent = "Selecciona un servicio para consultar sus ubicaciones.";
+  else if (!n) nota.textContent = "Aún no se han compartido ubicaciones para este servicio.";
+  else nota.textContent = "Línea entre ubicaciones reportadas. No representa el recorrido real del vehículo.";
+}
+
+function crearMarcador(u) {
+  if (!mapaLeaflet) return;
+  const color = areaInfo(u.area).color;
+  const icono = L.divIcon({
+    className: "",
+    html: `<div style="width:16px;height:16px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 0 3px rgba(0,0,0,0.4)"></div>`,
+    iconSize: [16, 16], iconAnchor: [8, 8], popupAnchor: [0, -8],
+  });
+  const marker = L.marker([u.lat, u.lon], { icon: icono }).addTo(mapaLeaflet);
+
+  // Popup seguro: se construye con DOM/textContent (sin innerHTML con datos de usuario).
+  const cont = document.createElement("div");
+  cont.appendChild(el("strong", "", tituloDeMensaje(u.mensaje)));
+  cont.appendChild(document.createElement("br"));
+  const cuerpo = anotacionSinUrl(u.mensaje || "");
+  cuerpo.split("\n").forEach((linea, i) => {
+    if (i) cont.appendChild(document.createElement("br"));
+    cont.appendChild(document.createTextNode(linea));
+  });
+  cont.appendChild(document.createElement("br"));
+  cont.appendChild(el("span", "lbl", "Folio: " + (u.folio || "—") + " · " + areaInfo(u.area).nombre + " · " + (u.usuario || "—")));
+  cont.appendChild(document.createElement("br"));
+  cont.appendChild(document.createTextNode(u.fecha || ""));
+  cont.appendChild(document.createElement("br"));
+  cont.appendChild(document.createTextNode(u.lat + ", " + u.lon));
+  cont.appendChild(document.createElement("br"));
+  const enlace = document.createElement("a");
+  enlace.href = u.url; enlace.textContent = "Abrir en Google Maps";
+  enlace.target = "_blank"; enlace.rel = "noopener noreferrer";
+  cont.appendChild(enlace);
+
+  marker.bindPopup(cont);
+  u.marker = marker;
+  return marker;
+}
+
+function aplicarFiltroArea() {
+  if (!mapaLeaflet) return;
+  mapaMarcadores.forEach(u => {
+    if (!u.marker) return;
+    const visible = !mapaFiltroArea || areaCanon(u.area) === mapaFiltroArea;
+    if (visible) u.marker.addTo(mapaLeaflet); else mapaLeaflet.removeLayer(u.marker);
+  });
+  if (mapaRecorrido) {
+    if (mapaFiltroArea) mapaLeaflet.removeLayer(mapaRecorrido);
+    else if (mapaMostrarRecorrido) mapaRecorrido.addTo(mapaLeaflet);
+  }
+}
+
+function alternarRecorrido() {
+  if (!mapaLeaflet) return;
+  mapaMostrarRecorrido = !mapaMostrarRecorrido;
+  $id("MAP_RECORRIDO").textContent = mapaMostrarRecorrido ? "Ocultar recorrido" : "Mostrar recorrido";
+  if (mapaRecorrido) { mapaLeaflet.removeLayer(mapaRecorrido); mapaRecorrido = null; }
+  if (mapaMostrarRecorrido && !mapaFiltroArea) {
+    const pts = [...mapaMarcadores].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || "")).map(u => [u.lat, u.lon]);
+    if (pts.length >= 2) mapaRecorrido = L.polyline(pts, { color: "#64748B", weight: 2, dashArray: "5 5" }).addTo(mapaLeaflet);
+  }
+}
+
+function centrarTodas() {
+  if (!mapaLeaflet || !mapaMarcadores.length) return;
+  mapaLeaflet.fitBounds(L.latLngBounds(mapaMarcadores.map(u => [u.lat, u.lon])), { padding: [40, 40] });
+}
+
+function centrarUltima() {
+  if (!mapaLeaflet || !mapaMarcadores.length) return;
+  const u = [...mapaMarcadores].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || ""))[mapaMarcadores.length - 1];
+  mapaLeaflet.setView([u.lat, u.lon], 13);
+  if (u.marker) u.marker.openPopup();
+}
+
+function alternarHistorial() {
+  const lista = $id("MAP_HISTORIAL_LISTA");
+  lista.hidden = !lista.hidden;
+  if (!lista.hidden) renderHistorial();
+}
+
+function renderHistorial() {
+  const lista = $id("MAP_HISTORIAL_LISTA");
+  lista.innerHTML = "";
+  const orden = [...mapaMarcadores].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || ""));
+  if (!orden.length) { lista.appendChild(el("div", "fm-empty", "Sin ubicaciones.")); return; }
+  const filas = el("div", "filas");
+  orden.forEach((u, i) => {
+    const f = el("div", "fila");
+    f.appendChild(el("span", "num", String(i + 1)));
+    const info = el("div", "info");
+    info.appendChild(el("div", "resumen", tituloDeMensaje(u.mensaje)));
+    info.appendChild(el("div", "meta", u.fecha + " · " + areaInfo(u.area).nombre + " · " + (u.usuario || "") + " · " + u.lat + ", " + u.lon));
+    f.appendChild(info);
+    const bVer = el("button", "fm-btn", "Ver en mapa");
+    bVer.addEventListener("click", () => { if (mapaLeaflet) { mapaLeaflet.setView([u.lat, u.lon], 14); if (u.marker) u.marker.openPopup(); } });
+    const bAbrir = el("button", "fm-btn", "Google Maps");
+    bAbrir.addEventListener("click", () => window.open(u.url, "_blank", "noopener,noreferrer"));
+    f.appendChild(bVer); f.appendChild(bAbrir);
+    filas.appendChild(f);
+  });
+  lista.appendChild(filas);
+}
+
+function alternarFullscreen() {
+  const sec = $id("MAP_SECTION");
+  if (!document.fullscreenElement) {
+    if (sec.requestFullscreen) sec.requestFullscreen();
+    $id("MAP_FULLSCREEN").textContent = "Salir de pantalla completa";
+  } else {
+    if (document.exitFullscreen) document.exitFullscreen();
+    $id("MAP_FULLSCREEN").textContent = "Pantalla completa";
+  }
+  setTimeout(() => { if (mapaLeaflet) mapaLeaflet.invalidateSize(); }, 150);
+}
+
+async function procesarUbicaciones(lista) {
+  if (!servicioIdActual || !mapaLeaflet || procesandoUbicaciones) return;
+  procesandoUbicaciones = true;
+  try {
+    const mensajes = Array.isArray(lista) ? lista : [];
+    for (const m of mensajes) {
+      if (!esMensajeGeneral(m.categoria)) continue;
+      const enlaces = enlacesGoogle(m.mensaje || m.contenido || m.texto || "");
+      if (!enlaces.length) continue;
+      const mensajeId = m.mensajeId || m.id || m._id || "";
+      for (let i = 0; i < enlaces.length; i++) {
+        const clave = claveUbicacion(mensajeId, i);
+        if (mapaMarcadorPorId.has(clave)) continue;
+        await resolverYAgregar(clave, enlaces[i], m, mensajeId);
+      }
+    }
+    actualizarMapaInfo();
+    centrarTodas();
+  } finally {
+    procesandoUbicaciones = false;
+  }
+}
+
+async function resolverYAgregar(clave, url, m, mensajeId) {
+  let coord = parsearCoordenadas(url);
+  if (!coord) {
+    const cacheClave = servicioIdActual + "|" + mensajeId + "|" + url;
+    if (mapaCache.has(cacheClave)) {
+      coord = mapaCache.get(cacheClave) || null;
+    } else {
+      try {
+        const r = await WixApi.resolverUbicacion(servicioIdActual, mensajeId, url);
+        const d = r?.data || {};
+        if (d && d.resuelto && Number.isFinite(d.latitud) && Number.isFinite(d.longitud)) {
+          coord = { lat: d.latitud, lon: d.longitud };
+          mapaCache.set(cacheClave, coord);
+        } else { mapaCache.set(cacheClave, null); }
+      } catch (e) { mapaCache.set(cacheClave, null); }
+    }
+  }
+  if (coord) {
+    const u = { id: clave, lat: coord.lat, lon: coord.lon, area: m.area || m.Area || "SISTEMA",
+      usuario: textoDe(m.usuario || m.user || ""), folio: folioActual, mensaje: m.mensaje || "",
+      fecha: fechaHora(m.fechaEnvio || m.fecha || m.fechaServidor), url: url, mensajeId };
+    mapaMarcadores.push(u);
+    mapaMarcadorPorId.set(clave, u);
+    crearMarcador(u);
+    marcarChip(mensajeId, "ubicacion", url);
+  } else {
+    marcarChip(mensajeId, "no_resuelto", url);
+  }
+}
+
+function marcarChip(mensajeId, estado, url) {
+  const chip = mapaChips.get(mensajeId);
+  if (!chip) return;
+  chip.innerHTML = "";
+  if (estado === "ubicacion") {
+    chip.appendChild(el("span", "fm-ubicacion-ok", "Ubicación agregada al mapa"));
+    const b = el("button", "fm-btn", "Ver ubicación");
+    b.addEventListener("click", () => {
+      const u = [...mapaMarcadores].find(x => x.mensajeId === mensajeId);
+      if (u && mapaLeaflet) { $id("MAP_SECTION").scrollIntoView({ behavior: "smooth" }); mapaLeaflet.setView([u.lat, u.lon], 14); if (u.marker) u.marker.openPopup(); }
+    });
+    chip.appendChild(b);
+  } else {
+    chip.appendChild(el("span", "fm-ubicacion-no", "No se pudo identificar la ubicación."));
+  }
+  const a = el("a", "", "Abrir en Google Maps");
+  a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+  chip.appendChild(a);
+}
+
+function configurarMapa() {
+  iniciarMapa();
+  const filtro = $id("MAP_FILTRO_AREA");
+  filtro.innerHTML = '<option value="">Todas las áreas</option>';
+  Object.keys(AREAS).forEach(a => filtro.appendChild(new Option(AREAS[a].nombre, a)));
+  $id("MAP_ULTIMA").addEventListener("click", centrarUltima);
+  $id("MAP_TODAS").addEventListener("click", centrarTodas);
+  $id("MAP_HISTORIAL").addEventListener("click", alternarHistorial);
+  $id("MAP_RECORRIDO").addEventListener("click", alternarRecorrido);
+  $id("MAP_FULLSCREEN").addEventListener("click", alternarFullscreen);
+  filtro.addEventListener("change", () => { mapaFiltroArea = filtro.value; aplicarFiltroArea(); });
+  document.addEventListener("fullscreenchange", () => {
+    $id("MAP_FULLSCREEN").textContent = document.fullscreenElement ? "Salir de pantalla completa" : "Pantalla completa";
+    setTimeout(() => { if (mapaLeaflet) mapaLeaflet.invalidateSize(); }, 150);
+  });
+}
 
 // ---------------------------------------------------------------------------
 // Arranque
