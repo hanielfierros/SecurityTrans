@@ -146,6 +146,12 @@ let timer = null;
 let cargandoMensajes = false;
 let esMovil = () => window.innerWidth <= 900;
 const vistos = new Map();  // servicioId -> Set(mensajeId)
+let adjunto = null;        // { file, objectUrl, nombreArchivo, tipoArchivo, base64 }
+let enviando = false;      // evita envíos concurrentes
+let visorUrl = null;       // URL del adjunto abierto en el visor
+let visorNombre = null;    // nombre del adjunto abierto en el visor
+let visorZoom = 1;
+let mensajesActuales = []; // últimos mensajes del servicio (para el panel de documentos)
 
 function flujoPanel() {
   if (!getToken()) { location.href = "./file-management.html"; return; }
@@ -161,6 +167,10 @@ function flujoPanel() {
     $id("BTN_LOGOUT").addEventListener("click", cerrarSesion);
     $id("BTN_ENVIAR").addEventListener("click", enviarMensaje);
     $id("MENSAJE").addEventListener("keydown", onTeclaMensaje);
+    $id("BTN_ADJUNTAR").addEventListener("click", () => { $id("FILE_INPUT").removeAttribute("capture"); $id("FILE_INPUT").click(); });
+    $id("BTN_CAMARA").addEventListener("click", () => { $id("FILE_INPUT").setAttribute("capture", "environment"); $id("FILE_INPUT").click(); });
+    $id("FILE_INPUT").addEventListener("change", (e) => seleccionarAdjunto(e.target.files && e.target.files[0]));
+    configurarVisor();
     document.addEventListener("click", manejarBotonesMoviles);
     poblarCategorias();
     await cargarCatalogosYServicios(area);
@@ -223,6 +233,7 @@ function renderPanel(area, servicios) {
 
   cont.appendChild(cardServicioSeleccionado(area));
   if (area === "CONDUCTOR") cont.appendChild(cardChecklist());
+  cont.appendChild(cardDocumentos());
   cont.appendChild(cardServicios(area, servicios));
 
   const btnChat = el("button", "fm-btn primary", "Abrir chat");
@@ -407,6 +418,39 @@ async function confirmarCierre(sid, s) {
   } catch (e) {
     alert("No fue posible confirmar el resultado. Consulte el servicio antes de intentar nuevamente.\n" + e.message);
   }
+}
+
+// --- Documentos del servicio (panel) ---
+function cardDocumentos() {
+  const card = el("div", "fm-card");
+  card.appendChild(el("h3", "", "Documentos del servicio"));
+  const body = el("div", "fm-empty", "Seleccione un servicio para ver sus documentos.");
+  body.id = "DOCUMENTOS";
+  card.appendChild(body);
+  return card;
+}
+
+function renderDocumentos(lista) {
+  const cont = $id("DOCUMENTOS"); if (!cont) return;
+  const docs = (Array.isArray(lista) ? lista : []).filter(m => m.tieneArchivo);
+  cont.innerHTML = "";
+  if (!docs.length) { cont.appendChild(el("div", "fm-empty", "Sin documentos en este servicio.")); return; }
+  const grid = el("div", "fm-docs-grid");
+  docs.forEach(m => {
+    const fila = el("div", "fm-doc-row");
+    fila.appendChild(el("span", "ico", (m.tipoArchivo || "").toLowerCase() === "application/pdf" ? "📄" : "🖼️"));
+    const datos = el("div", "datos");
+    datos.appendChild(el("div", "nombre", m.nombreArchivo || "documento"));
+    datos.appendChild(el("div", "meta", textoDe(m.categoria || "") + " · " + textoDe(m.usuario || "") + " · " + fechaHora(m.fechaEnvio) + " · " + formatoTamano(m.tamanoArchivo)));
+    fila.appendChild(datos);
+    const acc = el("div", "acciones");
+    const bVer = el("button", "", "Ver"); bVer.addEventListener("click", () => verAdjunto(m));
+    const bDes = el("button", "", "Descargar"); bDes.addEventListener("click", () => descargarAdjunto(m));
+    acc.append(bVer, bDes);
+    fila.appendChild(acc);
+    grid.appendChild(fila);
+  });
+  cont.appendChild(grid);
 }
 
 // --- AJ-07..10: Lista de servicios ---
@@ -636,7 +680,9 @@ async function cargarMensajes() {
   try {
     const r = await WixApi.mensajes(servicioIdActual);
     const lista = Array.isArray(r?.data) ? r.data : (r?.data?.mensajes || []);
+    mensajesActuales = lista;
     renderMensajes(lista);
+    renderDocumentos(lista);
     $id("CHAT_STATUS").textContent = "Sincronizado " + horaCorta();
   } catch (e) {
     $id("CHAT_STATUS").textContent = "Sin conexión";
@@ -714,6 +760,7 @@ function renderMensaje(m) {
     ? (TIPOS_SISTEMA[tipo] + " — " + textoDe(m.mensaje || m.contenido || m.texto || "") + (m.usuario ? " (" + usuario + ")" : ""))
     : textoDe(m.mensaje || m.contenido || m.texto || "");
   bubble.appendChild(cuerpo);
+  if (m.tieneArchivo) renderAdjunto(m, bubble);
   msg.appendChild(bubble);
   return msg;
 }
@@ -726,20 +773,236 @@ function onTeclaMensaje(e) {
   }
 }
 
+// ===========================================================================
+// ADJUNTOS (documentos e imágenes) — integración con Wix
+// ===========================================================================
+const MIMES_OK = { "application/pdf": true, "image/jpeg": true, "image/png": true };
+const EXTS_OK = ["pdf", "jpg", "jpeg", "png"];
+const MAX_BYTES = 10485760; // 10 MiB
+const cacheDescarga = new Map(); // mensajeId -> URL autorizada
+
+function extensionDe(file) { return (file.name.split(".").pop() || "").toLowerCase(); }
+
+function mimeDeArchivo(file) {
+  if (file.type && MIMES_OK[file.type]) return file.type;
+  const ext = extensionDe(file);
+  if (ext === "pdf") return "application/pdf";
+  if (ext === "jpg" || ext === "jpeg") return "image/jpeg";
+  if (ext === "png") return "image/png";
+  return "";
+}
+
+function formatoTamano(bytes) {
+  if (!bytes && bytes !== 0) return "";
+  if (bytes < 1024) return bytes + " B";
+  if (bytes < 1048576) return (bytes / 1024).toFixed(1) + " KB";
+  return (bytes / 1048576).toFixed(1) + " MB";
+}
+
+function esHttps(url) {
+  try { const p = new URL(url).protocol; return p === "https:" || p === "blob:"; } catch (e) { return false; }
+}
+
+function leerDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const fr = new FileReader();
+    fr.onload = () => resolve(fr.result);
+    fr.onerror = () => reject(fr.error);
+    fr.readAsDataURL(file);
+  });
+}
+
+function validarArchivo(file) {
+  const ext = extensionDe(file);
+  const mime = mimeDeArchivo(file);
+  if (!EXTS_OK.includes(ext) || !mime) return "Formato no permitido. Use PDF, JPG, JPEG o PNG.";
+  if (file.size === 0) return "El archivo está vacío.";
+  if (file.size > MAX_BYTES) return "El archivo supera el límite de 10 MiB.";
+  if (file.name.length > 255) return "El nombre del archivo es demasiado largo.";
+  return null;
+}
+
+async function seleccionarAdjunto(file) {
+  $id("FILE_INPUT").value = "";
+  if (!file) return;
+  const error = validarArchivo(file);
+  if (error) { $id("CHAT_STATUS").textContent = error; return; }
+  let base64 = "";
+  try { base64 = (await leerDataUrl(file)).split(",")[1] || ""; }
+  catch (e) { $id("CHAT_STATUS").textContent = "No se pudo leer el archivo."; return; }
+  limpiarAdjunto();
+  adjunto = { file, objectUrl: URL.createObjectURL(file), nombreArchivo: file.name, tipoArchivo: mimeDeArchivo(file), base64 };
+  renderPreviewAdjunto();
+  $id("ATTACH_PREVIEW").hidden = false;
+  $id("CHAT_STATUS").textContent = "";
+}
+
+function renderPreviewAdjunto() {
+  const cont = $id("ATTACH_PREVIEW"); if (!cont || !adjunto) return;
+  cont.innerHTML = "";
+  const chip = el("div", "fm-attach-chip");
+  if (adjunto.tipoArchivo === "application/pdf") {
+    chip.appendChild(el("span", "pdfico", "PDF"));
+    const bPrev = el("button", "fm-btn", "Vista previa");
+    bPrev.addEventListener("click", () => abrirVisor({ nombreArchivo: adjunto.nombreArchivo, url: adjunto.objectUrl, tipoArchivo: adjunto.tipoArchivo }));
+    chip.appendChild(bPrev);
+  } else {
+    const img = document.createElement("img");
+    img.className = "thumb"; img.src = adjunto.objectUrl; img.alt = adjunto.nombreArchivo;
+    chip.appendChild(img);
+  }
+  const datos = el("div", "datos");
+  datos.appendChild(el("div", "nombre", adjunto.nombreArchivo));
+  datos.appendChild(el("div", "tamano", formatoTamano(adjunto.file.size)));
+  chip.appendChild(datos);
+  const cancel = el("button", "fm-btn", "✕");
+  cancel.title = "Quitar adjunto"; cancel.setAttribute("aria-label", "Quitar adjunto");
+  cancel.addEventListener("click", limpiarAdjunto);
+  chip.appendChild(cancel);
+  cont.appendChild(chip);
+}
+
+function limpiarAdjunto() {
+  if (adjunto && adjunto.objectUrl) URL.revokeObjectURL(adjunto.objectUrl);
+  adjunto = null;
+  const cont = $id("ATTACH_PREVIEW"); if (cont) cont.hidden = true;
+}
+
+// Visor de imagen y PDF
+function configurarVisor() {
+  $id("VIEWER_CLOSE").addEventListener("click", cerrarVisor);
+  $id("VIEWER_DOWNLOAD").addEventListener("click", () => { if (visorUrl) descargarUrl(visorUrl, visorNombre || "documento"); });
+  $id("VIEWER_OPEN").addEventListener("click", () => { if (visorUrl) window.open(visorUrl, "_blank", "noopener,noreferrer"); });
+  $id("VIEWER_ZOOM_IN").addEventListener("click", () => zoomVisor(1.25));
+  $id("VIEWER_ZOOM_OUT").addEventListener("click", () => zoomVisor(0.8));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") cerrarVisor(); });
+}
+
+function abrirVisor({ nombreArchivo, url, tipoArchivo }) {
+  if (!esHttps(url)) { $id("CHAT_STATUS").textContent = "Enlace de descarga no válido."; return; }
+  visorUrl = url; visorNombre = nombreArchivo; visorZoom = 1;
+  $id("VIEWER_TITLE").textContent = nombreArchivo;
+  const body = $id("VIEWER_BODY"); body.innerHTML = "";
+  if (tipoArchivo === "application/pdf") {
+    const iframe = document.createElement("iframe");
+    iframe.src = url; iframe.title = nombreArchivo;
+    body.appendChild(iframe);
+    $id("VIEWER_ZOOM_IN").hidden = true; $id("VIEWER_ZOOM_OUT").hidden = true;
+  } else {
+    const img = document.createElement("img");
+    img.src = url; img.alt = nombreArchivo; img.id = "VIEWER_IMG";
+    body.appendChild(img);
+    $id("VIEWER_ZOOM_IN").hidden = false; $id("VIEWER_ZOOM_OUT").hidden = false;
+  }
+  $id("VIEWER").hidden = false;
+}
+
+function zoomVisor(f) {
+  visorZoom = Math.min(5, Math.max(0.2, visorZoom * f));
+  const img = $id("VIEWER_IMG"); if (img) img.style.transform = "scale(" + visorZoom + ")";
+}
+
+function cerrarVisor() {
+  $id("VIEWER").hidden = true;
+  $id("VIEWER_BODY").innerHTML = "";
+  visorUrl = null; visorNombre = null; visorZoom = 1;
+}
+
+function descargarUrl(url, nombre) {
+  if (!esHttps(url)) return;
+  const a = document.createElement("a");
+  a.href = url; a.download = nombre || ""; a.target = "_blank"; a.rel = "noopener noreferrer";
+  document.body.appendChild(a); a.click(); a.remove();
+}
+
+async function obtenerDescarga(mensajeId) {
+  if (!mensajeId) return "";
+  if (cacheDescarga.has(mensajeId)) return cacheDescarga.get(mensajeId);
+  const r = await WixApi.descarga(servicioIdActual, mensajeId);
+  const url = r?.data?.descarga || r?.data?.url || "";
+  if (url) cacheDescarga.set(mensajeId, url);
+  return url;
+}
+
+async function verAdjunto(m) {
+  try {
+    const url = await obtenerDescarga(m.mensajeId || m.id || m._id);
+    if (!url) { $id("CHAT_STATUS").textContent = "No se pudo obtener el enlace de descarga."; return; }
+    abrirVisor({ nombreArchivo: m.nombreArchivo || "documento", url, tipoArchivo: m.tipoArchivo });
+  } catch (e) { $id("CHAT_STATUS").textContent = e.message; }
+}
+
+async function descargarAdjunto(m) {
+  try {
+    const url = await obtenerDescarga(m.mensajeId || m.id || m._id);
+    if (!url) { $id("CHAT_STATUS").textContent = "No se pudo obtener el enlace de descarga."; return; }
+    descargarUrl(url, m.nombreArchivo || "documento");
+  } catch (e) { $id("CHAT_STATUS").textContent = e.message; }
+}
+
+function renderAdjunto(m, contenedor) {
+  const tipo = (m.tipoArchivo || "").toLowerCase();
+  if (tipo === "application/pdf") {
+    const card = el("div", "fm-doc-card");
+    card.appendChild(el("span", "pdfico", "PDF"));
+    const datos = el("div", "datos");
+    datos.appendChild(el("div", "nombre", m.nombreArchivo || "documento.pdf"));
+    datos.appendChild(el("div", "tamano", formatoTamano(m.tamanoArchivo)));
+    card.appendChild(datos);
+    const acc = el("div", "acciones");
+    const bVer = el("button", "", "Ver documento"); bVer.addEventListener("click", () => verAdjunto(m));
+    const bDes = el("button", "", "Descargar"); bDes.addEventListener("click", () => descargarAdjunto(m));
+    acc.append(bVer, bDes);
+    card.appendChild(acc);
+    contenedor.appendChild(card);
+  } else {
+    const card = el("div", "fm-img-card");
+    const mini = document.createElement("img"); mini.className = "mini"; mini.alt = m.nombreArchivo || "imagen";
+    card.appendChild(mini);
+    const datos = el("div", "datos");
+    datos.appendChild(el("div", "nombre", m.nombreArchivo || "imagen"));
+    datos.appendChild(el("div", "tamano", formatoTamano(m.tamanoArchivo)));
+    card.appendChild(datos);
+    const acc = el("div", "acciones");
+    const bVer = el("button", "", "Ver"); bVer.addEventListener("click", () => verAdjunto(m));
+    const bDes = el("button", "", "Descargar"); bDes.addEventListener("click", () => descargarAdjunto(m));
+    acc.append(bVer, bDes);
+    card.appendChild(acc);
+    contenedor.appendChild(card);
+    // miniatura con carga perezosa (URL on-demand, cacheada)
+    obtenerDescarga(m.mensajeId || m.id || m._id).then(url => { if (url && esHttps(url)) mini.src = url; }).catch(() => {});
+  }
+}
+
 async function enviarMensaje() {
-  if (!servicioIdActual) return;
+  if (!servicioIdActual || enviando) return;
   const cat = $id("CATEGORIA").value;
-  const msg = $id("MENSAJE").value.trim();
-  if (!msg) return;
+  const texto = $id("MENSAJE").value.trim();
+  if (!cat) { $id("CHAT_STATUS").textContent = "Seleccione una categoría."; return; }
+  if (!texto && !adjunto) return;
+  const teniaAdjunto = !!adjunto;
+  enviando = true;
   const btn = $id("BTN_ENVIAR");
   btn.disabled = true;
+  $id("CHAT_STATUS").textContent = teniaAdjunto ? "Subiendo archivo…" : "Enviando…";
   try {
-    await WixApi.enviarMensaje(servicioIdActual, cat, msg, "CHAT");
+    if (adjunto) {
+      // Un solo mensaje con adjunto (texto opcional) vía st_subir_documento.
+      await WixApi.subirDocumento(servicioIdActual, cat, texto,
+        adjunto.nombreArchivo, adjunto.tipoArchivo, adjunto.base64, "CHAT");
+    } else {
+      await WixApi.enviarMensaje(servicioIdActual, cat, texto, "CHAT");
+    }
     $id("MENSAJE").value = "";
+    limpiarAdjunto();
+    $id("CHAT_STATUS").textContent = teniaAdjunto ? "Archivo enviado correctamente" : "";
     await cargarMensajes();
   } catch (e) {
-    $id("CHAT_STATUS").textContent = "No se pudo enviar: " + e.message;
-  } finally { btn.disabled = false; }
+    // conservar borrador (texto y adjunto) en caso de error
+    $id("CHAT_STATUS").textContent = "La carga pudo haberse completado. Actualiza el historial antes de volver a enviar. (" + e.message + ")";
+  } finally {
+    enviando = false; btn.disabled = false;
+  }
 }
 
 // ---------------------------------------------------------------------------

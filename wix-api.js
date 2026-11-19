@@ -144,4 +144,17 @@ export const WixApi = {
   guardarChecklist(servicioId, version, items) {
     return apiRequest("POST", "st_guardar_checklist", { servicioId, version, items }, true);
   },
+
+  // Sube un documento (PDF/JPG/JPEG/PNG) como mensaje con adjunto.
+  // contenidoBase64 debe ser Base64 puro (sin prefijo data:).
+  subirDocumento(servicioId, categoria, mensaje, nombreArchivo, tipoArchivo, contenidoBase64, origenEnvio) {
+    return apiRequest("POST", "st_subir_documento",
+      { servicioId, categoria, mensaje, nombreArchivo, tipoArchivo, contenidoBase64, origenEnvio }, true);
+  },
+
+  // Obtiene una URL de descarga autorizada (HTTPS) para un adjunto.
+  descarga(servicioId, mensajeId) {
+    return apiRequest("GET", "st_descarga?servicioId=" + encodeURIComponent(servicioId)
+      + "&mensajeId=" + encodeURIComponent(mensajeId), null, true);
+  },
 };

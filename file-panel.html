@@ -44,7 +44,7 @@
       </div>
 
       <div class="fm-readonly" id="READONLY_BANNER" hidden>
-        Servicio cerrado · Solo lectura
+        Servicio cerrado. La información y los documentos están disponibles únicamente para consulta.
       </div>
 
       <div class="fm-composer" id="COMPOSER" hidden>
@@ -52,22 +52,35 @@
           <label for="CATEGORIA" class="sr-only">Categoría</label>
           <select id="CATEGORIA"></select>
         </div>
+        <div class="fm-attach-preview" id="ATTACH_PREVIEW" hidden></div>
         <label for="MENSAJE" class="sr-only">Mensaje</label>
         <textarea id="MENSAJE" placeholder="Escriba un mensaje…" rows="1"></textarea>
         <div class="row">
-          <button class="fm-icon-btn" type="button" id="BTN_ADJUNTAR" disabled title="Adjuntos pendientes de habilitación" aria-label="Adjuntar archivo">📎</button>
-          <button class="fm-icon-btn" type="button" id="BTN_CAMARA" disabled title="Adjuntos pendientes de habilitación" aria-label="Cámara">📷</button>
+          <input type="file" id="FILE_INPUT" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" hidden>
+          <button class="fm-icon-btn" type="button" id="BTN_ADJUNTAR" aria-label="Adjuntar archivo" title="Adjuntar archivo">📎</button>
+          <button class="fm-icon-btn" type="button" id="BTN_CAMARA" aria-label="Cámara" title="Tomar fotografía">📷</button>
           <span class="spacer"></span>
           <button class="fm-icon-btn send" type="button" id="BTN_ENVIAR" aria-label="Enviar">➤</button>
         </div>
-        <p class="fm-chat-status" style="font-size:11px;color:var(--fm-text-tertiary)">
-          Adjuntos pendientes de habilitación.
-        </p>
       </div>
 
       <p class="fm-chat-status" id="CHAT_STATUS"></p>
     </section>
   </main>
+
+  <!-- Visor de adjuntos (imagen y PDF) -->
+  <div class="fm-viewer" id="VIEWER" hidden>
+    <div class="fm-viewer-top">
+      <span class="fm-viewer-title" id="VIEWER_TITLE"></span>
+      <span class="spacer"></span>
+      <button class="fm-icon-btn" id="VIEWER_ZOOM_IN" aria-label="Acercar" title="Acercar">＋</button>
+      <button class="fm-icon-btn" id="VIEWER_ZOOM_OUT" aria-label="Alejar" title="Alejar">−</button>
+      <button class="fm-icon-btn" id="VIEWER_OPEN" aria-label="Abrir en pestaña nueva" title="Abrir en pestaña nueva">↗</button>
+      <button class="fm-icon-btn" id="VIEWER_DOWNLOAD" aria-label="Descargar" title="Descargar">⬇</button>
+      <button class="fm-icon-btn" id="VIEWER_CLOSE" aria-label="Cerrar" title="Cerrar">✕</button>
+    </div>
+    <div class="fm-viewer-body" id="VIEWER_BODY"></div>
+  </div>
 
   <script type="module" src="./file-management.js"></script>
 </body>

@@ -48,6 +48,9 @@
   --fm-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
+/* Asegura que el atributo hidden oculte realmente los elementos (vence a display:flex) */
+.fm [hidden] { display: none !important; }
+
 /* Colores por área */
 .fm-area-OPERACIONES_LOGISTICA { --area: #2563EB; --area-soft: #DBEAFE; }
 .fm-area-ADMINISTRACION { --area: #7C3AED; --area-soft: #EDE9FE; }
@@ -295,3 +298,63 @@
   .fm-msg { max-width: 90%; }
   .fm-composer textarea { font-size: 16px; } /* evita zoom en iOS */
 }
+
+/* --- Adjuntos: vista previa --- */
+.fm-attach-preview { margin-bottom: 8px; }
+.fm-attach-chip {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--fm-surface-secondary); border: 1px solid var(--fm-border);
+  border-radius: 10px; padding: 8px 10px;
+}
+.fm-attach-chip .thumb { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex: 0 0 auto; }
+.fm-attach-chip .pdfico { width: 44px; height: 44px; border-radius: 8px; flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center; background: #D70015; color: #fff; font-weight: 700; font-size: 12px; }
+.fm-attach-chip .datos { flex: 1; min-width: 0; }
+.fm-attach-chip .nombre { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fm-attach-chip .tamano { font-size: 11px; color: var(--fm-text-secondary); }
+
+/* --- Mensajes con adjunto --- */
+.fm-doc-card, .fm-img-card {
+  display: flex; align-items: center; gap: 10px; margin-top: 6px;
+  padding: 8px 10px; border-radius: 10px; background: var(--fm-surface-secondary);
+  border: 1px solid var(--fm-border); cursor: pointer;
+}
+.fm-doc-card .pdfico { width: 36px; height: 36px; border-radius: 8px; flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center; background: #D70015; color: #fff; font-weight: 700; font-size: 11px; }
+.fm-img-card .mini { width: 60px; height: 60px; border-radius: 8px; object-fit: cover; flex: 0 0 auto; background: var(--fm-surface-tertiary); }
+.fm-doc-card .datos, .fm-img-card .datos { flex: 1; min-width: 0; }
+.fm-doc-card .nombre, .fm-img-card .nombre { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fm-doc-card .tamano, .fm-img-card .tamano { font-size: 11px; color: var(--fm-text-secondary); }
+.fm-doc-card .acciones, .fm-img-card .acciones { display: flex; gap: 6px; }
+.fm-doc-card .acciones button, .fm-img-card .acciones button {
+  font-size: 12px; padding: 5px 10px; border-radius: 8px; border: 1px solid var(--fm-border);
+  background: var(--fm-surface); color: var(--fm-text-primary); cursor: pointer;
+}
+
+/* --- Visor de adjuntos --- */
+.fm-viewer {
+  position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.85);
+  display: flex; flex-direction: column; color: #fff;
+}
+.fm-viewer-top {
+  display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+  background: rgba(0,0,0,0.4);
+}
+.fm-viewer-top .fm-viewer-title { font-size: 14px; font-weight: 600; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fm-viewer-top .spacer { flex: 1; }
+.fm-viewer-top .fm-icon-btn { background: rgba(255,255,255,0.15); color: #fff; border-color: transparent; }
+.fm-viewer-body { flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.fm-viewer-body img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.15s ease; }
+.fm-viewer-body iframe { width: 100%; height: 100%; border: none; background: #fff; }
+
+/* --- Documentos en el panel --- */
+.fm-docs-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+.fm-doc-row { display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+  background: var(--fm-surface-secondary); border: 1px solid var(--fm-border); border-radius: 10px; }
+.fm-doc-row .ico { width: 34px; height: 34px; border-radius: 8px; flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center; font-size: 16px; background: var(--fm-surface-tertiary); }
+.fm-doc-row .datos { flex: 1; min-width: 0; }
+.fm-doc-row .nombre { font-size: 13px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fm-doc-row .meta { font-size: 11px; color: var(--fm-text-secondary); }
+.fm-doc-row .acciones { display: flex; gap: 6px; }
+.fm-doc-row .acciones button { font-size: 12px; padding: 4px 9px; border-radius: 7px; border: 1px solid var(--fm-border); background: var(--fm-surface); color: var(--fm-text-primary); cursor: pointer; }
