@@ -1,63 +1,56 @@
 /* ============================================================
-   SECURITYTRANS — DATA MANAGEMENT · Capa de adaptación de datos
+   SECURITYTRANS — DATA MANAGEMENT · Capa de adaptación de datos (DEMO)
    ------------------------------------------------------------
-   Responsabilidades:
-     - Leer las fuentes existentes (catalogos.json, services-summary.json,
-       vehicle-history.json) mediante DataLoader.
-     - Normalizar nombres de campos, validar números, fechas y unidades.
-     - Establecer relaciones entre operador, vehículo, ruta y servicio.
-     - Detectar campos ausentes (ingresos, mantenimiento, casetas, etc.).
-     - Agregar métricas y devolver resultados uniformes para los análisis.
+   Lee las fuentes DEMO (data/demo/*.json) mediante DemoLoader y las
+   normaliza a un modelo unificado para los 58 análisis.
 
    Reglas de integridad:
      - Nunca se divide entre cero.
      - Nunca se trata un valor nulo como cero.
-     - Los litros de repostaje no se igualan a litros consumidos.
-     - Los datos simulados se marcan explícitamente como SIMULADO.
+     - Los datos simulados se marcan explícitamente como DEMO.
    ============================================================ */
 
-import { DataLoader } from "./data-loader.js";
+import { DemoLoader } from "./demo-loader.js";
 
-// Umbrales de anomalía (proxy determinista, documentado).
-const UMBRAL_DIF_NO_EXPLICADA_L = 5;   // diferencia no explicada > 5 L
-const UMBRAL_RALENTI_H = 2;             // ralentí > 2 h
+const UMBRAL_DIF_NO_EXPLICADA_L = 5;
+const UMBRAL_RALENTI_H = 2;
 
-// Campos que el análisis requeriría pero que NO existen en las fuentes actuales.
+// Campos que podrían faltar si se usara otra fuente (no aplica a DEMO).
 const CAMPOS_AUSENTES = {
   ingresos: "No existe campo de ingresos (ingresos_MXN).",
   mantenimiento: "No existe campo de gasto de mantenimiento.",
   casetas: "No existe campo de gasto en casetas.",
   fallas: "No existe campo de fallas reportadas.",
   estado_servicio: "No existe campo de estado del servicio (activo/cerrado).",
-  tiempo_planificado: "No existe tiempo planificado por servicio en el resumen.",
+  tiempo_planificado: "No existe tiempo planificado por servicio.",
   carga: "No existe campo de carga transportada.",
-  incidencias_formales: "No existe campo formal de incidencias; se usa una señal proxy documentada.",
+  incidencias_formales: "No existe campo formal de incidencias.",
 };
 
-// Reglas de anomalía aplicables a cada servicio (señales proxy).
 function señalesDeAnomalia(s) {
   const reglas = [];
-  if (num(s.diferencia_no_explicada_L) > UMBRAL_DIF_NO_EXPLICADA_L) {
-    reglas.push("diferencia_no_explicada_L > " + UMBRAL_DIF_NO_EXPLICADA_L + " L");
-  }
-  if (num(s.tiempo_ralenti_h) > UMBRAL_RALENTI_H) {
-    reglas.push("tiempo_ralenti_h > " + UMBRAL_RALENTI_H + " h");
-  }
+  if (num(s.diferencia_no_explicada_L) > UMBRAL_DIF_NO_EXPLICADA_L) reglas.push("diferencia_no_explicada_L > " + UMBRAL_DIF_NO_EXPLICADA_L + " L");
+  if (num(s.tiempo_ralenti_h) > UMBRAL_RALENTI_H) reglas.push("tiempo_ralenti_h > " + UMBRAL_RALENTI_H + " h");
+  if (num(s.fallas) > 0) reglas.push("fallas reportadas");
+  if (num(s.retraso_h) > 2) reglas.push("retraso > 2 h");
   return reglas;
 }
 
-// Normalización de un servicio a un modelo unificado.
 function normalizarServicio(s, rutas) {
   const distancia = num(s.distancia_km);
   const litros = num(s.consumo_total_L);
   const costo = num(s.costo_consumo_MXN);
   const tiempoTotal = num(s.tiempo_total_h);
   const tiempoMov = num(s.tiempo_movimiento_h);
+  const ingresos = num(s.ingresos_MXN);
+  const costoOperativo = num(s.costo_operativo_total_MXN);
 
   const ruta = rutas.find(r => r.ID_RUTA === s.id_ruta) || null;
-  const distanciaPlan = ruta ? num(ruta.distancia_administrativa_km) : null;
-
+  const distanciaPlan = ruta ? num(ruta.distancia_administrativa_km) : num(s.distancia_planificada_km);
   const desviacionDist = (distancia != null && distanciaPlan != null) ? distancia - distanciaPlan : null;
+
+  const utilidad = (ingresos != null && costoOperativo != null) ? ingresos - costoOperativo : null;
+  const margen = (ingresos != null && ingresos > 0 && utilidad != null) ? utilidad / ingresos * 100 : null;
 
   return {
     // Identidad
@@ -69,9 +62,9 @@ function normalizarServicio(s, rutas) {
     fechaISO: fechaISO(s.fecha),
     origen: s.origen,
     destino: s.destino,
-    id_ruta: s.id_ruta || "RUT-0001",
-    id_vehiculo: s.id_vehiculo || "VEH-0001",
-    naturaleza: s.naturaleza || "SIMULADO",
+    id_ruta: s.id_ruta,
+    id_vehiculo: s.id_vehiculo,
+    naturaleza: s.naturaleza || "DEMO",
 
     // Distancia
     distancia_km: distancia,
@@ -80,6 +73,7 @@ function normalizarServicio(s, rutas) {
     desviacion_distancia_pct: (desviacionDist != null && distanciaPlan) ? (desviacionDist / distanciaPlan * 100) : null,
 
     // Tiempo
+    tiempo_planificado_h: num(s.tiempo_planificado_h),
     tiempo_total_h: tiempoTotal,
     tiempo_movimiento_h: tiempoMov,
     tiempo_ralenti_h: num(s.tiempo_ralenti_h),
@@ -87,6 +81,11 @@ function normalizarServicio(s, rutas) {
     n_paradas: num(s.n_paradas),
     velocidad_promedio_kmh: num(s.velocidad_promedio_kmh),
     velocidad_maxima_kmh: num(s.velocidad_maxima_kmh),
+    retraso_h: num(s.retraso_h),
+    puntualidad_pct: num(s.puntualidad_pct),
+
+    // Carga
+    carga_kg: num(s.carga_kg),
 
     // Combustible
     litros_presupuestados_L: num(s.litros_presupuestados_L),
@@ -104,15 +103,27 @@ function normalizarServicio(s, rutas) {
     // Costos
     presupuesto_MXN: num(s.presupuesto_MXN),
     costo_consumo_MXN: costo,
+    costo_casetas_MXN: num(s.costo_casetas_MXN),
+    costo_mantenimiento_MXN: num(s.costo_mantenimiento_MXN),
+    otros_gastos_MXN: num(s.otros_gastos_MXN),
+    costo_operativo_total_MXN: costoOperativo,
     costo_por_km_MXN: num(s.costo_por_km_MXN),
     ahorro_sobrecosto_MXN: num(s.ahorro_sobrecosto_MXN),
 
-    // Derivados (con protección de división entre cero)
-    precio_promedio_L_MXN: (costo != null && litros != null && litros > 0) ? costo / litros : null,
+    // Ingresos / utilidad
+    ingresos_MXN: ingresos,
+    utilidad_MXN: utilidad,
+    margen_pct: margen,
 
-    // Señales de anomalía (proxy)
+    // Derivados
+    precio_promedio_L_MXN: (costo != null && litros != null && litros > 0) ? costo / litros : num(s.precio_promedio_L_MXN),
+
+    // Estado / incidencias / fallas
+    estado_servicio: s.estado_servicio || "CERRADO",
+    fallas: num(s.fallas),
+    incidencias: num(s.incidencias),
     señales: señalesDeAnomalia(s),
-    incidencias_proxy: señalesDeAnomalia(s).length,
+    incidencias_proxy: num(s.incidencias),
   };
 }
 
@@ -128,7 +139,6 @@ function fechaISO(v) {
   return isNaN(d.getTime()) ? null : d;
 }
 
-// Agrupa servicios por clave (id_operador, id_vehiculo, id_ruta, etc.).
 function agrupar(servicios, clave) {
   const map = new Map();
   servicios.forEach(s => {
@@ -139,11 +149,12 @@ function agrupar(servicios, clave) {
   return [...map.entries()].map(([k, lista]) => ({ clave: k, servicios: lista }));
 }
 
-// Métricas agregadas ponderadas de un conjunto de servicios.
 function agregados(lista) {
   const n = lista.length;
-  let km = 0, litros = 0, costo = 0, presupuesto = 0, ahorro = 0, ralenti = 0, horas = 0, incidencias = 0;
-  let kmValidos = 0, litrosValidos = 0, costoValido = 0;
+  let km = 0, litros = 0, costo = 0, presupuesto = 0, ahorro = 0, ralenti = 0, horas = 0;
+  let casetas = 0, mantenimiento = 0, otros = 0, costoOperativo = 0;
+  let ingresos = 0, utilidad = 0, fallas = 0, incidencias = 0, retraso = 0;
+  let kmValidos = 0, litrosValidos = 0, costoValido = 0, ingresosValidos = 0;
 
   lista.forEach(s => {
     if (s.distancia_km != null) { km += s.distancia_km; kmValidos++; }
@@ -153,102 +164,106 @@ function agregados(lista) {
     if (s.ahorro_sobrecosto_MXN != null) ahorro += s.ahorro_sobrecosto_MXN;
     if (s.tiempo_ralenti_h != null) ralenti += s.tiempo_ralenti_h;
     if (s.tiempo_total_h != null) horas += s.tiempo_total_h;
-    incidencias += s.incidencias_proxy || 0;
+    if (s.costo_casetas_MXN != null) casetas += s.costo_casetas_MXN;
+    if (s.costo_mantenimiento_MXN != null) mantenimiento += s.costo_mantenimiento_MXN;
+    if (s.otros_gastos_MXN != null) otros += s.otros_gastos_MXN;
+    if (s.costo_operativo_total_MXN != null) costoOperativo += s.costo_operativo_total_MXN;
+    if (s.ingresos_MXN != null) { ingresos += s.ingresos_MXN; ingresosValidos++; }
+    if (s.utilidad_MXN != null) utilidad += s.utilidad_MXN;
+    if (s.fallas != null) fallas += s.fallas;
+    if (s.incidencias != null) incidencias += s.incidencias;
+    if (s.retraso_h != null) retraso += s.retraso_h;
   });
 
+  const margen = (ingresos > 0) ? (utilidad / ingresos * 100) : null;
+
   return {
-    n,
-    km,
-    litros,
-    costo,
-    presupuesto,
-    ahorro,
-    ralenti,
-    horas,
-    incidencias,
-    kmValidos,
-    litrosValidos,
-    costoValido,
+    n, km, litros, costo, presupuesto, ahorro, ralenti, horas,
+    casetas, mantenimiento, otros, costoOperativo, ingresos, utilidad,
+    fallas, incidencias, retraso,
+    kmValidos, litrosValidos, costoValido, ingresosValidos,
     rendimiento_kmL: (litros > 0) ? (km / litros) : null,
     consumo_L_100km: (km > 0) ? (litros / km * 100) : null,
     costo_km_MXN: (km > 0) ? (costo / km) : null,
+    costo_operativo_km_MXN: (km > 0) ? (costoOperativo / km) : null,
     precio_promedio_L_MXN: (litros > 0) ? (costo / litros) : null,
-    costo_medio_por_servicio_MXN: (n > 0) ? (costo / n) : null,
+    margen_pct: margen,
+    retraso_promedio_h: (n > 0) ? (retraso / n) : null,
+    puntualidad_pct: (n > 0) ? (lista.filter(s => s.retraso_h != null && s.retraso_h <= 0.01).length / n * 100) : null,
   };
 }
 
-// Índice de integridad: proporción de campos clave presentes en un servicio.
 function integridadServicio(s) {
   const camposClave = [
-    "distancia_km", "litros_consumidos_L", "costo_consumo_MXN",
-    "rendimiento_kmL", "tiempo_total_h", "velocidad_promedio_kmh",
+    "distancia_km", "litros_consumidos_L", "costo_consumo_MXN", "rendimiento_kmL",
+    "tiempo_total_h", "velocidad_promedio_kmh", "ingresos_MXN", "costo_operativo_total_MXN",
   ];
   const presentes = camposClave.filter(c => s[c] != null).length;
   return { presentes, total: camposClave.length, completo: presentes === camposClave.length };
 }
 
-// Detección de campos ausentes a nivel de conjunto de datos.
+// Detecta qué campos están ausentes en el conjunto de datos actual.
 function disponibilidad(servicios) {
+  if (!servicios.length) return { ausentes: [] };
   const ausentes = [];
-  if (servicios.every(s => s.ingresos_MXN == null)) ausentes.push("ingresos");
-  // Los campos siguientes no existen en el modelo unificado:
-  ausentes.push("mantenimiento", "casetas", "fallas", "estado_servicio", "tiempo_planificado", "carga", "incidencias_formales");
-  return { ausentes: [...new Set(ausentes)] };
+  const todo = (f) => servicios.every(s => s[f] != null);
+  if (!todo("ingresos_MXN")) ausentes.push("ingresos");
+  if (!todo("costo_mantenimiento_MXN")) ausentes.push("mantenimiento");
+  if (!todo("costo_casetas_MXN")) ausentes.push("casetas");
+  if (!todo("fallas")) ausentes.push("fallas");
+  if (!todo("estado_servicio")) ausentes.push("estado_servicio");
+  if (!todo("tiempo_planificado_h")) ausentes.push("tiempo_planificado");
+  if (!todo("carga_kg")) ausentes.push("carga");
+  if (!todo("incidencias")) ausentes.push("incidencias_formales");
+  return { ausentes };
 }
 
-// Carga y normaliza todas las fuentes.
 async function cargarDatos() {
-  const [catalogos, resumen, historial] = await Promise.all([
-    DataLoader.catalogos(),
-    DataLoader.resumen(),
-    DataLoader.historial(),
+  const [manifest, serviciosRaw, conductores, vehiculos, rutas] = await Promise.all([
+    DemoLoader.manifest(),
+    DemoLoader.servicios(),
+    DemoLoader.conductores(),
+    DemoLoader.vehiculos(),
+    DemoLoader.rutas(),
   ]);
-  const servicios = resumen.map(s => normalizarServicio(s, catalogos.rutas || []));
+  const operadores = conductores.map(c => ({ ID_OPERADOR: c.ID_OPERADOR, nombre: c.nombre, perfil: c.perfil }));
+  const catalogos = { vehiculos, operadores, rutas };
+  const servicios = serviciosRaw.map(s => normalizarServicio(s, rutas));
   return {
+    manifest,
     catalogos,
-    historial,
+    historial: null,
     servicios,
-    vehiculos: catalogos.vehiculos || [],
-    operadores: catalogos.operadores || [],
-    rutas: catalogos.rutas || [],
+    serviciosRaw,
+    vehiculos,
+    operadores,
+    rutas,
     disponibilidad: disponibilidad(servicios),
-    actualizado: new Date().toISOString(),
+    actualizado: manifest.fecha_generacion || new Date().toISOString().slice(0, 10),
+    esDemo: true,
+    marca: manifest.marca || "DATOS DEMO — INFORMACIÓN SIMULADA",
   };
 }
 
-// Formateadores deterministas.
 function fmtNum(v, dec = 2) {
   if (v == null) return "N/D";
   return Number(v).toLocaleString("es-MX", { minimumFractionDigits: dec, maximumFractionDigits: dec });
 }
-
 function fmtMXN(v) {
   if (v == null) return "N/D";
   return "$" + Number(v).toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
-
 function fmtPct(v, dec = 1) {
   if (v == null) return "N/D";
   return Number(v).toLocaleString("es-MX", { minimumFractionDigits: dec, maximumFractionDigits: dec }) + "%";
 }
-
 function fmtEntero(v) {
   if (v == null) return "N/D";
   return Number(v).toLocaleString("es-MX", { maximumFractionDigits: 0 });
 }
 
 export const DataManager = {
-  cargarDatos,
-  agrupar,
-  agregados,
-  integridadServicio,
-  disponibilidad,
-  num,
-  fmtNum,
-  fmtMXN,
-  fmtPct,
-  fmtEntero,
-  CAMPOS_AUSENTES,
-  UMBRAL_DIF_NO_EXPLICADA_L,
-  UMBRAL_RALENTI_H,
+  cargarDatos, agrupar, agregados, integridadServicio, disponibilidad,
+  num, fmtNum, fmtMXN, fmtPct, fmtEntero, CAMPOS_AUSENTES,
+  UMBRAL_DIF_NO_EXPLICADA_L, UMBRAL_RALENTI_H,
 };

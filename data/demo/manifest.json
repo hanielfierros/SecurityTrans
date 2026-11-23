@@ -1,0 +1,22 @@
+{
+ "nombre": "SECURITYTRANS — DATA MANAGEMENT · DATOS DEMO",
+ "marca": "DATOS DEMO — INFORMACIÓN SIMULADA",
+ "descripcion": "Conjunto de datos operativos de transporte terrestre simulados para demostración del módulo Data Management. Todos los registros son ficticios.",
+ "semilla": 20260615,
+ "fecha_generacion": "2026-11-22",
+ "periodo": [
+  "2025-11-22",
+  "2026-11-21"
+ ],
+ "conteos": {
+  "conductores": 35,
+  "vehiculos": 25,
+  "rutas": 18,
+  "servicios": 1200,
+  "combustible": 2500,
+  "mantenimientos": 175,
+  "casetas": 901,
+  "incidentes": 45
+ },
+ "advertencia": "INFORMACIÓN SIMULADA. No corresponde a personas, vehículos ni operaciones reales. No es un registro operativo ni financiero válido."
+}

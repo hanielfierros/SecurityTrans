@@ -1,0 +1,317 @@
+[
+ {
+  "ID_OPERADOR": "OPR-0001",
+  "nombre": "Daniel Castillo Torres",
+  "perfil": "Eficiente",
+  "factor_consumo": 0.95,
+  "ralenti_base_h": 0.4,
+  "margen_ajuste": 0.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0002",
+  "nombre": "Raúl Torres Vargas",
+  "perfil": "Velocidades elevadas",
+  "factor_consumo": 1.08,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": -0.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0003",
+  "nombre": "Raúl Torres García",
+  "perfil": "Eficiente",
+  "factor_consumo": 0.95,
+  "ralenti_base_h": 0.4,
+  "margen_ajuste": 0.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0004",
+  "nombre": "Jorge Torres Ortiz",
+  "perfil": "Convencional",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": 0.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0005",
+  "nombre": "Alejandro Hernández Pérez",
+  "perfil": "Eficiente",
+  "factor_consumo": 0.95,
+  "ralenti_base_h": 0.4,
+  "margen_ajuste": 0.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0006",
+  "nombre": "Javier Guerrero Guerrero",
+  "perfil": "Conducción irregular",
+  "factor_consumo": 1.15,
+  "ralenti_base_h": 0.9,
+  "margen_ajuste": -0.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0007",
+  "nombre": "Roberto Morales Castro",
+  "perfil": "Velocidades elevadas",
+  "factor_consumo": 1.08,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": -0.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0008",
+  "nombre": "Héctor Torres Pérez",
+  "perfil": "Eficiente",
+  "factor_consumo": 0.95,
+  "ralenti_base_h": 0.4,
+  "margen_ajuste": 0.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0009",
+  "nombre": "Salvador Aguilar Morales",
+  "perfil": "Velocidades elevadas",
+  "factor_consumo": 1.08,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": -0.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0010",
+  "nombre": "Luis Flores Romero",
+  "perfil": "Altamente eficiente",
+  "factor_consumo": 0.88,
+  "ralenti_base_h": 0.3,
+  "margen_ajuste": 0.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0011",
+  "nombre": "Andrés Vargas Mendoza",
+  "perfil": "Conducción irregular",
+  "factor_consumo": 1.15,
+  "ralenti_base_h": 0.9,
+  "margen_ajuste": -0.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0012",
+  "nombre": "Óscar López Vargas",
+  "perfil": "Conducción irregular",
+  "factor_consumo": 1.15,
+  "ralenti_base_h": 0.9,
+  "margen_ajuste": -0.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0013",
+  "nombre": "Fernando Torres Castro",
+  "perfil": "Conducción irregular",
+  "factor_consumo": 1.15,
+  "ralenti_base_h": 0.9,
+  "margen_ajuste": -0.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0014",
+  "nombre": "Ricardo Martínez Castro",
+  "perfil": "Conducción irregular",
+  "factor_consumo": 1.15,
+  "ralenti_base_h": 0.9,
+  "margen_ajuste": -0.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0015",
+  "nombre": "Fernando Sánchez Mendoza",
+  "perfil": "Altamente eficiente",
+  "factor_consumo": 0.88,
+  "ralenti_base_h": 0.3,
+  "margen_ajuste": 0.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0016",
+  "nombre": "Jorge Ruiz Castro",
+  "perfil": "Conducción irregular",
+  "factor_consumo": 1.15,
+  "ralenti_base_h": 0.9,
+  "margen_ajuste": -0.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0017",
+  "nombre": "Rubén Castillo Hernández",
+  "perfil": "Convencional",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": 0.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0018",
+  "nombre": "Sergio Rodríguez Martínez",
+  "perfil": "Convencional",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": 0.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0019",
+  "nombre": "Ignacio Ruiz Mendoza",
+  "perfil": "Ralentí prolongado",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 2.2,
+  "margen_ajuste": -0.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0020",
+  "nombre": "Manuel Torres Martínez",
+  "perfil": "Convencional",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": 0.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0021",
+  "nombre": "Raúl González García",
+  "perfil": "Convencional",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": 0.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0022",
+  "nombre": "Javier Ortiz Flores",
+  "perfil": "Convencional",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": 0.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0023",
+  "nombre": "Rubén Martínez Castillo",
+  "perfil": "Eficiente",
+  "factor_consumo": 0.95,
+  "ralenti_base_h": 0.4,
+  "margen_ajuste": 0.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0024",
+  "nombre": "Raúl Castro Ruiz",
+  "perfil": "Conducción irregular",
+  "factor_consumo": 1.15,
+  "ralenti_base_h": 0.9,
+  "margen_ajuste": -0.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0025",
+  "nombre": "Ricardo Mendoza Flores",
+  "perfil": "Altamente eficiente",
+  "factor_consumo": 0.88,
+  "ralenti_base_h": 0.3,
+  "margen_ajuste": 0.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0026",
+  "nombre": "Rubén Flores Flores",
+  "perfil": "Eficiente",
+  "factor_consumo": 0.95,
+  "ralenti_base_h": 0.4,
+  "margen_ajuste": 0.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0027",
+  "nombre": "Héctor Díaz Aguilar",
+  "perfil": "Velocidades elevadas",
+  "factor_consumo": 1.08,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": -0.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0028",
+  "nombre": "Armando Ramírez Castro",
+  "perfil": "Altamente eficiente",
+  "factor_consumo": 0.88,
+  "ralenti_base_h": 0.3,
+  "margen_ajuste": 0.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0029",
+  "nombre": "Iván Ortiz Hernández",
+  "perfil": "Conducción irregular",
+  "factor_consumo": 1.15,
+  "ralenti_base_h": 0.9,
+  "margen_ajuste": -0.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0030",
+  "nombre": "Armando Ramírez Guerrero",
+  "perfil": "Convencional",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": 0.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0031",
+  "nombre": "Adrián Romero Hernández",
+  "perfil": "Ralentí prolongado",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 2.2,
+  "margen_ajuste": -0.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0032",
+  "nombre": "Andrés Rodríguez Romero",
+  "perfil": "Eficiente",
+  "factor_consumo": 0.95,
+  "ralenti_base_h": 0.4,
+  "margen_ajuste": 0.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0033",
+  "nombre": "Héctor Rodríguez Silva",
+  "perfil": "Ralentí prolongado",
+  "factor_consumo": 1.02,
+  "ralenti_base_h": 2.2,
+  "margen_ajuste": -0.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0034",
+  "nombre": "Hugo Vargas García",
+  "perfil": "Velocidades elevadas",
+  "factor_consumo": 1.08,
+  "ralenti_base_h": 0.6,
+  "margen_ajuste": -0.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_OPERADOR": "OPR-0035",
+  "nombre": "Sergio Romero Mendoza",
+  "perfil": "Altamente eficiente",
+  "factor_consumo": 0.88,
+  "ralenti_base_h": 0.3,
+  "margen_ajuste": 0.07,
+  "naturaleza": "DEMO"
+ }
+]

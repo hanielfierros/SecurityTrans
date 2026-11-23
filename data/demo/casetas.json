@@ -1,0 +1,8111 @@
+[
+ {
+  "id": "CASETA-000001",
+  "id_servicio": "SRV-000001",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-01-13",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 361.46,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000002",
+  "id_servicio": "SRV-000002",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-11-11",
+  "caseta": "Córdoba",
+  "importe_MXN": 264.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000003",
+  "id_servicio": "SRV-000003",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-03",
+  "caseta": "Esperanza",
+  "importe_MXN": 417.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000004",
+  "id_servicio": "SRV-000004",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-09-14",
+  "caseta": "La Joya",
+  "importe_MXN": 3942.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000005",
+  "id_servicio": "SRV-000005",
+  "id_ruta": "RUT-0009",
+  "fecha": "2025-12-17",
+  "caseta": "Esperanza",
+  "importe_MXN": 1507.4,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000006",
+  "id_servicio": "SRV-000005",
+  "id_ruta": "RUT-0009",
+  "fecha": "2025-12-17",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1208.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000007",
+  "id_servicio": "SRV-000006",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-11-12",
+  "caseta": "Córdoba",
+  "importe_MXN": 174.01,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000008",
+  "id_servicio": "SRV-000006",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-11-12",
+  "caseta": "La Joya",
+  "importe_MXN": 199.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000009",
+  "id_servicio": "SRV-000007",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-01-08",
+  "caseta": "San Martín",
+  "importe_MXN": 205.69,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000010",
+  "id_servicio": "SRV-000007",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-01-08",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 184.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000011",
+  "id_servicio": "SRV-000008",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-01-21",
+  "caseta": "Fortín",
+  "importe_MXN": 935.05,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000012",
+  "id_servicio": "SRV-000008",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-01-21",
+  "caseta": "Mata",
+  "importe_MXN": 1194.32,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000013",
+  "id_servicio": "SRV-000009",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-06-19",
+  "caseta": "Mata",
+  "importe_MXN": 1096.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000014",
+  "id_servicio": "SRV-000010",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-04-24",
+  "caseta": "Fortín",
+  "importe_MXN": 566.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000015",
+  "id_servicio": "SRV-000011",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-04-06",
+  "caseta": "Fortín",
+  "importe_MXN": 812.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000016",
+  "id_servicio": "SRV-000012",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-07-06",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 394.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000017",
+  "id_servicio": "SRV-000012",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-07-06",
+  "caseta": "Perote",
+  "importe_MXN": 622.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000018",
+  "id_servicio": "SRV-000013",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-11-17",
+  "caseta": "San Martín",
+  "importe_MXN": 546.33,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000019",
+  "id_servicio": "SRV-000014",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-09-30",
+  "caseta": "Fortín",
+  "importe_MXN": 874.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000020",
+  "id_servicio": "SRV-000014",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-09-30",
+  "caseta": "Córdoba",
+  "importe_MXN": 945.91,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000021",
+  "id_servicio": "SRV-000015",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-06-29",
+  "caseta": "Perote",
+  "importe_MXN": 204.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000022",
+  "id_servicio": "SRV-000015",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-06-29",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 299.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000023",
+  "id_servicio": "SRV-000016",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-04-03",
+  "caseta": "Córdoba",
+  "importe_MXN": 66.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000024",
+  "id_servicio": "SRV-000017",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-10-15",
+  "caseta": "Perote",
+  "importe_MXN": 907.67,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000025",
+  "id_servicio": "SRV-000018",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-08-06",
+  "caseta": "San Martín",
+  "importe_MXN": 451.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000026",
+  "id_servicio": "SRV-000018",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-08-06",
+  "caseta": "Palmillas",
+  "importe_MXN": 504.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000027",
+  "id_servicio": "SRV-000019",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-05-08",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 262.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000028",
+  "id_servicio": "SRV-000020",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-04-15",
+  "caseta": "Fortín",
+  "importe_MXN": 66.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000029",
+  "id_servicio": "SRV-000020",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-04-15",
+  "caseta": "Esperanza",
+  "importe_MXN": 90.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000030",
+  "id_servicio": "SRV-000021",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-10-16",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 362.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000031",
+  "id_servicio": "SRV-000022",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-04-14",
+  "caseta": "Fortín",
+  "importe_MXN": 308.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000032",
+  "id_servicio": "SRV-000023",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-10-22",
+  "caseta": "San Martín",
+  "importe_MXN": 255.81,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000033",
+  "id_servicio": "SRV-000024",
+  "id_ruta": "RUT-0009",
+  "fecha": "2025-11-26",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 2847.88,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000034",
+  "id_servicio": "SRV-000024",
+  "id_ruta": "RUT-0009",
+  "fecha": "2025-11-26",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1883.61,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000035",
+  "id_servicio": "SRV-000025",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-09-18",
+  "caseta": "La Joya",
+  "importe_MXN": 914.79,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000036",
+  "id_servicio": "SRV-000025",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-09-18",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 638.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000037",
+  "id_servicio": "SRV-000026",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-01-26",
+  "caseta": "Acatzingo",
+  "importe_MXN": 256.51,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000038",
+  "id_servicio": "SRV-000027",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-06",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 208.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000039",
+  "id_servicio": "SRV-000028",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-06-05",
+  "caseta": "Córdoba",
+  "importe_MXN": 1698.05,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000040",
+  "id_servicio": "SRV-000029",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-07-21",
+  "caseta": "La Joya",
+  "importe_MXN": 461.67,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000041",
+  "id_servicio": "SRV-000030",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-27",
+  "caseta": "La Joya",
+  "importe_MXN": 316.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000042",
+  "id_servicio": "SRV-000031",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-29",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 3074.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000043",
+  "id_servicio": "SRV-000032",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-03",
+  "caseta": "Palmillas",
+  "importe_MXN": 150.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000044",
+  "id_servicio": "SRV-000032",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-03",
+  "caseta": "Esperanza",
+  "importe_MXN": 202.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000045",
+  "id_servicio": "SRV-000033",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-03-05",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 293.43,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000046",
+  "id_servicio": "SRV-000034",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-08-24",
+  "caseta": "La Joya",
+  "importe_MXN": 148.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000047",
+  "id_servicio": "SRV-000035",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-09-25",
+  "caseta": "Fortín",
+  "importe_MXN": 217.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000048",
+  "id_servicio": "SRV-000036",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-12",
+  "caseta": "Esperanza",
+  "importe_MXN": 1889.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000049",
+  "id_servicio": "SRV-000037",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-01-07",
+  "caseta": "La Joya",
+  "importe_MXN": 402.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000050",
+  "id_servicio": "SRV-000038",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-08-24",
+  "caseta": "San Martín",
+  "importe_MXN": 71.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000051",
+  "id_servicio": "SRV-000039",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-09-01",
+  "caseta": "Perote",
+  "importe_MXN": 3443.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000052",
+  "id_servicio": "SRV-000040",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-06-29",
+  "caseta": "La Joya",
+  "importe_MXN": 203.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000053",
+  "id_servicio": "SRV-000041",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-04-22",
+  "caseta": "San Martín",
+  "importe_MXN": 927.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000054",
+  "id_servicio": "SRV-000042",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-04-16",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1167.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000055",
+  "id_servicio": "SRV-000043",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-22",
+  "caseta": "Mata",
+  "importe_MXN": 2479.52,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000056",
+  "id_servicio": "SRV-000044",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-08-18",
+  "caseta": "Palmillas",
+  "importe_MXN": 697.28,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000057",
+  "id_servicio": "SRV-000044",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-08-18",
+  "caseta": "Esperanza",
+  "importe_MXN": 708.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000058",
+  "id_servicio": "SRV-000045",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-08-07",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 350.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000059",
+  "id_servicio": "SRV-000046",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-09-16",
+  "caseta": "Perote",
+  "importe_MXN": 148.01,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000060",
+  "id_servicio": "SRV-000046",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-09-16",
+  "caseta": "Perote",
+  "importe_MXN": 205.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000061",
+  "id_servicio": "SRV-000047",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-05-25",
+  "caseta": "La Joya",
+  "importe_MXN": 969.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000062",
+  "id_servicio": "SRV-000048",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-07-13",
+  "caseta": "Perote",
+  "importe_MXN": 654.51,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000063",
+  "id_servicio": "SRV-000049",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-05-05",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 209.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000064",
+  "id_servicio": "SRV-000049",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-05-05",
+  "caseta": "Fortín",
+  "importe_MXN": 193.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000065",
+  "id_servicio": "SRV-000050",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-07-30",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1119.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000066",
+  "id_servicio": "SRV-000051",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-10-28",
+  "caseta": "Acatzingo",
+  "importe_MXN": 31.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000067",
+  "id_servicio": "SRV-000051",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-10-28",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 22.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000068",
+  "id_servicio": "SRV-000052",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-11-02",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 226.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000069",
+  "id_servicio": "SRV-000053",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-05-28",
+  "caseta": "San Martín",
+  "importe_MXN": 554.51,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000070",
+  "id_servicio": "SRV-000054",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-07-29",
+  "caseta": "Palmillas",
+  "importe_MXN": 205.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000071",
+  "id_servicio": "SRV-000055",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-11-20",
+  "caseta": "La Joya",
+  "importe_MXN": 287.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000072",
+  "id_servicio": "SRV-000055",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-11-20",
+  "caseta": "Fortín",
+  "importe_MXN": 321.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000073",
+  "id_servicio": "SRV-000056",
+  "id_ruta": "RUT-0003",
+  "fecha": "2025-12-01",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 125.61,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000074",
+  "id_servicio": "SRV-000056",
+  "id_ruta": "RUT-0003",
+  "fecha": "2025-12-01",
+  "caseta": "San Martín",
+  "importe_MXN": 72.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000075",
+  "id_servicio": "SRV-000057",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-13",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1287.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000076",
+  "id_servicio": "SRV-000057",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-13",
+  "caseta": "San Martín",
+  "importe_MXN": 810.76,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000077",
+  "id_servicio": "SRV-000058",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-06-22",
+  "caseta": "Palmillas",
+  "importe_MXN": 320.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000078",
+  "id_servicio": "SRV-000058",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-06-22",
+  "caseta": "Córdoba",
+  "importe_MXN": 518.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000079",
+  "id_servicio": "SRV-000059",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-03-23",
+  "caseta": "Córdoba",
+  "importe_MXN": 287.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000080",
+  "id_servicio": "SRV-000060",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-02-17",
+  "caseta": "Mata",
+  "importe_MXN": 378.61,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000081",
+  "id_servicio": "SRV-000061",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-10-16",
+  "caseta": "San Martín",
+  "importe_MXN": 247.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000082",
+  "id_servicio": "SRV-000062",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-01-23",
+  "caseta": "Mata",
+  "importe_MXN": 655.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000083",
+  "id_servicio": "SRV-000063",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-01-05",
+  "caseta": "Acatzingo",
+  "importe_MXN": 222.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000084",
+  "id_servicio": "SRV-000063",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-01-05",
+  "caseta": "San Martín",
+  "importe_MXN": 243.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000085",
+  "id_servicio": "SRV-000064",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-02-26",
+  "caseta": "Acatzingo",
+  "importe_MXN": 218.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000086",
+  "id_servicio": "SRV-000065",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-10-19",
+  "caseta": "Esperanza",
+  "importe_MXN": 229.78,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000087",
+  "id_servicio": "SRV-000065",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-10-19",
+  "caseta": "Acatzingo",
+  "importe_MXN": 225.75,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000088",
+  "id_servicio": "SRV-000066",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-02",
+  "caseta": "Mata",
+  "importe_MXN": 2062.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000089",
+  "id_servicio": "SRV-000067",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-04-08",
+  "caseta": "San Martín",
+  "importe_MXN": 121.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000090",
+  "id_servicio": "SRV-000068",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-04-02",
+  "caseta": "San Martín",
+  "importe_MXN": 1106.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000091",
+  "id_servicio": "SRV-000069",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-08-27",
+  "caseta": "Palmillas",
+  "importe_MXN": 622.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000092",
+  "id_servicio": "SRV-000070",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-11-02",
+  "caseta": "Córdoba",
+  "importe_MXN": 73.67,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000093",
+  "id_servicio": "SRV-000070",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-11-02",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 151.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000094",
+  "id_servicio": "SRV-000071",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-10-01",
+  "caseta": "Palmillas",
+  "importe_MXN": 360.96,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000095",
+  "id_servicio": "SRV-000072",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-06-25",
+  "caseta": "Palmillas",
+  "importe_MXN": 482.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000096",
+  "id_servicio": "SRV-000073",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-01-19",
+  "caseta": "Perote",
+  "importe_MXN": 68.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000097",
+  "id_servicio": "SRV-000073",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-01-19",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 60.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000098",
+  "id_servicio": "SRV-000074",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-08-13",
+  "caseta": "La Joya",
+  "importe_MXN": 218.17,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000099",
+  "id_servicio": "SRV-000075",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-08-21",
+  "caseta": "Córdoba",
+  "importe_MXN": 1293.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000100",
+  "id_servicio": "SRV-000076",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-25",
+  "caseta": "Córdoba",
+  "importe_MXN": 1918.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000101",
+  "id_servicio": "SRV-000077",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-02-24",
+  "caseta": "La Joya",
+  "importe_MXN": 24.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000102",
+  "id_servicio": "SRV-000077",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-02-24",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 34.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000103",
+  "id_servicio": "SRV-000078",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-10-16",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 127.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000104",
+  "id_servicio": "SRV-000078",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-10-16",
+  "caseta": "Palmillas",
+  "importe_MXN": 121.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000105",
+  "id_servicio": "SRV-000079",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-11-24",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1156.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000106",
+  "id_servicio": "SRV-000079",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-11-24",
+  "caseta": "Esperanza",
+  "importe_MXN": 1126.31,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000107",
+  "id_servicio": "SRV-000080",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-18",
+  "caseta": "Mata",
+  "importe_MXN": 1666.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000108",
+  "id_servicio": "SRV-000080",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-18",
+  "caseta": "Palmillas",
+  "importe_MXN": 1865.79,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000109",
+  "id_servicio": "SRV-000081",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-01-16",
+  "caseta": "Fortín",
+  "importe_MXN": 509.75,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000110",
+  "id_servicio": "SRV-000082",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-03-27",
+  "caseta": "La Joya",
+  "importe_MXN": 569.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000111",
+  "id_servicio": "SRV-000083",
+  "id_ruta": "RUT-0013",
+  "fecha": "2025-12-29",
+  "caseta": "Acatzingo",
+  "importe_MXN": 236.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000112",
+  "id_servicio": "SRV-000083",
+  "id_ruta": "RUT-0013",
+  "fecha": "2025-12-29",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 260.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000113",
+  "id_servicio": "SRV-000084",
+  "id_ruta": "RUT-0007",
+  "fecha": "2025-12-23",
+  "caseta": "Esperanza",
+  "importe_MXN": 111.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000114",
+  "id_servicio": "SRV-000084",
+  "id_ruta": "RUT-0007",
+  "fecha": "2025-12-23",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 82.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000115",
+  "id_servicio": "SRV-000085",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-07-17",
+  "caseta": "Córdoba",
+  "importe_MXN": 338.66,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000116",
+  "id_servicio": "SRV-000086",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-05-13",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 205.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000117",
+  "id_servicio": "SRV-000087",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-01-21",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 339.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000118",
+  "id_servicio": "SRV-000088",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-17",
+  "caseta": "Perote",
+  "importe_MXN": 891.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000119",
+  "id_servicio": "SRV-000089",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-09-14",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1218.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000120",
+  "id_servicio": "SRV-000090",
+  "id_ruta": "RUT-0007",
+  "fecha": "2025-12-29",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 96.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000121",
+  "id_servicio": "SRV-000090",
+  "id_ruta": "RUT-0007",
+  "fecha": "2025-12-29",
+  "caseta": "Fortín",
+  "importe_MXN": 91.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000122",
+  "id_servicio": "SRV-000091",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-04-17",
+  "caseta": "Palmillas",
+  "importe_MXN": 105.83,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000123",
+  "id_servicio": "SRV-000092",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-08-03",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 482.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000124",
+  "id_servicio": "SRV-000093",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-01-01",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 500.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000125",
+  "id_servicio": "SRV-000094",
+  "id_ruta": "RUT-0002",
+  "fecha": "2025-12-29",
+  "caseta": "Acatzingo",
+  "importe_MXN": 517.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000126",
+  "id_servicio": "SRV-000095",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-02-09",
+  "caseta": "Perote",
+  "importe_MXN": 444.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000127",
+  "id_servicio": "SRV-000095",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-02-09",
+  "caseta": "San Martín",
+  "importe_MXN": 247.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000128",
+  "id_servicio": "SRV-000096",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-06-23",
+  "caseta": "Mata",
+  "importe_MXN": 465.16,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000129",
+  "id_servicio": "SRV-000097",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-09-30",
+  "caseta": "Fortín",
+  "importe_MXN": 220.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000130",
+  "id_servicio": "SRV-000098",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-13",
+  "caseta": "San Martín",
+  "importe_MXN": 199.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000131",
+  "id_servicio": "SRV-000098",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-13",
+  "caseta": "Perote",
+  "importe_MXN": 267.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000132",
+  "id_servicio": "SRV-000099",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-11",
+  "caseta": "Esperanza",
+  "importe_MXN": 1250.33,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000133",
+  "id_servicio": "SRV-000099",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-11",
+  "caseta": "Perote",
+  "importe_MXN": 1556.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000134",
+  "id_servicio": "SRV-000100",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-10-07",
+  "caseta": "Perote",
+  "importe_MXN": 508.28,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000135",
+  "id_servicio": "SRV-000101",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-10-07",
+  "caseta": "San Martín",
+  "importe_MXN": 218.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000136",
+  "id_servicio": "SRV-000101",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-10-07",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 203.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000137",
+  "id_servicio": "SRV-000102",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-04-07",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 379.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000138",
+  "id_servicio": "SRV-000102",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-04-07",
+  "caseta": "Mata",
+  "importe_MXN": 204.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000139",
+  "id_servicio": "SRV-000103",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-06-23",
+  "caseta": "La Joya",
+  "importe_MXN": 1860.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000140",
+  "id_servicio": "SRV-000103",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-06-23",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1889.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000141",
+  "id_servicio": "SRV-000104",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-09-25",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 2992.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000142",
+  "id_servicio": "SRV-000105",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-06",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 2311.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000143",
+  "id_servicio": "SRV-000106",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-08-04",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 715.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000144",
+  "id_servicio": "SRV-000107",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-09-17",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 474.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000145",
+  "id_servicio": "SRV-000108",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-19",
+  "caseta": "La Joya",
+  "importe_MXN": 218.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000146",
+  "id_servicio": "SRV-000108",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-19",
+  "caseta": "Perote",
+  "importe_MXN": 114.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000147",
+  "id_servicio": "SRV-000109",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-02-20",
+  "caseta": "La Joya",
+  "importe_MXN": 751.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000148",
+  "id_servicio": "SRV-000110",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-06",
+  "caseta": "Palmillas",
+  "importe_MXN": 655.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000149",
+  "id_servicio": "SRV-000110",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-06",
+  "caseta": "Perote",
+  "importe_MXN": 745.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000150",
+  "id_servicio": "SRV-000111",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-01-15",
+  "caseta": "Palmillas",
+  "importe_MXN": 672.43,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000151",
+  "id_servicio": "SRV-000111",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-01-15",
+  "caseta": "Acatzingo",
+  "importe_MXN": 863.05,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000152",
+  "id_servicio": "SRV-000112",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-07-27",
+  "caseta": "Acatzingo",
+  "importe_MXN": 105.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000153",
+  "id_servicio": "SRV-000112",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-07-27",
+  "caseta": "Palmillas",
+  "importe_MXN": 61.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000154",
+  "id_servicio": "SRV-000113",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-11-26",
+  "caseta": "La Joya",
+  "importe_MXN": 1173.33,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000155",
+  "id_servicio": "SRV-000113",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-11-26",
+  "caseta": "Fortín",
+  "importe_MXN": 1056.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000156",
+  "id_servicio": "SRV-000114",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-08-24",
+  "caseta": "Fortín",
+  "importe_MXN": 411.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000157",
+  "id_servicio": "SRV-000115",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-10-07",
+  "caseta": "Córdoba",
+  "importe_MXN": 484.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000158",
+  "id_servicio": "SRV-000116",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-10-30",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 197.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000159",
+  "id_servicio": "SRV-000116",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-10-30",
+  "caseta": "San Martín",
+  "importe_MXN": 244.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000160",
+  "id_servicio": "SRV-000117",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-05-29",
+  "caseta": "Palmillas",
+  "importe_MXN": 635.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000161",
+  "id_servicio": "SRV-000117",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-05-29",
+  "caseta": "Acatzingo",
+  "importe_MXN": 762.32,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000162",
+  "id_servicio": "SRV-000118",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-11-25",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1029.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000163",
+  "id_servicio": "SRV-000118",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-11-25",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1485.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000164",
+  "id_servicio": "SRV-000119",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-02-19",
+  "caseta": "Perote",
+  "importe_MXN": 440.84,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000165",
+  "id_servicio": "SRV-000120",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-05-26",
+  "caseta": "Fortín",
+  "importe_MXN": 125.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000166",
+  "id_servicio": "SRV-000121",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-09-02",
+  "caseta": "Mata",
+  "importe_MXN": 587.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000167",
+  "id_servicio": "SRV-000121",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-09-02",
+  "caseta": "Esperanza",
+  "importe_MXN": 706.73,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000168",
+  "id_servicio": "SRV-000122",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-05-14",
+  "caseta": "La Joya",
+  "importe_MXN": 469.46,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000169",
+  "id_servicio": "SRV-000123",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-06-09",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 275.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000170",
+  "id_servicio": "SRV-000123",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-06-09",
+  "caseta": "Esperanza",
+  "importe_MXN": 272.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000171",
+  "id_servicio": "SRV-000124",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-06-08",
+  "caseta": "Mata",
+  "importe_MXN": 261.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000172",
+  "id_servicio": "SRV-000124",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-06-08",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 172.83,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000173",
+  "id_servicio": "SRV-000125",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-06-09",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 663.53,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000174",
+  "id_servicio": "SRV-000125",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-06-09",
+  "caseta": "San Martín",
+  "importe_MXN": 608.91,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000175",
+  "id_servicio": "SRV-000126",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-07-22",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 3992.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000176",
+  "id_servicio": "SRV-000127",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-11-25",
+  "caseta": "Acatzingo",
+  "importe_MXN": 776.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000177",
+  "id_servicio": "SRV-000127",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-11-25",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 681.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000178",
+  "id_servicio": "SRV-000128",
+  "id_ruta": "RUT-0013",
+  "fecha": "2025-11-25",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 155.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000179",
+  "id_servicio": "SRV-000128",
+  "id_ruta": "RUT-0013",
+  "fecha": "2025-11-25",
+  "caseta": "Córdoba",
+  "importe_MXN": 117.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000180",
+  "id_servicio": "SRV-000129",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-07-31",
+  "caseta": "Córdoba",
+  "importe_MXN": 2560.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000181",
+  "id_servicio": "SRV-000130",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-02-13",
+  "caseta": "Acatzingo",
+  "importe_MXN": 820.67,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000182",
+  "id_servicio": "SRV-000131",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-05-13",
+  "caseta": "San Martín",
+  "importe_MXN": 106.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000183",
+  "id_servicio": "SRV-000132",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-10-02",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 350.78,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000184",
+  "id_servicio": "SRV-000133",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-04-22",
+  "caseta": "Córdoba",
+  "importe_MXN": 196.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000185",
+  "id_servicio": "SRV-000134",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-08-31",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 423.96,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000186",
+  "id_servicio": "SRV-000135",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-05-07",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 693.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000187",
+  "id_servicio": "SRV-000136",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-09-23",
+  "caseta": "Esperanza",
+  "importe_MXN": 210.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000188",
+  "id_servicio": "SRV-000136",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-09-23",
+  "caseta": "Palmillas",
+  "importe_MXN": 108.75,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000189",
+  "id_servicio": "SRV-000137",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-04-23",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 95.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000190",
+  "id_servicio": "SRV-000137",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-04-23",
+  "caseta": "Acatzingo",
+  "importe_MXN": 70.58,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000191",
+  "id_servicio": "SRV-000138",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-07-24",
+  "caseta": "Córdoba",
+  "importe_MXN": 5243.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000192",
+  "id_servicio": "SRV-000139",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-04-23",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1502.6,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000193",
+  "id_servicio": "SRV-000140",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-07-28",
+  "caseta": "La Joya",
+  "importe_MXN": 853.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000194",
+  "id_servicio": "SRV-000141",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-09-09",
+  "caseta": "Palmillas",
+  "importe_MXN": 294.84,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000195",
+  "id_servicio": "SRV-000141",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-09-09",
+  "caseta": "La Joya",
+  "importe_MXN": 347.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000196",
+  "id_servicio": "SRV-000142",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-12-04",
+  "caseta": "Esperanza",
+  "importe_MXN": 56.64,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000197",
+  "id_servicio": "SRV-000142",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-12-04",
+  "caseta": "Córdoba",
+  "importe_MXN": 57.05,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000198",
+  "id_servicio": "SRV-000143",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-01-07",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 136.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000199",
+  "id_servicio": "SRV-000143",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-01-07",
+  "caseta": "Perote",
+  "importe_MXN": 307.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000200",
+  "id_servicio": "SRV-000144",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-04-03",
+  "caseta": "San Martín",
+  "importe_MXN": 872.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000201",
+  "id_servicio": "SRV-000145",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-06-10",
+  "caseta": "San Martín",
+  "importe_MXN": 76.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000202",
+  "id_servicio": "SRV-000145",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-06-10",
+  "caseta": "Córdoba",
+  "importe_MXN": 79.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000203",
+  "id_servicio": "SRV-000146",
+  "id_ruta": "RUT-0017",
+  "fecha": "2025-12-11",
+  "caseta": "Córdoba",
+  "importe_MXN": 286.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000204",
+  "id_servicio": "SRV-000147",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-09-16",
+  "caseta": "Palmillas",
+  "importe_MXN": 3648.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000205",
+  "id_servicio": "SRV-000148",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-03",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1130.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000206",
+  "id_servicio": "SRV-000148",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-03",
+  "caseta": "Córdoba",
+  "importe_MXN": 803.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000207",
+  "id_servicio": "SRV-000149",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-01-07",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 3687.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000208",
+  "id_servicio": "SRV-000150",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-11-26",
+  "caseta": "La Joya",
+  "importe_MXN": 58.69,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000209",
+  "id_servicio": "SRV-000151",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-09-10",
+  "caseta": "Perote",
+  "importe_MXN": 124.46,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000210",
+  "id_servicio": "SRV-000151",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-09-10",
+  "caseta": "Esperanza",
+  "importe_MXN": 209.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000211",
+  "id_servicio": "SRV-000152",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-06-30",
+  "caseta": "Esperanza",
+  "importe_MXN": 458.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000212",
+  "id_servicio": "SRV-000153",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-07-29",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1526.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000213",
+  "id_servicio": "SRV-000154",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-01-26",
+  "caseta": "Acatzingo",
+  "importe_MXN": 385.01,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000214",
+  "id_servicio": "SRV-000154",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-01-26",
+  "caseta": "Esperanza",
+  "importe_MXN": 261.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000215",
+  "id_servicio": "SRV-000155",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-02-16",
+  "caseta": "Mata",
+  "importe_MXN": 445.81,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000216",
+  "id_servicio": "SRV-000155",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-02-16",
+  "caseta": "Mata",
+  "importe_MXN": 445.78,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000217",
+  "id_servicio": "SRV-000156",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-06-03",
+  "caseta": "Córdoba",
+  "importe_MXN": 691.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000218",
+  "id_servicio": "SRV-000157",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-09-01",
+  "caseta": "Fortín",
+  "importe_MXN": 276.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000219",
+  "id_servicio": "SRV-000158",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-08-10",
+  "caseta": "San Martín",
+  "importe_MXN": 752.17,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000220",
+  "id_servicio": "SRV-000159",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-11-12",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 943.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000221",
+  "id_servicio": "SRV-000159",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-11-12",
+  "caseta": "Palmillas",
+  "importe_MXN": 805.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000222",
+  "id_servicio": "SRV-000160",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-11",
+  "caseta": "La Joya",
+  "importe_MXN": 542.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000223",
+  "id_servicio": "SRV-000161",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-07-30",
+  "caseta": "Acatzingo",
+  "importe_MXN": 234.75,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000224",
+  "id_servicio": "SRV-000162",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-05-20",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1381.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000225",
+  "id_servicio": "SRV-000162",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-05-20",
+  "caseta": "Palmillas",
+  "importe_MXN": 839.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000226",
+  "id_servicio": "SRV-000163",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-07-29",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 679.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000227",
+  "id_servicio": "SRV-000164",
+  "id_ruta": "RUT-0006",
+  "fecha": "2025-12-11",
+  "caseta": "Mata",
+  "importe_MXN": 634.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000228",
+  "id_servicio": "SRV-000164",
+  "id_ruta": "RUT-0006",
+  "fecha": "2025-12-11",
+  "caseta": "Esperanza",
+  "importe_MXN": 538.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000229",
+  "id_servicio": "SRV-000165",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-10-28",
+  "caseta": "La Joya",
+  "importe_MXN": 994.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000230",
+  "id_servicio": "SRV-000166",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-04-02",
+  "caseta": "Esperanza",
+  "importe_MXN": 679.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000231",
+  "id_servicio": "SRV-000167",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-10-30",
+  "caseta": "San Martín",
+  "importe_MXN": 141.8,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000232",
+  "id_servicio": "SRV-000167",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-10-30",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 99.74,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000233",
+  "id_servicio": "SRV-000168",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-11-26",
+  "caseta": "Córdoba",
+  "importe_MXN": 19.73,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000234",
+  "id_servicio": "SRV-000168",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-11-26",
+  "caseta": "La Joya",
+  "importe_MXN": 32.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000235",
+  "id_servicio": "SRV-000169",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-04-13",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 161.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000236",
+  "id_servicio": "SRV-000169",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-04-13",
+  "caseta": "Córdoba",
+  "importe_MXN": 80.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000237",
+  "id_servicio": "SRV-000170",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-10",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 860.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000238",
+  "id_servicio": "SRV-000170",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-10",
+  "caseta": "Córdoba",
+  "importe_MXN": 627.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000239",
+  "id_servicio": "SRV-000171",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-06-10",
+  "caseta": "Fortín",
+  "importe_MXN": 130.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000240",
+  "id_servicio": "SRV-000172",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-06-03",
+  "caseta": "Esperanza",
+  "importe_MXN": 210.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000241",
+  "id_servicio": "SRV-000172",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-06-03",
+  "caseta": "Fortín",
+  "importe_MXN": 289.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000242",
+  "id_servicio": "SRV-000173",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-04-06",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 433.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000243",
+  "id_servicio": "SRV-000174",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-03-30",
+  "caseta": "La Joya",
+  "importe_MXN": 180.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000244",
+  "id_servicio": "SRV-000174",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-03-30",
+  "caseta": "La Joya",
+  "importe_MXN": 151.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000245",
+  "id_servicio": "SRV-000175",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-11-18",
+  "caseta": "Acatzingo",
+  "importe_MXN": 2648.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000246",
+  "id_servicio": "SRV-000176",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-09-14",
+  "caseta": "San Martín",
+  "importe_MXN": 515.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000247",
+  "id_servicio": "SRV-000177",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-11-19",
+  "caseta": "San Martín",
+  "importe_MXN": 1119.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000248",
+  "id_servicio": "SRV-000178",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-08-24",
+  "caseta": "Acatzingo",
+  "importe_MXN": 517.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000249",
+  "id_servicio": "SRV-000178",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-08-24",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 326.67,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000250",
+  "id_servicio": "SRV-000179",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-06-16",
+  "caseta": "Córdoba",
+  "importe_MXN": 246.86,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000251",
+  "id_servicio": "SRV-000179",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-06-16",
+  "caseta": "Acatzingo",
+  "importe_MXN": 354.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000252",
+  "id_servicio": "SRV-000180",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-03-12",
+  "caseta": "Esperanza",
+  "importe_MXN": 1265.43,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000253",
+  "id_servicio": "SRV-000180",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-03-12",
+  "caseta": "Esperanza",
+  "importe_MXN": 1138.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000254",
+  "id_servicio": "SRV-000181",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-10-08",
+  "caseta": "La Joya",
+  "importe_MXN": 226.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000255",
+  "id_servicio": "SRV-000182",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-08-20",
+  "caseta": "San Martín",
+  "importe_MXN": 219.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000256",
+  "id_servicio": "SRV-000182",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-08-20",
+  "caseta": "San Martín",
+  "importe_MXN": 182.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000257",
+  "id_servicio": "SRV-000183",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-11-10",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 710.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000258",
+  "id_servicio": "SRV-000184",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-01-02",
+  "caseta": "Palmillas",
+  "importe_MXN": 911.88,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000259",
+  "id_servicio": "SRV-000185",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-03-11",
+  "caseta": "Esperanza",
+  "importe_MXN": 3220.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000260",
+  "id_servicio": "SRV-000186",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-11-17",
+  "caseta": "Mata",
+  "importe_MXN": 414.18,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000261",
+  "id_servicio": "SRV-000186",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-11-17",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 415.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000262",
+  "id_servicio": "SRV-000187",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-07-29",
+  "caseta": "Mata",
+  "importe_MXN": 148.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000263",
+  "id_servicio": "SRV-000187",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-07-29",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 149.42,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000264",
+  "id_servicio": "SRV-000188",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-02-23",
+  "caseta": "Mata",
+  "importe_MXN": 105.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000265",
+  "id_servicio": "SRV-000188",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-02-23",
+  "caseta": "Fortín",
+  "importe_MXN": 222.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000266",
+  "id_servicio": "SRV-000189",
+  "id_ruta": "RUT-0017",
+  "fecha": "2025-12-26",
+  "caseta": "San Martín",
+  "importe_MXN": 547.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000267",
+  "id_servicio": "SRV-000190",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-10-19",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 123.66,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000268",
+  "id_servicio": "SRV-000191",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-06",
+  "caseta": "San Martín",
+  "importe_MXN": 799.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000269",
+  "id_servicio": "SRV-000191",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-06",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1233.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000270",
+  "id_servicio": "SRV-000192",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-11-05",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 315.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000271",
+  "id_servicio": "SRV-000193",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-04-13",
+  "caseta": "Mata",
+  "importe_MXN": 377.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000272",
+  "id_servicio": "SRV-000194",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-06-12",
+  "caseta": "Fortín",
+  "importe_MXN": 252.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000273",
+  "id_servicio": "SRV-000195",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-03-05",
+  "caseta": "Mata",
+  "importe_MXN": 185.78,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000274",
+  "id_servicio": "SRV-000195",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-03-05",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 98.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000275",
+  "id_servicio": "SRV-000196",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-08",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 3744.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000276",
+  "id_servicio": "SRV-000197",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-29",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 798.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000277",
+  "id_servicio": "SRV-000198",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-05-07",
+  "caseta": "Esperanza",
+  "importe_MXN": 185.92,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000278",
+  "id_servicio": "SRV-000199",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-03-26",
+  "caseta": "Palmillas",
+  "importe_MXN": 1091.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000279",
+  "id_servicio": "SRV-000199",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-03-26",
+  "caseta": "Fortín",
+  "importe_MXN": 1340.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000280",
+  "id_servicio": "SRV-000200",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-07-21",
+  "caseta": "Fortín",
+  "importe_MXN": 726.81,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000281",
+  "id_servicio": "SRV-000200",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-07-21",
+  "caseta": "Perote",
+  "importe_MXN": 873.88,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000282",
+  "id_servicio": "SRV-000201",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-03-23",
+  "caseta": "San Martín",
+  "importe_MXN": 460.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000283",
+  "id_servicio": "SRV-000202",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-04-13",
+  "caseta": "Acatzingo",
+  "importe_MXN": 57.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000284",
+  "id_servicio": "SRV-000202",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-04-13",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 68.42,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000285",
+  "id_servicio": "SRV-000203",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-08-20",
+  "caseta": "Palmillas",
+  "importe_MXN": 325.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000286",
+  "id_servicio": "SRV-000204",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-12-05",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 2881.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000287",
+  "id_servicio": "SRV-000205",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-02-05",
+  "caseta": "Esperanza",
+  "importe_MXN": 332.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000288",
+  "id_servicio": "SRV-000206",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-07-13",
+  "caseta": "Esperanza",
+  "importe_MXN": 295.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000289",
+  "id_servicio": "SRV-000207",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-08-14",
+  "caseta": "Palmillas",
+  "importe_MXN": 201.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000290",
+  "id_servicio": "SRV-000208",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-11-13",
+  "caseta": "Esperanza",
+  "importe_MXN": 2383.41,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000291",
+  "id_servicio": "SRV-000208",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-11-13",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 2217.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000292",
+  "id_servicio": "SRV-000209",
+  "id_ruta": "RUT-0002",
+  "fecha": "2025-12-19",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 845.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000293",
+  "id_servicio": "SRV-000210",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-07-29",
+  "caseta": "Esperanza",
+  "importe_MXN": 58.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000294",
+  "id_servicio": "SRV-000211",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-12-03",
+  "caseta": "Córdoba",
+  "importe_MXN": 1188.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000295",
+  "id_servicio": "SRV-000212",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-22",
+  "caseta": "Perote",
+  "importe_MXN": 1094.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000296",
+  "id_servicio": "SRV-000212",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-22",
+  "caseta": "La Joya",
+  "importe_MXN": 1229.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000297",
+  "id_servicio": "SRV-000213",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-05-26",
+  "caseta": "Palmillas",
+  "importe_MXN": 1745.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000298",
+  "id_servicio": "SRV-000213",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-05-26",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 2304.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000299",
+  "id_servicio": "SRV-000214",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-03-23",
+  "caseta": "Esperanza",
+  "importe_MXN": 394.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000300",
+  "id_servicio": "SRV-000215",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-03-19",
+  "caseta": "Palmillas",
+  "importe_MXN": 144.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000301",
+  "id_servicio": "SRV-000215",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-03-19",
+  "caseta": "Acatzingo",
+  "importe_MXN": 96.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000302",
+  "id_servicio": "SRV-000216",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-07-03",
+  "caseta": "Acatzingo",
+  "importe_MXN": 304.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000303",
+  "id_servicio": "SRV-000216",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-07-03",
+  "caseta": "Fortín",
+  "importe_MXN": 286.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000304",
+  "id_servicio": "SRV-000217",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-01-06",
+  "caseta": "Perote",
+  "importe_MXN": 221.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000305",
+  "id_servicio": "SRV-000217",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-01-06",
+  "caseta": "San Martín",
+  "importe_MXN": 504.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000306",
+  "id_servicio": "SRV-000218",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-04-22",
+  "caseta": "Palmillas",
+  "importe_MXN": 246.31,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000307",
+  "id_servicio": "SRV-000219",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-04-15",
+  "caseta": "Córdoba",
+  "importe_MXN": 287.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000308",
+  "id_servicio": "SRV-000220",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-11-13",
+  "caseta": "Acatzingo",
+  "importe_MXN": 253.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000309",
+  "id_servicio": "SRV-000221",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-07-17",
+  "caseta": "Córdoba",
+  "importe_MXN": 145.67,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000310",
+  "id_servicio": "SRV-000221",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-07-17",
+  "caseta": "Mata",
+  "importe_MXN": 203.83,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000311",
+  "id_servicio": "SRV-000222",
+  "id_ruta": "RUT-0013",
+  "fecha": "2025-12-31",
+  "caseta": "Esperanza",
+  "importe_MXN": 261.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000312",
+  "id_servicio": "SRV-000223",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-06-16",
+  "caseta": "San Martín",
+  "importe_MXN": 56.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000313",
+  "id_servicio": "SRV-000224",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-10-21",
+  "caseta": "Córdoba",
+  "importe_MXN": 552.88,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000314",
+  "id_servicio": "SRV-000225",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-09-25",
+  "caseta": "San Martín",
+  "importe_MXN": 213.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000315",
+  "id_servicio": "SRV-000225",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-09-25",
+  "caseta": "Mata",
+  "importe_MXN": 218.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000316",
+  "id_servicio": "SRV-000226",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-12-22",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 2226.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000317",
+  "id_servicio": "SRV-000227",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-01-19",
+  "caseta": "Esperanza",
+  "importe_MXN": 1105.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000318",
+  "id_servicio": "SRV-000227",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-01-19",
+  "caseta": "Mata",
+  "importe_MXN": 688.18,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000319",
+  "id_servicio": "SRV-000228",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-07-20",
+  "caseta": "Acatzingo",
+  "importe_MXN": 449.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000320",
+  "id_servicio": "SRV-000229",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-07",
+  "caseta": "Fortín",
+  "importe_MXN": 1319.91,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000321",
+  "id_servicio": "SRV-000229",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-07",
+  "caseta": "Mata",
+  "importe_MXN": 1444.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000322",
+  "id_servicio": "SRV-000230",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-06-24",
+  "caseta": "Palmillas",
+  "importe_MXN": 125.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000323",
+  "id_servicio": "SRV-000230",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-06-24",
+  "caseta": "La Joya",
+  "importe_MXN": 207.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000324",
+  "id_servicio": "SRV-000231",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-07-20",
+  "caseta": "San Martín",
+  "importe_MXN": 235.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000325",
+  "id_servicio": "SRV-000232",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-06-29",
+  "caseta": "Perote",
+  "importe_MXN": 688.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000326",
+  "id_servicio": "SRV-000233",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-10-21",
+  "caseta": "Córdoba",
+  "importe_MXN": 264.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000327",
+  "id_servicio": "SRV-000233",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-10-21",
+  "caseta": "Esperanza",
+  "importe_MXN": 368.8,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000328",
+  "id_servicio": "SRV-000234",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-03-13",
+  "caseta": "Palmillas",
+  "importe_MXN": 2239.81,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000329",
+  "id_servicio": "SRV-000234",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-03-13",
+  "caseta": "Fortín",
+  "importe_MXN": 1133.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000330",
+  "id_servicio": "SRV-000235",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-06-24",
+  "caseta": "Esperanza",
+  "importe_MXN": 439.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000331",
+  "id_servicio": "SRV-000236",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-01-22",
+  "caseta": "Fortín",
+  "importe_MXN": 300.64,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000332",
+  "id_servicio": "SRV-000237",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-05-13",
+  "caseta": "Mata",
+  "importe_MXN": 1170.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000333",
+  "id_servicio": "SRV-000238",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-01-05",
+  "caseta": "Esperanza",
+  "importe_MXN": 559.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000334",
+  "id_servicio": "SRV-000239",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-05-14",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 118.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000335",
+  "id_servicio": "SRV-000239",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-05-14",
+  "caseta": "La Joya",
+  "importe_MXN": 145.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000336",
+  "id_servicio": "SRV-000240",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-06-23",
+  "caseta": "La Joya",
+  "importe_MXN": 475.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000337",
+  "id_servicio": "SRV-000241",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-12-01",
+  "caseta": "Acatzingo",
+  "importe_MXN": 3521.01,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000338",
+  "id_servicio": "SRV-000242",
+  "id_ruta": "RUT-0010",
+  "fecha": "2025-12-19",
+  "caseta": "Córdoba",
+  "importe_MXN": 368.86,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000339",
+  "id_servicio": "SRV-000242",
+  "id_ruta": "RUT-0010",
+  "fecha": "2025-12-19",
+  "caseta": "Palmillas",
+  "importe_MXN": 318.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000340",
+  "id_servicio": "SRV-000243",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-05-22",
+  "caseta": "Acatzingo",
+  "importe_MXN": 355.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000341",
+  "id_servicio": "SRV-000244",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-04-23",
+  "caseta": "Acatzingo",
+  "importe_MXN": 920.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000342",
+  "id_servicio": "SRV-000245",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-10-08",
+  "caseta": "Esperanza",
+  "importe_MXN": 253.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000343",
+  "id_servicio": "SRV-000245",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-10-08",
+  "caseta": "Mata",
+  "importe_MXN": 178.28,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000344",
+  "id_servicio": "SRV-000246",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-12-12",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 627.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000345",
+  "id_servicio": "SRV-000246",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-12-12",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 782.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000346",
+  "id_servicio": "SRV-000247",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-05-26",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 239.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000347",
+  "id_servicio": "SRV-000248",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-07-27",
+  "caseta": "Córdoba",
+  "importe_MXN": 194.46,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000348",
+  "id_servicio": "SRV-000248",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-07-27",
+  "caseta": "Acatzingo",
+  "importe_MXN": 194.4,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000349",
+  "id_servicio": "SRV-000249",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-02-06",
+  "caseta": "La Joya",
+  "importe_MXN": 983.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000350",
+  "id_servicio": "SRV-000249",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-02-06",
+  "caseta": "Acatzingo",
+  "importe_MXN": 891.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000351",
+  "id_servicio": "SRV-000250",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-05-01",
+  "caseta": "Fortín",
+  "importe_MXN": 827.31,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000352",
+  "id_servicio": "SRV-000251",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-11-13",
+  "caseta": "Palmillas",
+  "importe_MXN": 393.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000353",
+  "id_servicio": "SRV-000252",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-01-28",
+  "caseta": "Perote",
+  "importe_MXN": 205.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000354",
+  "id_servicio": "SRV-000253",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-11-28",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 2569.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000355",
+  "id_servicio": "SRV-000254",
+  "id_ruta": "RUT-0005",
+  "fecha": "2025-12-29",
+  "caseta": "Fortín",
+  "importe_MXN": 169.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000356",
+  "id_servicio": "SRV-000255",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-01-30",
+  "caseta": "San Martín",
+  "importe_MXN": 219.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000357",
+  "id_servicio": "SRV-000255",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-01-30",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 171.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000358",
+  "id_servicio": "SRV-000256",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-08-24",
+  "caseta": "Perote",
+  "importe_MXN": 326.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000359",
+  "id_servicio": "SRV-000256",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-08-24",
+  "caseta": "Fortín",
+  "importe_MXN": 227.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000360",
+  "id_servicio": "SRV-000257",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-13",
+  "caseta": "Mata",
+  "importe_MXN": 632.17,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000361",
+  "id_servicio": "SRV-000257",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-13",
+  "caseta": "Perote",
+  "importe_MXN": 793.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000362",
+  "id_servicio": "SRV-000258",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-10-22",
+  "caseta": "Acatzingo",
+  "importe_MXN": 348.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000363",
+  "id_servicio": "SRV-000259",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-04-03",
+  "caseta": "Acatzingo",
+  "importe_MXN": 130.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000364",
+  "id_servicio": "SRV-000259",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-04-03",
+  "caseta": "Esperanza",
+  "importe_MXN": 181.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000365",
+  "id_servicio": "SRV-000260",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-01-14",
+  "caseta": "Fortín",
+  "importe_MXN": 369.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000366",
+  "id_servicio": "SRV-000261",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-02-27",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 128.16,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000367",
+  "id_servicio": "SRV-000262",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-06-05",
+  "caseta": "Mata",
+  "importe_MXN": 713.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000368",
+  "id_servicio": "SRV-000263",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-03-30",
+  "caseta": "Perote",
+  "importe_MXN": 209.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000369",
+  "id_servicio": "SRV-000264",
+  "id_ruta": "RUT-0016",
+  "fecha": "2025-12-31",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 538.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000370",
+  "id_servicio": "SRV-000265",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-02-10",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1455.46,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000371",
+  "id_servicio": "SRV-000265",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-02-10",
+  "caseta": "Fortín",
+  "importe_MXN": 1232.18,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000372",
+  "id_servicio": "SRV-000266",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-11-16",
+  "caseta": "San Martín",
+  "importe_MXN": 522.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000373",
+  "id_servicio": "SRV-000266",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-11-16",
+  "caseta": "Perote",
+  "importe_MXN": 405.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000374",
+  "id_servicio": "SRV-000267",
+  "id_ruta": "RUT-0015",
+  "fecha": "2025-12-26",
+  "caseta": "Perote",
+  "importe_MXN": 284.92,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000375",
+  "id_servicio": "SRV-000268",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-11-13",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 814.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000376",
+  "id_servicio": "SRV-000269",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-07-03",
+  "caseta": "San Martín",
+  "importe_MXN": 895.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000377",
+  "id_servicio": "SRV-000270",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-11-18",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 156.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000378",
+  "id_servicio": "SRV-000270",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-11-18",
+  "caseta": "Fortín",
+  "importe_MXN": 265.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000379",
+  "id_servicio": "SRV-000271",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-08-26",
+  "caseta": "Esperanza",
+  "importe_MXN": 629.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000380",
+  "id_servicio": "SRV-000272",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-01-01",
+  "caseta": "Acatzingo",
+  "importe_MXN": 752.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000381",
+  "id_servicio": "SRV-000273",
+  "id_ruta": "RUT-0014",
+  "fecha": "2025-12-31",
+  "caseta": "Palmillas",
+  "importe_MXN": 604.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000382",
+  "id_servicio": "SRV-000274",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-08-10",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 296.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000383",
+  "id_servicio": "SRV-000275",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-02-24",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 762.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000384",
+  "id_servicio": "SRV-000275",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-02-24",
+  "caseta": "Esperanza",
+  "importe_MXN": 581.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000385",
+  "id_servicio": "SRV-000276",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-09-02",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 2485.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000386",
+  "id_servicio": "SRV-000277",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-02-25",
+  "caseta": "Perote",
+  "importe_MXN": 125.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000387",
+  "id_servicio": "SRV-000277",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-02-25",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 142.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000388",
+  "id_servicio": "SRV-000278",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-09-15",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 276.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000389",
+  "id_servicio": "SRV-000279",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-01-16",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 162.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000390",
+  "id_servicio": "SRV-000279",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-01-16",
+  "caseta": "Córdoba",
+  "importe_MXN": 161.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000391",
+  "id_servicio": "SRV-000280",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-08-11",
+  "caseta": "San Martín",
+  "importe_MXN": 403.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000392",
+  "id_servicio": "SRV-000281",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-09-30",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 290.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000393",
+  "id_servicio": "SRV-000281",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-09-30",
+  "caseta": "San Martín",
+  "importe_MXN": 233.46,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000394",
+  "id_servicio": "SRV-000282",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-08-27",
+  "caseta": "La Joya",
+  "importe_MXN": 2102.64,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000395",
+  "id_servicio": "SRV-000283",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-10-13",
+  "caseta": "Palmillas",
+  "importe_MXN": 663.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000396",
+  "id_servicio": "SRV-000284",
+  "id_ruta": "RUT-0017",
+  "fecha": "2025-12-17",
+  "caseta": "La Joya",
+  "importe_MXN": 304.61,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000397",
+  "id_servicio": "SRV-000285",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-08-11",
+  "caseta": "Mata",
+  "importe_MXN": 261.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000398",
+  "id_servicio": "SRV-000286",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-05-06",
+  "caseta": "San Martín",
+  "importe_MXN": 247.78,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000399",
+  "id_servicio": "SRV-000287",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-01-13",
+  "caseta": "Palmillas",
+  "importe_MXN": 434.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000400",
+  "id_servicio": "SRV-000288",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-10-14",
+  "caseta": "San Martín",
+  "importe_MXN": 190.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000401",
+  "id_servicio": "SRV-000288",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-10-14",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 160.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000402",
+  "id_servicio": "SRV-000289",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-08-13",
+  "caseta": "San Martín",
+  "importe_MXN": 3963.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000403",
+  "id_servicio": "SRV-000290",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-11-17",
+  "caseta": "La Joya",
+  "importe_MXN": 362.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000404",
+  "id_servicio": "SRV-000291",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-07-15",
+  "caseta": "Córdoba",
+  "importe_MXN": 409.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000405",
+  "id_servicio": "SRV-000292",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-02-13",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 131.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000406",
+  "id_servicio": "SRV-000293",
+  "id_ruta": "RUT-0003",
+  "fecha": "2025-12-09",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 461.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000407",
+  "id_servicio": "SRV-000294",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-10-21",
+  "caseta": "Esperanza",
+  "importe_MXN": 88.4,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000408",
+  "id_servicio": "SRV-000295",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-08-26",
+  "caseta": "San Martín",
+  "importe_MXN": 651.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000409",
+  "id_servicio": "SRV-000296",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-05-11",
+  "caseta": "San Martín",
+  "importe_MXN": 2035.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000410",
+  "id_servicio": "SRV-000297",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-08-14",
+  "caseta": "Córdoba",
+  "importe_MXN": 267.61,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000411",
+  "id_servicio": "SRV-000298",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-06-15",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 2965.16,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000412",
+  "id_servicio": "SRV-000299",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-08-20",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 229.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000413",
+  "id_servicio": "SRV-000300",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-08-21",
+  "caseta": "Mata",
+  "importe_MXN": 500.73,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000414",
+  "id_servicio": "SRV-000301",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-01-30",
+  "caseta": "Mata",
+  "importe_MXN": 1142.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000415",
+  "id_servicio": "SRV-000302",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-06-23",
+  "caseta": "Acatzingo",
+  "importe_MXN": 2958.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000416",
+  "id_servicio": "SRV-000303",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-02-16",
+  "caseta": "Esperanza",
+  "importe_MXN": 901.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000417",
+  "id_servicio": "SRV-000303",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-02-16",
+  "caseta": "La Joya",
+  "importe_MXN": 564.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000418",
+  "id_servicio": "SRV-000304",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-24",
+  "caseta": "Acatzingo",
+  "importe_MXN": 71.28,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000419",
+  "id_servicio": "SRV-000304",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-24",
+  "caseta": "Córdoba",
+  "importe_MXN": 35.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000420",
+  "id_servicio": "SRV-000305",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-02-18",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 216.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000421",
+  "id_servicio": "SRV-000305",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-02-18",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 269.75,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000422",
+  "id_servicio": "SRV-000306",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-11-19",
+  "caseta": "Acatzingo",
+  "importe_MXN": 585.91,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000423",
+  "id_servicio": "SRV-000306",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-11-19",
+  "caseta": "Esperanza",
+  "importe_MXN": 625.31,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000424",
+  "id_servicio": "SRV-000307",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-21",
+  "caseta": "Palmillas",
+  "importe_MXN": 856.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000425",
+  "id_servicio": "SRV-000308",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-01-14",
+  "caseta": "Esperanza",
+  "importe_MXN": 434.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000426",
+  "id_servicio": "SRV-000309",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-21",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 136.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000427",
+  "id_servicio": "SRV-000310",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-11-05",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 192.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000428",
+  "id_servicio": "SRV-000310",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-11-05",
+  "caseta": "Mata",
+  "importe_MXN": 233.52,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000429",
+  "id_servicio": "SRV-000311",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-06-24",
+  "caseta": "Mata",
+  "importe_MXN": 2744.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000430",
+  "id_servicio": "SRV-000312",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-12-04",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 337.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000431",
+  "id_servicio": "SRV-000313",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-08-25",
+  "caseta": "Fortín",
+  "importe_MXN": 121.83,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000432",
+  "id_servicio": "SRV-000313",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-08-25",
+  "caseta": "Perote",
+  "importe_MXN": 224.4,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000433",
+  "id_servicio": "SRV-000314",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-02-26",
+  "caseta": "Córdoba",
+  "importe_MXN": 939.96,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000434",
+  "id_servicio": "SRV-000315",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-02-05",
+  "caseta": "Fortín",
+  "importe_MXN": 286.32,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000435",
+  "id_servicio": "SRV-000316",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-09-09",
+  "caseta": "Mata",
+  "importe_MXN": 151.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000436",
+  "id_servicio": "SRV-000316",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-09-09",
+  "caseta": "San Martín",
+  "importe_MXN": 71.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000437",
+  "id_servicio": "SRV-000317",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-21",
+  "caseta": "Perote",
+  "importe_MXN": 829.31,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000438",
+  "id_servicio": "SRV-000317",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-21",
+  "caseta": "Palmillas",
+  "importe_MXN": 928.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000439",
+  "id_servicio": "SRV-000318",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-07-20",
+  "caseta": "Acatzingo",
+  "importe_MXN": 2022.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000440",
+  "id_servicio": "SRV-000319",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-04-16",
+  "caseta": "La Joya",
+  "importe_MXN": 388.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000441",
+  "id_servicio": "SRV-000319",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-04-16",
+  "caseta": "La Joya",
+  "importe_MXN": 497.88,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000442",
+  "id_servicio": "SRV-000320",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-10-06",
+  "caseta": "Acatzingo",
+  "importe_MXN": 331.91,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000443",
+  "id_servicio": "SRV-000320",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-10-06",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 237.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000444",
+  "id_servicio": "SRV-000321",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-07-13",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 812.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000445",
+  "id_servicio": "SRV-000322",
+  "id_ruta": "RUT-0006",
+  "fecha": "2025-11-27",
+  "caseta": "Córdoba",
+  "importe_MXN": 988.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000446",
+  "id_servicio": "SRV-000323",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-03-18",
+  "caseta": "Esperanza",
+  "importe_MXN": 1442.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000447",
+  "id_servicio": "SRV-000324",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-06-15",
+  "caseta": "Fortín",
+  "importe_MXN": 2083.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000448",
+  "id_servicio": "SRV-000325",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-02-17",
+  "caseta": "San Martín",
+  "importe_MXN": 939.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000449",
+  "id_servicio": "SRV-000326",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-09-22",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 394.6,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000450",
+  "id_servicio": "SRV-000327",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-11-10",
+  "caseta": "La Joya",
+  "importe_MXN": 203.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000451",
+  "id_servicio": "SRV-000327",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-11-10",
+  "caseta": "Perote",
+  "importe_MXN": 156.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000452",
+  "id_servicio": "SRV-000328",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-03-31",
+  "caseta": "Mata",
+  "importe_MXN": 260.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000453",
+  "id_servicio": "SRV-000329",
+  "id_ruta": "RUT-0013",
+  "fecha": "2025-12-19",
+  "caseta": "Fortín",
+  "importe_MXN": 268.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000454",
+  "id_servicio": "SRV-000329",
+  "id_ruta": "RUT-0013",
+  "fecha": "2025-12-19",
+  "caseta": "Mata",
+  "importe_MXN": 256.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000455",
+  "id_servicio": "SRV-000330",
+  "id_ruta": "RUT-0005",
+  "fecha": "2025-12-09",
+  "caseta": "La Joya",
+  "importe_MXN": 142.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000456",
+  "id_servicio": "SRV-000330",
+  "id_ruta": "RUT-0005",
+  "fecha": "2025-12-09",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 125.79,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000457",
+  "id_servicio": "SRV-000331",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-07-20",
+  "caseta": "Fortín",
+  "importe_MXN": 210.86,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000458",
+  "id_servicio": "SRV-000331",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-07-20",
+  "caseta": "Fortín",
+  "importe_MXN": 178.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000459",
+  "id_servicio": "SRV-000332",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-07-09",
+  "caseta": "Fortín",
+  "importe_MXN": 797.53,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000460",
+  "id_servicio": "SRV-000333",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-03-19",
+  "caseta": "Esperanza",
+  "importe_MXN": 1779.84,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000461",
+  "id_servicio": "SRV-000334",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-07-20",
+  "caseta": "Mata",
+  "importe_MXN": 1566.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000462",
+  "id_servicio": "SRV-000334",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-07-20",
+  "caseta": "San Martín",
+  "importe_MXN": 804.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000463",
+  "id_servicio": "SRV-000335",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-06-24",
+  "caseta": "Esperanza",
+  "importe_MXN": 122.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000464",
+  "id_servicio": "SRV-000335",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-06-24",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 177.32,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000465",
+  "id_servicio": "SRV-000336",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-03-05",
+  "caseta": "Palmillas",
+  "importe_MXN": 183.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000466",
+  "id_servicio": "SRV-000336",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-03-05",
+  "caseta": "Esperanza",
+  "importe_MXN": 115.8,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000467",
+  "id_servicio": "SRV-000337",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-01-13",
+  "caseta": "San Martín",
+  "importe_MXN": 94.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000468",
+  "id_servicio": "SRV-000337",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-01-13",
+  "caseta": "Mata",
+  "importe_MXN": 130.69,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000469",
+  "id_servicio": "SRV-000338",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-03-16",
+  "caseta": "San Martín",
+  "importe_MXN": 1447.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000470",
+  "id_servicio": "SRV-000339",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-06-03",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 1168.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000471",
+  "id_servicio": "SRV-000340",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-10-22",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 1482.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000472",
+  "id_servicio": "SRV-000341",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-07-14",
+  "caseta": "San Martín",
+  "importe_MXN": 324.52,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000473",
+  "id_servicio": "SRV-000341",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-07-14",
+  "caseta": "Mata",
+  "importe_MXN": 366.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000474",
+  "id_servicio": "SRV-000342",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-04-14",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 142.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000475",
+  "id_servicio": "SRV-000342",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-04-14",
+  "caseta": "La Joya",
+  "importe_MXN": 76.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000476",
+  "id_servicio": "SRV-000343",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-11-20",
+  "caseta": "Acatzingo",
+  "importe_MXN": 163.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000477",
+  "id_servicio": "SRV-000343",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-11-20",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 152.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000478",
+  "id_servicio": "SRV-000344",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-01-07",
+  "caseta": "Fortín",
+  "importe_MXN": 704.93,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000479",
+  "id_servicio": "SRV-000345",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-05-07",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1189.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000480",
+  "id_servicio": "SRV-000346",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-08-26",
+  "caseta": "Fortín",
+  "importe_MXN": 331.84,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000481",
+  "id_servicio": "SRV-000347",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-15",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1524.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000482",
+  "id_servicio": "SRV-000347",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-15",
+  "caseta": "Perote",
+  "importe_MXN": 1973.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000483",
+  "id_servicio": "SRV-000348",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-06-15",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 322.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000484",
+  "id_servicio": "SRV-000348",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-06-15",
+  "caseta": "Acatzingo",
+  "importe_MXN": 363.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000485",
+  "id_servicio": "SRV-000349",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-29",
+  "caseta": "Acatzingo",
+  "importe_MXN": 279.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000486",
+  "id_servicio": "SRV-000349",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-29",
+  "caseta": "Mata",
+  "importe_MXN": 175.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000487",
+  "id_servicio": "SRV-000350",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-12-03",
+  "caseta": "Fortín",
+  "importe_MXN": 1523.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000488",
+  "id_servicio": "SRV-000350",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-12-03",
+  "caseta": "Córdoba",
+  "importe_MXN": 932.61,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000489",
+  "id_servicio": "SRV-000351",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-07-24",
+  "caseta": "La Joya",
+  "importe_MXN": 2358.28,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000490",
+  "id_servicio": "SRV-000352",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-03-16",
+  "caseta": "La Joya",
+  "importe_MXN": 378.58,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000491",
+  "id_servicio": "SRV-000353",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-16",
+  "caseta": "San Martín",
+  "importe_MXN": 118.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000492",
+  "id_servicio": "SRV-000353",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-16",
+  "caseta": "Córdoba",
+  "importe_MXN": 151.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000493",
+  "id_servicio": "SRV-000354",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-02-27",
+  "caseta": "Fortín",
+  "importe_MXN": 60.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000494",
+  "id_servicio": "SRV-000355",
+  "id_ruta": "RUT-0011",
+  "fecha": "2025-12-23",
+  "caseta": "Mata",
+  "importe_MXN": 428.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000495",
+  "id_servicio": "SRV-000356",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-02-20",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 352.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000496",
+  "id_servicio": "SRV-000357",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-08-19",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 753.81,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000497",
+  "id_servicio": "SRV-000358",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-11-10",
+  "caseta": "Palmillas",
+  "importe_MXN": 233.51,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000498",
+  "id_servicio": "SRV-000359",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-02-05",
+  "caseta": "La Joya",
+  "importe_MXN": 1558.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000499",
+  "id_servicio": "SRV-000360",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-05-29",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 252.17,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000500",
+  "id_servicio": "SRV-000360",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-05-29",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 405.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000501",
+  "id_servicio": "SRV-000361",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-02-11",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 197.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000502",
+  "id_servicio": "SRV-000362",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-05-27",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 159.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000503",
+  "id_servicio": "SRV-000362",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-05-27",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 91.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000504",
+  "id_servicio": "SRV-000363",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-11-12",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 232.74,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000505",
+  "id_servicio": "SRV-000364",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-01-21",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 103.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000506",
+  "id_servicio": "SRV-000364",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-01-21",
+  "caseta": "Esperanza",
+  "importe_MXN": 108.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000507",
+  "id_servicio": "SRV-000365",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-08-07",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1861.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000508",
+  "id_servicio": "SRV-000366",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-05-01",
+  "caseta": "Palmillas",
+  "importe_MXN": 648.01,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000509",
+  "id_servicio": "SRV-000367",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-24",
+  "caseta": "Palmillas",
+  "importe_MXN": 1380.8,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000510",
+  "id_servicio": "SRV-000368",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-03-25",
+  "caseta": "La Joya",
+  "importe_MXN": 282.96,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000511",
+  "id_servicio": "SRV-000368",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-03-25",
+  "caseta": "San Martín",
+  "importe_MXN": 205.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000512",
+  "id_servicio": "SRV-000369",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-09-15",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 726.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000513",
+  "id_servicio": "SRV-000370",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-08-17",
+  "caseta": "La Joya",
+  "importe_MXN": 312.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000514",
+  "id_servicio": "SRV-000371",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-12-02",
+  "caseta": "La Joya",
+  "importe_MXN": 1782.66,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000515",
+  "id_servicio": "SRV-000372",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-05-18",
+  "caseta": "Córdoba",
+  "importe_MXN": 256.78,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000516",
+  "id_servicio": "SRV-000373",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-01-29",
+  "caseta": "Perote",
+  "importe_MXN": 433.92,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000517",
+  "id_servicio": "SRV-000374",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-07-07",
+  "caseta": "Mata",
+  "importe_MXN": 564.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000518",
+  "id_servicio": "SRV-000375",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-09-04",
+  "caseta": "Palmillas",
+  "importe_MXN": 249.88,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000519",
+  "id_servicio": "SRV-000376",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-10-21",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 1215.74,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000520",
+  "id_servicio": "SRV-000376",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-10-21",
+  "caseta": "San Martín",
+  "importe_MXN": 997.41,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000521",
+  "id_servicio": "SRV-000377",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-01-06",
+  "caseta": "Palmillas",
+  "importe_MXN": 237.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000522",
+  "id_servicio": "SRV-000378",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-02-11",
+  "caseta": "Mata",
+  "importe_MXN": 2048.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000523",
+  "id_servicio": "SRV-000379",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-03-20",
+  "caseta": "Perote",
+  "importe_MXN": 696.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000524",
+  "id_servicio": "SRV-000380",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-05-18",
+  "caseta": "La Joya",
+  "importe_MXN": 88.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000525",
+  "id_servicio": "SRV-000380",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-05-18",
+  "caseta": "Fortín",
+  "importe_MXN": 105.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000526",
+  "id_servicio": "SRV-000381",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-11-03",
+  "caseta": "Mata",
+  "importe_MXN": 95.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000527",
+  "id_servicio": "SRV-000381",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-11-03",
+  "caseta": "Palmillas",
+  "importe_MXN": 112.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000528",
+  "id_servicio": "SRV-000382",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-10-23",
+  "caseta": "Palmillas",
+  "importe_MXN": 1001.42,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000529",
+  "id_servicio": "SRV-000383",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-02-11",
+  "caseta": "Córdoba",
+  "importe_MXN": 265.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000530",
+  "id_servicio": "SRV-000384",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-02-02",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 712.86,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000531",
+  "id_servicio": "SRV-000385",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-06-18",
+  "caseta": "Acatzingo",
+  "importe_MXN": 349.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000532",
+  "id_servicio": "SRV-000386",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-09-04",
+  "caseta": "San Martín",
+  "importe_MXN": 102.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000533",
+  "id_servicio": "SRV-000387",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-11-16",
+  "caseta": "San Martín",
+  "importe_MXN": 59.18,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000534",
+  "id_servicio": "SRV-000387",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-11-16",
+  "caseta": "Palmillas",
+  "importe_MXN": 61.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000535",
+  "id_servicio": "SRV-000388",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-24",
+  "caseta": "Córdoba",
+  "importe_MXN": 506.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000536",
+  "id_servicio": "SRV-000389",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-11-05",
+  "caseta": "Perote",
+  "importe_MXN": 2321.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000537",
+  "id_servicio": "SRV-000389",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-11-05",
+  "caseta": "Córdoba",
+  "importe_MXN": 1744.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000538",
+  "id_servicio": "SRV-000390",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-08-26",
+  "caseta": "La Joya",
+  "importe_MXN": 93.92,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000539",
+  "id_servicio": "SRV-000390",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-08-26",
+  "caseta": "Fortín",
+  "importe_MXN": 106.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000540",
+  "id_servicio": "SRV-000391",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-09-14",
+  "caseta": "Córdoba",
+  "importe_MXN": 256.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000541",
+  "id_servicio": "SRV-000391",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-09-14",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 206.28,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000542",
+  "id_servicio": "SRV-000392",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-07-07",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 457.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000543",
+  "id_servicio": "SRV-000393",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-03-17",
+  "caseta": "Perote",
+  "importe_MXN": 328.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000544",
+  "id_servicio": "SRV-000394",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-01-09",
+  "caseta": "La Joya",
+  "importe_MXN": 2846.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000545",
+  "id_servicio": "SRV-000395",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-03-24",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 175.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000546",
+  "id_servicio": "SRV-000396",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-04-08",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 222.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000547",
+  "id_servicio": "SRV-000397",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-28",
+  "caseta": "La Joya",
+  "importe_MXN": 40.76,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000548",
+  "id_servicio": "SRV-000397",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-28",
+  "caseta": "Acatzingo",
+  "importe_MXN": 61.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000549",
+  "id_servicio": "SRV-000398",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-15",
+  "caseta": "La Joya",
+  "importe_MXN": 62.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000550",
+  "id_servicio": "SRV-000399",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-12",
+  "caseta": "Fortín",
+  "importe_MXN": 197.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000551",
+  "id_servicio": "SRV-000400",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-02-17",
+  "caseta": "La Joya",
+  "importe_MXN": 660.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000552",
+  "id_servicio": "SRV-000401",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-07-10",
+  "caseta": "San Martín",
+  "importe_MXN": 201.31,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000553",
+  "id_servicio": "SRV-000402",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-12-22",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 872.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000554",
+  "id_servicio": "SRV-000402",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-12-22",
+  "caseta": "Acatzingo",
+  "importe_MXN": 851.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000555",
+  "id_servicio": "SRV-000403",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-10-01",
+  "caseta": "San Martín",
+  "importe_MXN": 193.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000556",
+  "id_servicio": "SRV-000403",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-10-01",
+  "caseta": "Acatzingo",
+  "importe_MXN": 240.91,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000557",
+  "id_servicio": "SRV-000404",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-05-22",
+  "caseta": "Córdoba",
+  "importe_MXN": 1156.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000558",
+  "id_servicio": "SRV-000405",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-07-06",
+  "caseta": "Acatzingo",
+  "importe_MXN": 380.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000559",
+  "id_servicio": "SRV-000405",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-07-06",
+  "caseta": "Mata",
+  "importe_MXN": 284.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000560",
+  "id_servicio": "SRV-000406",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-07-29",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 2336.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000561",
+  "id_servicio": "SRV-000406",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-07-29",
+  "caseta": "San Martín",
+  "importe_MXN": 1811.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000562",
+  "id_servicio": "SRV-000407",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-10-05",
+  "caseta": "Córdoba",
+  "importe_MXN": 138.51,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000563",
+  "id_servicio": "SRV-000407",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-10-05",
+  "caseta": "Córdoba",
+  "importe_MXN": 311.69,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000564",
+  "id_servicio": "SRV-000408",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-04-16",
+  "caseta": "Palmillas",
+  "importe_MXN": 179.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000565",
+  "id_servicio": "SRV-000409",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-02-02",
+  "caseta": "Mata",
+  "importe_MXN": 721.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000566",
+  "id_servicio": "SRV-000410",
+  "id_ruta": "RUT-0011",
+  "fecha": "2025-12-22",
+  "caseta": "Perote",
+  "importe_MXN": 200.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000567",
+  "id_servicio": "SRV-000411",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-01-23",
+  "caseta": "Palmillas",
+  "importe_MXN": 132.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000568",
+  "id_servicio": "SRV-000411",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-01-23",
+  "caseta": "Palmillas",
+  "importe_MXN": 116.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000569",
+  "id_servicio": "SRV-000412",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-08-14",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 579.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000570",
+  "id_servicio": "SRV-000413",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-09-01",
+  "caseta": "Córdoba",
+  "importe_MXN": 1579.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000571",
+  "id_servicio": "SRV-000413",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-09-01",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 902.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000572",
+  "id_servicio": "SRV-000414",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-10-07",
+  "caseta": "Fortín",
+  "importe_MXN": 409.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000573",
+  "id_servicio": "SRV-000414",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-10-07",
+  "caseta": "La Joya",
+  "importe_MXN": 483.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000574",
+  "id_servicio": "SRV-000415",
+  "id_ruta": "RUT-0006",
+  "fecha": "2025-12-30",
+  "caseta": "Acatzingo",
+  "importe_MXN": 678.92,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000575",
+  "id_servicio": "SRV-000416",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-09-03",
+  "caseta": "Palmillas",
+  "importe_MXN": 327.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000576",
+  "id_servicio": "SRV-000416",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-09-03",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 568.51,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000577",
+  "id_servicio": "SRV-000417",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-04-23",
+  "caseta": "Fortín",
+  "importe_MXN": 353.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000578",
+  "id_servicio": "SRV-000418",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-02-02",
+  "caseta": "Esperanza",
+  "importe_MXN": 1203.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000579",
+  "id_servicio": "SRV-000419",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-04-13",
+  "caseta": "Fortín",
+  "importe_MXN": 369.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000580",
+  "id_servicio": "SRV-000419",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-04-13",
+  "caseta": "Esperanza",
+  "importe_MXN": 416.01,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000581",
+  "id_servicio": "SRV-000420",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-07-21",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 330.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000582",
+  "id_servicio": "SRV-000420",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-07-21",
+  "caseta": "Fortín",
+  "importe_MXN": 303.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000583",
+  "id_servicio": "SRV-000421",
+  "id_ruta": "RUT-0003",
+  "fecha": "2025-12-19",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 252.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000584",
+  "id_servicio": "SRV-000422",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-08-24",
+  "caseta": "Mata",
+  "importe_MXN": 56.69,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000585",
+  "id_servicio": "SRV-000423",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-02-04",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 452.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000586",
+  "id_servicio": "SRV-000424",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-08-06",
+  "caseta": "Perote",
+  "importe_MXN": 2172.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000587",
+  "id_servicio": "SRV-000425",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-02-24",
+  "caseta": "Fortín",
+  "importe_MXN": 2000.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000588",
+  "id_servicio": "SRV-000426",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-11-25",
+  "caseta": "Córdoba",
+  "importe_MXN": 359.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000589",
+  "id_servicio": "SRV-000427",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-03-02",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 1063.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000590",
+  "id_servicio": "SRV-000428",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-07-23",
+  "caseta": "La Joya",
+  "importe_MXN": 408.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000591",
+  "id_servicio": "SRV-000429",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-07-06",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 261.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000592",
+  "id_servicio": "SRV-000430",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-11-03",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1434.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000593",
+  "id_servicio": "SRV-000431",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-08-06",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 1884.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000594",
+  "id_servicio": "SRV-000431",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-08-06",
+  "caseta": "Mata",
+  "importe_MXN": 2514.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000595",
+  "id_servicio": "SRV-000432",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-06-02",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 203.58,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000596",
+  "id_servicio": "SRV-000433",
+  "id_ruta": "RUT-0005",
+  "fecha": "2025-12-24",
+  "caseta": "Córdoba",
+  "importe_MXN": 145.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000597",
+  "id_servicio": "SRV-000434",
+  "id_ruta": "RUT-0010",
+  "fecha": "2025-11-26",
+  "caseta": "Esperanza",
+  "importe_MXN": 609.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000598",
+  "id_servicio": "SRV-000435",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-06-04",
+  "caseta": "Córdoba",
+  "importe_MXN": 2432.8,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000599",
+  "id_servicio": "SRV-000436",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-10-20",
+  "caseta": "Córdoba",
+  "importe_MXN": 252.51,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000600",
+  "id_servicio": "SRV-000436",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-10-20",
+  "caseta": "Perote",
+  "importe_MXN": 347.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000601",
+  "id_servicio": "SRV-000437",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-11-18",
+  "caseta": "Córdoba",
+  "importe_MXN": 627.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000602",
+  "id_servicio": "SRV-000438",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-05",
+  "caseta": "Fortín",
+  "importe_MXN": 392.41,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000603",
+  "id_servicio": "SRV-000439",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-06-04",
+  "caseta": "Acatzingo",
+  "importe_MXN": 895.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000604",
+  "id_servicio": "SRV-000439",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-06-04",
+  "caseta": "La Joya",
+  "importe_MXN": 831.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000605",
+  "id_servicio": "SRV-000440",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-04-01",
+  "caseta": "Mata",
+  "importe_MXN": 181.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000606",
+  "id_servicio": "SRV-000441",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-09-09",
+  "caseta": "Perote",
+  "importe_MXN": 1785.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000607",
+  "id_servicio": "SRV-000442",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-03-12",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 213.42,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000608",
+  "id_servicio": "SRV-000443",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-11-11",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1465.25,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000609",
+  "id_servicio": "SRV-000444",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-08-04",
+  "caseta": "Palmillas",
+  "importe_MXN": 1200.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000610",
+  "id_servicio": "SRV-000445",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-20",
+  "caseta": "Esperanza",
+  "importe_MXN": 1473.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000611",
+  "id_servicio": "SRV-000445",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-10-20",
+  "caseta": "Palmillas",
+  "importe_MXN": 1546.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000612",
+  "id_servicio": "SRV-000446",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-20",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 220.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000613",
+  "id_servicio": "SRV-000446",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-20",
+  "caseta": "Córdoba",
+  "importe_MXN": 160.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000614",
+  "id_servicio": "SRV-000447",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-04-20",
+  "caseta": "Acatzingo",
+  "importe_MXN": 402.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000615",
+  "id_servicio": "SRV-000448",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-04",
+  "caseta": "Mata",
+  "importe_MXN": 1257.43,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000616",
+  "id_servicio": "SRV-000449",
+  "id_ruta": "RUT-0014",
+  "fecha": "2025-12-26",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 504.93,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000617",
+  "id_servicio": "SRV-000450",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-10",
+  "caseta": "La Joya",
+  "importe_MXN": 622.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000618",
+  "id_servicio": "SRV-000451",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-01-28",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 170.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000619",
+  "id_servicio": "SRV-000452",
+  "id_ruta": "RUT-0010",
+  "fecha": "2025-11-26",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 410.91,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000620",
+  "id_servicio": "SRV-000453",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-08-14",
+  "caseta": "San Martín",
+  "importe_MXN": 1525.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000621",
+  "id_servicio": "SRV-000454",
+  "id_ruta": "RUT-0016",
+  "fecha": "2025-12-03",
+  "caseta": "La Joya",
+  "importe_MXN": 222.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000622",
+  "id_servicio": "SRV-000454",
+  "id_ruta": "RUT-0016",
+  "fecha": "2025-12-03",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 255.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000623",
+  "id_servicio": "SRV-000455",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-10-01",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 790.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000624",
+  "id_servicio": "SRV-000456",
+  "id_ruta": "RUT-0015",
+  "fecha": "2025-12-30",
+  "caseta": "San Martín",
+  "importe_MXN": 252.4,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000625",
+  "id_servicio": "SRV-000457",
+  "id_ruta": "RUT-0009",
+  "fecha": "2025-12-23",
+  "caseta": "San Martín",
+  "importe_MXN": 2558.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000626",
+  "id_servicio": "SRV-000458",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-12-10",
+  "caseta": "Esperanza",
+  "importe_MXN": 177.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000627",
+  "id_servicio": "SRV-000458",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-12-10",
+  "caseta": "Esperanza",
+  "importe_MXN": 299.78,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000628",
+  "id_servicio": "SRV-000459",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-01-28",
+  "caseta": "Fortín",
+  "importe_MXN": 144.53,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000629",
+  "id_servicio": "SRV-000460",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-07-08",
+  "caseta": "Esperanza",
+  "importe_MXN": 2503.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000630",
+  "id_servicio": "SRV-000461",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-04-13",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 419.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000631",
+  "id_servicio": "SRV-000462",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-09-16",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 247.76,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000632",
+  "id_servicio": "SRV-000462",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-09-16",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 292.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000633",
+  "id_servicio": "SRV-000463",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-10-06",
+  "caseta": "La Joya",
+  "importe_MXN": 246.16,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000634",
+  "id_servicio": "SRV-000464",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-04-21",
+  "caseta": "Palmillas",
+  "importe_MXN": 503.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000635",
+  "id_servicio": "SRV-000465",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-06-09",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 303.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000636",
+  "id_servicio": "SRV-000465",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-06-09",
+  "caseta": "Fortín",
+  "importe_MXN": 391.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000637",
+  "id_servicio": "SRV-000466",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-07-09",
+  "caseta": "Mata",
+  "importe_MXN": 404.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000638",
+  "id_servicio": "SRV-000467",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-09-22",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 308.76,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000639",
+  "id_servicio": "SRV-000467",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-09-22",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 154.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000640",
+  "id_servicio": "SRV-000468",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-06-30",
+  "caseta": "Esperanza",
+  "importe_MXN": 314.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000641",
+  "id_servicio": "SRV-000469",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-03-23",
+  "caseta": "Perote",
+  "importe_MXN": 137.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000642",
+  "id_servicio": "SRV-000469",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-03-23",
+  "caseta": "Córdoba",
+  "importe_MXN": 176.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000643",
+  "id_servicio": "SRV-000470",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-11-16",
+  "caseta": "La Joya",
+  "importe_MXN": 385.92,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000644",
+  "id_servicio": "SRV-000471",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-03",
+  "caseta": "Mata",
+  "importe_MXN": 57.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000645",
+  "id_servicio": "SRV-000471",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-03",
+  "caseta": "Acatzingo",
+  "importe_MXN": 35.23,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000646",
+  "id_servicio": "SRV-000472",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-04-02",
+  "caseta": "Perote",
+  "importe_MXN": 2168.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000647",
+  "id_servicio": "SRV-000473",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-01-13",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 185.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000648",
+  "id_servicio": "SRV-000473",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-01-13",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 117.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000649",
+  "id_servicio": "SRV-000474",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-08-18",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 245.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000650",
+  "id_servicio": "SRV-000474",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-08-18",
+  "caseta": "La Joya",
+  "importe_MXN": 179.16,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000651",
+  "id_servicio": "SRV-000475",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-06-19",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 74.86,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000652",
+  "id_servicio": "SRV-000475",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-06-19",
+  "caseta": "Perote",
+  "importe_MXN": 82.19,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000653",
+  "id_servicio": "SRV-000476",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-27",
+  "caseta": "San Martín",
+  "importe_MXN": 2759.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000654",
+  "id_servicio": "SRV-000477",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-10-01",
+  "caseta": "Acatzingo",
+  "importe_MXN": 70.79,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000655",
+  "id_servicio": "SRV-000477",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-10-01",
+  "caseta": "Fortín",
+  "importe_MXN": 48.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000656",
+  "id_servicio": "SRV-000478",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-01",
+  "caseta": "Mata",
+  "importe_MXN": 532.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000657",
+  "id_servicio": "SRV-000478",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-01",
+  "caseta": "Perote",
+  "importe_MXN": 329.57,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000658",
+  "id_servicio": "SRV-000479",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-06-05",
+  "caseta": "Esperanza",
+  "importe_MXN": 284.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000659",
+  "id_servicio": "SRV-000479",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-06-05",
+  "caseta": "Fortín",
+  "importe_MXN": 306.67,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000660",
+  "id_servicio": "SRV-000480",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-12-09",
+  "caseta": "Palmillas",
+  "importe_MXN": 1406.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000661",
+  "id_servicio": "SRV-000481",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-01-21",
+  "caseta": "Fortín",
+  "importe_MXN": 2348.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000662",
+  "id_servicio": "SRV-000482",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-12-05",
+  "caseta": "Córdoba",
+  "importe_MXN": 620.66,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000663",
+  "id_servicio": "SRV-000483",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-04-08",
+  "caseta": "Esperanza",
+  "importe_MXN": 110.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000664",
+  "id_servicio": "SRV-000484",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-10-28",
+  "caseta": "Perote",
+  "importe_MXN": 1255.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000665",
+  "id_servicio": "SRV-000485",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-02-17",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 277.92,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000666",
+  "id_servicio": "SRV-000485",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-02-17",
+  "caseta": "Acatzingo",
+  "importe_MXN": 151.53,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000667",
+  "id_servicio": "SRV-000486",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-03-20",
+  "caseta": "Perote",
+  "importe_MXN": 571.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000668",
+  "id_servicio": "SRV-000487",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-29",
+  "caseta": "La Joya",
+  "importe_MXN": 377.93,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000669",
+  "id_servicio": "SRV-000488",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-01-23",
+  "caseta": "Mata",
+  "importe_MXN": 913.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000670",
+  "id_servicio": "SRV-000489",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-01-26",
+  "caseta": "Acatzingo",
+  "importe_MXN": 256.88,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000671",
+  "id_servicio": "SRV-000489",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-01-26",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 393.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000672",
+  "id_servicio": "SRV-000490",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-12-04",
+  "caseta": "Fortín",
+  "importe_MXN": 163.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000673",
+  "id_servicio": "SRV-000490",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-12-04",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 200.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000674",
+  "id_servicio": "SRV-000491",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-07-28",
+  "caseta": "Palmillas",
+  "importe_MXN": 216.75,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000675",
+  "id_servicio": "SRV-000492",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-10-12",
+  "caseta": "La Joya",
+  "importe_MXN": 430.83,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000676",
+  "id_servicio": "SRV-000493",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-05-21",
+  "caseta": "Palmillas",
+  "importe_MXN": 230.6,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000677",
+  "id_servicio": "SRV-000494",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-11-18",
+  "caseta": "Mata",
+  "importe_MXN": 333.31,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000678",
+  "id_servicio": "SRV-000494",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-11-18",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 317.91,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000679",
+  "id_servicio": "SRV-000495",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-03-10",
+  "caseta": "Mata",
+  "importe_MXN": 996.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000680",
+  "id_servicio": "SRV-000496",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-07-08",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 193.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000681",
+  "id_servicio": "SRV-000496",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-07-08",
+  "caseta": "La Joya",
+  "importe_MXN": 183.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000682",
+  "id_servicio": "SRV-000497",
+  "id_ruta": "RUT-0008",
+  "fecha": "2025-12-24",
+  "caseta": "Palmillas",
+  "importe_MXN": 1344.53,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000683",
+  "id_servicio": "SRV-000498",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-03-12",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 596.93,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000684",
+  "id_servicio": "SRV-000499",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-12",
+  "caseta": "San Martín",
+  "importe_MXN": 161.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000685",
+  "id_servicio": "SRV-000499",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-12",
+  "caseta": "Córdoba",
+  "importe_MXN": 300.84,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000686",
+  "id_servicio": "SRV-000500",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-07-29",
+  "caseta": "Perote",
+  "importe_MXN": 394.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000687",
+  "id_servicio": "SRV-000500",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-07-29",
+  "caseta": "Palmillas",
+  "importe_MXN": 486.17,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000688",
+  "id_servicio": "SRV-000501",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-04-08",
+  "caseta": "Perote",
+  "importe_MXN": 422.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000689",
+  "id_servicio": "SRV-000501",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-04-08",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 360.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000690",
+  "id_servicio": "SRV-000502",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-04-13",
+  "caseta": "Mata",
+  "importe_MXN": 1536.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000691",
+  "id_servicio": "SRV-000503",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-10-08",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 144.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000692",
+  "id_servicio": "SRV-000503",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-10-08",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 134.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000693",
+  "id_servicio": "SRV-000504",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-02-03",
+  "caseta": "Córdoba",
+  "importe_MXN": 209.66,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000694",
+  "id_servicio": "SRV-000505",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-04",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 174.33,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000695",
+  "id_servicio": "SRV-000505",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-08-04",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 284.07,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000696",
+  "id_servicio": "SRV-000506",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-09-29",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 2496.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000697",
+  "id_servicio": "SRV-000506",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-09-29",
+  "caseta": "Palmillas",
+  "importe_MXN": 2217.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000698",
+  "id_servicio": "SRV-000507",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-06-15",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 186.42,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000699",
+  "id_servicio": "SRV-000507",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-06-15",
+  "caseta": "Perote",
+  "importe_MXN": 116.92,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000700",
+  "id_servicio": "SRV-000508",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-02-13",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 162.18,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000701",
+  "id_servicio": "SRV-000508",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-02-13",
+  "caseta": "Perote",
+  "importe_MXN": 225.93,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000702",
+  "id_servicio": "SRV-000509",
+  "id_ruta": "RUT-0005",
+  "fecha": "2025-12-26",
+  "caseta": "Córdoba",
+  "importe_MXN": 200.86,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000703",
+  "id_servicio": "SRV-000510",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-02-13",
+  "caseta": "Palmillas",
+  "importe_MXN": 945.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000704",
+  "id_servicio": "SRV-000511",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-09-03",
+  "caseta": "Palmillas",
+  "importe_MXN": 145.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000705",
+  "id_servicio": "SRV-000511",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-09-03",
+  "caseta": "Fortín",
+  "importe_MXN": 181.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000706",
+  "id_servicio": "SRV-000512",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-02-18",
+  "caseta": "La Joya",
+  "importe_MXN": 1881.79,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000707",
+  "id_servicio": "SRV-000513",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-01-19",
+  "caseta": "Palmillas",
+  "importe_MXN": 33.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000708",
+  "id_servicio": "SRV-000513",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-01-19",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 23.33,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000709",
+  "id_servicio": "SRV-000514",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-01-16",
+  "caseta": "Córdoba",
+  "importe_MXN": 802.69,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000710",
+  "id_servicio": "SRV-000515",
+  "id_ruta": "RUT-0006",
+  "fecha": "2025-12-04",
+  "caseta": "Fortín",
+  "importe_MXN": 1259.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000711",
+  "id_servicio": "SRV-000516",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-28",
+  "caseta": "San Martín",
+  "importe_MXN": 899.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000712",
+  "id_servicio": "SRV-000517",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-06-23",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 112.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000713",
+  "id_servicio": "SRV-000518",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-10-20",
+  "caseta": "Córdoba",
+  "importe_MXN": 968.74,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000714",
+  "id_servicio": "SRV-000519",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-02-02",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 1062.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000715",
+  "id_servicio": "SRV-000519",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-02-02",
+  "caseta": "Palmillas",
+  "importe_MXN": 815.79,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000716",
+  "id_servicio": "SRV-000520",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-01-08",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 199.17,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000717",
+  "id_servicio": "SRV-000520",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-01-08",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 281.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000718",
+  "id_servicio": "SRV-000521",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-08-05",
+  "caseta": "Córdoba",
+  "importe_MXN": 746.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000719",
+  "id_servicio": "SRV-000522",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-25",
+  "caseta": "Perote",
+  "importe_MXN": 1085.43,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000720",
+  "id_servicio": "SRV-000522",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-25",
+  "caseta": "Mata",
+  "importe_MXN": 1165.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000721",
+  "id_servicio": "SRV-000523",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-04-20",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 583.93,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000722",
+  "id_servicio": "SRV-000524",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-11-16",
+  "caseta": "Mata",
+  "importe_MXN": 351.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000723",
+  "id_servicio": "SRV-000524",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-11-16",
+  "caseta": "Mata",
+  "importe_MXN": 363.64,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000724",
+  "id_servicio": "SRV-000525",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-02-09",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 876.86,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000725",
+  "id_servicio": "SRV-000526",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-09-15",
+  "caseta": "La Joya",
+  "importe_MXN": 225.61,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000726",
+  "id_servicio": "SRV-000526",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-09-15",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 232.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000727",
+  "id_servicio": "SRV-000527",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-05-04",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 4336.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000728",
+  "id_servicio": "SRV-000528",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-08-12",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 251.96,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000729",
+  "id_servicio": "SRV-000529",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-02",
+  "caseta": "Palmillas",
+  "importe_MXN": 168.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000730",
+  "id_servicio": "SRV-000529",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-02",
+  "caseta": "Perote",
+  "importe_MXN": 100.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000731",
+  "id_servicio": "SRV-000530",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-07-14",
+  "caseta": "Palmillas",
+  "importe_MXN": 340.84,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000732",
+  "id_servicio": "SRV-000531",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-04",
+  "caseta": "San Martín",
+  "importe_MXN": 645.39,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000733",
+  "id_servicio": "SRV-000531",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-04",
+  "caseta": "Mata",
+  "importe_MXN": 539.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000734",
+  "id_servicio": "SRV-000532",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-11-19",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1102.77,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000735",
+  "id_servicio": "SRV-000532",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-11-19",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1112.69,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000736",
+  "id_servicio": "SRV-000533",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-07-03",
+  "caseta": "Palmillas",
+  "importe_MXN": 1153.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000737",
+  "id_servicio": "SRV-000534",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-01-27",
+  "caseta": "Córdoba",
+  "importe_MXN": 103.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000738",
+  "id_servicio": "SRV-000534",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-01-27",
+  "caseta": "La Joya",
+  "importe_MXN": 192.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000739",
+  "id_servicio": "SRV-000535",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-06-24",
+  "caseta": "San Martín",
+  "importe_MXN": 365.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000740",
+  "id_servicio": "SRV-000536",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-02-23",
+  "caseta": "Fortín",
+  "importe_MXN": 1259.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000741",
+  "id_servicio": "SRV-000536",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-02-23",
+  "caseta": "Esperanza",
+  "importe_MXN": 924.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000742",
+  "id_servicio": "SRV-000537",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-06-25",
+  "caseta": "Córdoba",
+  "importe_MXN": 172.58,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000743",
+  "id_servicio": "SRV-000537",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-06-25",
+  "caseta": "Fortín",
+  "importe_MXN": 296.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000744",
+  "id_servicio": "SRV-000538",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-09-08",
+  "caseta": "La Joya",
+  "importe_MXN": 367.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000745",
+  "id_servicio": "SRV-000539",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-11-18",
+  "caseta": "Perote",
+  "importe_MXN": 191.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000746",
+  "id_servicio": "SRV-000540",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-01-26",
+  "caseta": "Palmillas",
+  "importe_MXN": 238.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000747",
+  "id_servicio": "SRV-000540",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-01-26",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 190.88,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000748",
+  "id_servicio": "SRV-000541",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-10-30",
+  "caseta": "Perote",
+  "importe_MXN": 391.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000749",
+  "id_servicio": "SRV-000542",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-12-26",
+  "caseta": "Palmillas",
+  "importe_MXN": 251.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000750",
+  "id_servicio": "SRV-000542",
+  "id_ruta": "RUT-0004",
+  "fecha": "2025-12-26",
+  "caseta": "San Martín",
+  "importe_MXN": 244.73,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000751",
+  "id_servicio": "SRV-000543",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-07-02",
+  "caseta": "Acatzingo",
+  "importe_MXN": 421.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000752",
+  "id_servicio": "SRV-000544",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-02-10",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1675.4,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000753",
+  "id_servicio": "SRV-000545",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-07-23",
+  "caseta": "Córdoba",
+  "importe_MXN": 1794.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000754",
+  "id_servicio": "SRV-000546",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-05-05",
+  "caseta": "Mata",
+  "importe_MXN": 1089.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000755",
+  "id_servicio": "SRV-000547",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-11-18",
+  "caseta": "Mata",
+  "importe_MXN": 410.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000756",
+  "id_servicio": "SRV-000548",
+  "id_ruta": "RUT-0014",
+  "fecha": "2025-12-23",
+  "caseta": "Palmillas",
+  "importe_MXN": 882.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000757",
+  "id_servicio": "SRV-000549",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-05-13",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 602.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000758",
+  "id_servicio": "SRV-000550",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-05-27",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 287.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000759",
+  "id_servicio": "SRV-000550",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-05-27",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 215.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000760",
+  "id_servicio": "SRV-000551",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-07-03",
+  "caseta": "Córdoba",
+  "importe_MXN": 1123.52,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000761",
+  "id_servicio": "SRV-000552",
+  "id_ruta": "RUT-0017",
+  "fecha": "2025-12-11",
+  "caseta": "Acatzingo",
+  "importe_MXN": 184.81,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000762",
+  "id_servicio": "SRV-000552",
+  "id_ruta": "RUT-0017",
+  "fecha": "2025-12-11",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 226.86,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000763",
+  "id_servicio": "SRV-000553",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-01-12",
+  "caseta": "Mata",
+  "importe_MXN": 1213.58,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000764",
+  "id_servicio": "SRV-000553",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-01-12",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1466.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000765",
+  "id_servicio": "SRV-000554",
+  "id_ruta": "RUT-0009",
+  "fecha": "2026-08-07",
+  "caseta": "Córdoba",
+  "importe_MXN": 3762.66,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000766",
+  "id_servicio": "SRV-000555",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-07-16",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 2276.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000767",
+  "id_servicio": "SRV-000556",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-06-22",
+  "caseta": "Mata",
+  "importe_MXN": 159.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000768",
+  "id_servicio": "SRV-000557",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-16",
+  "caseta": "Esperanza",
+  "importe_MXN": 299.93,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000769",
+  "id_servicio": "SRV-000557",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-16",
+  "caseta": "Esperanza",
+  "importe_MXN": 553.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000770",
+  "id_servicio": "SRV-000558",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-01-26",
+  "caseta": "Perote",
+  "importe_MXN": 73.93,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000771",
+  "id_servicio": "SRV-000559",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-10-12",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 278.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000772",
+  "id_servicio": "SRV-000560",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-08-13",
+  "caseta": "San Martín",
+  "importe_MXN": 2422.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000773",
+  "id_servicio": "SRV-000561",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-11-02",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1239.41,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000774",
+  "id_servicio": "SRV-000562",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-12-30",
+  "caseta": "Perote",
+  "importe_MXN": 989.4,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000775",
+  "id_servicio": "SRV-000562",
+  "id_ruta": "RUT-0018",
+  "fecha": "2025-12-30",
+  "caseta": "Mata",
+  "importe_MXN": 1816.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000776",
+  "id_servicio": "SRV-000563",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-05-07",
+  "caseta": "Mata",
+  "importe_MXN": 424.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000777",
+  "id_servicio": "SRV-000563",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-05-07",
+  "caseta": "Acatzingo",
+  "importe_MXN": 302.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000778",
+  "id_servicio": "SRV-000564",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-09-15",
+  "caseta": "Fortín",
+  "importe_MXN": 125.46,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000779",
+  "id_servicio": "SRV-000565",
+  "id_ruta": "RUT-0016",
+  "fecha": "2025-12-12",
+  "caseta": "Mata",
+  "importe_MXN": 465.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000780",
+  "id_servicio": "SRV-000565",
+  "id_ruta": "RUT-0016",
+  "fecha": "2025-12-12",
+  "caseta": "La Joya",
+  "importe_MXN": 251.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000781",
+  "id_servicio": "SRV-000566",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-03-27",
+  "caseta": "Palmillas",
+  "importe_MXN": 462.35,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000782",
+  "id_servicio": "SRV-000566",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-03-27",
+  "caseta": "Fortín",
+  "importe_MXN": 560.52,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000783",
+  "id_servicio": "SRV-000567",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-11-27",
+  "caseta": "Mata",
+  "importe_MXN": 44.51,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000784",
+  "id_servicio": "SRV-000567",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-11-27",
+  "caseta": "La Joya",
+  "importe_MXN": 48.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000785",
+  "id_servicio": "SRV-000568",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-10-14",
+  "caseta": "San Martín",
+  "importe_MXN": 135.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000786",
+  "id_servicio": "SRV-000568",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-10-14",
+  "caseta": "Palmillas",
+  "importe_MXN": 130.89,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000787",
+  "id_servicio": "SRV-000569",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-11-24",
+  "caseta": "La Joya",
+  "importe_MXN": 91.64,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000788",
+  "id_servicio": "SRV-000569",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-11-24",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 64.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000789",
+  "id_servicio": "SRV-000570",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-07-15",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 1393.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000790",
+  "id_servicio": "SRV-000571",
+  "id_ruta": "RUT-0007",
+  "fecha": "2025-11-26",
+  "caseta": "San Martín",
+  "importe_MXN": 146.31,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000791",
+  "id_servicio": "SRV-000571",
+  "id_ruta": "RUT-0007",
+  "fecha": "2025-11-26",
+  "caseta": "Córdoba",
+  "importe_MXN": 235.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000792",
+  "id_servicio": "SRV-000572",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-01-19",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 414.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000793",
+  "id_servicio": "SRV-000573",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-04-20",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 625.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000794",
+  "id_servicio": "SRV-000573",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-04-20",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 1206.36,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000795",
+  "id_servicio": "SRV-000574",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-08-26",
+  "caseta": "Mata",
+  "importe_MXN": 249.48,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000796",
+  "id_servicio": "SRV-000574",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-08-26",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 251.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000797",
+  "id_servicio": "SRV-000575",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-03-11",
+  "caseta": "Mata",
+  "importe_MXN": 53.43,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000798",
+  "id_servicio": "SRV-000575",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-03-11",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 46.33,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000799",
+  "id_servicio": "SRV-000576",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-09-22",
+  "caseta": "Palmillas",
+  "importe_MXN": 1636.84,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000800",
+  "id_servicio": "SRV-000577",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-01-07",
+  "caseta": "San Martín",
+  "importe_MXN": 519.69,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000801",
+  "id_servicio": "SRV-000578",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-11-06",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 380.34,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000802",
+  "id_servicio": "SRV-000579",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-06-08",
+  "caseta": "Mata",
+  "importe_MXN": 1208.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000803",
+  "id_servicio": "SRV-000580",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-04-08",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 585.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000804",
+  "id_servicio": "SRV-000581",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-05-19",
+  "caseta": "Esperanza",
+  "importe_MXN": 301.75,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000805",
+  "id_servicio": "SRV-000581",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-05-19",
+  "caseta": "San Martín",
+  "importe_MXN": 321.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000806",
+  "id_servicio": "SRV-000582",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-20",
+  "caseta": "Fortín",
+  "importe_MXN": 92.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000807",
+  "id_servicio": "SRV-000582",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-20",
+  "caseta": "Acatzingo",
+  "importe_MXN": 87.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000808",
+  "id_servicio": "SRV-000583",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-03-31",
+  "caseta": "Perote",
+  "importe_MXN": 273.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000809",
+  "id_servicio": "SRV-000584",
+  "id_ruta": "RUT-0003",
+  "fecha": "2025-12-23",
+  "caseta": "Mata",
+  "importe_MXN": 190.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000810",
+  "id_servicio": "SRV-000585",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-11-17",
+  "caseta": "Fortín",
+  "importe_MXN": 243.98,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000811",
+  "id_servicio": "SRV-000586",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-09-16",
+  "caseta": "Córdoba",
+  "importe_MXN": 230.42,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000812",
+  "id_servicio": "SRV-000587",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-04-29",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 299.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000813",
+  "id_servicio": "SRV-000587",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-04-29",
+  "caseta": "San Martín",
+  "importe_MXN": 185.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000814",
+  "id_servicio": "SRV-000588",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-10-30",
+  "caseta": "Esperanza",
+  "importe_MXN": 626.87,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000815",
+  "id_servicio": "SRV-000589",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-10-02",
+  "caseta": "San Martín",
+  "importe_MXN": 105.42,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000816",
+  "id_servicio": "SRV-000589",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-10-02",
+  "caseta": "Esperanza",
+  "importe_MXN": 78.53,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000817",
+  "id_servicio": "SRV-000590",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-01-02",
+  "caseta": "Córdoba",
+  "importe_MXN": 1207.11,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000818",
+  "id_servicio": "SRV-000591",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-01",
+  "caseta": "San Martín",
+  "importe_MXN": 220.66,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000819",
+  "id_servicio": "SRV-000591",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-01",
+  "caseta": "Fortín",
+  "importe_MXN": 154.41,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000820",
+  "id_servicio": "SRV-000592",
+  "id_ruta": "RUT-0011",
+  "fecha": "2025-12-25",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 506.44,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000821",
+  "id_servicio": "SRV-000593",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-02-16",
+  "caseta": "Esperanza",
+  "importe_MXN": 1630.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000822",
+  "id_servicio": "SRV-000594",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-06-15",
+  "caseta": "Palmillas",
+  "importe_MXN": 286.52,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000823",
+  "id_servicio": "SRV-000594",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-06-15",
+  "caseta": "Esperanza",
+  "importe_MXN": 401.27,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000824",
+  "id_servicio": "SRV-000595",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-08-20",
+  "caseta": "La Joya",
+  "importe_MXN": 182.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000825",
+  "id_servicio": "SRV-000596",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-08-10",
+  "caseta": "Mata",
+  "importe_MXN": 88.66,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000826",
+  "id_servicio": "SRV-000596",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-08-10",
+  "caseta": "Palmillas",
+  "importe_MXN": 101.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000827",
+  "id_servicio": "SRV-000597",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-01-16",
+  "caseta": "Palmillas",
+  "importe_MXN": 440.18,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000828",
+  "id_servicio": "SRV-000598",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-08-19",
+  "caseta": "Fortín",
+  "importe_MXN": 463.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000829",
+  "id_servicio": "SRV-000599",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-04",
+  "caseta": "Esperanza",
+  "importe_MXN": 61.58,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000830",
+  "id_servicio": "SRV-000599",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-09-04",
+  "caseta": "San Martín",
+  "importe_MXN": 45.46,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000831",
+  "id_servicio": "SRV-000600",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-09-15",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 273.56,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000832",
+  "id_servicio": "SRV-000600",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-09-15",
+  "caseta": "Córdoba",
+  "importe_MXN": 293.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000833",
+  "id_servicio": "SRV-000601",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-03-12",
+  "caseta": "La Joya",
+  "importe_MXN": 331.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000834",
+  "id_servicio": "SRV-000601",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-03-12",
+  "caseta": "Perote",
+  "importe_MXN": 547.4,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000835",
+  "id_servicio": "SRV-000602",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-11-05",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 245.33,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000836",
+  "id_servicio": "SRV-000603",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-08-18",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1261.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000837",
+  "id_servicio": "SRV-000604",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-12-04",
+  "caseta": "Acatzingo",
+  "importe_MXN": 50.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000838",
+  "id_servicio": "SRV-000604",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-12-04",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 74.85,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000839",
+  "id_servicio": "SRV-000605",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-11-04",
+  "caseta": "Acatzingo",
+  "importe_MXN": 399.13,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000840",
+  "id_servicio": "SRV-000606",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-01-12",
+  "caseta": "Acatzingo",
+  "importe_MXN": 614.99,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000841",
+  "id_servicio": "SRV-000607",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-11",
+  "caseta": "Perote",
+  "importe_MXN": 494.28,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000842",
+  "id_servicio": "SRV-000607",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-09-11",
+  "caseta": "Palmillas",
+  "importe_MXN": 529.26,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000843",
+  "id_servicio": "SRV-000608",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-11-11",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 448.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000844",
+  "id_servicio": "SRV-000609",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-05-28",
+  "caseta": "La Joya",
+  "importe_MXN": 718.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000845",
+  "id_servicio": "SRV-000610",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-10-06",
+  "caseta": "Mata",
+  "importe_MXN": 1297.71,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000846",
+  "id_servicio": "SRV-000610",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-10-06",
+  "caseta": "San Martín",
+  "importe_MXN": 1348.7,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000847",
+  "id_servicio": "SRV-000611",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-05-05",
+  "caseta": "Acatzingo",
+  "importe_MXN": 2088.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000848",
+  "id_servicio": "SRV-000612",
+  "id_ruta": "RUT-0001",
+  "fecha": "2025-12-31",
+  "caseta": "Acatzingo",
+  "importe_MXN": 1056.32,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000849",
+  "id_servicio": "SRV-000613",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-06",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 465.74,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000850",
+  "id_servicio": "SRV-000613",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-05-06",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 376.29,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000851",
+  "id_servicio": "SRV-000614",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-10-29",
+  "caseta": "San Martín",
+  "importe_MXN": 546.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000852",
+  "id_servicio": "SRV-000615",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-10-06",
+  "caseta": "Palmillas",
+  "importe_MXN": 732.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000853",
+  "id_servicio": "SRV-000615",
+  "id_ruta": "RUT-0001",
+  "fecha": "2026-10-06",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 1015.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000854",
+  "id_servicio": "SRV-000616",
+  "id_ruta": "RUT-0017",
+  "fecha": "2025-11-27",
+  "caseta": "La Joya",
+  "importe_MXN": 445.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000855",
+  "id_servicio": "SRV-000617",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-03-09",
+  "caseta": "San Martín",
+  "importe_MXN": 582.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000856",
+  "id_servicio": "SRV-000617",
+  "id_ruta": "RUT-0002",
+  "fecha": "2026-03-09",
+  "caseta": "Palmillas",
+  "importe_MXN": 402.96,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000857",
+  "id_servicio": "SRV-000618",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-08-07",
+  "caseta": "Acatzingo",
+  "importe_MXN": 255.59,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000858",
+  "id_servicio": "SRV-000619",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-01-09",
+  "caseta": "Palmillas",
+  "importe_MXN": 249.37,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000859",
+  "id_servicio": "SRV-000619",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-01-09",
+  "caseta": "Córdoba",
+  "importe_MXN": 173.16,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000860",
+  "id_servicio": "SRV-000620",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-03-17",
+  "caseta": "Acatzingo",
+  "importe_MXN": 413.22,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000861",
+  "id_servicio": "SRV-000621",
+  "id_ruta": "RUT-0014",
+  "fecha": "2025-12-12",
+  "caseta": "Perote",
+  "importe_MXN": 607.68,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000862",
+  "id_servicio": "SRV-000622",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-03-05",
+  "caseta": "Acatzingo",
+  "importe_MXN": 349.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000863",
+  "id_servicio": "SRV-000623",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-10-19",
+  "caseta": "Palmillas",
+  "importe_MXN": 534.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000864",
+  "id_servicio": "SRV-000624",
+  "id_ruta": "RUT-0010",
+  "fecha": "2025-12-08",
+  "caseta": "San Martín",
+  "importe_MXN": 423.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000865",
+  "id_servicio": "SRV-000625",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-04-14",
+  "caseta": "San Martín",
+  "importe_MXN": 965.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000866",
+  "id_servicio": "SRV-000626",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-06-26",
+  "caseta": "Fortín",
+  "importe_MXN": 802.18,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000867",
+  "id_servicio": "SRV-000627",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-06-01",
+  "caseta": "Mata",
+  "importe_MXN": 974.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000868",
+  "id_servicio": "SRV-000628",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-03-25",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 2113.45,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000869",
+  "id_servicio": "SRV-000629",
+  "id_ruta": "RUT-0014",
+  "fecha": "2026-03-02",
+  "caseta": "San Martín",
+  "importe_MXN": 889.3,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000870",
+  "id_servicio": "SRV-000630",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-09-14",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 650.54,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000871",
+  "id_servicio": "SRV-000630",
+  "id_ruta": "RUT-0008",
+  "fecha": "2026-09-14",
+  "caseta": "Córdoba",
+  "importe_MXN": 1134.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000872",
+  "id_servicio": "SRV-000631",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-11-18",
+  "caseta": "San Martín",
+  "importe_MXN": 76.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000873",
+  "id_servicio": "SRV-000631",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-11-18",
+  "caseta": "San Martín",
+  "importe_MXN": 43.21,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000874",
+  "id_servicio": "SRV-000632",
+  "id_ruta": "RUT-0003",
+  "fecha": "2026-03-24",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 174.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000875",
+  "id_servicio": "SRV-000633",
+  "id_ruta": "RUT-0012",
+  "fecha": "2026-11-17",
+  "caseta": "Palmillas",
+  "importe_MXN": 70.9,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000876",
+  "id_servicio": "SRV-000634",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-03-24",
+  "caseta": "Esperanza",
+  "importe_MXN": 64.47,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000877",
+  "id_servicio": "SRV-000634",
+  "id_ruta": "RUT-0005",
+  "fecha": "2026-03-24",
+  "caseta": "Esperanza",
+  "importe_MXN": 89.17,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000878",
+  "id_servicio": "SRV-000635",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-04-24",
+  "caseta": "Fortín",
+  "importe_MXN": 286.24,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000879",
+  "id_servicio": "SRV-000636",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-06-05",
+  "caseta": "Palmillas",
+  "importe_MXN": 132.55,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000880",
+  "id_servicio": "SRV-000636",
+  "id_ruta": "RUT-0011",
+  "fecha": "2026-06-05",
+  "caseta": "Fortín",
+  "importe_MXN": 161.72,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000881",
+  "id_servicio": "SRV-000637",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-07-10",
+  "caseta": "Palmillas",
+  "importe_MXN": 187.6,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000882",
+  "id_servicio": "SRV-000637",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-07-10",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 238.83,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000883",
+  "id_servicio": "SRV-000638",
+  "id_ruta": "RUT-0006",
+  "fecha": "2026-01-09",
+  "caseta": "Esperanza",
+  "importe_MXN": 1049.74,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000884",
+  "id_servicio": "SRV-000639",
+  "id_ruta": "RUT-0010",
+  "fecha": "2026-03-30",
+  "caseta": "Acatzingo",
+  "importe_MXN": 939.5,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000885",
+  "id_servicio": "SRV-000640",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-06",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 112.12,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000886",
+  "id_servicio": "SRV-000640",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-05-06",
+  "caseta": "Tepotzotlán",
+  "importe_MXN": 158.49,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000887",
+  "id_servicio": "SRV-000641",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-06-12",
+  "caseta": "Perote",
+  "importe_MXN": 248.78,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000888",
+  "id_servicio": "SRV-000642",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-02-19",
+  "caseta": "Palmillas",
+  "importe_MXN": 95.65,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000889",
+  "id_servicio": "SRV-000642",
+  "id_ruta": "RUT-0015",
+  "fecha": "2026-02-19",
+  "caseta": "Esperanza",
+  "importe_MXN": 82.62,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000890",
+  "id_servicio": "SRV-000643",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-01-27",
+  "caseta": "San Martín",
+  "importe_MXN": 374.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000891",
+  "id_servicio": "SRV-000643",
+  "id_ruta": "RUT-0004",
+  "fecha": "2026-01-27",
+  "caseta": "Acatzingo",
+  "importe_MXN": 360.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000892",
+  "id_servicio": "SRV-000644",
+  "id_ruta": "RUT-0017",
+  "fecha": "2026-01-21",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 328.82,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000893",
+  "id_servicio": "SRV-000645",
+  "id_ruta": "RUT-0013",
+  "fecha": "2026-03-17",
+  "caseta": "La Joya",
+  "importe_MXN": 264.09,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000894",
+  "id_servicio": "SRV-000646",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-08-07",
+  "caseta": "Acatzingo",
+  "importe_MXN": 151.95,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000895",
+  "id_servicio": "SRV-000646",
+  "id_ruta": "RUT-0007",
+  "fecha": "2026-08-07",
+  "caseta": "Zapotlanejo",
+  "importe_MXN": 122.94,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000896",
+  "id_servicio": "SRV-000647",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-10-14",
+  "caseta": "Fortín",
+  "importe_MXN": 154.14,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000897",
+  "id_servicio": "SRV-000647",
+  "id_ruta": "RUT-0016",
+  "fecha": "2026-10-14",
+  "caseta": "San Martín",
+  "importe_MXN": 338.05,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000898",
+  "id_servicio": "SRV-000648",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-12-25",
+  "caseta": "Palmillas",
+  "importe_MXN": 25.97,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000899",
+  "id_servicio": "SRV-000648",
+  "id_ruta": "RUT-0012",
+  "fecha": "2025-12-25",
+  "caseta": "Ciudad Valles",
+  "importe_MXN": 37.63,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000900",
+  "id_servicio": "SRV-000649",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-22",
+  "caseta": "Perote",
+  "importe_MXN": 539.38,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "CASETA-000901",
+  "id_servicio": "SRV-000649",
+  "id_ruta": "RUT-0018",
+  "fecha": "2026-05-22",
+  "caseta": "Fortín",
+  "importe_MXN": 946.16,
+  "naturaleza": "DEMO"
+ }
+]

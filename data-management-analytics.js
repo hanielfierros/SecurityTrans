@@ -40,27 +40,37 @@ function renderGrafica(el, spec) {
   const chart = echarts.init(el);
   instanciasGrafica.set(id, chart);
   const c = colores();
+
+  // Limita las categorías para mantener la gráfica legible con muchos servicios.
+  const MAX_CAT = 30;
+  let xData = spec.xData || [];
+  let series = spec.series || [];
+  if (spec.tipo !== "scatter" && xData.length > MAX_CAT) {
+    xData = xData.slice(0, MAX_CAT);
+    series = series.map(s => ({ ...s, data: (s.data || []).slice(0, MAX_CAT) }));
+  }
+
   const opt = {
     grid: { left: 60, right: 24, top: 40, bottom: 48 },
     tooltip: { trigger: spec.tipo === "scatter" ? "item" : "axis" },
-    legend: spec.series.length > 1 ? { top: 0, textStyle: { color: c.text } } : undefined,
+    legend: series.length > 1 ? { top: 0, textStyle: { color: c.text } } : undefined,
     color: c.palette,
-    xAxis: { type: "category", data: spec.xData, axisLabel: { color: c.text, rotate: spec.xData.length > 6 ? 30 : 0 }, axisLine: { lineStyle: { color: c.grid } } },
+    xAxis: { type: "category", data: xData, axisLabel: { color: c.text, rotate: xData.length > 6 ? 30 : 0 }, axisLine: { lineStyle: { color: c.grid } } },
     yAxis: { type: "value", name: spec.yName || "", nameTextStyle: { color: c.text }, axisLabel: { color: c.text }, splitLine: { lineStyle: { color: c.grid } } },
   };
   if (spec.tipo === "line") {
-    opt.series = spec.series.map(s => ({ name: s.name, type: "line", data: s.data, smooth: true }));
+    opt.series = series.map(s => ({ name: s.name, type: "line", data: s.data, smooth: true }));
   } else if (spec.tipo === "bar" || spec.tipo === "stacked") {
-    opt.series = spec.series.map(s => ({ name: s.name, type: "bar", stack: spec.tipo === "stacked" ? "total" : undefined, data: s.data }));
+    opt.series = series.map(s => ({ name: s.name, type: "bar", stack: spec.tipo === "stacked" ? "total" : undefined, data: s.data }));
   } else if (spec.tipo === "hbar") {
     opt.xAxis = { type: "value", axisLabel: { color: c.text }, splitLine: { lineStyle: { color: c.grid } } };
-    opt.yAxis = { type: "category", data: spec.xData, axisLabel: { color: c.text } };
+    opt.yAxis = { type: "category", data: xData, axisLabel: { color: c.text } };
     opt.grid = { left: 140, right: 24, top: 40, bottom: 32 };
-    opt.series = spec.series.map(s => ({ name: s.name, type: "bar", data: s.data }));
+    opt.series = series.map(s => ({ name: s.name, type: "bar", data: s.data }));
   } else if (spec.tipo === "scatter") {
     opt.xAxis = { type: "value", name: spec.xName || "", axisLabel: { color: c.text }, splitLine: { lineStyle: { color: c.grid } } };
     opt.yAxis = { type: "value", name: spec.yName || "", axisLabel: { color: c.text }, splitLine: { lineStyle: { color: c.grid } } };
-    opt.series = spec.series.map(s => ({ name: s.name, type: "scatter", data: s.data, symbolSize: 13 }));
+    opt.series = series.map(s => ({ name: s.name, type: "scatter", data: s.data, symbolSize: 13 }));
   }
   chart.setOption(opt);
   return chart;
@@ -276,6 +286,24 @@ export const MODULOS = [modA, modB, modC, modD, modE, modF];
 // ---------------------------------------------------------------------------
 const ANALISIS = {};
 
+// Agrega servicios por mes (para series temporales legibles).
+function agregarPorMes(servicios) {
+  const m = new Map();
+  servicios.forEach(s => {
+    const mes = s.fecha ? s.fecha.slice(0, 7) : "N/D";
+    if (!m.has(mes)) m.set(mes, { mes, costo: 0, presupuesto: 0, litros: 0, ingresos: 0, utilidad: 0, n: 0, km: 0 });
+    const e = m.get(mes);
+    e.costo += (s.costo_consumo_MXN || 0);
+    e.presupuesto += (s.presupuesto_MXN || 0);
+    e.litros += (s.litros_consumidos_L || 0);
+    e.ingresos += (s.ingresos_MXN || 0);
+    e.utilidad += (s.utilidad_MXN || 0);
+    e.km += (s.distancia_km || 0);
+    e.n += 1;
+  });
+  return [...m.values()].sort((a, b) => a.mes.localeCompare(b.mes));
+}
+
 // --- A ---
 ANALISIS.A01 = (ctx) => {
   const s = ordenar(ctx.servicios, x => x.costo_consumo_MXN, true);
@@ -311,60 +339,111 @@ ANALISIS.A02 = (ctx) => {
   });
 };
 
-ANALISIS.A03 = (ctx) => noDisponible(ctx, "Servicios más rentables", "ingresos");
-ANALISIS.A04 = (ctx) => noDisponible(ctx, "Servicios menos rentables", "ingresos");
+ANALISIS.A03 = (ctx) => {
+  const s = ordenar(ctx.servicios, x => x.margen_pct, true);
+  const top = s[0];
+  return componer(ctx, {
+    titulo: "Servicios más rentables",
+    kpis: [
+      { label: "Servicio", value: top ? top.folio : "N/D", unit: "", note: "" },
+      { label: "Margen", value: top && top.margen_pct != null ? DM.fmtPct(top.margen_pct, 1) : "N/D", unit: "", note: "" },
+      { label: "Utilidad", value: top ? DM.fmtMXN(top.utilidad_MXN) : "N/D", unit: "MXN", note: "" },
+    ],
+    tabla: { headers: ["Folio", "Operador", "Ingresos (MXN)", "Costo (MXN)", "Utilidad (MXN)", "Margen"], filas: s.slice(0, 40).map(x => [x.folio, x.operador, DM.fmtMXN(x.ingresos_MXN), DM.fmtMXN(x.costo_operativo_total_MXN), DM.fmtMXN(x.utilidad_MXN), DM.fmtPct(x.margen_pct, 1)]) },
+    grafica: { tipo: "bar", xData: s.slice(0, 25).map(x => x.folio.slice(-5)), yName: "Margen %", series: [{ name: "Margen", data: s.slice(0, 25).map(x => +(x.margen_pct || 0).toFixed(1)) }] },
+    explicacion: "El servicio " + (top ? top.folio : "—") + " presenta el mayor margen de utilidad (" + (top ? DM.fmtPct(top.margen_pct, 1) : "N/D") + "). Margen = utilidad operativa / ingresos × 100, usando costo operativo total (combustible + casetas + mantenimiento + otros gastos).",
+    formula: "margen % = (ingresos − costo_operativo_total) / ingresos × 100.",
+  });
+};
+
+ANALISIS.A04 = (ctx) => {
+  const s = ordenar(ctx.servicios, x => x.margen_pct, false);
+  const top = s[0];
+  return componer(ctx, {
+    titulo: "Servicios menos rentables",
+    kpis: [
+      { label: "Servicio", value: top ? top.folio : "N/D", unit: "", note: "" },
+      { label: "Margen", value: top && top.margen_pct != null ? DM.fmtPct(top.margen_pct, 1) : "N/D", unit: "", note: "" },
+      { label: "Utilidad", value: top ? DM.fmtMXN(top.utilidad_MXN) : "N/D", unit: "MXN", note: "" },
+    ],
+    tabla: { headers: ["Folio", "Operador", "Ingresos (MXN)", "Costo (MXN)", "Utilidad (MXN)", "Margen"], filas: s.slice(0, 40).map(x => [x.folio, x.operador, DM.fmtMXN(x.ingresos_MXN), DM.fmtMXN(x.costo_operativo_total_MXN), DM.fmtMXN(x.utilidad_MXN), DM.fmtPct(x.margen_pct, 1)]) },
+    grafica: { tipo: "bar", xData: s.slice(0, 25).map(x => x.folio.slice(-5)), yName: "Margen %", series: [{ name: "Margen", data: s.slice(0, 25).map(x => +(x.margen_pct || 0).toFixed(1)) }] },
+    explicacion: "El servicio " + (top ? top.folio : "—") + " presenta el menor margen de utilidad (" + (top ? DM.fmtPct(top.margen_pct, 1) : "N/D") + "). Un margen bajo o negativo no se interpreta como pérdida operativa salvo que exista costo total e ingreso registrados.",
+    formula: "margen % = (ingresos − costo_operativo_total) / ingresos × 100.",
+  });
+};
 
 ANALISIS.A05 = (ctx) => {
-  const s = ordenar(ctx.servicios, x => x.fechaISO, false);
-  const totalCosto = s.reduce((a, x) => a + (x.costo_consumo_MXN || 0), 0);
-  const totalPres = s.reduce((a, x) => a + (x.presupuesto_MXN || 0), 0);
+  const meses = agregarPorMes(ctx.servicios);
+  const totalCosto = meses.reduce((a, x) => a + x.costo, 0);
+  const totalPres = meses.reduce((a, x) => a + x.presupuesto, 0);
   return componer(ctx, {
     titulo: "Evolución de gastos",
     kpis: [
       { label: "Gasto total", value: DM.fmtMXN(totalCosto), unit: "MXN", note: "combustible" },
       { label: "Presupuesto total", value: DM.fmtMXN(totalPres), unit: "MXN", note: "" },
-      { label: "Servicios", value: String(s.length), unit: "", note: "" },
+      { label: "Meses", value: String(meses.length), unit: "", note: "" },
     ],
-    tabla: { headers: ["Fecha", "Folio", "Costo (MXN)", "Presupuesto (MXN)"], filas: s.map(x => [x.fecha, x.folio, DM.fmtMXN(x.costo_consumo_MXN), DM.fmtMXN(x.presupuesto_MXN)]) },
-    grafica: { tipo: "line", xData: s.map(x => x.fecha), yName: "MXN", series: [{ name: "Costo", data: s.map(x => +x.costo_consumo_MXN.toFixed(2)) }, { name: "Presupuesto", data: s.map(x => +x.presupuesto_MXN.toFixed(2)) }] },
-    explicacion: "El gasto evoluciona de " + (s[0] ? s[0].fecha : "—") + " a " + (s[s.length - 1] ? s[s.length - 1].fecha : "—") + ", con un total de " + DM.fmtMXN(totalCosto) + " MXN frente a un presupuesto de " + DM.fmtMXN(totalPres) + " MXN.",
-    formula: "gasto = Σ costo_consumo_MXN; presupuesto = Σ presupuesto_MXN.",
+    tabla: { headers: ["Mes", "Servicios", "Costo (MXN)", "Presupuesto (MXN)"], filas: meses.map(x => [x.mes, x.n, DM.fmtMXN(x.costo), DM.fmtMXN(x.presupuesto)]) },
+    grafica: { tipo: "line", xData: meses.map(x => x.mes), yName: "MXN", series: [{ name: "Costo", data: meses.map(x => +x.costo.toFixed(2)) }, { name: "Presupuesto", data: meses.map(x => +x.presupuesto.toFixed(2)) }] },
+    explicacion: "El gasto en combustible evoluciona mes a mes, con un total de " + DM.fmtMXN(totalCosto) + " MXN frente a un presupuesto de " + DM.fmtMXN(totalPres) + " MXN en el periodo.",
+    formula: "gasto mensual = Σ costo_consumo_MXN por mes; presupuesto = Σ presupuesto_MXN por mes.",
   });
 };
 
 ANALISIS.A06 = (ctx) => {
   const a = DM.agregados(ctx.servicios);
+  const meses = agregarPorMes(ctx.servicios).map(m => ({ mes: m.mes, kmL: m.km > 0 ? m.km / m.litros : null }));
   return componer(ctx, {
     titulo: "Eficiencia de la flota",
     kpis: [
       { label: "Rendimiento ponderado", value: a.rendimiento_kmL != null ? a.rendimiento_kmL.toFixed(2) : "No calculable", unit: "km/L", note: "ponderado" },
       { label: "Consumo", value: a.consumo_L_100km != null ? a.consumo_L_100km.toFixed(2) : "No calculable", unit: "L/100km", note: "" },
-      { label: "Costo por km", value: a.costo_km_MXN != null ? DM.fmtNum(a.costo_km_MXN, 2) : "No calculable", unit: "MXN/km", note: "" },
+      { label: "Costo por km", value: a.costo_km_MXN != null ? DM.fmtNum(a.costo_km_MXN, 2) : "No calculable", unit: "MXN/km", note: "combustible" },
     ],
-    tabla: { headers: ["Folio", "Fecha", "km/L", "L/100km"], filas: ordenar(ctx.servicios, x => x.fechaISO, false).map(x => [x.folio, x.fecha, DM.fmtNum(x.rendimiento_kmL, 2), DM.fmtNum(x.consumo_L_100km, 2)]) },
-    grafica: { tipo: "line", xData: ordenar(ctx.servicios, x => x.fechaISO, false).map(x => x.fecha), yName: "km/L", series: [{ name: "Rendimiento", data: ordenar(ctx.servicios, x => x.fechaISO, false).map(x => +x.rendimiento_kmL.toFixed(2)) }] },
+    tabla: { headers: ["Mes", "km/L ponderado"], filas: meses.map(x => [x.mes, DM.fmtNum(x.kmL, 2)]) },
+    grafica: { tipo: "line", xData: meses.map(x => x.mes), yName: "km/L", series: [{ name: "Rendimiento", data: meses.map(x => +(x.kmL || 0).toFixed(2)) }] },
     explicacion: "El rendimiento ponderado de la flota es " + (a.rendimiento_kmL != null ? a.rendimiento_kmL.toFixed(2) : "no calculable") + " km/L. Se usa ponderación global (kilómetros válidos totales / litros válidos totales), no un promedio simple por servicio.",
     formula: "km/L = Σ km / Σ litros; L/100km = Σ litros / Σ km × 100; MXN/km = Σ costo / Σ km.",
   });
 };
 
-ANALISIS.A07 = (ctx) => noDisponible(ctx, "Cumplimiento de entregas", "tiempo_planificado");
+ANALISIS.A07 = (ctx) => {
+  const n = ctx.servicios.length;
+  const aTiempo = ctx.servicios.filter(s => s.retraso_h != null && s.retraso_h <= 0.01).length;
+  const pct = n > 0 ? (aTiempo / n * 100) : null;
+  const retrasoProm = n > 0 ? ctx.servicios.reduce((a, s) => a + (s.retraso_h || 0), 0) / n : null;
+  const orden = ordenar(ctx.servicios, x => x.retraso_h, true);
+  return componer(ctx, {
+    titulo: "Cumplimiento de entregas",
+    kpis: [
+      { label: "Entregas a tiempo", value: String(aTiempo), unit: "", note: "" },
+      { label: "Cumplimiento", value: pct != null ? DM.fmtPct(pct, 1) : "N/D", unit: "", note: "a tiempo" },
+      { label: "Retraso promedio", value: DM.fmtNum(retrasoProm, 2), unit: "h", note: "" },
+    ],
+    tabla: { headers: ["Folio", "Fecha", "Planificado (h)", "Total (h)", "Retraso (h)", "Puntualidad"], filas: orden.slice(0, 30).map(x => [x.folio, x.fecha, DM.fmtNum(x.tiempo_planificado_h, 1), DM.fmtNum(x.tiempo_total_h, 1), DM.fmtNum(x.retraso_h, 2), DM.fmtPct(x.puntualidad_pct, 0)]) },
+    grafica: { tipo: "bar", xData: orden.slice(0, 20).map(x => x.folio.slice(-5)), yName: "Retraso (h)", series: [{ name: "Retraso", data: orden.slice(0, 20).map(x => +(x.retraso_h || 0).toFixed(2)) }] },
+    explicacion: "El cumplimiento de entregas a tiempo es del " + (pct != null ? DM.fmtPct(pct, 1) : "N/D") + ". Se considera a tiempo un servicio sin retraso respecto al tiempo planificado.",
+    formula: "cumplimiento % = servicios con retraso_h ≈ 0 / total × 100.",
+  });
+};
 
 ANALISIS.A08 = (ctx) => {
-  const conSeñales = ctx.servicios.filter(s => s.señales.length > 0);
-  const total = ctx.servicios.reduce((a, s) => a + s.incidencias_proxy, 0);
+  const totalIncidencias = ctx.servicios.reduce((a, s) => a + (s.incidencias || 0), 0);
+  const totalFallas = ctx.servicios.reduce((a, s) => a + (s.fallas || 0), 0);
+  const conSeñales = ordenar(ctx.servicios.filter(s => s.señales.length > 0), s => s.incidencias || 0, true);
   return componer(ctx, {
     titulo: "Resumen de incidencias",
     kpis: [
-      { label: "Señales detectadas", value: String(total), unit: "", note: "proxy" },
+      { label: "Incidencias", value: String(totalIncidencias), unit: "", note: "registradas" },
+      { label: "Fallas", value: String(totalFallas), unit: "", note: "" },
       { label: "Servicios con señal", value: String(conSeñales.length), unit: "", note: "" },
-      { label: "Servicios sin señal", value: String(ctx.servicios.length - conSeñales.length), unit: "", note: "" },
     ],
-    tabla: { headers: ["Folio", "Operador", "Señal(es) disparada(s)"], filas: (conSeñales.length ? conSeñales : ctx.servicios).map(x => [x.folio, x.operador, x.señales.length ? x.señales.join("; ") : "Sin señales"]) },
+    tabla: { headers: ["Folio", "Operador", "Incidencias", "Fallas", "Señales disparadas"], filas: conSeñales.slice(0, 30).map(x => [x.folio, x.operador, x.incidencias || 0, x.fallas || 0, x.señales.join("; ")]) },
     explicacion: conSeñales.length
-      ? "Se detectaron " + total + " señal(es) de anomalía en " + conSeñales.length + " servicio(s). Las señales son un proxy determinista (diferencia no explicada > " + DM.UMBRAL_DIF_NO_EXPLICADA_L + " L o ralentí > " + DM.UMBRAL_RALENTI_H + " h) y no afirman fraude ni error humano."
-      : "No se detectaron señales de anomalía en el periodo seleccionado.",
-    formula: "señal = (diferencia_no_explicada_L > " + DM.UMBRAL_DIF_NO_EXPLICADA_L + ") o (tiempo_ralenti_h > " + DM.UMBRAL_RALENTI_H + ").",
+      ? "Se registraron " + totalIncidencias + " incidencias y " + totalFallas + " fallas en " + conSeñales.length + " servicio(s). Las señales son deterministas (diferencia no explicada, ralentí, fallas o retraso) y no afirman fraude ni error humano."
+      : "No se registraron incidencias ni señales de anomalía en el periodo seleccionado.",
+    formula: "incidencias y fallas = Σ campos incidencias / fallas; señal = regla disparada (diferencia > " + DM.UMBRAL_DIF_NO_EXPLICADA_L + " L, ralentí > " + DM.UMBRAL_RALENTI_H + " h, fallas > 0 o retraso > 2 h).",
   });
 };
 
@@ -520,24 +599,41 @@ ANALISIS.B07 = (ctx) => {
 
 ANALISIS.B08 = (ctx) => {
   const { orden, tabla, grafica } = rankingOperadores(ctx, g => g.a.incidencias, true, {
-    headers: ["Operador", "Servicios", "Señales (proxy)", "Dif. no explicada (L)", "Ralentí (h)"],
-    filasFn: g => [g.g.clave, g.a.n, g.a.incidencias, DM.fmtNum(g.g.servicios.reduce((a, s) => a + (s.diferencia_no_explicada_L || 0), 0), 1), DM.fmtNum(g.a.ralenti, 2)],
-    graficaFn: orden => ({ tipo: "hbar", xData: orden.map(g => nombreOperador(g.g.clave, ctx.data)), series: [{ name: "Señales", data: orden.map(g => g.a.incidencias) }] }),
+    headers: ["Operador", "Servicios", "Incidencias", "Fallas", "Dif. no explicada (L)", "Ralentí (h)"],
+    filasFn: g => [g.g.clave, g.a.n, g.a.incidencias, g.a.fallas, DM.fmtNum(g.g.servicios.reduce((a, s) => a + (s.diferencia_no_explicada_L || 0), 0), 1), DM.fmtNum(g.a.ralenti, 2)],
+    graficaFn: orden => ({ tipo: "hbar", xData: orden.map(g => nombreOperador(g.g.clave, ctx.data)), series: [{ name: "Incidencias", data: orden.map(g => g.a.incidencias) }] }),
   });
   const top = orden[0];
   return componer(ctx, {
     titulo: "Más incidencias",
     kpis: [
       { label: "Operador", value: top ? top.g.clave : "N/D", unit: "", note: "" },
-      { label: "Señales", value: top ? String(top.a.incidencias) : "0", unit: "", note: "proxy" },
+      { label: "Incidencias", value: top ? String(top.a.incidencias) : "0", unit: "", note: "" },
     ],
     tabla, grafica,
-    explicacion: "Las incidencias usan una señal proxy determinista (diferencia no explicada > " + DM.UMBRAL_DIF_NO_EXPLICADA_L + " L o ralentí > " + DM.UMBRAL_RALENTI_H + " h). No existe un campo formal de incidencias; no se atribuye responsabilidad ni fraude.",
-    formula: "incidencias (proxy) = nº de reglas de anomalía disparadas por operador.",
+    explicacion: "Las incidencias registradas por operador provienen del registro de incidentes DEMO. No se atribuye responsabilidad ni fraude a partir de un conteo; cada incidencia requiere revisión independiente.",
+    formula: "incidencias = Σ incidencias por operador.",
   });
 };
 
-ANALISIS.B09 = (ctx) => noDisponible(ctx, "Mejor puntualidad", "tiempo_planificado");
+ANALISIS.B09 = (ctx) => {
+  const grupos = DM.agrupar(ctx.servicios, "id_operador").map(g => ({ clave: g.clave, a: DM.agregados(g.servicios) }))
+    .filter(g => g.a.puntualidad_pct != null);
+  const orden = ordenar(grupos, g => g.a.puntualidad_pct, true);
+  const top = orden[0];
+  return componer(ctx, {
+    titulo: "Mejor puntualidad",
+    kpis: [
+      { label: "Operador", value: top ? top.clave : "N/D", unit: "", note: "" },
+      { label: "Puntualidad", value: top && top.a.puntualidad_pct != null ? DM.fmtPct(top.a.puntualidad_pct, 1) : "N/D", unit: "", note: "" },
+      { label: "Retraso prom.", value: top ? DM.fmtNum(top.a.retraso_promedio_h, 2) : "N/D", unit: "h", note: "" },
+    ],
+    tabla: { headers: ["Operador", "Servicios", "Retraso prom. (h)", "Puntualidad"], filas: orden.map(g => [g.clave, g.a.n, DM.fmtNum(g.a.retraso_promedio_h, 2), DM.fmtPct(g.a.puntualidad_pct, 1)]) },
+    grafica: { tipo: "hbar", xData: orden.map(g => nombreOperador(g.clave, ctx.data)), series: [{ name: "Puntualidad %", data: orden.map(g => +(g.a.puntualidad_pct || 0).toFixed(1)) }] },
+    explicacion: "El operador " + (top ? top.clave : "—") + " presenta la mejor puntualidad (" + (top ? DM.fmtPct(top.a.puntualidad_pct, 1) : "N/D") + "). Retraso = max(0, tiempo_real − tiempo_planificado).",
+    formula: "puntualidad % = servicios sin retraso / total × 100 por operador.",
+  });
+};
 
 ANALISIS.B10 = (ctx) => {
   const grupos = DM.agrupar(ctx.servicios, "id_operador").map(g => ({ clave: g.clave, a: DM.agregados(g.servicios) }))
@@ -680,7 +776,22 @@ ANALISIS.C06 = (ctx) => {
   });
 };
 
-ANALISIS.C07 = (ctx) => noDisponible(ctx, "Mayor gasto mantenimiento", "mantenimiento");
+ANALISIS.C07 = (ctx) => {
+  const unidades = gruposUnidades(ctx);
+  const orden = ordenar(unidades, u => u.a.mantenimiento, true);
+  const top = orden[0];
+  return componer(ctx, {
+    titulo: "Mayor gasto mantenimiento",
+    kpis: [
+      { label: "Unidad", value: top ? nombreVehiculo(top.clave, ctx.data) : "N/D", unit: "", note: "" },
+      { label: "Mantenimiento", value: top ? DM.fmtMXN(top.a.mantenimiento) : "N/D", unit: "MXN", note: "" },
+    ],
+    tabla: { headers: ["Unidad", "Servicios", "km", "Mantenimiento (MXN)", "MXN/km"], filas: orden.map(u => [nombreVehiculo(u.clave, ctx.data), u.n, DM.fmtNum(u.a.km, 0), DM.fmtMXN(u.a.mantenimiento), DM.fmtNum(u.a.km > 0 ? u.a.mantenimiento / u.a.km : null, 2)]) },
+    grafica: { tipo: "hbar", xData: orden.map(u => nombreVehiculo(u.clave, ctx.data)), series: [{ name: "Mantenimiento (MXN)", data: orden.map(u => +(u.a.mantenimiento || 0).toFixed(2)) }] },
+    explicacion: "La unidad " + (top ? nombreVehiculo(top.clave, ctx.data) : "—") + " acumula el mayor gasto de mantenimiento (" + (top ? DM.fmtMXN(top.a.mantenimiento) : "N/D") + " MXN) en el periodo.",
+    formula: "mantenimiento = Σ costo_mantenimiento_MXN por unidad.",
+  });
+};
 
 ANALISIS.C08 = (ctx) => {
   const unidades = gruposUnidades(ctx);
@@ -700,7 +811,22 @@ ANALISIS.C08 = (ctx) => {
   });
 };
 
-ANALISIS.C09 = (ctx) => noDisponible(ctx, "Más fallas reportadas", "fallas");
+ANALISIS.C09 = (ctx) => {
+  const unidades = gruposUnidades(ctx);
+  const orden = ordenar(unidades, u => u.a.fallas, true);
+  const top = orden[0];
+  return componer(ctx, {
+    titulo: "Más fallas reportadas",
+    kpis: [
+      { label: "Unidad", value: top ? nombreVehiculo(top.clave, ctx.data) : "N/D", unit: "", note: "" },
+      { label: "Fallas", value: top ? String(top.a.fallas) : "0", unit: "", note: "" },
+    ],
+    tabla: { headers: ["Unidad", "Servicios", "Fallas", "Incidencias"], filas: orden.map(u => [nombreVehiculo(u.clave, ctx.data), u.n, u.a.fallas, u.a.incidencias]) },
+    grafica: { tipo: "hbar", xData: orden.map(u => nombreVehiculo(u.clave, ctx.data)), series: [{ name: "Fallas", data: orden.map(u => u.a.fallas) }] },
+    explicacion: "La unidad " + (top ? nombreVehiculo(top.clave, ctx.data) : "—") + " registra la mayor cantidad de fallas (" + (top ? top.a.fallas : 0) + ") en el periodo.",
+    formula: "fallas = Σ fallas por unidad.",
+  });
+};
 
 ANALISIS.C10 = (ctx) => {
   const unidades = gruposUnidades(ctx);
@@ -720,8 +846,41 @@ function gruposRutas(ctx) {
   return DM.agrupar(ctx.servicios, "id_ruta").map(g => ({ clave: g.clave, a: DM.agregados(g.servicios), n: g.servicios.length }));
 }
 
-ANALISIS.D01 = (ctx) => noDisponible(ctx, "Ruta más rentable", "ingresos");
-ANALISIS.D02 = (ctx) => noDisponible(ctx, "Ruta menos rentable", "ingresos");
+ANALISIS.D01 = (ctx) => {
+  const rutas = gruposRutas(ctx);
+  const orden = ordenar(rutas, r => r.a.margen_pct, true);
+  const top = orden[0];
+  return componer(ctx, {
+    titulo: "Ruta más rentable",
+    kpis: [
+      { label: "Ruta", value: top ? nombreRuta(top.clave, ctx.data) : "N/D", unit: "", note: "" },
+      { label: "Margen", value: top && top.a.margen_pct != null ? DM.fmtPct(top.a.margen_pct, 1) : "N/D", unit: "", note: "" },
+      { label: "Utilidad", value: top ? DM.fmtMXN(top.a.utilidad) : "N/D", unit: "MXN", note: "" },
+    ],
+    tabla: { headers: ["Ruta", "Servicios", "Ingresos (MXN)", "Costo (MXN)", "Utilidad (MXN)", "Margen"], filas: orden.map(r => [nombreRuta(r.clave, ctx.data), r.n, DM.fmtMXN(r.a.ingresos), DM.fmtMXN(r.a.costoOperativo), DM.fmtMXN(r.a.utilidad), DM.fmtPct(r.a.margen_pct, 1)]) },
+    grafica: { tipo: "hbar", xData: orden.map(r => nombreRuta(r.clave, ctx.data)), series: [{ name: "Margen %", data: orden.map(r => +(r.a.margen_pct || 0).toFixed(1)) }] },
+    explicacion: "La ruta " + (top ? nombreRuta(top.clave, ctx.data) : "—") + " presenta el mayor margen de utilidad (" + (top ? DM.fmtPct(top.a.margen_pct, 1) : "N/D") + "). Margen calculado con ingresos y costo operativo total.",
+    formula: "margen % = (Σ ingresos − Σ costo_operativo_total) / Σ ingresos × 100 por ruta.",
+  });
+};
+
+ANALISIS.D02 = (ctx) => {
+  const rutas = gruposRutas(ctx);
+  const orden = ordenar(rutas, r => r.a.margen_pct, false);
+  const top = orden[0];
+  return componer(ctx, {
+    titulo: "Ruta menos rentable",
+    kpis: [
+      { label: "Ruta", value: top ? nombreRuta(top.clave, ctx.data) : "N/D", unit: "", note: "" },
+      { label: "Margen", value: top && top.a.margen_pct != null ? DM.fmtPct(top.a.margen_pct, 1) : "N/D", unit: "", note: "" },
+      { label: "Utilidad", value: top ? DM.fmtMXN(top.a.utilidad) : "N/D", unit: "MXN", note: "" },
+    ],
+    tabla: { headers: ["Ruta", "Servicios", "Ingresos (MXN)", "Costo (MXN)", "Utilidad (MXN)", "Margen"], filas: orden.map(r => [nombreRuta(r.clave, ctx.data), r.n, DM.fmtMXN(r.a.ingresos), DM.fmtMXN(r.a.costoOperativo), DM.fmtMXN(r.a.utilidad), DM.fmtPct(r.a.margen_pct, 1)]) },
+    grafica: { tipo: "hbar", xData: orden.map(r => nombreRuta(r.clave, ctx.data)), series: [{ name: "Margen %", data: orden.map(r => +(r.a.margen_pct || 0).toFixed(1)) }] },
+    explicacion: "La ruta " + (top ? nombreRuta(top.clave, ctx.data) : "—") + " presenta el menor margen de utilidad (" + (top ? DM.fmtPct(top.a.margen_pct, 1) : "N/D") + ").",
+    formula: "margen % = (Σ ingresos − Σ costo_operativo_total) / Σ ingresos × 100 por ruta.",
+  });
+};
 
 ANALISIS.D03 = (ctx) => {
   const rutas = gruposRutas(ctx);
@@ -765,9 +924,39 @@ ANALISIS.D05 = (ctx) => {
   });
 };
 
-ANALISIS.D06 = (ctx) => noDisponible(ctx, "Mayor gasto en casetas", "casetas");
+ANALISIS.D06 = (ctx) => {
+  const rutas = gruposRutas(ctx);
+  const orden = ordenar(rutas, r => r.a.casetas, true);
+  const top = orden[0];
+  return componer(ctx, {
+    titulo: "Mayor gasto en casetas",
+    kpis: [
+      { label: "Ruta", value: top ? nombreRuta(top.clave, ctx.data) : "N/D", unit: "", note: "" },
+      { label: "Casetas", value: top ? DM.fmtMXN(top.a.casetas) : "N/D", unit: "MXN", note: "" },
+    ],
+    tabla: { headers: ["Ruta", "Servicios", "km", "Casetas (MXN)", "MXN/km"], filas: orden.map(r => [nombreRuta(r.clave, ctx.data), r.n, DM.fmtNum(r.a.km, 0), DM.fmtMXN(r.a.casetas), DM.fmtNum(r.a.km > 0 ? r.a.casetas / r.a.km : null, 2)]) },
+    grafica: { tipo: "hbar", xData: orden.map(r => nombreRuta(r.clave, ctx.data)), series: [{ name: "Casetas (MXN)", data: orden.map(r => +(r.a.casetas || 0).toFixed(2)) }] },
+    explicacion: "La ruta " + (top ? nombreRuta(top.clave, ctx.data) : "—") + " acumula el mayor gasto en casetas (" + (top ? DM.fmtMXN(top.a.casetas) : "N/D") + " MXN).",
+    formula: "casetas = Σ costo_casetas_MXN por ruta.",
+  });
+};
 
-ANALISIS.D07 = (ctx) => noDisponible(ctx, "Mayor retraso promedio", "tiempo_planificado");
+ANALISIS.D07 = (ctx) => {
+  const rutas = gruposRutas(ctx);
+  const orden = ordenar(rutas, r => r.a.retraso_promedio_h, true);
+  const top = orden[0];
+  return componer(ctx, {
+    titulo: "Mayor retraso promedio",
+    kpis: [
+      { label: "Ruta", value: top ? nombreRuta(top.clave, ctx.data) : "N/D", unit: "", note: "" },
+      { label: "Retraso prom.", value: top ? DM.fmtNum(top.a.retraso_promedio_h, 2) : "N/D", unit: "h", note: "" },
+    ],
+    tabla: { headers: ["Ruta", "Servicios", "Retraso prom. (h)", "Puntualidad"], filas: orden.map(r => [nombreRuta(r.clave, ctx.data), r.n, DM.fmtNum(r.a.retraso_promedio_h, 2), DM.fmtPct(r.a.puntualidad_pct, 1)]) },
+    grafica: { tipo: "hbar", xData: orden.map(r => nombreRuta(r.clave, ctx.data)), series: [{ name: "Retraso (h)", data: orden.map(r => +(r.a.retraso_promedio_h || 0).toFixed(2)) }] },
+    explicacion: "La ruta " + (top ? nombreRuta(top.clave, ctx.data) : "—") + " presenta el mayor retraso promedio (" + (top ? DM.fmtNum(top.a.retraso_promedio_h, 2) : "N/D") + " h).",
+    formula: "retraso promedio = Σ retraso_h / nº servicios por ruta.",
+  });
+};
 
 ANALISIS.D08 = (ctx) => {
   const rutas = gruposRutas(ctx);
@@ -866,22 +1055,25 @@ ANALISIS.E04 = (ctx) => {
 };
 
 ANALISIS.E05 = (ctx) => {
-  const ref = ctx.data.vehiculos[0] ? ctx.data.vehiculos[0].rend_admin_ref_kmL : null;
-  const refL100 = ref ? (100 / ref) : null;
-  const fuera = ctx.servicios.filter(s => s.consumo_L_100km != null && refL100 != null && s.consumo_L_100km > refL100);
+  const refPorVeh = new Map(ctx.data.vehiculos.map(v => [v.ID_VEHICULO, v.rend_admin_ref_kmL]));
+  const refs = ctx.data.vehiculos.map(v => v.rend_admin_ref_kmL);
+  const refProm = refs.length ? refs.reduce((a, b) => a + b, 0) / refs.length : null;
+  const calcRef = s => { const r = refPorVeh.get(s.id_vehiculo); return r ? 100 / r : null; };
+  const fuera = ctx.servicios.filter(s => { const rl = calcRef(s); return s.consumo_L_100km != null && rl != null && s.consumo_L_100km > rl; });
+  const orden = ordenar(ctx.servicios, s => { const rl = calcRef(s); return (rl != null && s.consumo_L_100km != null) ? (s.consumo_L_100km - rl) : -Infinity; }, true);
   return componer(ctx, {
     titulo: "Consumo fuera de referencia",
     kpis: [
-      { label: "Referencia", value: ref ? DM.fmtNum(ref, 2) : "N/D", unit: "km/L", note: "administrativa" },
-      { label: "Referencia", value: refL100 ? DM.fmtNum(refL100, 2) : "N/D", unit: "L/100km", note: "" },
+      { label: "Referencia media", value: refProm ? DM.fmtNum(refProm, 2) : "N/D", unit: "km/L", note: "flota" },
+      { label: "Referencia media", value: refProm ? DM.fmtNum(100 / refProm, 2) : "N/D", unit: "L/100km", note: "" },
       { label: "Fuera de referencia", value: String(fuera.length), unit: "", note: "" },
     ],
-    tabla: { headers: ["Folio", "L/100km", "Referencia (L/100km)", "Estado"], filas: ctx.servicios.map(x => [x.folio, DM.fmtNum(x.consumo_L_100km, 2), DM.fmtNum(refL100, 2), (refL100 != null && x.consumo_L_100km > refL100) ? "Fuera de referencia" : "Dentro de referencia"]) },
-    grafica: { tipo: "bar", xData: ctx.servicios.map(x => x.folio.slice(-5)), yName: "L/100km", series: [{ name: "Consumo", data: ctx.servicios.map(x => +x.consumo_L_100km.toFixed(2)) }, { name: "Referencia", data: ctx.servicios.map(() => +(refL100 || 0).toFixed(2)) }] },
+    tabla: { headers: ["Folio", "Unidad", "L/100km", "Referencia (L/100km)", "Estado"], filas: orden.slice(0, 30).map(s => { const rl = calcRef(s); return [s.folio, s.id_vehiculo, DM.fmtNum(s.consumo_L_100km, 2), DM.fmtNum(rl, 2), (rl != null && s.consumo_L_100km > rl) ? "Fuera de referencia" : "Dentro de referencia"]; }) },
+    grafica: { tipo: "bar", xData: orden.slice(0, 25).map(s => s.folio.slice(-5)), yName: "L/100km", series: [{ name: "Consumo", data: orden.slice(0, 25).map(s => +s.consumo_L_100km.toFixed(2)) }, { name: "Referencia", data: orden.slice(0, 25).map(s => +(calcRef(s) || 0).toFixed(2)) }] },
     explicacion: fuera.length
-      ? "Se detectaron " + fuera.length + " servicio(s) con consumo superior a la referencia administrativa de " + (refL100 ? DM.fmtNum(refL100, 2) : "N/D") + " L/100km."
-      : "Ningún servicio supera la referencia administrativa de " + (refL100 ? DM.fmtNum(refL100, 2) : "N/D") + " L/100km en el periodo seleccionado.",
-    formula: "referencia L/100km = 100 / rendimiento_administrativo_kmL; fuera de referencia = consumo_L_100km > referencia.",
+      ? "Se detectaron " + fuera.length + " servicio(s) con consumo superior a la referencia de su unidad (rendimiento administrativo)."
+      : "Ningún servicio supera la referencia de consumo de su unidad en el periodo seleccionado.",
+    formula: "referencia L/100km = 100 / rendimiento_administrativo_kmL de cada unidad; fuera de referencia = consumo_L_100km > referencia.",
   });
 };
 
@@ -899,14 +1091,15 @@ ANALISIS.E06 = (ctx) => {
 };
 
 ANALISIS.E07 = (ctx) => {
-  const s = ordenar(ctx.servicios, x => x.fechaISO, false);
+  const meses = agregarPorMes(ctx.servicios);
+  const totalL = meses.reduce((a, x) => a + x.litros, 0);
   return componer(ctx, {
     titulo: "Evolución de combustible",
-    kpis: [{ label: "Litros totales", value: DM.fmtNum(s.reduce((a, x) => a + (x.litros_consumidos_L || 0), 0), 1), unit: "L", note: "" }],
-    tabla: { headers: ["Fecha", "Folio", "Litros", "L/100km"], filas: s.map(x => [x.fecha, x.folio, DM.fmtNum(x.litros_consumidos_L, 1), DM.fmtNum(x.consumo_L_100km, 2)]) },
-    grafica: { tipo: "line", xData: s.map(x => x.fecha), yName: "L", series: [{ name: "Litros", data: s.map(x => +x.litros_consumidos_L.toFixed(1)) }] },
-    explicacion: "Evolución del consumo en litros a lo largo del periodo seleccionado.",
-    formula: "litros = consumo_total_L por servicio ordenado por fecha.",
+    kpis: [{ label: "Litros totales", value: DM.fmtNum(totalL, 1), unit: "L", note: "" }],
+    tabla: { headers: ["Mes", "Servicios", "Litros", "km"], filas: meses.map(x => [x.mes, x.n, DM.fmtNum(x.litros, 1), DM.fmtNum(x.km, 0)]) },
+    grafica: { tipo: "line", xData: meses.map(x => x.mes), yName: "L", series: [{ name: "Litros", data: meses.map(x => +x.litros.toFixed(1)) }] },
+    explicacion: "Evolución del consumo en litros mes a mes a lo largo del periodo seleccionado.",
+    formula: "litros mensuales = Σ consumo_total_L por mes.",
   });
 };
 
@@ -1144,11 +1337,13 @@ ANALISIS.F10 = (ctx) => {
   const valores = orden.map(s => s.rendimiento_kmL).filter(v => v != null);
   const media = valores.length ? valores.reduce((a, b) => a + b, 0) / valores.length : null;
   const desv = valores.length ? Math.sqrt(valores.reduce((a, b) => a + (b - media) * (b - media), 0) / valores.length) : null;
-  const anomalias = orden.filter(s => s.rendimiento_kmL != null && desv != null && desv > 0 && Math.abs((s.rendimiento_kmL - media) / desv) > 1.5);
-  const filas = orden.map(s => {
-    const z = (s.rendimiento_kmL != null && desv != null && desv > 0) ? ((s.rendimiento_kmL - media) / desv).toFixed(2) : "N/D";
-    return [s.folio, s.fecha, DM.fmtNum(s.rendimiento_kmL, 2), z, (desv != null && desv > 0 && Math.abs((s.rendimiento_kmL - media) / desv) > 1.5) ? "Anomalía estadística" : "Dentro de lo esperado"];
+  const anomalias = ordenar(orden.filter(s => s.rendimiento_kmL != null && desv != null && desv > 0 && Math.abs((s.rendimiento_kmL - media) / desv) > 1.5),
+    s => Math.abs((s.rendimiento_kmL - media) / desv), true);
+  const filas = anomalias.slice(0, 30).map(s => {
+    const z = ((s.rendimiento_kmL - media) / desv).toFixed(2);
+    return [s.folio, s.fecha, DM.fmtNum(s.rendimiento_kmL, 2), z, "Anomalía estadística"];
   });
+  const meses = agregarPorMes(ctx.servicios).map(m => ({ mes: m.mes, kmL: m.km > 0 ? m.km / m.litros : null }));
   return componer(ctx, {
     titulo: "Tendencias y anomalías",
     kpis: [
@@ -1157,7 +1352,7 @@ ANALISIS.F10 = (ctx) => {
       { label: "Anomalías", value: String(anomalias.length), unit: "", note: "|z| > 1.5" },
     ],
     tabla: { headers: ["Folio", "Fecha", "km/L", "z-score", "Estado"], filas },
-    grafica: { tipo: "line", xData: orden.map(s => s.fecha), yName: "km/L", series: [{ name: "Rendimiento", data: orden.map(s => +s.rendimiento_kmL.toFixed(2)) }] },
+    grafica: { tipo: "line", xData: meses.map(x => x.mes), yName: "km/L", series: [{ name: "Rendimiento mensual", data: meses.map(x => +(x.kmL || 0).toFixed(2)) }] },
     explicacion: anomalias.length
       ? "Se identificaron " + anomalias.length + " desviación(es) estadística(s) (|z| > 1.5) en el rendimiento. Una anomalía es una desviación estadística o una regla disparada; no se afirma fraude, incumplimiento ni error humano."
       : "No se identificaron desviaciones estadísticas relevantes (|z| > 1.5) en el rendimiento del periodo.",
@@ -1180,9 +1375,13 @@ function kpiHTML(k) {
 
 function tablaHTML(t) {
   if (!t) return "";
+  const MAX_FILAS = 60;
+  const total = t.filas.length;
+  const filas = total > MAX_FILAS ? t.filas.slice(0, MAX_FILAS) : t.filas;
   const head = "<tr>" + t.headers.map(h => `<th>${h}</th>`).join("") + "</tr>";
-  const body = t.filas.map(f => "<tr>" + f.map(c => `<td class="num">${c}</td>`).join("") + "</tr>").join("");
-  return `<div class="table-wrap"><table class="ir dm-table"><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+  const body = filas.map(f => "<tr>" + f.map(c => `<td class="num">${c}</td>`).join("") + "</tr>").join("");
+  const nota = total > MAX_FILAS ? `<p class="ir-meta">Mostrando ${MAX_FILAS} de ${total} registros.</p>` : "";
+  return `<div class="table-wrap"><table class="ir dm-table"><thead>${head}</thead><tbody>${body}</tbody></table></div>${nota}`;
 }
 
 export function renderResultado(resultado, contenedor) {

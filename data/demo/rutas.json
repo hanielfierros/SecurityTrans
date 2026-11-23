@@ -1,0 +1,182 @@
+[
+ {
+  "ID_RUTA": "RUT-0001",
+  "origen": "Ciudad de México",
+  "destino": "Monterrey",
+  "sentido": "Ciudad de México → Monterrey",
+  "distancia_administrativa_km": 925,
+  "caseta_rate_MXN_km": 2.2,
+  "margen_factor": 0.15,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0002",
+  "origen": "Ciudad de México",
+  "destino": "Guadalajara",
+  "sentido": "Ciudad de México → Guadalajara",
+  "distancia_administrativa_km": 540,
+  "caseta_rate_MXN_km": 1.8,
+  "margen_factor": 0.1,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0003",
+  "origen": "Ciudad de México",
+  "destino": "Querétaro",
+  "sentido": "Ciudad de México → Querétaro",
+  "distancia_administrativa_km": 215,
+  "caseta_rate_MXN_km": 0.9,
+  "margen_factor": 0.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0004",
+  "origen": "Ciudad de México",
+  "destino": "Veracruz",
+  "sentido": "Ciudad de México → Veracruz",
+  "distancia_administrativa_km": 400,
+  "caseta_rate_MXN_km": 1.5,
+  "margen_factor": 0.05,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0005",
+  "origen": "Ciudad de México",
+  "destino": "Puebla",
+  "sentido": "Ciudad de México → Puebla",
+  "distancia_administrativa_km": 130,
+  "caseta_rate_MXN_km": 0.6,
+  "margen_factor": -0.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0006",
+  "origen": "Guadalajara",
+  "destino": "Monterrey",
+  "sentido": "Guadalajara → Monterrey",
+  "distancia_administrativa_km": 780,
+  "caseta_rate_MXN_km": 2.0,
+  "margen_factor": 0.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0007",
+  "origen": "Monterrey",
+  "destino": "Nuevo Laredo",
+  "sentido": "Monterrey → Nuevo Laredo",
+  "distancia_administrativa_km": 220,
+  "caseta_rate_MXN_km": 0.8,
+  "margen_factor": -0.04,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0008",
+  "origen": "Ciudad de México",
+  "destino": "Mérida",
+  "sentido": "Ciudad de México → Mérida",
+  "distancia_administrativa_km": 1300,
+  "caseta_rate_MXN_km": 2.5,
+  "margen_factor": 0.18,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0009",
+  "origen": "Guadalajara",
+  "destino": "Tijuana",
+  "sentido": "Guadalajara → Tijuana",
+  "distancia_administrativa_km": 2000,
+  "caseta_rate_MXN_km": 2.6,
+  "margen_factor": 0.2,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0010",
+  "origen": "Ciudad de México",
+  "destino": "Acapulco",
+  "sentido": "Ciudad de México → Acapulco",
+  "distancia_administrativa_km": 380,
+  "caseta_rate_MXN_km": 1.3,
+  "margen_factor": 0.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0011",
+  "origen": "Querétaro",
+  "destino": "San Luis Potosí",
+  "sentido": "Querétaro → San Luis Potosí",
+  "distancia_administrativa_km": 210,
+  "caseta_rate_MXN_km": 0.9,
+  "margen_factor": -0.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0012",
+  "origen": "Ciudad de México",
+  "destino": "Toluca",
+  "sentido": "Ciudad de México → Toluca",
+  "distancia_administrativa_km": 65,
+  "caseta_rate_MXN_km": 0.4,
+  "margen_factor": -0.08,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0013",
+  "origen": "Veracruz",
+  "destino": "Puebla",
+  "sentido": "Veracruz → Puebla",
+  "distancia_administrativa_km": 280,
+  "caseta_rate_MXN_km": 1.1,
+  "margen_factor": 0.0,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0014",
+  "origen": "Monterrey",
+  "destino": "Tampico",
+  "sentido": "Monterrey → Tampico",
+  "distancia_administrativa_km": 520,
+  "caseta_rate_MXN_km": 1.4,
+  "margen_factor": 0.05,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0015",
+  "origen": "Guadalajara",
+  "destino": "León",
+  "sentido": "Guadalajara → León",
+  "distancia_administrativa_km": 220,
+  "caseta_rate_MXN_km": 0.8,
+  "margen_factor": -0.03,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0016",
+  "origen": "Ciudad de México",
+  "destino": "Oaxaca",
+  "sentido": "Ciudad de México → Oaxaca",
+  "distancia_administrativa_km": 460,
+  "caseta_rate_MXN_km": 1.4,
+  "margen_factor": 0.06,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0017",
+  "origen": "Mérida",
+  "destino": "Cancún",
+  "sentido": "Mérida → Cancún",
+  "distancia_administrativa_km": 300,
+  "caseta_rate_MXN_km": 1.0,
+  "margen_factor": 0.02,
+  "naturaleza": "DEMO"
+ },
+ {
+  "ID_RUTA": "RUT-0018",
+  "origen": "Ciudad de México",
+  "destino": "Chihuahua",
+  "sentido": "Ciudad de México → Chihuahua",
+  "distancia_administrativa_km": 1450,
+  "caseta_rate_MXN_km": 2.4,
+  "margen_factor": 0.14,
+  "naturaleza": "DEMO"
+ }
+]

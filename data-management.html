@@ -26,6 +26,8 @@
       <a href="./index.html">iData</a> &rsaquo; <span id="BREADCRUMB">Data Management</span>
     </nav>
 
+    <div class="alert warn" id="DEMO_BANNER" role="note" style="margin-bottom:16px"></div>
+
     <section class="region" aria-label="Título principal">
       <div class="region-body" style="padding-top:14px">
         <h1 style="margin:0;font-size:1.4rem">DATA MANAGEMENT</h1>
@@ -33,9 +35,9 @@
       </div>
     </section>
 
-    <!-- R02 Identificación de la unidad -->
-    <section class="region" id="R_VEHICLE_PROFILE" aria-label="Identificación de la unidad">
-      <div class="region-title">Identificación de la unidad</div>
+    <!-- R02 Resumen de la flota -->
+    <section class="region" id="R_VEHICLE_PROFILE" aria-label="Resumen de la flota">
+      <div class="region-title">Resumen de la flota</div>
       <div class="region-body">
         <div class="vehicle-profile" id="VEHICLE_PROFILE"><span class="state-msg">Cargando…</span></div>
       </div>
@@ -86,8 +88,7 @@
           <label>Naturaleza
             <select id="F_NATURALEZA">
               <option value="">Todas</option>
-              <option value="SIMULADO">Simulado</option>
-              <option value="REAL">Real</option>
+              <option value="DEMO">Demo (simulado)</option>
             </select>
           </label>
           <div class="filter-actions">
@@ -96,7 +97,7 @@
           </div>
         </div>
         <p class="filter-summary" id="FILTER_SUMMARY"></p>
-        <p class="filter-note">El estado de servicio (activo/cerrado) no existe en las fuentes actuales; el filtro se mantiene para compatibilidad.</p>
+        <p class="filter-note">Los filtros se alimentan de datos DEMO (35 conductores, 25 vehículos, 18 rutas, 1,200 servicios).</p>
       </div>
     </section>
 

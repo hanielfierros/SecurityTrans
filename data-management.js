@@ -11,10 +11,8 @@
    ============================================================ */
 
 import { DataManager as DM } from "./data-management-data.js";
-import { DataLoader } from "./data-loader.js";
 import * as G from "./charts.js";
 import * as CMP from "./comparisons.js";
-import * as SD from "./service-details.js";
 import * as SCI from "./scientific-models.js";
 import { MODULOS, ejecutar, renderResultado } from "./data-management-analytics.js";
 
@@ -26,6 +24,7 @@ let historial = null;
 let filtradosNorm = [];
 let filtradosRaw = [];
 let analisisActual = null;
+let marcaDemo = "DATOS DEMO — INFORMACIÓN SIMULADA";
 
 // Estado del filtro global
 const filtroState = {
@@ -58,13 +57,15 @@ async function init() {
     const datos = await DM.cargarDatos();
     catalogos = datos.catalogos;
     historial = datos.historial;
-    rawServicios = await DataLoader.resumen();
+    rawServicios = datos.serviciosRaw;
     serviciosNorm = datos.servicios;
     porFolio = new Map(serviciosNorm.map(s => [s.folio, s]));
+    marcaDemo = datos.marca || marcaDemo;
 
     filtradosNorm = [...serviciosNorm];
     filtradosRaw = [...rawServicios];
 
+    renderBanner();
     renderVehiculo();
     renderFiltros();
     bindFilterEvents();
@@ -92,25 +93,28 @@ function vp(label, value, clase) {
   return `<div class="vp-item"><div class="vp-label">${label}</div><div class="vp-value">${value}</div><div class="vp-status">${chip(clase)}</div></div>`;
 }
 
+function renderBanner() {
+  const el = document.getElementById("DEMO_BANNER");
+  if (!el) return;
+  el.innerHTML = `<strong>${marcaDemo}</strong> · Los nombres, vehículos, rutas y montos son ficticios.`;
+}
+
 function renderVehiculo() {
   const el = document.getElementById("VEHICLE_PROFILE");
   if (!el || !catalogos) return;
-  const v = catalogos.vehiculos[0];
+  const vs = catalogos.vehiculos;
+  const porCat = {};
+  vs.forEach(v => { porCat[v.categoria] = (porCat[v.categoria] || 0) + 1; });
+  const categorias = Object.entries(porCat).map(([c, n]) => `${c}: ${n}`).join(" · ");
+  const rendProm = (vs.reduce((a, v) => a + (v.rend_admin_ref_kmL || 0), 0) / vs.length).toFixed(2);
   el.innerHTML = `
-    ${vp("Número económico", v.unidad_referencia, "real")}
-    ${vp("Marca", v.marca, "real")}
-    ${vp("Modelo", v.modelo_operativo + " (" + v.modelo_cientifico + ")", "real")}
-    ${vp("Placa (ficticia)", v.placa_ficticia, "simulado")}
-    ${vp("Carrocería", v.carroceria, "real")}
-    ${vp("Blindaje", v.blindaje, "real")}
-    ${vp("Motor", v.motor, "pendiente")}
-    ${vp("Potencia", v.potencia_kW + " kW", "pendiente")}
-    ${vp("Transmisión", v.transmision, "pendiente")}
-    ${vp("Tanque", v.capacidad_tanque_L + " L", "real")}
-    ${vp("Masa vehicular (blindada)", v.masa_vacio_blindado_kg + " kg", "pendiente")}
-    ${vp("Rendimiento administrativo", v.rend_admin_ref_kmL + " km/L", "real")}
-    ${vp("Kilometraje", historial.odo_final_acumulado_km + " km", "calculado")}
+    ${vp("Flota total", vs.length + " unidades", "calculado")}
+    ${vp("Categorías", categorias, "real")}
+    ${vp("Rendimiento admin. medio", rendProm + " km/L", "real")}
     ${vp("Servicios registrados", rawServicios.length + "", "calculado")}
+    ${vp("Conductores", catalogos.operadores.length + "", "calculado")}
+    ${vp("Rutas", catalogos.rutas.length + "", "calculado")}
+    ${vp("Naturaleza", "DATOS DEMO", "simulado")}
   `;
 }
 
@@ -135,12 +139,8 @@ function renderFiltros() {
   llenarSelect("F_RUTA", catalogos.rutas.map(x => [x.ID_RUTA, x.origen + " → " + x.destino]));
   llenarSelect("F_TIPO_UNIDAD", [...new Set(catalogos.vehiculos.map(x => x.carroceria))].map(c => [c, c]));
 
-  // Estado de servicio: sin datos en las fuentes actuales.
-  const estServ = document.getElementById("F_ESTADO_SERVICIO");
-  if (estServ) {
-    estServ.innerHTML = `<option value="">Todos</option>`;
-    estServ.title = "No existe campo de estado de servicio (activo/cerrado) en los datos actuales.";
-  }
+  // Estado de servicio: poblado desde los datos DEMO.
+  llenarSelect("F_ESTADO_SERVICIO", ["ACTIVO", "CERRADO"].map(e => [e, e === "ACTIVO" ? "Activo" : "Cerrado"]));
 
   document.getElementById("F_FECHA_INI").disabled = filtroState.rango !== "custom";
   document.getElementById("F_FECHA_FIN").disabled = filtroState.rango !== "custom";
@@ -196,6 +196,7 @@ function cumpleFiltro(s, f) {
   if (f.vehiculo && s.id_vehiculo !== f.vehiculo) return false;
   if (f.ruta && s.id_ruta !== f.ruta) return false;
   if (f.naturaleza && s.naturaleza !== f.naturaleza) return false;
+  if (f.estadoServicio && s.estado_servicio !== f.estadoServicio) return false;
 
   if (f.tipoUnidad) {
     const v = catalogos.vehiculos.find(x => x.ID_VEHICULO === s.id_vehiculo);
@@ -258,22 +259,31 @@ function renderKpis() {
   const rendPond = a.rendimiento_kmL != null ? a.rendimiento_kmL.toFixed(2) : "No calculable";
   const costoKm = a.costo_km_MXN != null ? DM.fmtNum(a.costo_km_MXN, 2) : "No calculable";
 
+  const activos = filtradosNorm.filter(s => s.estado_servicio === "ACTIVO").length;
+  const cerrados = filtradosNorm.filter(s => s.estado_servicio === "CERRADO").length;
+  const aTiempo = filtradosNorm.filter(s => s.retraso_h != null && s.retraso_h <= 0.01).length;
+  const cumplimiento = n > 0 ? (aTiempo / n * 100) : null;
+
   const fechas = filtradosNorm.map(s => s.fechaISO).filter(Boolean);
   const dias = fechas.length ? Math.max(1, (Math.max(...fechas) - Math.min(...fechas)) / 86400000 + 1) : null;
   const utilizacion = (dias != null && dias > 0 && a.horas != null) ? (a.horas / (dias * 24) * 100) : null;
 
+  const ingresos = a.ingresos;
+  const margen = a.margen_pct;
+
   const kpis = [
     ["Servicios realizados", String(n), "", "calculado"],
-    ["Servicios activos", "Datos insuficientes", "", "insuficiente"],
-    ["Servicios cerrados", "Datos insuficientes", "", "insuficiente"],
+    ["Servicios activos", String(activos), "", "calculado"],
+    ["Servicios cerrados", String(cerrados), "", "calculado"],
     ["Kilómetros recorridos", DM.fmtNum(a.km, 0), "km", "calculado"],
     ["Litros consumidos", DM.fmtNum(a.litros, 1), "L", "calculado"],
     ["Gasto total", DM.fmtMXN(a.costo), "MXN", "calculado"],
     ["Costo por kilómetro", "$" + costoKm, "MXN/km", "calculado"],
     ["Rendimiento ponderado", rendPond, "km/L", "calculado"],
-    ["Cumplimiento de entregas", "Datos insuficientes", "", "insuficiente"],
+    ["Cumplimiento de entregas", cumplimiento != null ? DM.fmtPct(cumplimiento, 1) : "No calculable", "", "calculado"],
     ["Utilización de flota", utilizacion != null ? DM.fmtNum(utilizacion, 1) + "%" : "No calculable", "proxy", "calculado"],
-    ["Ingresos y margen", "Datos insuficientes", "", "insuficiente"],
+    ["Ingresos", DM.fmtMXN(ingresos), "MXN", "calculado"],
+    ["Margen operativo", margen != null ? DM.fmtPct(margen, 1) : "No calculable", "", "calculado"],
   ];
 
   document.getElementById("KPI_GRID").innerHTML = kpis.map(k =>
@@ -282,7 +292,9 @@ function renderKpis() {
 
   const renta = document.getElementById("RENTABILIDAD_NOTA");
   if (renta) {
-    renta.textContent = "Datos insuficientes para calcular rentabilidad.";
+    renta.textContent = margen != null
+      ? "Rentabilidad calculada con ingresos y costo operativo total (combustible + casetas + mantenimiento + otros gastos)."
+      : "Datos insuficientes para calcular rentabilidad.";
   }
 }
 
@@ -293,7 +305,6 @@ const TABS = [
   ["Rendimiento", (s) => G.g01Rendimiento(s, 3.6, null)],
   ["Combustible", (s) => G.g02Combustible(s)],
   ["Presupuesto vs costo", (s) => G.g03Presupuesto(s)],
-  ["Kilometraje", (s, h) => G.g04Kilometraje(h)],
   ["Costo por km", (s) => G.g05CostoKm(s)],
   ["Por operador", (s) => G.g06Operadores(s)],
   ["Ahorros", (s) => G.g07Ahorros(s)],
@@ -398,18 +409,24 @@ function renderTabla() {
     !termino || s.folio.toLowerCase().includes(termino) || s.operador.toLowerCase().includes(termino)
     || s.origen.toLowerCase().includes(termino) || s.destino.toLowerCase().includes(termino));
 
-  body.innerHTML = datos.map(s => {
+  const MAX_ROWS = 500;
+  const visibles = datos.slice(0, MAX_ROWS);
+
+  body.innerHTML = visibles.map(s => {
     const celdas = COLS_TABLA.map(c => `<td data-label="${c[1]}" class="num">${s[c[0]]}</td>`).join("");
-    const alertas = s.diferencia_no_explicada_L > 5 ? "⚠" : "";
+    const alertas = (s.diferencia_no_explicada_L || 0) > 5 ? "⚠" : "";
+    const estado = s.estado_servicio === "ACTIVO" ? "Activo" : "Cerrado";
     return `<tr>
       <td><button class="btn" data-expand="${s.folio}" aria-expanded="false" aria-controls="R_SERVICE_DETAIL">+</button></td>
       ${celdas}
-      <td data-label="Estado">${chip("simulado")}</td>
+      <td data-label="Estado">${estado}</td>
       <td data-label="Alertas">${alertas}</td>
     </tr>`;
   }).join("");
 
-  document.getElementById("IR_META").textContent = `${datos.length} registros`;
+  document.getElementById("IR_META").textContent = datos.length > MAX_ROWS
+    ? `Mostrando ${MAX_ROWS} de ${datos.length} registros`
+    : `${datos.length} registros`;
 
   head.querySelectorAll("th[data-col]").forEach(th => {
     th.addEventListener("click", () => {
@@ -420,11 +437,34 @@ function renderTabla() {
   });
 
   body.querySelectorAll("[data-expand]").forEach(btn => {
-    btn.addEventListener("click", async () => {
-      if (SD.servicioAbierto() === btn.dataset.expand) { SD.cerrarServicio(); }
-      else { await SD.abrirServicio(btn.dataset.expand); }
+    btn.addEventListener("click", () => {
+      const s = datos.find(x => x.folio === btn.dataset.expand);
+      if (s) abrirDetalleDemo(s);
     });
   });
+}
+
+function abrirDetalleDemo(s) {
+  const sec = document.getElementById("R_SERVICE_DETAIL");
+  const body = document.getElementById("SERVICE_DETAIL_BODY");
+  if (!sec || !body) return;
+  sec.hidden = false;
+  const kv = (l, v) => `<div class="vp-item"><div class="vp-label">${l}</div><div class="vp-value">${v}</div></div>`;
+  body.innerHTML = `
+    <div class="detail-section"><h4>Detalle del servicio (dato DEMO)</h4>
+      <div class="vehicle-profile">
+        ${kv("Folio", s.folio)} ${kv("Fecha", s.fecha)} ${kv("Operador", s.operador)}
+        ${kv("Unidad", s.id_vehiculo)} ${kv("Ruta", s.id_ruta)} ${kv("Origen/Destino", s.origen + " → " + s.destino)}
+        ${kv("Estado", s.estado_servicio)} ${kv("Distancia", s.distancia_km + " km")} ${kv("Carga", s.carga_kg + " kg")}
+        ${kv("Tiempo total", s.tiempo_total_h + " h")} ${kv("Retraso", s.retraso_h + " h")} ${kv("Puntualidad", s.puntualidad_pct + "%")}
+        ${kv("Consumo", s.consumo_total_L + " L")} ${kv("Rendimiento", s.rendimiento_balance_tanque_kmL + " km/L")} ${kv("L/100km", s.consumo_L_100km)}
+        ${kv("Ingresos", "$" + Number(s.ingresos_MXN).toLocaleString("es-MX"))} ${kv("Costo operativo", "$" + Number(s.costo_operativo_total_MXN).toLocaleString("es-MX"))} ${kv("Margen", s.margen_pct + "%")}
+        ${kv("Combustible", "$" + Number(s.costo_consumo_MXN).toLocaleString("es-MX"))} ${kv("Casetas", "$" + Number(s.costo_casetas_MXN).toLocaleString("es-MX"))} ${kv("Mantenimiento", "$" + Number(s.costo_mantenimiento_MXN).toLocaleString("es-MX"))}
+        ${kv("Fallas", s.fallas)} ${kv("Incidencias", s.incidencias)}
+      </div>
+    </div>
+    <p class="state-msg">${marcaDemo}. El detalle de trayectoria GPS aplica al módulo File Management (datos reales); aquí se muestra el resumen operativo del servicio DEMO.</p>`;
+  sec.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function exportCSV() {

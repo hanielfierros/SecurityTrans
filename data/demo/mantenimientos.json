@@ -1,0 +1,1752 @@
+[
+ {
+  "id": "MANT-000001",
+  "id_vehiculo": "VEH-0001",
+  "id_servicio": "SRV-000361",
+  "fecha": "2026-02-11",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 4595.79,
+  "kilometraje_km": 180237,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000002",
+  "id_vehiculo": "VEH-0001",
+  "id_servicio": "SRV-000085",
+  "fecha": "2026-07-17",
+  "tipo": "Suspensión",
+  "costo_MXN": 7403.36,
+  "kilometraje_km": 127304,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000003",
+  "id_vehiculo": "VEH-0001",
+  "id_servicio": "SRV-001115",
+  "fecha": "2026-09-24",
+  "tipo": "Frenos",
+  "costo_MXN": 4434.69,
+  "kilometraje_km": 382408,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000004",
+  "id_vehiculo": "VEH-0001",
+  "id_servicio": "SRV-000231",
+  "fecha": "2026-07-20",
+  "tipo": "Suspensión",
+  "costo_MXN": 7869.41,
+  "kilometraje_km": 283809,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000005",
+  "id_vehiculo": "VEH-0001",
+  "id_servicio": "SRV-000648",
+  "fecha": "2025-12-25",
+  "tipo": "Frenos",
+  "costo_MXN": 8356.13,
+  "kilometraje_km": 409895,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000006",
+  "id_vehiculo": "VEH-0001",
+  "id_servicio": "SRV-000033",
+  "fecha": "2026-03-05",
+  "tipo": "Correctivo",
+  "costo_MXN": 6671.72,
+  "kilometraje_km": 441483,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000007",
+  "id_vehiculo": "VEH-0001",
+  "id_servicio": "SRV-000500",
+  "fecha": "2026-07-29",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 7073.63,
+  "kilometraje_km": 658651,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000008",
+  "id_vehiculo": "VEH-0002",
+  "id_servicio": "SRV-000312",
+  "fecha": "2025-12-04",
+  "tipo": "Suspensión",
+  "costo_MXN": 3430.92,
+  "kilometraje_km": 492487,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000009",
+  "id_vehiculo": "VEH-0002",
+  "id_servicio": "SRV-000580",
+  "fecha": "2026-04-08",
+  "tipo": "Correctivo",
+  "costo_MXN": 2195.29,
+  "kilometraje_km": 376714,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000010",
+  "id_vehiculo": "VEH-0002",
+  "id_servicio": "SRV-000952",
+  "fecha": "2026-05-28",
+  "tipo": "Neumáticos",
+  "costo_MXN": 7508.59,
+  "kilometraje_km": 129212,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000011",
+  "id_vehiculo": "VEH-0002",
+  "id_servicio": "SRV-000299",
+  "fecha": "2026-08-20",
+  "tipo": "Suspensión",
+  "costo_MXN": 2019.76,
+  "kilometraje_km": 200254,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000012",
+  "id_vehiculo": "VEH-0002",
+  "id_servicio": "SRV-000179",
+  "fecha": "2026-06-16",
+  "tipo": "Suspensión",
+  "costo_MXN": 3399.2,
+  "kilometraje_km": 505762,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000013",
+  "id_vehiculo": "VEH-0002",
+  "id_servicio": "SRV-000364",
+  "fecha": "2026-01-21",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 4545.19,
+  "kilometraje_km": 325636,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000014",
+  "id_vehiculo": "VEH-0002",
+  "id_servicio": "SRV-000738",
+  "fecha": "2026-06-04",
+  "tipo": "Frenos",
+  "costo_MXN": 6038.98,
+  "kilometraje_km": 512476,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000015",
+  "id_vehiculo": "VEH-0003",
+  "id_servicio": "SRV-000843",
+  "fecha": "2026-02-16",
+  "tipo": "Frenos",
+  "costo_MXN": 8435.09,
+  "kilometraje_km": 79026,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000016",
+  "id_vehiculo": "VEH-0003",
+  "id_servicio": "SRV-001105",
+  "fecha": "2026-04-27",
+  "tipo": "Suspensión",
+  "costo_MXN": 2510.37,
+  "kilometraje_km": 476465,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000017",
+  "id_vehiculo": "VEH-0003",
+  "id_servicio": "SRV-000412",
+  "fecha": "2026-08-14",
+  "tipo": "Suspensión",
+  "costo_MXN": 8327.0,
+  "kilometraje_km": 591570,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000018",
+  "id_vehiculo": "VEH-0003",
+  "id_servicio": "SRV-000955",
+  "fecha": "2026-10-26",
+  "tipo": "Correctivo",
+  "costo_MXN": 8706.51,
+  "kilometraje_km": 554910,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000019",
+  "id_vehiculo": "VEH-0003",
+  "id_servicio": "SRV-000867",
+  "fecha": "2026-08-20",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 4182.03,
+  "kilometraje_km": 602052,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000020",
+  "id_vehiculo": "VEH-0003",
+  "id_servicio": "SRV-000900",
+  "fecha": "2025-12-30",
+  "tipo": "Preventivo",
+  "costo_MXN": 5702.57,
+  "kilometraje_km": 124931,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000021",
+  "id_vehiculo": "VEH-0003",
+  "id_servicio": "SRV-000305",
+  "fecha": "2026-02-18",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 4661.38,
+  "kilometraje_km": 67920,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000022",
+  "id_vehiculo": "VEH-0004",
+  "id_servicio": "SRV-001124",
+  "fecha": "2026-01-08",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 8425.17,
+  "kilometraje_km": 140879,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000023",
+  "id_vehiculo": "VEH-0004",
+  "id_servicio": "SRV-000807",
+  "fecha": "2026-03-20",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 2746.76,
+  "kilometraje_km": 227439,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000024",
+  "id_vehiculo": "VEH-0004",
+  "id_servicio": "SRV-000690",
+  "fecha": "2026-09-18",
+  "tipo": "Frenos",
+  "costo_MXN": 6087.91,
+  "kilometraje_km": 408927,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000025",
+  "id_vehiculo": "VEH-0004",
+  "id_servicio": "SRV-000942",
+  "fecha": "2026-10-23",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 7098.27,
+  "kilometraje_km": 588103,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000026",
+  "id_vehiculo": "VEH-0004",
+  "id_servicio": "SRV-000589",
+  "fecha": "2026-10-02",
+  "tipo": "Frenos",
+  "costo_MXN": 2712.64,
+  "kilometraje_km": 315416,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000027",
+  "id_vehiculo": "VEH-0004",
+  "id_servicio": "SRV-001186",
+  "fecha": "2026-10-26",
+  "tipo": "Neumáticos",
+  "costo_MXN": 5401.55,
+  "kilometraje_km": 660532,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000028",
+  "id_vehiculo": "VEH-0004",
+  "id_servicio": "SRV-000585",
+  "fecha": "2026-11-17",
+  "tipo": "Correctivo",
+  "costo_MXN": 5991.38,
+  "kilometraje_km": 476636,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000029",
+  "id_vehiculo": "VEH-0005",
+  "id_servicio": "SRV-000974",
+  "fecha": "2026-04-20",
+  "tipo": "Frenos",
+  "costo_MXN": 5867.34,
+  "kilometraje_km": 237000,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000030",
+  "id_vehiculo": "VEH-0005",
+  "id_servicio": "SRV-000454",
+  "fecha": "2025-12-03",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 3967.08,
+  "kilometraje_km": 65200,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000031",
+  "id_vehiculo": "VEH-0005",
+  "id_servicio": "SRV-000538",
+  "fecha": "2026-09-08",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 4865.09,
+  "kilometraje_km": 441126,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000032",
+  "id_vehiculo": "VEH-0005",
+  "id_servicio": "SRV-000027",
+  "fecha": "2026-03-06",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 3198.04,
+  "kilometraje_km": 539750,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000033",
+  "id_vehiculo": "VEH-0005",
+  "id_servicio": "SRV-000720",
+  "fecha": "2026-03-13",
+  "tipo": "Preventivo",
+  "costo_MXN": 5324.57,
+  "kilometraje_km": 675853,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000034",
+  "id_vehiculo": "VEH-0005",
+  "id_servicio": "SRV-000508",
+  "fecha": "2026-02-13",
+  "tipo": "Correctivo",
+  "costo_MXN": 7342.78,
+  "kilometraje_km": 684534,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000035",
+  "id_vehiculo": "VEH-0005",
+  "id_servicio": "SRV-000128",
+  "fecha": "2025-11-25",
+  "tipo": "Frenos",
+  "costo_MXN": 4964.65,
+  "kilometraje_km": 380407,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000036",
+  "id_vehiculo": "VEH-0006",
+  "id_servicio": "SRV-000635",
+  "fecha": "2026-04-24",
+  "tipo": "Preventivo",
+  "costo_MXN": 6308.83,
+  "kilometraje_km": 142288,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000037",
+  "id_vehiculo": "VEH-0006",
+  "id_servicio": "SRV-000252",
+  "fecha": "2026-01-28",
+  "tipo": "Neumáticos",
+  "costo_MXN": 5323.53,
+  "kilometraje_km": 560895,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000038",
+  "id_vehiculo": "VEH-0006",
+  "id_servicio": "SRV-000480",
+  "fecha": "2025-12-09",
+  "tipo": "Frenos",
+  "costo_MXN": 8518.96,
+  "kilometraje_km": 660947,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000039",
+  "id_vehiculo": "VEH-0006",
+  "id_servicio": "SRV-000918",
+  "fecha": "2026-11-04",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 9437.77,
+  "kilometraje_km": 296889,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000040",
+  "id_vehiculo": "VEH-0006",
+  "id_servicio": "SRV-000918",
+  "fecha": "2026-11-04",
+  "tipo": "Suspensión",
+  "costo_MXN": 2625.2,
+  "kilometraje_km": 116323,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000041",
+  "id_vehiculo": "VEH-0006",
+  "id_servicio": "SRV-001006",
+  "fecha": "2026-10-01",
+  "tipo": "Neumáticos",
+  "costo_MXN": 3094.65,
+  "kilometraje_km": 452443,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000042",
+  "id_vehiculo": "VEH-0006",
+  "id_servicio": "SRV-000386",
+  "fecha": "2026-09-04",
+  "tipo": "Suspensión",
+  "costo_MXN": 6184.22,
+  "kilometraje_km": 498304,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000043",
+  "id_vehiculo": "VEH-0007",
+  "id_servicio": "SRV-000932",
+  "fecha": "2026-03-23",
+  "tipo": "Suspensión",
+  "costo_MXN": 3361.38,
+  "kilometraje_km": 189784,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000044",
+  "id_vehiculo": "VEH-0007",
+  "id_servicio": "SRV-001075",
+  "fecha": "2026-03-26",
+  "tipo": "Suspensión",
+  "costo_MXN": 4622.71,
+  "kilometraje_km": 530004,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000045",
+  "id_vehiculo": "VEH-0007",
+  "id_servicio": "SRV-000808",
+  "fecha": "2026-03-23",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 5821.34,
+  "kilometraje_km": 105205,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000046",
+  "id_vehiculo": "VEH-0007",
+  "id_servicio": "SRV-001200",
+  "fecha": "2026-11-19",
+  "tipo": "Suspensión",
+  "costo_MXN": 5765.33,
+  "kilometraje_km": 485147,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000047",
+  "id_vehiculo": "VEH-0007",
+  "id_servicio": "SRV-000032",
+  "fecha": "2026-08-03",
+  "tipo": "Neumáticos",
+  "costo_MXN": 4513.5,
+  "kilometraje_km": 322959,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000048",
+  "id_vehiculo": "VEH-0007",
+  "id_servicio": "SRV-000245",
+  "fecha": "2026-10-08",
+  "tipo": "Correctivo",
+  "costo_MXN": 4962.92,
+  "kilometraje_km": 225653,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000049",
+  "id_vehiculo": "VEH-0007",
+  "id_servicio": "SRV-000398",
+  "fecha": "2026-09-15",
+  "tipo": "Correctivo",
+  "costo_MXN": 3020.58,
+  "kilometraje_km": 135925,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000050",
+  "id_vehiculo": "VEH-0008",
+  "id_servicio": "SRV-000297",
+  "fecha": "2026-08-14",
+  "tipo": "Correctivo",
+  "costo_MXN": 4770.0,
+  "kilometraje_km": 514331,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000051",
+  "id_vehiculo": "VEH-0008",
+  "id_servicio": "SRV-001158",
+  "fecha": "2026-02-02",
+  "tipo": "Preventivo",
+  "costo_MXN": 5204.51,
+  "kilometraje_km": 627254,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000052",
+  "id_vehiculo": "VEH-0008",
+  "id_servicio": "SRV-001076",
+  "fecha": "2026-03-11",
+  "tipo": "Neumáticos",
+  "costo_MXN": 4883.06,
+  "kilometraje_km": 685849,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000053",
+  "id_vehiculo": "VEH-0008",
+  "id_servicio": "SRV-000426",
+  "fecha": "2025-11-25",
+  "tipo": "Frenos",
+  "costo_MXN": 8606.85,
+  "kilometraje_km": 545280,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000054",
+  "id_vehiculo": "VEH-0008",
+  "id_servicio": "SRV-001058",
+  "fecha": "2026-01-26",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 5910.99,
+  "kilometraje_km": 461889,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000055",
+  "id_vehiculo": "VEH-0008",
+  "id_servicio": "SRV-001142",
+  "fecha": "2026-03-05",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 9512.36,
+  "kilometraje_km": 357253,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000056",
+  "id_vehiculo": "VEH-0008",
+  "id_servicio": "SRV-000871",
+  "fecha": "2026-11-10",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 8195.0,
+  "kilometraje_km": 505339,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000057",
+  "id_vehiculo": "VEH-0009",
+  "id_servicio": "SRV-000640",
+  "fecha": "2026-05-06",
+  "tipo": "Suspensión",
+  "costo_MXN": 12726.84,
+  "kilometraje_km": 623427,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000058",
+  "id_vehiculo": "VEH-0009",
+  "id_servicio": "SRV-000343",
+  "fecha": "2026-11-20",
+  "tipo": "Neumáticos",
+  "costo_MXN": 12292.46,
+  "kilometraje_km": 632888,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000059",
+  "id_vehiculo": "VEH-0009",
+  "id_servicio": "SRV-000199",
+  "fecha": "2026-03-26",
+  "tipo": "Suspensión",
+  "costo_MXN": 12847.15,
+  "kilometraje_km": 691106,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000060",
+  "id_vehiculo": "VEH-0009",
+  "id_servicio": "SRV-001132",
+  "fecha": "2026-03-03",
+  "tipo": "Correctivo",
+  "costo_MXN": 12549.21,
+  "kilometraje_km": 586552,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000061",
+  "id_vehiculo": "VEH-0009",
+  "id_servicio": "SRV-000705",
+  "fecha": "2026-01-12",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 5066.5,
+  "kilometraje_km": 204461,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000062",
+  "id_vehiculo": "VEH-0009",
+  "id_servicio": "SRV-000507",
+  "fecha": "2026-06-15",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 4782.33,
+  "kilometraje_km": 529823,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000063",
+  "id_vehiculo": "VEH-0009",
+  "id_servicio": "SRV-000058",
+  "fecha": "2026-06-22",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 3790.24,
+  "kilometraje_km": 606801,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000064",
+  "id_vehiculo": "VEH-0010",
+  "id_servicio": "SRV-000338",
+  "fecha": "2026-03-16",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 7347.24,
+  "kilometraje_km": 198014,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000065",
+  "id_vehiculo": "VEH-0010",
+  "id_servicio": "SRV-000968",
+  "fecha": "2026-11-20",
+  "tipo": "Correctivo",
+  "costo_MXN": 12612.6,
+  "kilometraje_km": 211703,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000066",
+  "id_vehiculo": "VEH-0010",
+  "id_servicio": "SRV-000683",
+  "fecha": "2026-03-31",
+  "tipo": "Suspensión",
+  "costo_MXN": 5492.64,
+  "kilometraje_km": 67257,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000067",
+  "id_vehiculo": "VEH-0010",
+  "id_servicio": "SRV-000465",
+  "fecha": "2026-06-09",
+  "tipo": "Preventivo",
+  "costo_MXN": 16347.35,
+  "kilometraje_km": 425887,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000068",
+  "id_vehiculo": "VEH-0010",
+  "id_servicio": "SRV-001135",
+  "fecha": "2026-06-24",
+  "tipo": "Suspensión",
+  "costo_MXN": 10724.69,
+  "kilometraje_km": 513043,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000069",
+  "id_vehiculo": "VEH-0010",
+  "id_servicio": "SRV-000779",
+  "fecha": "2026-03-30",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 11437.99,
+  "kilometraje_km": 404203,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000070",
+  "id_vehiculo": "VEH-0010",
+  "id_servicio": "SRV-000068",
+  "fecha": "2026-04-02",
+  "tipo": "Correctivo",
+  "costo_MXN": 13191.12,
+  "kilometraje_km": 525743,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000071",
+  "id_vehiculo": "VEH-0011",
+  "id_servicio": "SRV-001162",
+  "fecha": "2026-04-21",
+  "tipo": "Suspensión",
+  "costo_MXN": 11614.36,
+  "kilometraje_km": 446970,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000072",
+  "id_vehiculo": "VEH-0011",
+  "id_servicio": "SRV-000028",
+  "fecha": "2026-06-05",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 4856.75,
+  "kilometraje_km": 303338,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000073",
+  "id_vehiculo": "VEH-0011",
+  "id_servicio": "SRV-000028",
+  "fecha": "2026-06-05",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 9609.63,
+  "kilometraje_km": 506196,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000074",
+  "id_vehiculo": "VEH-0011",
+  "id_servicio": "SRV-000917",
+  "fecha": "2026-08-31",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 11064.59,
+  "kilometraje_km": 517576,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000075",
+  "id_vehiculo": "VEH-0011",
+  "id_servicio": "SRV-000528",
+  "fecha": "2026-08-12",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 4843.66,
+  "kilometraje_km": 590826,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000076",
+  "id_vehiculo": "VEH-0011",
+  "id_servicio": "SRV-000059",
+  "fecha": "2026-03-23",
+  "tipo": "Correctivo",
+  "costo_MXN": 6412.43,
+  "kilometraje_km": 362546,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000077",
+  "id_vehiculo": "VEH-0011",
+  "id_servicio": "SRV-000505",
+  "fecha": "2026-08-04",
+  "tipo": "Correctivo",
+  "costo_MXN": 5954.85,
+  "kilometraje_km": 116137,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000078",
+  "id_vehiculo": "VEH-0012",
+  "id_servicio": "SRV-000862",
+  "fecha": "2026-02-24",
+  "tipo": "Correctivo",
+  "costo_MXN": 12765.01,
+  "kilometraje_km": 494716,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000079",
+  "id_vehiculo": "VEH-0012",
+  "id_servicio": "SRV-000915",
+  "fecha": "2026-04-16",
+  "tipo": "Neumáticos",
+  "costo_MXN": 10523.6,
+  "kilometraje_km": 574101,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000080",
+  "id_vehiculo": "VEH-0012",
+  "id_servicio": "SRV-000038",
+  "fecha": "2026-08-24",
+  "tipo": "Suspensión",
+  "costo_MXN": 11229.53,
+  "kilometraje_km": 671576,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000081",
+  "id_vehiculo": "VEH-0012",
+  "id_servicio": "SRV-000939",
+  "fecha": "2025-12-22",
+  "tipo": "Preventivo",
+  "costo_MXN": 9218.37,
+  "kilometraje_km": 637674,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000082",
+  "id_vehiculo": "VEH-0012",
+  "id_servicio": "SRV-000469",
+  "fecha": "2026-03-23",
+  "tipo": "Frenos",
+  "costo_MXN": 5857.63,
+  "kilometraje_km": 661156,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000083",
+  "id_vehiculo": "VEH-0012",
+  "id_servicio": "SRV-000946",
+  "fecha": "2026-01-27",
+  "tipo": "Preventivo",
+  "costo_MXN": 6545.03,
+  "kilometraje_km": 79549,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000084",
+  "id_vehiculo": "VEH-0012",
+  "id_servicio": "SRV-000444",
+  "fecha": "2026-08-04",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 10429.02,
+  "kilometraje_km": 613599,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000085",
+  "id_vehiculo": "VEH-0013",
+  "id_servicio": "SRV-000606",
+  "fecha": "2026-01-12",
+  "tipo": "Frenos",
+  "costo_MXN": 7233.67,
+  "kilometraje_km": 227055,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000086",
+  "id_vehiculo": "VEH-0013",
+  "id_servicio": "SRV-000872",
+  "fecha": "2026-10-12",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 9549.95,
+  "kilometraje_km": 110497,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000087",
+  "id_vehiculo": "VEH-0013",
+  "id_servicio": "SRV-000493",
+  "fecha": "2026-05-21",
+  "tipo": "Preventivo",
+  "costo_MXN": 15676.03,
+  "kilometraje_km": 605210,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000088",
+  "id_vehiculo": "VEH-0013",
+  "id_servicio": "SRV-000529",
+  "fecha": "2026-03-02",
+  "tipo": "Preventivo",
+  "costo_MXN": 10230.14,
+  "kilometraje_km": 275064,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000089",
+  "id_vehiculo": "VEH-0013",
+  "id_servicio": "SRV-001055",
+  "fecha": "2025-12-02",
+  "tipo": "Neumáticos",
+  "costo_MXN": 5834.43,
+  "kilometraje_km": 341690,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000090",
+  "id_vehiculo": "VEH-0013",
+  "id_servicio": "SRV-000214",
+  "fecha": "2026-03-23",
+  "tipo": "Preventivo",
+  "costo_MXN": 5701.94,
+  "kilometraje_km": 543648,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000091",
+  "id_vehiculo": "VEH-0013",
+  "id_servicio": "SRV-000153",
+  "fecha": "2026-07-29",
+  "tipo": "Correctivo",
+  "costo_MXN": 6403.17,
+  "kilometraje_km": 458264,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000092",
+  "id_vehiculo": "VEH-0014",
+  "id_servicio": "SRV-000249",
+  "fecha": "2026-02-06",
+  "tipo": "Preventivo",
+  "costo_MXN": 8934.97,
+  "kilometraje_km": 587810,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000093",
+  "id_vehiculo": "VEH-0014",
+  "id_servicio": "SRV-000633",
+  "fecha": "2026-11-17",
+  "tipo": "Preventivo",
+  "costo_MXN": 3870.56,
+  "kilometraje_km": 242334,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000094",
+  "id_vehiculo": "VEH-0014",
+  "id_servicio": "SRV-000123",
+  "fecha": "2026-06-09",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 9243.91,
+  "kilometraje_km": 264598,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000095",
+  "id_vehiculo": "VEH-0014",
+  "id_servicio": "SRV-000875",
+  "fecha": "2026-05-14",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 11697.87,
+  "kilometraje_km": 639962,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000096",
+  "id_vehiculo": "VEH-0014",
+  "id_servicio": "SRV-000411",
+  "fecha": "2026-01-23",
+  "tipo": "Neumáticos",
+  "costo_MXN": 3708.26,
+  "kilometraje_km": 249090,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000097",
+  "id_vehiculo": "VEH-0014",
+  "id_servicio": "SRV-000634",
+  "fecha": "2026-03-24",
+  "tipo": "Correctivo",
+  "costo_MXN": 3937.62,
+  "kilometraje_km": 199268,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000098",
+  "id_vehiculo": "VEH-0014",
+  "id_servicio": "SRV-000212",
+  "fecha": "2026-10-22",
+  "tipo": "Suspensión",
+  "costo_MXN": 6418.16,
+  "kilometraje_km": 314925,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000099",
+  "id_vehiculo": "VEH-0015",
+  "id_servicio": "SRV-000636",
+  "fecha": "2026-06-05",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 8637.54,
+  "kilometraje_km": 431378,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000100",
+  "id_vehiculo": "VEH-0015",
+  "id_servicio": "SRV-000187",
+  "fecha": "2026-07-29",
+  "tipo": "Frenos",
+  "costo_MXN": 9015.2,
+  "kilometraje_km": 253784,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000101",
+  "id_vehiculo": "VEH-0015",
+  "id_servicio": "SRV-000206",
+  "fecha": "2026-07-13",
+  "tipo": "Preventivo",
+  "costo_MXN": 2730.9,
+  "kilometraje_km": 138153,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000102",
+  "id_vehiculo": "VEH-0015",
+  "id_servicio": "SRV-001184",
+  "fecha": "2026-08-19",
+  "tipo": "Suspensión",
+  "costo_MXN": 7680.08,
+  "kilometraje_km": 132342,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000103",
+  "id_vehiculo": "VEH-0015",
+  "id_servicio": "SRV-000944",
+  "fecha": "2026-07-03",
+  "tipo": "Correctivo",
+  "costo_MXN": 4882.69,
+  "kilometraje_km": 372416,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000104",
+  "id_vehiculo": "VEH-0015",
+  "id_servicio": "SRV-000944",
+  "fecha": "2026-07-03",
+  "tipo": "Preventivo",
+  "costo_MXN": 7407.43,
+  "kilometraje_km": 375099,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000105",
+  "id_vehiculo": "VEH-0015",
+  "id_servicio": "SRV-000256",
+  "fecha": "2026-08-24",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 6700.58,
+  "kilometraje_km": 353932,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000106",
+  "id_vehiculo": "VEH-0016",
+  "id_servicio": "SRV-000856",
+  "fecha": "2026-08-10",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 10826.95,
+  "kilometraje_km": 668238,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000107",
+  "id_vehiculo": "VEH-0016",
+  "id_servicio": "SRV-000044",
+  "fecha": "2026-08-18",
+  "tipo": "Suspensión",
+  "costo_MXN": 6129.1,
+  "kilometraje_km": 251993,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000108",
+  "id_vehiculo": "VEH-0016",
+  "id_servicio": "SRV-000966",
+  "fecha": "2026-01-14",
+  "tipo": "Suspensión",
+  "costo_MXN": 7147.49,
+  "kilometraje_km": 94847,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000109",
+  "id_vehiculo": "VEH-0016",
+  "id_servicio": "SRV-000555",
+  "fecha": "2026-07-16",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 12705.81,
+  "kilometraje_km": 600911,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000110",
+  "id_vehiculo": "VEH-0016",
+  "id_servicio": "SRV-000079",
+  "fecha": "2025-11-24",
+  "tipo": "Preventivo",
+  "costo_MXN": 9229.8,
+  "kilometraje_km": 164341,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000111",
+  "id_vehiculo": "VEH-0016",
+  "id_servicio": "SRV-001195",
+  "fecha": "2026-05-12",
+  "tipo": "Frenos",
+  "costo_MXN": 9459.36,
+  "kilometraje_km": 106763,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000112",
+  "id_vehiculo": "VEH-0016",
+  "id_servicio": "SRV-000886",
+  "fecha": "2025-12-16",
+  "tipo": "Correctivo",
+  "costo_MXN": 7181.54,
+  "kilometraje_km": 676537,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000113",
+  "id_vehiculo": "VEH-0017",
+  "id_servicio": "SRV-000825",
+  "fecha": "2026-06-10",
+  "tipo": "Correctivo",
+  "costo_MXN": 10178.68,
+  "kilometraje_km": 350808,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000114",
+  "id_vehiculo": "VEH-0017",
+  "id_servicio": "SRV-001172",
+  "fecha": "2026-08-12",
+  "tipo": "Frenos",
+  "costo_MXN": 6810.9,
+  "kilometraje_km": 185266,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000115",
+  "id_vehiculo": "VEH-0017",
+  "id_servicio": "SRV-000891",
+  "fecha": "2026-01-14",
+  "tipo": "Frenos",
+  "costo_MXN": 9945.22,
+  "kilometraje_km": 439199,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000116",
+  "id_vehiculo": "VEH-0017",
+  "id_servicio": "SRV-000842",
+  "fecha": "2025-12-26",
+  "tipo": "Frenos",
+  "costo_MXN": 4389.31,
+  "kilometraje_km": 304089,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000117",
+  "id_vehiculo": "VEH-0017",
+  "id_servicio": "SRV-000916",
+  "fecha": "2026-03-02",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 3548.96,
+  "kilometraje_km": 359370,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000118",
+  "id_vehiculo": "VEH-0017",
+  "id_servicio": "SRV-000276",
+  "fecha": "2026-09-02",
+  "tipo": "Suspensión",
+  "costo_MXN": 11064.39,
+  "kilometraje_km": 193023,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000119",
+  "id_vehiculo": "VEH-0017",
+  "id_servicio": "SRV-000613",
+  "fecha": "2026-05-06",
+  "tipo": "Neumáticos",
+  "costo_MXN": 11085.42,
+  "kilometraje_km": 168529,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000120",
+  "id_vehiculo": "VEH-0018",
+  "id_servicio": "SRV-000987",
+  "fecha": "2026-09-21",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 11850.33,
+  "kilometraje_km": 543384,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000121",
+  "id_vehiculo": "VEH-0018",
+  "id_servicio": "SRV-000515",
+  "fecha": "2025-12-04",
+  "tipo": "Frenos",
+  "costo_MXN": 18246.94,
+  "kilometraje_km": 500724,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000122",
+  "id_vehiculo": "VEH-0018",
+  "id_servicio": "SRV-000067",
+  "fecha": "2026-04-08",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 12811.39,
+  "kilometraje_km": 229867,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000123",
+  "id_vehiculo": "VEH-0018",
+  "id_servicio": "SRV-000737",
+  "fecha": "2026-01-15",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 11362.07,
+  "kilometraje_km": 349657,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000124",
+  "id_vehiculo": "VEH-0018",
+  "id_servicio": "SRV-000987",
+  "fecha": "2026-09-21",
+  "tipo": "Suspensión",
+  "costo_MXN": 16929.55,
+  "kilometraje_km": 636449,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000125",
+  "id_vehiculo": "VEH-0018",
+  "id_servicio": "SRV-000889",
+  "fecha": "2026-02-20",
+  "tipo": "Preventivo",
+  "costo_MXN": 10504.45,
+  "kilometraje_km": 295064,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000126",
+  "id_vehiculo": "VEH-0018",
+  "id_servicio": "SRV-000164",
+  "fecha": "2025-12-11",
+  "tipo": "Correctivo",
+  "costo_MXN": 9885.19,
+  "kilometraje_km": 76831,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000127",
+  "id_vehiculo": "VEH-0019",
+  "id_servicio": "SRV-000680",
+  "fecha": "2026-09-08",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 10424.0,
+  "kilometraje_km": 478048,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000128",
+  "id_vehiculo": "VEH-0019",
+  "id_servicio": "SRV-001153",
+  "fecha": "2026-06-19",
+  "tipo": "Neumáticos",
+  "costo_MXN": 10583.66,
+  "kilometraje_km": 547278,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000129",
+  "id_vehiculo": "VEH-0019",
+  "id_servicio": "SRV-000818",
+  "fecha": "2026-05-15",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 6932.55,
+  "kilometraje_km": 373136,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000130",
+  "id_vehiculo": "VEH-0019",
+  "id_servicio": "SRV-001061",
+  "fecha": "2026-04-24",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 4920.75,
+  "kilometraje_km": 691762,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000131",
+  "id_vehiculo": "VEH-0019",
+  "id_servicio": "SRV-000818",
+  "fecha": "2026-05-15",
+  "tipo": "Preventivo",
+  "costo_MXN": 10968.87,
+  "kilometraje_km": 57515,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000132",
+  "id_vehiculo": "VEH-0019",
+  "id_servicio": "SRV-000345",
+  "fecha": "2026-05-07",
+  "tipo": "Correctivo",
+  "costo_MXN": 14865.14,
+  "kilometraje_km": 364507,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000133",
+  "id_vehiculo": "VEH-0019",
+  "id_servicio": "SRV-001161",
+  "fecha": "2026-10-16",
+  "tipo": "Neumáticos",
+  "costo_MXN": 15851.16,
+  "kilometraje_km": 624280,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000134",
+  "id_vehiculo": "VEH-0020",
+  "id_servicio": "SRV-000269",
+  "fecha": "2026-07-03",
+  "tipo": "Neumáticos",
+  "costo_MXN": 11837.96,
+  "kilometraje_km": 667287,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000135",
+  "id_vehiculo": "VEH-0020",
+  "id_servicio": "SRV-000109",
+  "fecha": "2026-02-20",
+  "tipo": "Suspensión",
+  "costo_MXN": 16005.88,
+  "kilometraje_km": 590890,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000136",
+  "id_vehiculo": "VEH-0020",
+  "id_servicio": "SRV-000356",
+  "fecha": "2026-02-20",
+  "tipo": "Correctivo",
+  "costo_MXN": 9771.15,
+  "kilometraje_km": 453591,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000137",
+  "id_vehiculo": "VEH-0020",
+  "id_servicio": "SRV-000637",
+  "fecha": "2026-07-10",
+  "tipo": "Suspensión",
+  "costo_MXN": 10300.97,
+  "kilometraje_km": 190471,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000138",
+  "id_vehiculo": "VEH-0020",
+  "id_servicio": "SRV-001138",
+  "fecha": "2026-01-01",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 5484.14,
+  "kilometraje_km": 320862,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000139",
+  "id_vehiculo": "VEH-0020",
+  "id_servicio": "SRV-000706",
+  "fecha": "2025-12-09",
+  "tipo": "Frenos",
+  "costo_MXN": 5392.76,
+  "kilometraje_km": 206399,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000140",
+  "id_vehiculo": "VEH-0020",
+  "id_servicio": "SRV-000147",
+  "fecha": "2026-09-16",
+  "tipo": "Suspensión",
+  "costo_MXN": 13367.21,
+  "kilometraje_km": 144006,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000141",
+  "id_vehiculo": "VEH-0021",
+  "id_servicio": "SRV-000565",
+  "fecha": "2025-12-12",
+  "tipo": "Suspensión",
+  "costo_MXN": 11599.75,
+  "kilometraje_km": 508215,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000142",
+  "id_vehiculo": "VEH-0021",
+  "id_servicio": "SRV-001002",
+  "fecha": "2026-05-04",
+  "tipo": "Suspensión",
+  "costo_MXN": 12940.49,
+  "kilometraje_km": 251474,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000143",
+  "id_vehiculo": "VEH-0021",
+  "id_servicio": "SRV-000501",
+  "fecha": "2026-04-08",
+  "tipo": "Neumáticos",
+  "costo_MXN": 11830.15,
+  "kilometraje_km": 658587,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000144",
+  "id_vehiculo": "VEH-0021",
+  "id_servicio": "SRV-001083",
+  "fecha": "2026-01-05",
+  "tipo": "Correctivo",
+  "costo_MXN": 7408.98,
+  "kilometraje_km": 638945,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000145",
+  "id_vehiculo": "VEH-0021",
+  "id_servicio": "SRV-000751",
+  "fecha": "2026-11-11",
+  "tipo": "Frenos",
+  "costo_MXN": 14480.4,
+  "kilometraje_km": 380614,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000146",
+  "id_vehiculo": "VEH-0021",
+  "id_servicio": "SRV-000334",
+  "fecha": "2026-07-20",
+  "tipo": "Frenos",
+  "costo_MXN": 14181.89,
+  "kilometraje_km": 479151,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000147",
+  "id_vehiculo": "VEH-0021",
+  "id_servicio": "SRV-000321",
+  "fecha": "2026-07-13",
+  "tipo": "Frenos",
+  "costo_MXN": 10300.32,
+  "kilometraje_km": 101473,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000148",
+  "id_vehiculo": "VEH-0022",
+  "id_servicio": "SRV-000165",
+  "fecha": "2026-10-28",
+  "tipo": "Frenos",
+  "costo_MXN": 10730.65,
+  "kilometraje_km": 149064,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000149",
+  "id_vehiculo": "VEH-0022",
+  "id_servicio": "SRV-000196",
+  "fecha": "2026-10-08",
+  "tipo": "Suspensión",
+  "costo_MXN": 10260.46,
+  "kilometraje_km": 404359,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000150",
+  "id_vehiculo": "VEH-0022",
+  "id_servicio": "SRV-000721",
+  "fecha": "2026-07-02",
+  "tipo": "Preventivo",
+  "costo_MXN": 15856.89,
+  "kilometraje_km": 230834,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000151",
+  "id_vehiculo": "VEH-0022",
+  "id_servicio": "SRV-000666",
+  "fecha": "2026-10-21",
+  "tipo": "Preventivo",
+  "costo_MXN": 8696.22,
+  "kilometraje_km": 198193,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000152",
+  "id_vehiculo": "VEH-0022",
+  "id_servicio": "SRV-000978",
+  "fecha": "2026-01-07",
+  "tipo": "Frenos",
+  "costo_MXN": 8680.62,
+  "kilometraje_km": 530230,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000153",
+  "id_vehiculo": "VEH-0022",
+  "id_servicio": "SRV-000007",
+  "fecha": "2026-01-08",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 7318.67,
+  "kilometraje_km": 556779,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000154",
+  "id_vehiculo": "VEH-0022",
+  "id_servicio": "SRV-000959",
+  "fecha": "2026-01-19",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 14576.61,
+  "kilometraje_km": 658516,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000155",
+  "id_vehiculo": "VEH-0023",
+  "id_servicio": "SRV-000841",
+  "fecha": "2026-09-29",
+  "tipo": "Preventivo",
+  "costo_MXN": 17457.84,
+  "kilometraje_km": 283219,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000156",
+  "id_vehiculo": "VEH-0023",
+  "id_servicio": "SRV-000819",
+  "fecha": "2026-07-29",
+  "tipo": "Neumáticos",
+  "costo_MXN": 17331.57,
+  "kilometraje_km": 132558,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000157",
+  "id_vehiculo": "VEH-0023",
+  "id_servicio": "SRV-000293",
+  "fecha": "2025-12-09",
+  "tipo": "Neumáticos",
+  "costo_MXN": 17469.63,
+  "kilometraje_km": 151437,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000158",
+  "id_vehiculo": "VEH-0023",
+  "id_servicio": "SRV-000562",
+  "fecha": "2025-12-30",
+  "tipo": "Correctivo",
+  "costo_MXN": 6550.55,
+  "kilometraje_km": 164247,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000159",
+  "id_vehiculo": "VEH-0023",
+  "id_servicio": "SRV-000531",
+  "fecha": "2026-05-04",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 14361.32,
+  "kilometraje_km": 175344,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000160",
+  "id_vehiculo": "VEH-0023",
+  "id_servicio": "SRV-000302",
+  "fecha": "2026-06-23",
+  "tipo": "Correctivo",
+  "costo_MXN": 10726.7,
+  "kilometraje_km": 272928,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000161",
+  "id_vehiculo": "VEH-0023",
+  "id_servicio": "SRV-000967",
+  "fecha": "2026-09-04",
+  "tipo": "Preventivo",
+  "costo_MXN": 15458.26,
+  "kilometraje_km": 557104,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000162",
+  "id_vehiculo": "VEH-0024",
+  "id_servicio": "SRV-000423",
+  "fecha": "2026-02-04",
+  "tipo": "Correctivo",
+  "costo_MXN": 9205.56,
+  "kilometraje_km": 66601,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000163",
+  "id_vehiculo": "VEH-0024",
+  "id_servicio": "SRV-001026",
+  "fecha": "2026-08-27",
+  "tipo": "Correctivo",
+  "costo_MXN": 17969.23,
+  "kilometraje_km": 420949,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000164",
+  "id_vehiculo": "VEH-0024",
+  "id_servicio": "SRV-000924",
+  "fecha": "2026-08-14",
+  "tipo": "Correctivo",
+  "costo_MXN": 16250.89,
+  "kilometraje_km": 176338,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000165",
+  "id_vehiculo": "VEH-0024",
+  "id_servicio": "SRV-000012",
+  "fecha": "2026-07-06",
+  "tipo": "Correctivo",
+  "costo_MXN": 10239.51,
+  "kilometraje_km": 477040,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000166",
+  "id_vehiculo": "VEH-0024",
+  "id_servicio": "SRV-000012",
+  "fecha": "2026-07-06",
+  "tipo": "Preventivo",
+  "costo_MXN": 10834.35,
+  "kilometraje_km": 679639,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000167",
+  "id_vehiculo": "VEH-0024",
+  "id_servicio": "SRV-000543",
+  "fecha": "2026-07-02",
+  "tipo": "Suspensión",
+  "costo_MXN": 11372.88,
+  "kilometraje_km": 593321,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000168",
+  "id_vehiculo": "VEH-0024",
+  "id_servicio": "SRV-000611",
+  "fecha": "2026-05-05",
+  "tipo": "Sistema eléctrico",
+  "costo_MXN": 9407.67,
+  "kilometraje_km": 423814,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000169",
+  "id_vehiculo": "VEH-0025",
+  "id_servicio": "SRV-000980",
+  "fecha": "2026-04-24",
+  "tipo": "Suspensión",
+  "costo_MXN": 23179.4,
+  "kilometraje_km": 80240,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000170",
+  "id_vehiculo": "VEH-0025",
+  "id_servicio": "SRV-001103",
+  "fecha": "2026-05-13",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 8965.75,
+  "kilometraje_km": 695238,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000171",
+  "id_vehiculo": "VEH-0025",
+  "id_servicio": "SRV-000283",
+  "fecha": "2026-10-13",
+  "tipo": "Correctivo",
+  "costo_MXN": 19464.54,
+  "kilometraje_km": 515278,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000172",
+  "id_vehiculo": "VEH-0025",
+  "id_servicio": "SRV-000152",
+  "fecha": "2026-06-30",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 18487.09,
+  "kilometraje_km": 366087,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000173",
+  "id_vehiculo": "VEH-0025",
+  "id_servicio": "SRV-000431",
+  "fecha": "2026-08-06",
+  "tipo": "Aceite y filtros",
+  "costo_MXN": 7972.53,
+  "kilometraje_km": 257006,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000174",
+  "id_vehiculo": "VEH-0025",
+  "id_servicio": "SRV-000431",
+  "fecha": "2026-08-06",
+  "tipo": "Preventivo",
+  "costo_MXN": 23499.97,
+  "kilometraje_km": 112881,
+  "naturaleza": "DEMO"
+ },
+ {
+  "id": "MANT-000175",
+  "id_vehiculo": "VEH-0025",
+  "id_servicio": "SRV-000283",
+  "fecha": "2026-10-13",
+  "tipo": "Neumáticos",
+  "costo_MXN": 9516.49,
+  "kilometraje_km": 276988,
+  "naturaleza": "DEMO"
+ }
+]
