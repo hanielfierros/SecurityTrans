@@ -1180,19 +1180,29 @@ function enlacesGoogle(texto) {
   return out;
 }
 
+// Extrae un par lat,lon de un texto (acepta '+' como espacio y coma opcional).
+function extraerCoordenadas(texto) {
+  if (!texto) return null;
+  const s = String(texto).replace(/\+/g, " ");
+  const m = s.match(/(-?\d{1,2}(?:\.\d+)?)\s*,\s*(-?\d{1,3}(?:\.\d+)?)/);
+  if (!m) return null;
+  const lat = parseFloat(m[1]), lon = parseFloat(m[2]);
+  if (Number.isFinite(lat) && Number.isFinite(lon) && lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180) {
+    return { lat, lon };
+  }
+  return null;
+}
+
+// Extrae coordenadas explícitas de URLs de Google Maps:
+//   ?q=LAT,LON · ?query=LAT,LON · /maps/search/LAT,LON · /maps/@LAT,LON,z · /maps/place/LAT,LON
 function parsearCoordenadas(url) {
   try {
     const u = new URL(url);
-    const q = u.searchParams.get("q") || u.searchParams.get("query") || "";
-    if (q) {
-      const m = q.match(/^(-?\d{1,2}(?:\.\d+)?)\s*,\s*(-?\d{1,3}(?:\.\d+)?)$/);
-      if (m) {
-        const lat = parseFloat(m[1]), lon = parseFloat(m[2]);
-        if (Number.isFinite(lat) && Number.isFinite(lon) && lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180) {
-          return { lat, lon };
-        }
-      }
-    }
+    const q = u.searchParams.get("q") || u.searchParams.get("query") || u.searchParams.get("ll") || "";
+    const deQuery = extraerCoordenadas(q);
+    if (deQuery) return deQuery;
+    const path = decodeURIComponent(u.pathname || "");
+    return extraerCoordenadas(path);
   } catch (e) {}
   return null;
 }
@@ -1444,24 +1454,36 @@ async function resolverYAgregar(clave, url, m, mensajeId, sid) {
   const cacheClave = sid + "|" + mensajeId + "|" + url;
   const ultimoFallo = mapaReintentos.get(cacheClave) || 0;
   if (Date.now() - ultimoFallo < MAPA_REINTENTO_MS) return;
+  // Coordenadas explícitas en la propia URL (respaldo sin depender del backend).
+  const local = parsearCoordenadas(url);
   try {
-    // Incluso los enlaces con coordenadas directas deben pasar por Wix para persistirlos.
+    // Wix sigue siendo la fuente de verdad y persiste la ubicación.
     const r = await WixApi.resolverUbicacion(sid, mensajeId, url);
     if (sid !== servicioIdActual) return;
     const d = r?.data || {};
     const lat = Number(d.latitud), lon = Number(d.longitud);
-    if (d.resuelto && Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat)<=90 && Math.abs(lon)<=180) {
+    if (d.resuelto && Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat) <= 90 && Math.abs(lon) <= 180) {
       mapaReintentos.delete(cacheClave);
-      agregarUbicacionConfirmada(clave, {lat,lon}, m, mensajeId, url, sid, d.etiqueta);
+      agregarUbicacionConfirmada(clave, { lat, lon }, m, mensajeId, url, sid, d.etiqueta);
+      return;
+    }
+    // Respaldo: usar coordenadas explícitas del enlace si el backend no las resolvió.
+    if (local) {
+      mapaReintentos.delete(cacheClave);
+      agregarUbicacionConfirmada(clave, local, m, mensajeId, url, sid, "Coordenadas del enlace");
+      return;
+    }
+    mapaReintentos.set(cacheClave, Date.now());
+    console.warn("SECURITYTRANS: enlace no resuelto:", d.motivo || "sin coordenadas exactas");
+    marcarChip(mensajeId, "no_resuelto", url);
+  } catch (e) {
+    if (local) {
+      agregarUbicacionConfirmada(clave, local, m, mensajeId, url, sid, "Coordenadas del enlace");
     } else {
       mapaReintentos.set(cacheClave, Date.now());
-      console.warn("SECURITYTRANS: enlace no resuelto:", d.motivo || "sin coordenadas exactas");
-      marcarChip(mensajeId, "no_resuelto", url);
+      console.warn("SECURITYTRANS: fallo de resolución:", e.message);
+      if (sid === servicioIdActual) marcarChip(mensajeId, "no_resuelto", url);
     }
-  } catch (e) {
-    mapaReintentos.set(cacheClave, Date.now());
-    console.warn("SECURITYTRANS: fallo de resolución:", e.message);
-    if (sid === servicioIdActual) marcarChip(mensajeId, "no_resuelto", url);
   }
 }
 
