@@ -91,9 +91,21 @@
               <option value="DEMO">Demo (simulado)</option>
             </select>
           </label>
+          <label>Servicio (folio)
+            <input type="search" id="F_SERVICIO" placeholder="p. ej. SRV-000001">
+          </label>
+          <label>Tipo de incidencia
+            <select id="F_TIPO_INCIDENCIA">
+              <option value="">Todos</option>
+              <option value="con_fallas">Con fallas</option>
+              <option value="con_incidencias">Con incidencias</option>
+              <option value="con_retraso">Con retraso (&gt;2 h)</option>
+            </select>
+          </label>
           <div class="filter-actions">
             <button class="btn primary" id="B_APLICAR_FILTROS">Aplicar filtros</button>
             <button class="btn" id="B_LIMPIAR_FILTROS">Limpiar filtros</button>
+            <button class="btn" id="B_RESTABLECER">Restablecer vista</button>
           </div>
         </div>
         <p class="filter-summary" id="FILTER_SUMMARY"></p>
@@ -110,9 +122,17 @@
       </div>
     </section>
 
-    <!-- R05 Centro de análisis (6 módulos, 58 botones) -->
+    <!-- R05 Áreas de análisis rápido (DATA MANAGEMENT 2.0) -->
+    <section class="region" id="R_AREAS" aria-label="Áreas de análisis rápido">
+      <div class="region-title">Áreas de análisis rápido · 8 áreas</div>
+      <div class="region-body">
+        <div id="DM_AREAS"></div>
+      </div>
+    </section>
+
+    <!-- R06 Centro de análisis (6 módulos, 58 botones) -->
     <section class="region" id="R_DATA_MODULES" aria-label="Centro de análisis">
-      <div class="region-title">Centro de análisis · 6 módulos</div>
+      <div class="region-title">Centro de análisis · 6 módulos · 58 análisis</div>
       <div class="region-body">
         <div id="DM_MODULES"></div>
       </div>

@@ -14,7 +14,7 @@ import { DataManager as DM } from "./data-management-data.js";
 import * as G from "./charts.js";
 import * as CMP from "./comparisons.js";
 import * as SCI from "./scientific-models.js";
-import { MODULOS, ejecutar, renderResultado } from "./data-management-analytics.js";
+import { MODULOS, AREAS, ejecutar, renderResultado } from "./data-management-analytics.js";
 
 let rawServicios = [];
 let serviciosNorm = [];
@@ -24,6 +24,7 @@ let historial = null;
 let filtradosNorm = [];
 let filtradosRaw = [];
 let analisisActual = null;
+let areaActual = null;
 let marcaDemo = "DATOS DEMO — INFORMACIÓN SIMULADA";
 
 // Estado del filtro global
@@ -38,6 +39,8 @@ const filtroState = {
   estadoServicio: "",
   integridad: "",
   naturaleza: "",
+  servicio: "",
+  tipoIncidencia: "",
 };
 
 const COLS_TABLA = [
@@ -72,6 +75,7 @@ async function init() {
     renderKpis();
     renderChartTabs();
     renderModulos();
+    renderAreas();
     CMP.init(filtradosRaw);
     renderTabla();
     await SCI.init();
@@ -133,6 +137,8 @@ function renderFiltros() {
   set("F_ESTADO_SERVICIO", filtroState.estadoServicio);
   set("F_INTEGRIDAD", filtroState.integridad);
   set("F_NATURALEZA", filtroState.naturaleza);
+  set("F_SERVICIO", filtroState.servicio);
+  set("F_TIPO_INCIDENCIA", filtroState.tipoIncidencia);
 
   llenarSelect("F_OPERADOR", catalogos.operadores.map(x => [x.ID_OPERADOR, x.nombre]));
   llenarSelect("F_VEHICULO", catalogos.vehiculos.map(x => [x.ID_VEHICULO, x.unidad_referencia + " · " + x.modelo_operativo]));
@@ -151,6 +157,8 @@ function renderFiltros() {
 function bindFilterEvents() {
   document.getElementById("B_APLICAR_FILTROS").addEventListener("click", aplicarFiltros);
   document.getElementById("B_LIMPIAR_FILTROS").addEventListener("click", limpiarFiltros);
+  const bReset = document.getElementById("B_RESTABLECER");
+  if (bReset) bReset.addEventListener("click", restablecerVista);
   document.getElementById("F_RANGO").addEventListener("change", () => {
     const personalizado = document.getElementById("F_RANGO").value === "custom";
     document.getElementById("F_FECHA_INI").disabled = !personalizado;
@@ -179,6 +187,8 @@ function leerFiltros() {
     estadoServicio: g("F_ESTADO_SERVICIO"),
     integridad: g("F_INTEGRIDAD"),
     naturaleza: g("F_NATURALEZA"),
+    servicio: g("F_SERVICIO"),
+    tipoIncidencia: g("F_TIPO_INCIDENCIA"),
   };
 }
 
@@ -197,6 +207,10 @@ function cumpleFiltro(s, f) {
   if (f.ruta && s.id_ruta !== f.ruta) return false;
   if (f.naturaleza && s.naturaleza !== f.naturaleza) return false;
   if (f.estadoServicio && s.estado_servicio !== f.estadoServicio) return false;
+  if (f.servicio && !String(s.folio).toLowerCase().includes(f.servicio.toLowerCase())) return false;
+  if (f.tipoIncidencia === "con_fallas" && !((s.fallas || 0) > 0)) return false;
+  if (f.tipoIncidencia === "con_incidencias" && !((s.incidencias || 0) > 0)) return false;
+  if (f.tipoIncidencia === "con_retraso" && !((s.retraso_h || 0) > 2)) return false;
 
   if (f.tipoUnidad) {
     const v = catalogos.vehiculos.find(x => x.ID_VEHICULO === s.id_vehiculo);
@@ -235,12 +249,21 @@ function aplicarFiltros() {
 
   // Redibuja el último análisis con los datos ya filtrados (contexto compartido).
   if (analisisActual) ejecutarAnalisis(analisisActual.id, analisisActual.moduloId);
+  if (areaActual) ejecutarArea(areaActual.id, areaActual.areaId);
 }
 
 function limpiarFiltros() {
-  Object.assign(filtroState, { rango: "todos", fechaIni: "", fechaFin: "", operador: "", vehiculo: "", ruta: "", tipoUnidad: "", estadoServicio: "", integridad: "", naturaleza: "" });
+  Object.assign(filtroState, { rango: "todos", fechaIni: "", fechaFin: "", operador: "", vehiculo: "", ruta: "", tipoUnidad: "", estadoServicio: "", integridad: "", naturaleza: "", servicio: "", tipoIncidencia: "" });
   renderFiltros();
   aplicarFiltros();
+}
+
+function restablecerVista() {
+  limpiarFiltros();
+  analisisActual = null;
+  MODULOS.forEach(m => { const a = document.getElementById("DM_RESULT_" + m.id); if (a) a.innerHTML = ""; const r = document.getElementById("DM_RECENT_" + m.id); if (r) r.innerHTML = ""; });
+  AREAS.forEach(a => { const r = document.getElementById("DM_AREA_RESULT_" + a.id); if (r) r.innerHTML = ""; const rec = document.getElementById("DM_AREA_RECENT_" + a.id); if (rec) rec.innerHTML = ""; });
+  document.getElementById("R_MAIN").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function actualizarResumenFiltros() {
@@ -383,12 +406,53 @@ function actualizarEstadoModulos() {
   });
 }
 
+function ctxActual() {
+  return { servicios: filtradosNorm, data: { catalogos, historial, vehiculos: catalogos.vehiculos, operadores: catalogos.operadores, rutas: catalogos.rutas, disponibilidad: DM.disponibilidad(filtradosNorm), actualizado: new Date().toISOString() } };
+}
+
 function ejecutarAnalisis(id, moduloId) {
   analisisActual = { id, moduloId };
   const area = document.getElementById("DM_RESULT_" + moduloId);
   const recent = document.getElementById("DM_RECENT_" + moduloId);
-  const ctx = { servicios: filtradosNorm, data: { catalogos, historial, vehiculos: catalogos.vehiculos, operadores: catalogos.operadores, rutas: catalogos.rutas, disponibilidad: DM.disponibilidad(filtradosNorm), actualizado: new Date().toISOString() } };
-  const resultado = ejecutar(id, ctx);
+  const resultado = ejecutar(id, ctxActual());
+  renderResultado(resultado, area);
+  if (recent) recent.innerHTML = `<strong>Último análisis:</strong> ${resultado.titulo}`;
+  area.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function renderAreas() {
+  const cont = document.getElementById("DM_AREAS");
+  if (!cont) return;
+  cont.innerHTML = AREAS.map(a => `
+    <section class="region dm-module" id="DM_AREA_${a.id}" aria-label="${a.titulo}">
+      <div class="region-title">${a.icono} ${a.titulo}</div>
+      <div class="region-body">
+        <p class="dm-desc">${a.desc}</p>
+        <div class="dm-button-grid" id="DM_AREA_BUTTONS_${a.id}"></div>
+        <div class="dm-recent" id="DM_AREA_RECENT_${a.id}"></div>
+        <div class="dm-result-area" id="DM_AREA_RESULT_${a.id}"></div>
+      </div>
+    </section>
+  `).join("");
+  AREAS.forEach(a => {
+    const grid = document.getElementById("DM_AREA_BUTTONS_" + a.id);
+    a.botones.forEach(b => {
+      const btn = document.createElement("button");
+      btn.className = "btn dm-btn";
+      btn.textContent = b.label;
+      btn.dataset.id = b.id;
+      btn.setAttribute("aria-label", b.id + " — " + b.label);
+      btn.addEventListener("click", () => ejecutarArea(b.id, a.id));
+      grid.appendChild(btn);
+    });
+  });
+}
+
+function ejecutarArea(id, areaId) {
+  areaActual = { id, areaId };
+  const area = document.getElementById("DM_AREA_RESULT_" + areaId);
+  const recent = document.getElementById("DM_AREA_RECENT_" + areaId);
+  const resultado = ejecutar(id, ctxActual());
   renderResultado(resultado, area);
   if (recent) recent.innerHTML = `<strong>Último análisis:</strong> ${resultado.titulo}`;
   area.scrollIntoView({ behavior: "smooth", block: "nearest" });

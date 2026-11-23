@@ -291,7 +291,7 @@ function agregarPorMes(servicios) {
   const m = new Map();
   servicios.forEach(s => {
     const mes = s.fecha ? s.fecha.slice(0, 7) : "N/D";
-    if (!m.has(mes)) m.set(mes, { mes, costo: 0, presupuesto: 0, litros: 0, ingresos: 0, utilidad: 0, n: 0, km: 0 });
+    if (!m.has(mes)) m.set(mes, { mes, costo: 0, presupuesto: 0, litros: 0, ingresos: 0, utilidad: 0, n: 0, km: 0, casetas: 0, mantenimiento: 0, otros: 0, fallas: 0, incidencias: 0 });
     const e = m.get(mes);
     e.costo += (s.costo_consumo_MXN || 0);
     e.presupuesto += (s.presupuesto_MXN || 0);
@@ -299,6 +299,11 @@ function agregarPorMes(servicios) {
     e.ingresos += (s.ingresos_MXN || 0);
     e.utilidad += (s.utilidad_MXN || 0);
     e.km += (s.distancia_km || 0);
+    e.casetas += (s.costo_casetas_MXN || 0);
+    e.mantenimiento += (s.costo_mantenimiento_MXN || 0);
+    e.otros += (s.otros_gastos_MXN || 0);
+    e.fallas += (s.fallas || 0);
+    e.incidencias += (s.incidencias || 0);
     e.n += 1;
   });
   return [...m.values()].sort((a, b) => a.mes.localeCompare(b.mes));
@@ -1361,10 +1366,143 @@ ANALISIS.F10 = (ctx) => {
 };
 
 // ---------------------------------------------------------------------------
+// Análisis rápidos adicionales (áreas temáticas DATA MANAGEMENT 2.0)
+// ---------------------------------------------------------------------------
+function pctDe(x, t) { return (t > 0 && x != null) ? DM.fmtPct(x / t * 100, 1) : "N/D"; }
+
+const ANALISIS_RAPIDOS = {
+  "Q_DIST_GASTOS": (ctx) => {
+    const a = DM.agregados(ctx.servicios);
+    const total = a.costo + a.casetas + a.mantenimiento + a.otros;
+    const filas = [
+      ["Combustible", a.costo], ["Casetas", a.casetas],
+      ["Mantenimiento", a.mantenimiento], ["Otros gastos", a.otros],
+    ];
+    return componer(ctx, {
+      titulo: "Distribución de gastos",
+      kpis: filas.map(([l, v]) => ({ label: l, value: DM.fmtMXN(v), unit: "MXN", note: pctDe(v, total) })),
+      tabla: { headers: ["Componente", "Monto (MXN)", "% del total"], filas: filas.map(([l, v]) => [l, DM.fmtMXN(v), pctDe(v, total)]) },
+      grafica: { tipo: "bar", xData: filas.map(f => f[0]), yName: "MXN", series: [{ name: "Gasto", data: filas.map(f => +f[1].toFixed(2)) }] },
+      explicacion: "El combustible representa " + pctDe(a.costo, total) + " del gasto operativo total (" + DM.fmtMXN(total) + " MXN).",
+      formula: "componente % = componente / Σ costo_operativo_total × 100.",
+    });
+  },
+
+  "Q_MANT_POR_KM": (ctx) => {
+    const unidades = gruposUnidades(ctx);
+    const orden = ordenar(unidades, u => u.a.km > 0 ? u.a.mantenimiento / u.a.km : null, true);
+    return componer(ctx, {
+      titulo: "Mantenimiento por kilómetro",
+      kpis: [{ label: "Unidades", value: String(orden.length), unit: "", note: "" }],
+      tabla: { headers: ["Unidad", "Servicios", "km", "Mantenimiento (MXN)", "MXN/km"], filas: orden.map(u => [nombreVehiculo(u.clave, ctx.data), u.n, DM.fmtNum(u.a.km, 0), DM.fmtMXN(u.a.mantenimiento), DM.fmtNum(u.a.km > 0 ? u.a.mantenimiento / u.a.km : null, 2)]) },
+      grafica: { tipo: "hbar", xData: orden.map(u => nombreVehiculo(u.clave, ctx.data)), series: [{ name: "MXN/km", data: orden.map(u => +(u.a.km > 0 ? u.a.mantenimiento / u.a.km : 0).toFixed(2)) }] },
+      explicacion: "Costo de mantenimiento por kilómetro recorrido, por unidad.",
+      formula: "MXN/km mantenimiento = Σ costo_mantenimiento_MXN / Σ km por unidad.",
+    });
+  },
+
+  "Q_MANT_EVOL": (ctx) => {
+    const meses = agregarPorMes(ctx.servicios).map(m => ({ mes: m.mes, mant: m.mantenimiento }));
+    return componer(ctx, {
+      titulo: "Evolución del gasto de mantenimiento",
+      kpis: [{ label: "Mantenimiento total", value: DM.fmtMXN(ctx.servicios.reduce((a, s) => a + (s.costo_mantenimiento_MXN || 0), 0)), unit: "MXN", note: "" }],
+      tabla: { headers: ["Mes", "Mantenimiento (MXN)"], filas: meses.map(x => [x.mes, DM.fmtMXN(x.mant)]) },
+      grafica: { tipo: "line", xData: meses.map(x => x.mes), yName: "MXN", series: [{ name: "Mantenimiento", data: meses.map(x => +x.mant.toFixed(2)) }] },
+      explicacion: "Evolución mensual del gasto de mantenimiento en el periodo.",
+      formula: "mantenimiento mensual = Σ costo_mantenimiento_MXN por mes.",
+    });
+  },
+
+  "Q_INCI_TIPO": (ctx) => {
+    const tipos = [
+      ["Fallas", ctx.servicios.filter(s => (s.fallas || 0) > 0).length],
+      ["Retraso > 2 h", ctx.servicios.filter(s => (s.retraso_h || 0) > 2).length],
+      ["Diferencia no explicada > 5 L", ctx.servicios.filter(s => (s.diferencia_no_explicada_L || 0) > DM.UMBRAL_DIF_NO_EXPLICADA_L).length],
+      ["Ralentí > 2 h", ctx.servicios.filter(s => (s.tiempo_ralenti_h || 0) > DM.UMBRAL_RALENTI_H).length],
+    ];
+    return componer(ctx, {
+      titulo: "Incidencias por tipo",
+      kpis: tipos.map(([l, v]) => ({ label: l, value: String(v), unit: "", note: "servicios" })),
+      tabla: { headers: ["Tipo de señal", "Servicios afectados"], filas: tipos.map(([l, v]) => [l, String(v)]) },
+      grafica: { tipo: "bar", xData: tipos.map(t => t[0]), yName: "Servicios", series: [{ name: "Servicios", data: tipos.map(t => t[1]) }] },
+      explicacion: "Distribución de señales de incidencia por tipo. Una anomalía es una desviación estadística o una regla disparada; no se afirma fraude ni error humano.",
+      formula: "señal = regla determinista (fallas, retraso, diferencia no explicada o ralentí).",
+    });
+  },
+
+  "Q_INCI_VEHICULO": (ctx) => {
+    const unidades = gruposUnidades(ctx);
+    const orden = ordenar(unidades, u => u.a.incidencias, true);
+    return componer(ctx, {
+      titulo: "Incidencias por vehículo",
+      kpis: [{ label: "Total de incidencias", value: String(ctx.servicios.reduce((a, s) => a + (s.incidencias || 0), 0)), unit: "", note: "" }],
+      tabla: { headers: ["Unidad", "Servicios", "Incidencias", "Fallas"], filas: orden.map(u => [nombreVehiculo(u.clave, ctx.data), u.n, u.a.incidencias, u.a.fallas]) },
+      grafica: { tipo: "hbar", xData: orden.map(u => nombreVehiculo(u.clave, ctx.data)), series: [{ name: "Incidencias", data: orden.map(u => u.a.incidencias) }] },
+      explicacion: "Incidencias registradas por vehículo en el periodo.",
+      formula: "incidencias = Σ incidencias por unidad.",
+    });
+  },
+
+  "Q_INCI_EVOL": (ctx) => {
+    const meses = agregarPorMes(ctx.servicios).map(m => ({ mes: m.mes, inc: m.incidencias }));
+    return componer(ctx, {
+      titulo: "Evolución temporal de incidencias",
+      kpis: [{ label: "Incidencias totales", value: String(ctx.servicios.reduce((a, s) => a + (s.incidencias || 0), 0)), unit: "", note: "" }],
+      tabla: { headers: ["Mes", "Incidencias"], filas: meses.map(x => [x.mes, String(x.inc)]) },
+      grafica: { tipo: "line", xData: meses.map(x => x.mes), yName: "Incidencias", series: [{ name: "Incidencias", data: meses.map(x => x.inc) }] },
+      explicacion: "Evolución mensual del número de incidencias registradas.",
+      formula: "incidencias mensuales = Σ incidencias por mes.",
+    });
+  },
+};
+
+// Áreas temáticas de acceso rápido (DATA MANAGEMENT 2.0).
+export const AREAS = [
+  { id: "resumen", titulo: "Resumen general", icono: "📋", desc: "Indicadores ejecutivos de la operación.", botones: [
+    { id: "A06", label: "Rendimiento de la flota" }, { id: "A03", label: "Servicios más rentables" },
+    { id: "A05", label: "Evolución de gastos" }, { id: "A08", label: "Resumen de incidencias" },
+    { id: "F07", label: "Mes actual vs. anterior" },
+  ]},
+  { id: "conductores", titulo: "Conductores", icono: "👥", desc: "Rendimiento y costos por operador.", botones: [
+    { id: "F01", label: "Comparar operadores" }, { id: "B01", label: "Mayor eficiencia" },
+    { id: "B02", label: "Menor eficiencia" }, { id: "B03", label: "Consumo por conductor" },
+    { id: "B04", label: "Costo por kilómetro" }, { id: "B09", label: "Puntualidad" },
+  ]},
+  { id: "vehiculos", titulo: "Vehículos", icono: "🚛", desc: "Unidades: rendimiento, costo y consumo.", botones: [
+    { id: "F02", label: "Comparar vehículos" }, { id: "C02", label: "Rendimiento por unidad" },
+    { id: "C03", label: "Costo por km" }, { id: "C01", label: "Vehículos más costosos" },
+    { id: "E08", label: "Costo por tipo de unidad" },
+  ]},
+  { id: "rutas", titulo: "Rutas y servicios", icono: "🗺️", desc: "Rutas y desempeño de servicios.", botones: [
+    { id: "F03", label: "Comparar rutas" }, { id: "D03", label: "Ruta más costosa" },
+    { id: "D04", label: "Eficiencia por ruta" }, { id: "D09", label: "Desviación de distancia" },
+    { id: "F08", label: "Periodo vs. periodo" },
+  ]},
+  { id: "combustible", titulo: "Combustible", icono: "⛽", desc: "Consumo, rendimiento y anomalías.", botones: [
+    { id: "E07", label: "Consumo por período" }, { id: "E01", label: "Mayor consumo" },
+    { id: "E03", label: "Precio por litro" }, { id: "F10", label: "Anomalías" },
+    { id: "E06", label: "Ahorro potencial" },
+  ]},
+  { id: "mantenimiento", titulo: "Mantenimiento", icono: "🔧", desc: "Costos y frecuencia de mantenimiento.", botones: [
+    { id: "C07", label: "Costos por unidad" }, { id: "Q_MANT_POR_KM", label: "Mantenimiento por km" },
+    { id: "Q_MANT_EVOL", label: "Evolución de gastos" }, { id: "C09", label: "Fallas por unidad" },
+  ]},
+  { id: "casetas", titulo: "Casetas y costos", icono: "🛣️", desc: "Casetas y composición de costos.", botones: [
+    { id: "D06", label: "Gastos por ruta" }, { id: "Q_DIST_GASTOS", label: "Distribución de gastos" },
+    { id: "A05", label: "Evolución de costos" }, { id: "A01", label: "Costo por servicio" },
+  ]},
+  { id: "incidencias", titulo: "Incidencias", icono: "⚠️", desc: "Incidencias por tipo, actor y evolución.", botones: [
+    { id: "A08", label: "Resumen de incidencias" }, { id: "B08", label: "Por conductor" },
+    { id: "Q_INCI_VEHICULO", label: "Por vehículo" }, { id: "Q_INCI_TIPO", label: "Por tipo" },
+    { id: "Q_INCI_EVOL", label: "Evolución temporal" },
+  ]},
+];
+
+// ---------------------------------------------------------------------------
 // Ejecución y renderizado
 // ---------------------------------------------------------------------------
 export function ejecutar(id, ctx) {
-  const fn = ANALISIS[id];
+  const fn = ANALISIS[id] || ANALISIS_RAPIDOS[id];
   if (!fn) throw new Error("Análisis no definido: " + id);
   return fn(ctx);
 }
