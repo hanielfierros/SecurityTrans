@@ -1,0 +1,102 @@
+/* ============================================================
+   SECURITYTRANS — DATA MANAGEMENT · Estilos de análisis
+   Reutiliza tokens de styles.css y componentes de dashboard.css.
+   ============================================================ */
+
+/* --- Módulos de análisis --- */
+.status-chip.insuficiente { color: var(--color-pendiente); border-color: var(--color-pendiente); }
+
+.dm-module .region-title { display: flex; align-items: baseline; gap: 8px; }
+
+.dm-desc {
+  margin: 0 0 14px; font-size: 0.82rem; color: var(--color-text-secondary);
+}
+
+.dm-button-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;
+  margin-bottom: 12px;
+}
+.dm-btn {
+  font-size: 0.8rem; text-align: left; padding: 9px 12px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.dm-btn:hover { border-color: var(--color-primary); }
+.dm-btn:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+
+.dm-status {
+  font-size: 0.74rem; color: var(--color-text-secondary);
+  padding: 8px 10px; background: var(--color-surface-alt);
+  border: 1px solid var(--color-border); border-radius: 6px; margin-bottom: 10px;
+}
+.dm-recent {
+  font-size: 0.74rem; color: var(--color-text-secondary); margin-bottom: 12px;
+}
+.dm-recent strong { color: var(--color-text); }
+
+.dm-result-area { min-height: 20px; }
+
+.dm-result {
+  border: 1px solid var(--color-border); border-radius: var(--radius);
+  padding: 14px 16px; background: var(--color-surface);
+}
+.dm-result-title {
+  font-size: 0.9rem; font-weight: 700; margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+/* --- KPI del resultado --- */
+.dm-kpi-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px;
+  margin-bottom: 14px;
+}
+.dm-kpi {
+  padding: 12px 14px; border: 1px solid var(--color-border); border-radius: 6px;
+  background: var(--color-surface-alt);
+}
+.dm-kpi .dm-kpi-label { font-size: 0.7rem; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.dm-kpi .dm-kpi-value { font-size: 1.35rem; font-weight: 700; margin-top: 2px; }
+.dm-kpi .dm-kpi-unit { font-size: 0.72rem; color: var(--color-text-secondary); }
+.dm-kpi .dm-kpi-note { font-size: 0.68rem; color: var(--color-text-secondary); margin-top: 3px; }
+
+/* --- Tabla del resultado --- */
+.dm-table { margin-bottom: 14px; }
+.dm-table th { cursor: default; }
+
+/* --- Gráfica --- */
+.dm-chart { height: 300px; margin-bottom: 14px; }
+
+/* --- Explicación y fórmula --- */
+.dm-explicacion, .dm-formula {
+  font-size: 0.82rem; color: var(--color-text-secondary);
+  margin-bottom: 8px; line-height: 1.5;
+}
+.dm-explicacion strong, .dm-formula strong { color: var(--color-text); }
+.dm-formula {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.76rem; background: var(--color-surface-alt);
+  border: 1px solid var(--color-border); border-radius: 6px; padding: 8px 10px;
+}
+
+/* --- Metadatos de integridad --- */
+.dm-meta {
+  display: flex; flex-wrap: wrap; gap: 6px 16px;
+  font-size: 0.72rem; color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border); margin-top: 12px; padding-top: 10px;
+}
+.dm-meta strong { color: var(--color-text); }
+
+/* --- Filtro global --- */
+.filter-note {
+  font-size: 0.72rem; color: var(--color-text-secondary); margin: 6px 0 0;
+}
+.filter-bar input:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .dm-button-grid { grid-template-columns: repeat(2, 1fr); }
+  .dm-kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .dm-chart { height: 240px; }
+}
+@media (max-width: 420px) {
+  .dm-button-grid { grid-template-columns: 1fr; }
+}

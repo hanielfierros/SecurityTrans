@@ -1,13 +1,14 @@
-# SECURITYTRANS — Plataforma Web (iData · Fuel Management)
+# SECURITYTRANS — Plataforma Web (iData · Data Management)
 
-Plataforma estática de gestión científica y financiera del consumo de combustible
-para el vehículo Freightliner M2 (unidad de referencia D-179). Preparada para
-desplegarse directamente en **GitHub Pages**.
+Plataforma estática de análisis de datos operativos y gestión energética para el
+vehículo Freightliner M2 (unidad de referencia D-179). Preparada para desplegarse
+directamente en **GitHub Pages**.
 
 ## Contenido
 
 - `index.html` — Portada de iData (Departamento de Ingeniería Aeronáutica Aplicada).
-- `fuel-management.html` — Dashboard de gestión energética vehicular.
+- `data-management.html` — Centro de Inteligencia Operativa con 6 módulos de análisis (58 análisis predefinidos), KPIs ejecutivos y funcionalidad de gestión energética.
+- `fuel-management.html` — Redirige a `data-management.html` (compatibilidad hacia atrás).
 - Datos: 7 servicios simulados (los datos reales de referencia NO se publican).
 
 ## Requisitos
