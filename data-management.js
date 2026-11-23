@@ -76,6 +76,7 @@ async function init() {
     renderChartTabs();
     renderModulos();
     renderAreas();
+    renderSidebar();
     CMP.init(filtradosRaw);
     renderTabla();
     await SCI.init();
@@ -456,6 +457,34 @@ function ejecutarArea(id, areaId) {
   renderResultado(resultado, area);
   if (recent) recent.innerHTML = `<strong>Último análisis:</strong> ${resultado.titulo}`;
   area.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function renderSidebar() {
+  const nav = document.getElementById("DM_SIDEBAR");
+  if (!nav) return;
+  const items = [];
+  items.push({ href: "R_EXECUTIVE_KPIS", label: "📊 Resumen ejecutivo" });
+  items.push({ group: "Áreas de análisis" });
+  AREAS.forEach(a => items.push({ href: "DM_AREA_" + a.id, label: a.icono + " " + a.titulo }));
+  items.push({ group: "Módulos A–F" });
+  MODULOS.forEach(m => items.push({ href: "DM_MOD_" + m.id, label: m.id + " · " + m.titulo }));
+  items.push({ group: "Más secciones" });
+  items.push({ href: "R_HISTORICAL_CHARTS", label: "📈 Gráficas históricas" });
+  items.push({ href: "R_SERVICE_HISTORY", label: "📄 Histórico de servicios" });
+
+  nav.innerHTML = items.map(it => it.group
+    ? `<div class="dm-side-group">${it.group}</div>`
+    : `<a href="#${it.href}" class="dm-side-item" data-target="${it.href}">${it.label}</a>`).join("");
+
+  nav.querySelectorAll(".dm-side-item").forEach(a => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const t = document.getElementById(a.dataset.target);
+      if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+      nav.querySelectorAll(".dm-side-item").forEach(x => x.classList.remove("active"));
+      a.classList.add("active");
+    });
+  });
 }
 
 // ---------------------------------------------------------------------------

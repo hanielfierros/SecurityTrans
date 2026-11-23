@@ -55,22 +55,27 @@ function renderGrafica(el, spec) {
     tooltip: { trigger: spec.tipo === "scatter" ? "item" : "axis" },
     legend: series.length > 1 ? { top: 0, textStyle: { color: c.text } } : undefined,
     color: c.palette,
+    toolbox: { show: true, right: 8, feature: { restore: { title: "Restaurar" }, saveAsImage: { title: "Guardar imagen" } } },
     xAxis: { type: "category", data: xData, axisLabel: { color: c.text, rotate: xData.length > 6 ? 30 : 0 }, axisLine: { lineStyle: { color: c.grid } } },
     yAxis: { type: "value", name: spec.yName || "", nameTextStyle: { color: c.text }, axisLabel: { color: c.text }, splitLine: { lineStyle: { color: c.grid } } },
   };
   if (spec.tipo === "line") {
     opt.series = series.map(s => ({ name: s.name, type: "line", data: s.data, smooth: true }));
+    opt.dataZoom = [{ type: "inside" }, { type: "slider", height: 18, bottom: 6 }];
   } else if (spec.tipo === "bar" || spec.tipo === "stacked") {
     opt.series = series.map(s => ({ name: s.name, type: "bar", stack: spec.tipo === "stacked" ? "total" : undefined, data: s.data }));
+    opt.dataZoom = [{ type: "inside" }, { type: "slider", height: 18, bottom: 6 }];
   } else if (spec.tipo === "hbar") {
     opt.xAxis = { type: "value", axisLabel: { color: c.text }, splitLine: { lineStyle: { color: c.grid } } };
     opt.yAxis = { type: "category", data: xData, axisLabel: { color: c.text } };
-    opt.grid = { left: 140, right: 24, top: 40, bottom: 32 };
+    opt.grid = { left: 140, right: 60, top: 40, bottom: 32 };
     opt.series = series.map(s => ({ name: s.name, type: "bar", data: s.data }));
+    opt.dataZoom = [{ type: "inside", yAxisIndex: 0 }, { type: "slider", yAxisIndex: 0, width: 14, right: 4 }];
   } else if (spec.tipo === "scatter") {
     opt.xAxis = { type: "value", name: spec.xName || "", axisLabel: { color: c.text }, splitLine: { lineStyle: { color: c.grid } } };
     opt.yAxis = { type: "value", name: spec.yName || "", axisLabel: { color: c.text }, splitLine: { lineStyle: { color: c.grid } } };
     opt.series = series.map(s => ({ name: s.name, type: "scatter", data: s.data, symbolSize: 13 }));
+    opt.dataZoom = [{ type: "inside" }, { type: "slider", height: 18, bottom: 6 }];
   }
   chart.setOption(opt);
   return chart;
