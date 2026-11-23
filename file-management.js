@@ -1150,7 +1150,7 @@ function detenerPolling() { if (timer) { clearInterval(timer); timer = null; } }
 // ===========================================================================
 // MAPA DEL SERVICIO (Leaflet + OpenStreetMap)
 // ===========================================================================
-const RE_GMAPS = /(https?:\/\/(?:maps\.app\.goo\.gl|goo\.gl\/maps|maps\.google\.com|www\.google\.com\/maps)[^\s<>]+)/g;
+const RE_GMAPS = /(https:\/\/(?:maps\.app\.goo\.gl|goo\.gl\/maps|maps\.google\.com|www\.google\.com\/maps|google\.com\/maps)[^\s<>]+)/g;
 
 let folioActual = "";
 let mapaLeaflet = null;
@@ -1163,6 +1163,9 @@ let mapaFiltroArea = "";
 let mapaMostrarRecorrido = false;
 let mapaChips = new Map();
 let procesandoUbicaciones = false;
+const mapaReintentos = new Map();
+const MAPA_REINTENTO_MS = 30000;
+
 
 function esMensajeGeneral(categoria) {
   const c = String(categoria || "").trim().toLowerCase();
@@ -1242,6 +1245,7 @@ function resetearMapa() {
   }
   mapaMarcadores = [];
   mapaMarcadorPorId.clear();
+  mapaReintentos.clear();
   mapaChips.clear();
   mapaMostrarRecorrido = false;
   $id("MAP_RECORRIDO").textContent = "Mostrar recorrido";
@@ -1371,56 +1375,93 @@ function alternarFullscreen() {
   setTimeout(() => { if (mapaLeaflet) mapaLeaflet.invalidateSize(); }, 150);
 }
 
+// Sincronización: Wix es la fuente de verdad; el chat aporta metadatos del mensaje.
+// Nunca mostrar como persistido un punto que solo se pudo interpretar localmente.
 async function procesarUbicaciones(lista) {
   if (!servicioIdActual || !mapaLeaflet || procesandoUbicaciones) return;
+  const sid = servicioIdActual;
   procesandoUbicaciones = true;
   try {
     const mensajes = Array.isArray(lista) ? lista : [];
-    for (const m of mensajes) {
-      if (!esMensajeGeneral(m.categoria)) continue;
-      const enlaces = enlacesGoogle(m.mensaje || m.contenido || m.texto || "");
-      if (!enlaces.length) continue;
-      const mensajeId = m.mensajeId || m.id || m._id || "";
-      for (let i = 0; i < enlaces.length; i++) {
-        const clave = claveUbicacion(mensajeId, i);
+    const porId = new Map(mensajes.map(m => [String(m.mensajeId || m.id || m._id || ""), m]));
+    // Restaurar ubicaciones guardadas, incluso si ya se cerró el servicio.
+    try {
+      const r = await WixApi.ubicaciones(sid);
+      if (sid !== servicioIdActual) return;
+      const guardadas = Array.isArray(r?.data) ? r.data : (r?.data?.ubicaciones || []);
+      for (const g of guardadas) {
+        const lat = Number(g.latitud), lon = Number(g.longitud);
+        if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat)>90 || Math.abs(lon)>180) continue;
+        const mid = String(g.mensajeId || "");
+        const m = porId.get(mid) || {};
+        const url = String(g.urlOriginal || "");
+        const clave = sid + "|persistida|" + (g.ubicacionId || mid + "|" + url);
         if (mapaMarcadorPorId.has(clave)) continue;
-        await resolverYAgregar(clave, enlaces[i], m, mensajeId);
+        agregarUbicacionConfirmada(clave, {lat,lon}, m, mid, url, sid, g.etiqueta);
+      }
+    } catch (e) {
+      // Una falla de lectura no debe impedir intentar resolver mensajes nuevos.
+      console.warn("SECURITYTRANS: consulta de ubicaciones no disponible:", e.message);
+    }
+    for (const m of mensajes) {
+      if (sid !== servicioIdActual) return;
+      const contenido = m.mensaje || m.contenido || m.texto || "";
+      const enlaces = enlacesGoogle(contenido);
+      if (!enlaces.length) continue;
+      const mensajeId = String(m.mensajeId || m.id || m._id || "");
+      if (!mensajeId) continue;
+      for (let i = 0; i < enlaces.length; i++) {
+        const url = enlaces[i];
+        // Evitar repetir marcadores ya restaurados desde Wix.
+        if (mapaMarcadores.some(u => u.mensajeId === mensajeId && u.url === url)) continue;
+        const clave = sid + "|" + mensajeId + "|" + i;
+        if (mapaMarcadorPorId.has(clave)) continue;
+        await resolverYAgregar(clave, url, m, mensajeId, sid);
       }
     }
+    if (sid !== servicioIdActual) return;
     actualizarMapaInfo();
-    centrarTodas();
-  } finally {
-    procesandoUbicaciones = false;
-  }
+    // Respetar el zoom del usuario; centrar solo cuando se añade el primer pin.
+  } finally { procesandoUbicaciones = false; }
 }
 
-async function resolverYAgregar(clave, url, m, mensajeId) {
-  let coord = parsearCoordenadas(url);
-  if (!coord) {
-    const cacheClave = servicioIdActual + "|" + mensajeId + "|" + url;
-    if (mapaCache.has(cacheClave)) {
-      coord = mapaCache.get(cacheClave) || null;
+function agregarUbicacionConfirmada(clave, coord, m, mensajeId, url, sid, etiqueta) {
+  if (sid !== servicioIdActual || mapaMarcadorPorId.has(clave)) return;
+  const estabaVacio = mapaMarcadores.length === 0;
+  const u = { id: clave, lat: coord.lat, lon: coord.lon, area: m.area || m.Area || "SISTEMA",
+    usuario: textoDe(m.usuario || m.user || ""), folio: folioActual,
+    mensaje: m.mensaje || etiqueta || "Ubicación compartida",
+    fecha: fechaHora(m.fechaEnvio || m.fecha || m.fechaServidor), url, mensajeId };
+  mapaMarcadores.push(u);
+  mapaMarcadorPorId.set(clave, u);
+  crearMarcador(u);
+  marcarChip(mensajeId, "ubicacion", url);
+  actualizarMapaInfo();
+  if (estabaVacio && mapaLeaflet) mapaLeaflet.setView([coord.lat, coord.lon], 12);
+}
+
+async function resolverYAgregar(clave, url, m, mensajeId, sid) {
+  const cacheClave = sid + "|" + mensajeId + "|" + url;
+  const ultimoFallo = mapaReintentos.get(cacheClave) || 0;
+  if (Date.now() - ultimoFallo < MAPA_REINTENTO_MS) return;
+  try {
+    // Incluso los enlaces con coordenadas directas deben pasar por Wix para persistirlos.
+    const r = await WixApi.resolverUbicacion(sid, mensajeId, url);
+    if (sid !== servicioIdActual) return;
+    const d = r?.data || {};
+    const lat = Number(d.latitud), lon = Number(d.longitud);
+    if (d.resuelto && Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat)<=90 && Math.abs(lon)<=180) {
+      mapaReintentos.delete(cacheClave);
+      agregarUbicacionConfirmada(clave, {lat,lon}, m, mensajeId, url, sid, d.etiqueta);
     } else {
-      try {
-        const r = await WixApi.resolverUbicacion(servicioIdActual, mensajeId, url);
-        const d = r?.data || {};
-        if (d && d.resuelto && Number.isFinite(d.latitud) && Number.isFinite(d.longitud)) {
-          coord = { lat: d.latitud, lon: d.longitud };
-          mapaCache.set(cacheClave, coord);
-        } else { mapaCache.set(cacheClave, null); }
-      } catch (e) { mapaCache.set(cacheClave, null); }
+      mapaReintentos.set(cacheClave, Date.now());
+      console.warn("SECURITYTRANS: enlace no resuelto:", d.motivo || "sin coordenadas exactas");
+      marcarChip(mensajeId, "no_resuelto", url);
     }
-  }
-  if (coord) {
-    const u = { id: clave, lat: coord.lat, lon: coord.lon, area: m.area || m.Area || "SISTEMA",
-      usuario: textoDe(m.usuario || m.user || ""), folio: folioActual, mensaje: m.mensaje || "",
-      fecha: fechaHora(m.fechaEnvio || m.fecha || m.fechaServidor), url: url, mensajeId };
-    mapaMarcadores.push(u);
-    mapaMarcadorPorId.set(clave, u);
-    crearMarcador(u);
-    marcarChip(mensajeId, "ubicacion", url);
-  } else {
-    marcarChip(mensajeId, "no_resuelto", url);
+  } catch (e) {
+    mapaReintentos.set(cacheClave, Date.now());
+    console.warn("SECURITYTRANS: fallo de resolución:", e.message);
+    if (sid === servicioIdActual) marcarChip(mensajeId, "no_resuelto", url);
   }
 }
 
